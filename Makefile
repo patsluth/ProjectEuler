@@ -4,15 +4,14 @@
 
 
 all: clean
-	./compile
+	clang++ -std=c++11 -stdlib=libc++ -Wall -Wextra *.cpp -o projecteuler;
 
 
 
 
 
 clean:
-	rm -rf *.out
-	rm -rf progress.txt
+	rm -rf projecteuler
 
 
 
