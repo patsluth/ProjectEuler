@@ -139,13 +139,13 @@ uint64_t nextCollatzInt(uint64_t i)
 
 pyramid pyramidFromFile(string file)
 {
-    ifstream triangleSrc(file);
+    ifstream fileStream(file);
     pyramid p;
     
-    if (triangleSrc){
+    if (fileStream){
         
         string line;
-        while (getline(triangleSrc, line, '\n')) { //split txt file by line
+        while (getline(fileStream, line, '\n')) { //split txt file by line
             
             pyramidRow pRow;
             
@@ -241,6 +241,88 @@ vector<uint64_t> circularVariations(uint64_t i)
     }
     
     return circularVariations;
+}
+
+double quadraticSolveSolveDescriminant(quadratic q)
+{
+    return (q.b * q.b) - (4.0 * q.a * q.c);
+}
+
+quadraticRoots quadraticSolveRoots(quadratic q)
+{
+    int64_t descriminant = quadraticSolveSolveDescriminant(q);
+    
+    if (descriminant < 0){
+        return {0, 0};
+    }
+    
+    double numeratorAdd = -q.b + sqrt(descriminant);
+    double numeratorSubtract = -q.b - sqrt(descriminant);
+    double denomenator = 2.0 * q.a;
+    
+    return {numeratorAdd / denomenator, numeratorSubtract / denomenator};
+}
+
+int64_t triangleNumberForN(uint64_t n)
+{
+    uint64_t Tn = n * (n + 1);
+    Tn /= 2;
+    return Tn;
+}
+
+uint64_t nForTriangleNumber(int64_t Tn)
+{
+    quadratic q = {1, 1, (-2 * Tn)};
+    quadraticRoots roots = quadraticSolveRoots(q);
+    
+    double largerRoot = max(roots.x, roots.y);
+    
+    if (largerRoot - (int64_t)largerRoot == 0){ //whole number
+        return largerRoot;
+    }
+    
+    return 0;
+}
+
+uint64_t pentagonalNumberForN(uint64_t n)
+{
+    uint64_t Pn = n * ( (3 * n) - 1 );
+    Pn /= 2;
+    return Pn;
+}
+
+uint64_t nForPentagonalNumber(int64_t Pn)
+{
+    quadratic q = {3, -1, (-2 * Pn)};
+    quadraticRoots roots = quadraticSolveRoots(q);
+    
+    double largerRoot = max(roots.x, roots.y);
+    
+    if (largerRoot - (int64_t)largerRoot == 0){ //whole number
+        return largerRoot;
+    }
+    
+    return 0;
+}
+
+uint64_t hexagonalNumberForN(uint64_t n)
+{
+    uint64_t Hn = n * ( (2 * n) - 1 );
+    return Hn;
+}
+
+uint64_t nForHexagonalNumber(int64_t Hn)
+{
+    quadratic q = {2, -1, (-1 * Hn)};
+    quadraticRoots roots = quadraticSolveRoots(q);
+    
+    double largerRoot = max(roots.x, roots.y);
+    
+    if (largerRoot - (int64_t)largerRoot == 0){ //whole number
+        return largerRoot;
+    }
+    
+    return 0;
 }
 
 

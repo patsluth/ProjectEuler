@@ -9,7 +9,6 @@
 
 #include <iostream>
 
-#include "libProjectEuler.h"
 #include "problem_1.cpp"
 #include "problem_2.cpp"
 #include "problem_3.cpp"
@@ -51,9 +50,9 @@
 //#include "problem_39.cpp"
 //#include "problem_40.cpp"
 //#include "problem_41.cpp"
-//#include "problem_42.cpp"
+#include "problem_42.cpp"
 //#include "problem_43.cpp"
-//#include "problem_44.cpp"
+#include "problem_44.cpp"
 #include "problem_45.cpp"
 //#include "problem_46.cpp"
 //#include "problem_47.cpp"
@@ -127,9 +126,9 @@ int main(int, char**)
 //    problem_39().run();
 //    problem_40().run();
 //    problem_41().run();
-//    problem_42().run();
+    problem_42().run();
 //    problem_43().run();
-//    problem_44().run();
+    problem_44().run();
     problem_45().run();
 //    problem_46().run();
 //    problem_47().run();

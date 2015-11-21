@@ -20,14 +20,9 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <cxxabi.h>
 
 using namespace std;
-
-#define XCODE_COLORS_ESCAPE "\033["
-
-#define XCODE_COLORS_RESET_FG  XCODE_COLORS_ESCAPE "fg;" // Clear any foreground color
-#define XCODE_COLORS_RESET_BG  XCODE_COLORS_ESCAPE "bg;" // Clear any background color
-#define XCODE_COLORS_RESET     XCODE_COLORS_ESCAPE ";"   // Clear any foreground or background color
 
 
 
@@ -40,22 +35,26 @@ protected:
     
     stringstream calculatedAnswer;
     
-    virtual void subrun(){};
     virtual string desiredAnswer(){ return ""; };
+    virtual void subrun(){};
+    virtual void tdd(){};
     
 public:
     
     void run()
     {
+        tdd();
         subrun();
         
-        if (correct()){
-            cout << "Correct: ";
-        } else {
-            cout << XCODE_COLORS_ESCAPE << "fg220,0,0;" << "Incorrect: " << XCODE_COLORS_RESET;
-        }
+        //class name
+        cout << abi::__cxa_demangle(typeid(*this).name(), 0, 0, 0);
+        cout << " ==> ";
         
-        cout << XCODE_COLORS_ESCAPE << "fg255,255,255;" << calculatedAnswer.str() << "   [" << desiredAnswer() << "]" << XCODE_COLORS_RESET << endl;
+        if (correct()){
+            cout << "[" << calculatedAnswer.str() << "]" << endl;
+        } else {
+            cout << " [Calculated != Desired] [" << calculatedAnswer.str() << " != " << desiredAnswer() << "]" << endl;
+        }
         
     };
     
@@ -165,6 +164,44 @@ void printPyramid(pyramid p);
  *  @return vector
  */
 vector<uint64_t> circularVariations(uint64_t i);
+
+struct quadratic
+{
+    int64_t a;
+    int64_t b;
+    int64_t c;
+};
+
+struct quadraticRoots
+{
+    double x;
+    double y;
+};
+
+/**
+ *  Solve descriminant of a quadratic
+ *
+ *  @param q
+ *
+ *  @return descriminant
+ */
+double quadraticSolveSolveDescriminant(quadratic q);
+
+/**
+ *  Solv 2 roots of quadratic using the quadratic formula
+ *
+ *  @param q
+ *
+ *  @return quadraticRoots
+ */
+quadraticRoots quadraticSolveRoots(quadratic q);
+
+int64_t triangleNumberForN(uint64_t n);
+uint64_t nForTriangleNumber(int64_t Tn);
+uint64_t pentagonalNumberForN(uint64_t n);
+uint64_t nForPentagonalNumber(int64_t Pn);
+uint64_t hexagonalNumberForN(uint64_t n);
+uint64_t nForHexagonalNumber(int64_t Hn);
 
 
 
