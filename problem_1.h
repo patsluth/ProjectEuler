@@ -1,7 +1,7 @@
 //
-//  main.cpp
-//  problem_1
+//  problem_1.h
 //  Multiples of 3 and 5
+//  ProjectEuler
 //
 //  Created by Pat Sluth on 2015-09-09.
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.

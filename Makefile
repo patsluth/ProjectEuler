@@ -3,8 +3,22 @@
 
 
 
+
+# C preprocessor
+CPPFLAGS =
+# C compiler
+CFLAGS = -Isercantutar-infint
+# C++ compiler
+CXXFLAGS = -std=gnu++11 -stdlib=libc++ -Wall -Wextra
+# linker
+LDFLAGS = 
+
+
+
+
+
 all: clean
-	clang++ -std=c++11 -stdlib=libc++ -Wall -Wextra *.cpp -o projecteuler;
+	clang++ $(CXXFLAGS) *.cpp $(CFLAGS) -o projecteuler;
 
 
 

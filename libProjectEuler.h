@@ -21,6 +21,7 @@
 #include <string>
 #include <sstream>
 #include <cxxabi.h>
+#include <time.h>
 
 using namespace std;
 
@@ -41,19 +42,28 @@ protected:
     
 public:
     
+    problemBase()
+    {
+    }
+    
     void run()
     {
         tdd();
+        
+        clock_t timer = clock();
+        
         subrun();
+        
+        timer = clock() - timer;
         
         //class name
         cout << abi::__cxa_demangle(typeid(*this).name(), 0, 0, 0);
         cout << " ==> ";
         
         if (correct()){
-            cout << "[" << calculatedAnswer.str() << "]" << endl;
+            printf("[%s]        (%f seconds)\n", calculatedAnswer.str().c_str(), (float)timer/CLOCKS_PER_SEC);
         } else {
-            cout << " [Calculated != Desired] [" << calculatedAnswer.str() << " != " << desiredAnswer() << "]" << endl;
+            printf(" [Calculated != Desired] [%s != %s]\n", calculatedAnswer.str().c_str(), desiredAnswer().c_str());
         }
         
     };

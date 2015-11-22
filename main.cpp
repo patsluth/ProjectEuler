@@ -1,7 +1,6 @@
 //
 //  main.cpp
-//  problem_1
-//  Multiples of 3 and 5
+//  ProjectEuler
 //
 //  Created by Pat Sluth on 2015-09-09.
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
@@ -9,75 +8,75 @@
 
 #include <iostream>
 
-#include "problem_1.cpp"
-#include "problem_2.cpp"
-#include "problem_3.cpp"
-#include "problem_4.cpp"
-#include "problem_5.cpp"
-#include "problem_6.cpp"
-#include "problem_7.cpp"
-#include "problem_8.cpp"
-#include "problem_9.cpp"
-#include "problem_10.cpp"
-#include "problem_11.cpp"
-#include "problem_12.cpp"
-#include "problem_13.cpp"
-#include "problem_14.cpp"
-#include "problem_15.cpp"
-#include "problem_16.cpp"
-#include "problem_17.cpp"
-#include "problem_18.cpp"
-//#include "problem_19.cpp"
-#include "problem_20.cpp"
-//#include "problem_21.cpp"
-//#include "problem_22.cpp"
-//#include "problem_23.cpp"
-//#include "problem_24.cpp"
-//#include "problem_25.cpp"
-//#include "problem_26.cpp"
-//#include "problem_27.cpp"
-//#include "problem_28.cpp"
-//#include "problem_29.cpp"
-#include "problem_30.cpp"
-//#include "problem_31.cpp"
-//#include "problem_32.cpp"
-//#include "problem_33.cpp"
-//#include "problem_34.cpp"
-#include "problem_35.cpp"
-//#include "problem_36.cpp"
-//#include "problem_37.cpp"
-//#include "problem_38.cpp"
-//#include "problem_39.cpp"
-//#include "problem_40.cpp"
-//#include "problem_41.cpp"
-#include "problem_42.cpp"
-//#include "problem_43.cpp"
-#include "problem_44.cpp"
-#include "problem_45.cpp"
-//#include "problem_46.cpp"
-//#include "problem_47.cpp"
-//#include "problem_48.cpp"
-//#include "problem_49.cpp"
-//#include "problem_50.cpp"
-//#include "problem_51.cpp"
-//#include "problem_52.cpp"
-//#include "problem_53.cpp"
-//#include "problem_54.cpp"
-//#include "problem_55.cpp"
-//#include "problem_56.cpp"
-//#include "problem_57.cpp"
-//#include "problem_58.cpp"
-//#include "problem_59.cpp"
-//#include "problem_60.cpp"
-//#include "problem_61.cpp"
-//#include "problem_62.cpp"
-//#include "problem_63.cpp"
-//#include "problem_64.cpp"
-//#include "problem_65.cpp"
-//#include "problem_66.cpp"
-#include "problem_67.cpp"
-//#include "problem_68.cpp"
-//#include "problem_69.cpp"
+#include "problem_1.h"
+#include "problem_2.h"
+#include "problem_3.h"
+#include "problem_4.h"
+#include "problem_5.h"
+#include "problem_6.h"
+#include "problem_7.h"
+#include "problem_8.h"
+#include "problem_9.h"
+#include "problem_10.h"
+#include "problem_11.h"
+#include "problem_12.h"
+#include "problem_13.h"
+#include "problem_14.h"
+#include "problem_15.h"
+#include "problem_16.h"
+#include "problem_17.h"
+#include "problem_18.h"
+//#include "problem_19.h"
+#include "problem_20.h"
+//#include "problem_21.h"
+//#include "problem_22.h"
+//#include "problem_23.h"
+//#include "problem_24.h"
+//#include "problem_25.h"
+//#include "problem_26.h"
+//#include "problem_27.h"
+//#include "problem_28.h"
+//#include "problem_29.h"
+#include "problem_30.h"
+//#include "problem_31.h"
+//#include "problem_32.h"
+//#include "problem_33.h"
+//#include "problem_34.h"
+#include "problem_35.h"
+//#include "problem_36.h"
+//#include "problem_37.h"
+//#include "problem_38.h"
+//#include "problem_39.h"
+//#include "problem_40.h"
+//#include "problem_41.h"
+#include "problem_42.h"
+//#include "problem_43.h"
+#include "problem_44.h"
+#include "problem_45.h"
+//#include "problem_46.h"
+//#include "problem_47.h"
+#include "problem_48.h"
+//#include "problem_49.h"
+//#include "problem_50.h"
+//#include "problem_51.h"
+//#include "problem_52.h"
+//#include "problem_53.h"
+//#include "problem_54.h"
+//#include "problem_55.h"
+//#include "problem_56.h"
+//#include "problem_57.h"
+//#include "problem_58.h"
+//#include "problem_59.h"
+//#include "problem_60.h"
+//#include "problem_61.h"
+//#include "problem_62.h"
+//#include "problem_63.h"
+//#include "problem_64.h"
+//#include "problem_65.h"
+//#include "problem_66.h"
+#include "problem_67.h"
+//#include "problem_68.h"
+//#include "problem_69.h"
 
 
 
@@ -85,6 +84,16 @@
 
 int main(int, char**)
 {
+//    cout << "Project Euler" << endl << "Enter Problem #   (a for all)" << endl;
+//    
+//    char input;
+//    cin >> input;
+//    
+//    if (tolower(input) == 'a'){
+//        
+//    }
+    
+    
     problem_1().run();
     problem_2().run();
     problem_3().run();
@@ -132,7 +141,7 @@ int main(int, char**)
     problem_45().run();
 //    problem_46().run();
 //    problem_47().run();
-//    problem_48().run();
+    problem_48().run();
 //    problem_49().run();
 //    problem_50().run();
 //    problem_51().run();
