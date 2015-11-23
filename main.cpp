@@ -46,7 +46,7 @@
 //#include "problem_36.h"
 //#include "problem_37.h"
 //#include "problem_38.h"
-//#include "problem_39.h"
+#include "problem_39.h"
 //#include "problem_40.h"
 //#include "problem_41.h"
 #include "problem_42.h"
@@ -79,20 +79,18 @@
 //#include "problem_69.h"
 
 
+#include "problem_80.h"
+
+#include "problem_99.h"
+
+
 
 
 
 int main(int, char**)
 {
-//    cout << "Project Euler" << endl << "Enter Problem #   (a for all)" << endl;
-//    
-//    char input;
-//    cin >> input;
-//    
-//    if (tolower(input) == 'a'){
-//        
-//    }
-    
+    problem_39().run();
+    return EXIT_SUCCESS;
     
     problem_1().run();
     problem_2().run();
@@ -163,6 +161,12 @@ int main(int, char**)
     problem_67().run();
 //    problem_68().run();
 //    problem_69().run();
+    
+    
+    problem_80().run();
+    
+    
+    problem_99().run();
 
     return EXIT_SUCCESS;
 }

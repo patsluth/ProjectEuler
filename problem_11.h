@@ -1,10 +1,10 @@
 //
-//  main.cpp
-//  problem_11
+//  problem_11.h
 //  Largest product in a grid
+//  ProjectEuler
 //
 //  Created by Pat Sluth on 2015-11-02.
-//
+//  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
 #include <iostream>

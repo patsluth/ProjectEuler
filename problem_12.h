@@ -1,10 +1,10 @@
 //
-//  main.cpp
-//  problem_12
+//  problem_12.h
 //  Highly divisible triangular number
+//  ProjectEuler
 //
 //  Created by Pat Sluth on 2015-11-02.
-//
+//  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
 #include <iostream>

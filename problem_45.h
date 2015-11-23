@@ -1,10 +1,10 @@
 //
-// main.cpp
-// problem_45
-// Triangular, pentagonal, and hexagonal
+//  problem_45.h
+//  Triangular, pentagonal, and hexagonal
+//  ProjectEuler
 //
-// Created by Pat Sluth on 2015-11-02.
-//
+//  Created by Pat Sluth on 2015-11-02.
+//  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
 #include <iostream>

@@ -1,7 +1,7 @@
 //
-//  main.cpp
-//  problem_5
+//  problem_5.h
 //  Smallest multiple
+//  ProjectEuler
 //
 //  Created by Pat Sluth on 2015-09-09.
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.

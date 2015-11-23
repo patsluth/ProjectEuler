@@ -1,9 +1,10 @@
 //
-// problem_48.h
-// Self powers
+//  problem_48.h
+//  Self powers
+//  ProjectEuler
 //
-// Created by Pat Sluth on 2015-11-02.
-//
+//  Created by Pat Sluth on 2015-11-02.
+//  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
 #include <iostream>

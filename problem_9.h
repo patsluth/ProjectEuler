@@ -1,10 +1,10 @@
 //
-//  main.cpp
-//  problem_9
+//  problem_9.h
 //  Special Pythagorean triplet
+//  ProjectEuler
 //
 //  Created by Pat Sluth on 2015-11-02.
-//
+//  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
 #include <iostream>

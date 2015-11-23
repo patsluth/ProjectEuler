@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		2E7F448C1BFF861F00FCB85B /* libProjectEuler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F44721BFF861F00FCB85B /* libProjectEuler.cpp */; };
 		2E7F448D1BFF861F00FCB85B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F44741BFF861F00FCB85B /* main.cpp */; };
-		2E7F44A81BFF863C00FCB85B /* p018_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E7F44A51BFF863300FCB85B /* p018_triangle.txt */; };
-		2E7F44A91BFF863C00FCB85B /* p042_words.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E7F44A61BFF863300FCB85B /* p042_words.txt */; };
-		2E7F44AA1BFF863C00FCB85B /* p067_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E7F44A71BFF863300FCB85B /* p067_triangle.txt */; };
+		2EC746701C024B3D003F8119 /* p099_base_exp.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EC7466F1C024B29003F8119 /* p099_base_exp.txt */; };
+		2EC746711C024B3D003F8119 /* p018_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E7F44A51BFF863300FCB85B /* p018_triangle.txt */; };
+		2EC746721C024B3D003F8119 /* p042_words.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E7F44A61BFF863300FCB85B /* p042_words.txt */; };
+		2EC746731C024B3D003F8119 /* p067_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E7F44A71BFF863300FCB85B /* p067_triangle.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -21,9 +22,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				2E7F44A81BFF863C00FCB85B /* p018_triangle.txt in CopyFiles */,
-				2E7F44A91BFF863C00FCB85B /* p042_words.txt in CopyFiles */,
-				2E7F44AA1BFF863C00FCB85B /* p067_triangle.txt in CopyFiles */,
+				2EC746701C024B3D003F8119 /* p099_base_exp.txt in CopyFiles */,
+				2EC746711C024B3D003F8119 /* p018_triangle.txt in CopyFiles */,
+				2EC746721C024B3D003F8119 /* p042_words.txt in CopyFiles */,
+				2EC746731C024B3D003F8119 /* p067_triangle.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +67,11 @@
 		2E87839E1C017178002C80B0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		2E87839F1C017178002C80B0 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		2E8EADEE1C00E3AC004F7B84 /* problem_42.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = problem_42.h; sourceTree = SOURCE_ROOT; };
+		2EC7466F1C024B29003F8119 /* p099_base_exp.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = p099_base_exp.txt; sourceTree = SOURCE_ROOT; };
+		2EC746741C024B5A003F8119 /* problem_99.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_99.h; sourceTree = SOURCE_ROOT; };
 		2EC7E1651BFF47130068DA60 /* ProjectEuler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEuler; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EF50E291C027DD600541A9F /* problem_80.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_80.h; sourceTree = SOURCE_ROOT; };
+		2EF50E2A1C028D8C00541A9F /* problem_39.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_39.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,7 @@
 		2EC7E1A21BFF477F0068DA60 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				2EC7466F1C024B29003F8119 /* p099_base_exp.txt */,
 				2E7F44A51BFF863300FCB85B /* p018_triangle.txt */,
 				2E7F44A61BFF863300FCB85B /* p042_words.txt */,
 				2E7F44A71BFF863300FCB85B /* p067_triangle.txt */,
@@ -160,11 +167,14 @@
 				2E7F44871BFF861F00FCB85B /* problem_20.h */,
 				2E7F44881BFF861F00FCB85B /* problem_30.h */,
 				2E7F44891BFF861F00FCB85B /* problem_35.h */,
+				2EF50E2A1C028D8C00541A9F /* problem_39.h */,
 				2E8EADEE1C00E3AC004F7B84 /* problem_42.h */,
 				2E7AA94D1C010D15003B3655 /* problem_44.h */,
 				2E7F448A1BFF861F00FCB85B /* problem_45.h */,
 				2E6223E61C015D5A007C1F13 /* problem_48.h */,
 				2E7F448B1BFF861F00FCB85B /* problem_67.h */,
+				2EF50E291C027DD600541A9F /* problem_80.h */,
+				2EC746741C024B5A003F8119 /* problem_99.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -316,6 +326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
+				HEADER_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 			};
@@ -325,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
+				HEADER_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 			};

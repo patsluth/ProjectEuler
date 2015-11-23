@@ -1,7 +1,7 @@
 //
-//  main.cpp
-//  problem_6
+//  problem_6.h
 //  Sum square difference
+//  ProjectEuler
 //
 //  Created by Pat Sluth on 2015-09-09.
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.

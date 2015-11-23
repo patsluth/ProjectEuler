@@ -1,9 +1,10 @@
 //
-//  main.cpp
-//  problem_2
+//  problem_2.h
 //  Even Fibonacci Numbers
+//  ProjectEuler
 //
 //  Created by Pat Sluth on 2015-09-09.
+//  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 

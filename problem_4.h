@@ -1,7 +1,7 @@
 //
-//  main.cpp
-//  problem_4
+//  problem_4.h
 //  Largest palindrome product
+//  ProjectEuler
 //
 //  Created by Pat Sluth on 2015-09-09.
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
