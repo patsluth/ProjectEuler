@@ -32,9 +32,9 @@
 //#include "problem_22.h"
 //#include "problem_23.h"
 //#include "problem_24.h"
-//#include "problem_25.h"
+#include "problem_25.h"
 //#include "problem_26.h"
-//#include "problem_27.h"
+#include "problem_27.h"
 //#include "problem_28.h"
 //#include "problem_29.h"
 #include "problem_30.h"
@@ -79,7 +79,12 @@
 //#include "problem_69.h"
 
 
+#include "problem_76.h"
 #include "problem_80.h"
+
+
+
+#include "problem_92.h"
 
 #include "problem_99.h"
 
@@ -89,7 +94,7 @@
 
 int main(int, char**)
 {
-    problem_39().run();
+    problem_92().run();
     return EXIT_SUCCESS;
     
     problem_1().run();
@@ -118,7 +123,7 @@ int main(int, char**)
 //    problem_24().run();
 //    problem_25().run();
 //    problem_26().run();
-//    problem_27().run();
+    problem_27().run();
 //    problem_28().run();
 //    problem_29().run();
     problem_30().run();
@@ -165,6 +170,7 @@ int main(int, char**)
     
     problem_80().run();
     
+    problem_92().run();
     
     problem_99().run();
 

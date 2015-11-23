@@ -217,6 +217,22 @@ uint64_t nForHexagonalNumber(int64_t Hn);
 
 
 
+typedef vector<uint64_t> numberChain;
+
+/**
+ *  Calculate number chain (next number is sum of the digits of the current number)
+ *  shouldContinue called with each new calculated value. Returning false will stop the calulation at that point
+ *
+ *  @param start
+ *  @param uint64_t& shouldContinue function
+ *
+ *  @return numberChain
+ */
+numberChain calculateChain(uint64_t start, function<bool (const numberChain *)> shouldContinue);
+
+
+
+
 #endif /* libProjectEuler_h */
 
 
