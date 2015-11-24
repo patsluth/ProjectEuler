@@ -9,8 +9,6 @@
 
 #include <iostream>
 
-#include "InfInt.h"
-
 #include <boost/multiprecision/cpp_int.hpp>
 
 #include "libProjectEuler.h"

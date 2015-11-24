@@ -10,8 +10,6 @@
 #include <iostream>
 #include <math.h>
 
-#include "InfInt.h"
-
 #include "libProjectEuler.h"
 
 using namespace std;

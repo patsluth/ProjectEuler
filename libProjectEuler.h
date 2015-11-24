@@ -55,15 +55,16 @@ public:
         subrun();
         
         timer = clock() - timer;
+        float timerSeconds = (float)timer/CLOCKS_PER_SEC;
         
         //class name
         cout << abi::__cxa_demangle(typeid(*this).name(), 0, 0, 0);
         cout << " ==> ";
         
         if (correct()){
-            printf("[%s]        (%f seconds)\n", calculatedAnswer.str().c_str(), (float)timer/CLOCKS_PER_SEC);
+            printf("[%s]        (%f seconds)\n", calculatedAnswer.str().c_str(), timerSeconds);
         } else {
-            printf(" [Calculated != Desired] [%s != %s]\n", calculatedAnswer.str().c_str(), desiredAnswer().c_str());
+            printf(" [Calculated != Desired] [%s != %s]        (%f seconds)\n", calculatedAnswer.str().c_str(), desiredAnswer().c_str(), timerSeconds);
         }
         
     };
@@ -94,6 +95,19 @@ struct factor
     uint64_t x;
     uint64_t y;
 };
+
+inline int64_t factorial(int64_t x)
+{
+    if (x == 0){
+        x = 1;
+    }
+    
+    if (x == 1){
+        return 1;
+    } else {
+        return x * factorial(x - 1);
+    }
+}
 
 /**
  *  Calculate factors of an int by finding lowest divisble number and its corresponding factor (factor tree method)
@@ -218,9 +232,10 @@ uint64_t nForHexagonalNumber(int64_t Hn);
 
 
 typedef vector<uint64_t> numberChain;
+typedef function<bool (const numberChain *)> chain_ShouldContinueFunction;
 
 /**
- *  Calculate number chain (next number is sum of the digits of the current number)
+ *  Calculate number chain (where next number is the sum of each digits squared of the current number)
  *  shouldContinue called with each new calculated value. Returning false will stop the calulation at that point
  *
  *  @param start
@@ -228,8 +243,18 @@ typedef vector<uint64_t> numberChain;
  *
  *  @return numberChain
  */
-numberChain calculateChain(uint64_t start, function<bool (const numberChain *)> shouldContinue);
+numberChain chain_digitSquaredSum(uint64_t start, chain_ShouldContinueFunction shouldContinue);
 
+/**
+ *  Calculate number chain (where next number is the sum of the factorial of each digit of the current number)
+ *  shouldContinue called with each new calculated value. Returning false will stop the calulation at that point
+ *
+ *  @param start
+ *  @param shouldContinue function
+ *
+ *  @return numberChain
+ */
+numberChain chain_digitFactorial(uint64_t start, chain_ShouldContinueFunction shouldContinue);
 
 
 

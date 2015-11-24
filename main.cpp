@@ -79,6 +79,7 @@
 //#include "problem_69.h"
 
 
+#include "problem_74.h"
 #include "problem_76.h"
 #include "problem_80.h"
 
@@ -86,6 +87,7 @@
 
 #include "problem_92.h"
 
+#include "problem_95.h"
 #include "problem_99.h"
 
 
@@ -95,6 +97,8 @@
 int main(int, char**)
 {
     problem_92().run();
+    problem_74().run();
+    problem_95().run();
     return EXIT_SUCCESS;
     
     problem_1().run();
@@ -167,10 +171,12 @@ int main(int, char**)
 //    problem_68().run();
 //    problem_69().run();
     
+    problem_74().run();
     
     problem_80().run();
     
     problem_92().run();
+    problem_95().run();
     
     problem_99().run();
 

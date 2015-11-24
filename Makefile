@@ -7,7 +7,7 @@
 # C preprocessor
 CPPFLAGS =
 # C compiler
-CFLAGS = -Isercantutar-infint
+CFLAGS = 
 # C++ compiler
 CXXFLAGS = -std=gnu++11 -stdlib=libc++ -Wall -Wextra
 # linker

@@ -1,6 +1,6 @@
 //
-//  problem_92.h
-//  Square digit chains
+//  problem_74.h
+//  Digit factorial chains
 //  ProjectEuler
 //
 //  Created by Pat Sluth on 2015-11-02.
@@ -18,12 +18,12 @@ using namespace std;
 
 
 
-class problem_92 : public problemBase
+class problem_74 : public problemBase
 {
     
     string desiredAnswer()
     {
-        return "8581146";
+        return "402";
     }
     
     void subrun()
@@ -31,15 +31,16 @@ class problem_92 : public problemBase
         uint64_t x = 0;
         
         chain_ShouldContinueFunction shouldContinueFunction = [] (const numberChain *currentChain){
-            if (currentChain->back() == 89){ // stop calculating chain at 89
+            if (currentChain->size() > 60){ // stop calculating chain with 60 items
                 return false;
             } else {
                 return true;
             }
         };
         
-        for (uint64_t start = 0; start < 10000000; start++){
-            if (chain_digitSquaredSum(start, shouldContinueFunction).back() == 89){
+        for (uint64_t start = 0; start < 1000000; start++){
+            //+1 because the last term is guaranteed to be a repeated term
+            if (chain_digitFactorial(start, shouldContinueFunction).size() == 60 + 1){
                 x++;
             }
         }

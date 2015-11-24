@@ -10,11 +10,12 @@
 #include <iostream>
 #include <string>
 
-#include "InfInt.h"
+#include <boost/multiprecision/cpp_int.hpp>
 
 #include "libProjectEuler.h"
 
 using namespace std;
+using namespace boost::multiprecision;
 
 
 
@@ -30,11 +31,11 @@ class problem_48 : public problemBase
     
     void subrun()
     {
-        InfInt selfPowerSum = 0;
+        cpp_int selfPowerSum = 0;
         
         for (uint x = 1; x <= 1000; x++){
             
-            InfInt nextSelfPower = x;
+            cpp_int nextSelfPower = x;
             
             for (uint pow = 1; pow < x; pow++){
                 nextSelfPower *= x;
@@ -43,8 +44,8 @@ class problem_48 : public problemBase
             selfPowerSum += nextSelfPower;
         }
         
-        string temp = selfPowerSum.toString();
-        calculatedAnswer << temp.substr(temp.length() - 10, temp.length() - 1);
+        string temp = selfPowerSum.str();
+        calculatedAnswer << temp.substr(temp.size() - 10, temp.size() - 1);
         
     }
     

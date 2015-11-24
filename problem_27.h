@@ -9,8 +9,6 @@
 
 #include <iostream>
 
-#include "InfInt.h"
-
 #include "libProjectEuler.h"
 
 using namespace std;

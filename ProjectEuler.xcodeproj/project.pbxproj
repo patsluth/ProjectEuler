@@ -37,6 +37,8 @@
 		2E6223E61C015D5A007C1F13 /* problem_48.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = problem_48.h; sourceTree = SOURCE_ROOT; };
 		2E6A18691C02A210002C49F2 /* problem_27.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_27.h; sourceTree = SOURCE_ROOT; };
 		2E6A186A1C02B371002C49F2 /* problem_76.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_76.h; sourceTree = SOURCE_ROOT; };
+		2E6E74A51C04AC6A008680DD /* problem_74.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_74.h; sourceTree = SOURCE_ROOT; };
+		2E6E74A61C04B4FE008680DD /* problem_95.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_95.h; sourceTree = SOURCE_ROOT; };
 		2E7AA94D1C010D15003B3655 /* problem_44.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = problem_44.h; sourceTree = SOURCE_ROOT; };
 		2E7F44721BFF861F00FCB85B /* libProjectEuler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = libProjectEuler.cpp; sourceTree = SOURCE_ROOT; };
 		2E7F44731BFF861F00FCB85B /* libProjectEuler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libProjectEuler.h; sourceTree = SOURCE_ROOT; };
@@ -67,9 +69,6 @@
 		2E7F44A51BFF863300FCB85B /* p018_triangle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p018_triangle.txt; sourceTree = SOURCE_ROOT; };
 		2E7F44A61BFF863300FCB85B /* p042_words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p042_words.txt; sourceTree = SOURCE_ROOT; };
 		2E7F44A71BFF863300FCB85B /* p067_triangle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p067_triangle.txt; sourceTree = SOURCE_ROOT; };
-		2E87839D1C017178002C80B0 /* InfInt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfInt.h; sourceTree = "<group>"; };
-		2E87839E1C017178002C80B0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		2E87839F1C017178002C80B0 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		2E8EADEE1C00E3AC004F7B84 /* problem_42.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = problem_42.h; sourceTree = SOURCE_ROOT; };
 		2EC7466F1C024B29003F8119 /* p099_base_exp.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = p099_base_exp.txt; sourceTree = SOURCE_ROOT; };
 		2EC746741C024B5A003F8119 /* problem_99.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_99.h; sourceTree = SOURCE_ROOT; };
@@ -89,24 +88,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2E6223EB1C016573007C1F13 /* libraries */ = {
-			isa = PBXGroup;
-			children = (
-				2E87839C1C017178002C80B0 /* sercantutar-infint */,
-			);
-			name = libraries;
-			sourceTree = "<group>";
-		};
-		2E87839C1C017178002C80B0 /* sercantutar-infint */ = {
-			isa = PBXGroup;
-			children = (
-				2E87839D1C017178002C80B0 /* InfInt.h */,
-				2E87839E1C017178002C80B0 /* main.cpp */,
-				2E87839F1C017178002C80B0 /* ReadMe.txt */,
-			);
-			path = "sercantutar-infint";
-			sourceTree = SOURCE_ROOT;
-		};
 		2EC7E15C1BFF47130068DA60 = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +107,6 @@
 		2EC7E1671BFF47130068DA60 /* ProjectEuler */ = {
 			isa = PBXGroup;
 			children = (
-				2E6223EB1C016573007C1F13 /* libraries */,
 				2EC7E1A31BFF478A0068DA60 /* src */,
 				2EC7E1A21BFF477F0068DA60 /* resources */,
 			);
@@ -179,9 +159,11 @@
 				2E7F448A1BFF861F00FCB85B /* problem_45.h */,
 				2E6223E61C015D5A007C1F13 /* problem_48.h */,
 				2E7F448B1BFF861F00FCB85B /* problem_67.h */,
+				2E6E74A51C04AC6A008680DD /* problem_74.h */,
 				2E6A186A1C02B371002C49F2 /* problem_76.h */,
 				2EF50E291C027DD600541A9F /* problem_80.h */,
 				2E19963C1C03692F00BF50C3 /* problem_92.h */,
+				2E6E74A61C04B4FE008680DD /* problem_95.h */,
 				2EC746741C024B5A003F8119 /* problem_99.h */,
 			);
 			name = src;

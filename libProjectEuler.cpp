@@ -329,7 +329,7 @@ uint64_t nForHexagonalNumber(int64_t Hn)
 
 
 
-numberChain calculateChain(uint64_t start, function<bool (const numberChain *)> shouldContinue)
+numberChain chain_digitSquaredSum(uint64_t start, chain_ShouldContinueFunction shouldContinue)
 {
     numberChain chain = {start};
     
@@ -359,7 +359,38 @@ numberChain calculateChain(uint64_t start, function<bool (const numberChain *)> 
         }
         
     }
+}
+
+numberChain chain_digitFactorial(uint64_t start, chain_ShouldContinueFunction shouldContinue)
+{
+    numberChain chain = {start};
     
+    while (true){
+        
+        uint64_t end = chain.back();
+        uint64_t nextEnd = 0;
+        
+        while (end != 0){
+            
+            nextEnd += factorial(end % 10);
+            end /= 10;
+            
+        }
+        
+        for (uint64_t i : chain){
+            if (i == nextEnd){
+                chain.push_back(nextEnd);
+                return chain;
+            }
+        }
+        
+        chain.push_back(nextEnd);
+        
+        if (shouldContinue && shouldContinue(&chain) == false){
+            return chain;
+        }
+        
+    }
 }
 
 
