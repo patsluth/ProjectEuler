@@ -329,68 +329,38 @@ uint64_t nForHexagonalNumber(int64_t Hn)
 
 
 
-numberChain chain_digitSquaredSum(uint64_t start, chain_ShouldContinueFunction shouldContinue)
+/**
+ *  Calculate the proper divisors of a number (all divisors exluding the number itself)
+ *
+ *  @param i
+ *
+ *  @return vector containing proper divisors
+ */
+properDivisors calculateProperDivisors(uint64_t i)
 {
-    numberChain chain = {start};
+    vector<uint64_t> properDivisors = {1};
     
-    while (true){
-        
-        uint64_t end = chain.back();
-        uint64_t nextEnd = 0;
-        
-        while (end != 0){
-            
-            nextEnd += ( (end % 10) * (end % 10) ); //sum of current digit squared
-            end /= 10;
-            
-        }
-        
-        for (uint64_t i : chain){
-            if (i == nextEnd){
-                chain.push_back(nextEnd);
-                return chain;
+    for (uint64_t x = 2; x <= sqrt(i); x++){
+        if ( (i / x) * x == i ){
+            properDivisors.push_back(x);
+            if ( (i / x) != x){ //dont add same multiple twice
+                properDivisors.push_back(i / x);
             }
         }
-        
-        chain.push_back(nextEnd);
-        
-        if (shouldContinue && shouldContinue(&chain) == false){
-            return chain;
-        }
-        
     }
+    
+    return properDivisors;
 }
 
-numberChain chain_digitFactorial(uint64_t start, chain_ShouldContinueFunction shouldContinue)
+uint64_t sumOfProperDivisors(properDivisors properDivisors)
 {
-    numberChain chain = {start};
+    uint64_t sum = 0;
     
-    while (true){
-        
-        uint64_t end = chain.back();
-        uint64_t nextEnd = 0;
-        
-        while (end != 0){
-            
-            nextEnd += factorial(end % 10);
-            end /= 10;
-            
-        }
-        
-        for (uint64_t i : chain){
-            if (i == nextEnd){
-                chain.push_back(nextEnd);
-                return chain;
-            }
-        }
-        
-        chain.push_back(nextEnd);
-        
-        if (shouldContinue && shouldContinue(&chain) == false){
-            return chain;
-        }
-        
+    for (uint64_t i : properDivisors){
+        sum += i;
     }
+    
+    return sum;
 }
 
 

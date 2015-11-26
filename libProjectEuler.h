@@ -13,68 +13,9 @@
 
 
 
-#include <iostream>
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdint.h>
 #include <vector>
-#include <string>
-#include <sstream>
-#include <cxxabi.h>
-#include <time.h>
 
 using namespace std;
-
-
-
-
-
-class problemBase
-{
-    
-protected:
-    
-    stringstream calculatedAnswer;
-    
-    virtual string desiredAnswer(){ return ""; };
-    virtual void subrun(){};
-    virtual void tdd(){};
-    
-public:
-    
-    problemBase()
-    {
-    }
-    
-    void run()
-    {
-        tdd();
-        
-        clock_t timer = clock();
-        
-        subrun();
-        
-        timer = clock() - timer;
-        float timerSeconds = (float)timer/CLOCKS_PER_SEC;
-        
-        //class name
-        cout << abi::__cxa_demangle(typeid(*this).name(), 0, 0, 0);
-        cout << " ==> ";
-        
-        if (correct()){
-            printf("[%s]        (%f seconds)\n", calculatedAnswer.str().c_str(), timerSeconds);
-        } else {
-            printf(" [Calculated != Desired] [%s != %s]        (%f seconds)\n", calculatedAnswer.str().c_str(), desiredAnswer().c_str(), timerSeconds);
-        }
-        
-    };
-    
-    bool correct()
-    {
-        return (calculatedAnswer.str() == desiredAnswer());
-    };
-    
-};
 
 
 
@@ -98,11 +39,7 @@ struct factor
 
 inline int64_t factorial(int64_t x)
 {
-    if (x == 0){
-        x = 1;
-    }
-    
-    if (x == 1){
+    if (x == 0 || x == 1){
         return 1;
     } else {
         return x * factorial(x - 1);
@@ -230,31 +167,18 @@ uint64_t nForHexagonalNumber(int64_t Hn);
 
 
 
-
-typedef vector<uint64_t> numberChain;
-typedef function<bool (const numberChain *)> chain_ShouldContinueFunction;
-
+typedef vector<uint64_t> properDivisors;
 /**
- *  Calculate number chain (where next number is the sum of each digits squared of the current number)
- *  shouldContinue called with each new calculated value. Returning false will stop the calulation at that point
+ *  Calculate the proper divisors of a number (all divisors exluding the number itself)
  *
- *  @param start
- *  @param uint64_t& shouldContinue function
+ *  @param i
  *
- *  @return numberChain
+ *  @return vector containing proper divisors
  */
-numberChain chain_digitSquaredSum(uint64_t start, chain_ShouldContinueFunction shouldContinue);
+properDivisors calculateProperDivisors(uint64_t i);
+uint64_t sumOfProperDivisors(properDivisors properDivisors);
 
-/**
- *  Calculate number chain (where next number is the sum of the factorial of each digit of the current number)
- *  shouldContinue called with each new calculated value. Returning false will stop the calulation at that point
- *
- *  @param start
- *  @param shouldContinue function
- *
- *  @return numberChain
- */
-numberChain chain_digitFactorial(uint64_t start, chain_ShouldContinueFunction shouldContinue);
+
 
 
 

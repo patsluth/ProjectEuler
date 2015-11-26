@@ -12,6 +12,7 @@
 
 #include <boost/multiprecision/cpp_int.hpp>
 
+#include "problem_base.h"
 #include "libProjectEuler.h"
 
 using namespace std;
@@ -21,7 +22,7 @@ using namespace boost::multiprecision;
 
 
 
-class problem_48 : public problemBase
+class problem_48 : public problem_base
 {
     
     string desiredAnswer()

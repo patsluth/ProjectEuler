@@ -96,10 +96,18 @@
 
 int main(int, char**)
 {
+    cout << "Project Euler - Pat Sluth" << endl << "Starting..." << endl << endl;
+    
+    problem_95().run();
     problem_92().run();
     problem_74().run();
-    problem_95().run();
-    return EXIT_SUCCESS;
+    
+    
+    
+    
+    
+    
+    
     
     problem_1().run();
     problem_2().run();

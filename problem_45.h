@@ -10,6 +10,7 @@
 #include <iostream>
 #include <assert.h>
 
+#include "problem_base.h"
 #include "libProjectEuler.h"
 
 using namespace std;
@@ -18,7 +19,7 @@ using namespace std;
 
 
 
-class problem_45 : public problemBase
+class problem_45 : public problem_base
 {
     
     string desiredAnswer()

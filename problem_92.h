@@ -8,9 +8,11 @@
 //
 
 #include <iostream>
-#include <math.h>
 
+#include "problem_base.h"
 #include "libProjectEuler.h"
+
+#import "numberChain.h"
 
 using namespace std;
 
@@ -18,7 +20,7 @@ using namespace std;
 
 
 
-class problem_92 : public problemBase
+class problem_92 : public problem_base
 {
     
     string desiredAnswer()
@@ -30,7 +32,7 @@ class problem_92 : public problemBase
     {
         uint64_t x = 0;
         
-        chain_ShouldContinueFunction shouldContinueFunction = [] (const numberChain *currentChain){
+        numberChain_continueCalculatingFunction continueCalculating = [] (const numberChain *currentChain){
             if (currentChain->back() == 89){ // stop calculating chain at 89
                 return false;
             } else {
@@ -39,13 +41,12 @@ class problem_92 : public problemBase
         };
         
         for (uint64_t start = 0; start < 10000000; start++){
-            if (chain_digitSquaredSum(start, shouldContinueFunction).back() == 89){
+            if (numberChain_calculate(start, sumOfSquaresOfDigits(), continueCalculating).back() == 89){
                 x++;
             }
         }
         
         calculatedAnswer << x;
-        
     }
     
 };

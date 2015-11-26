@@ -10,6 +10,7 @@
 #include <iostream>
 #include <vector>
 #include <stdlib.h>
+#include "problem_base.h"
 #include "libProjectEuler.h"
 
 
@@ -22,7 +23,7 @@ using namespace std;
 
 
 
-class problem_3 : public problemBase
+class problem_3 : public problem_base
 {
     
     string desiredAnswer()

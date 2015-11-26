@@ -5,11 +5,11 @@
 //
 //  Created by Pat Sluth on 2015-09-09.
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
-//  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
 #include <iostream>
 
+#include "problem_base.h"
 #include "libProjectEuler.h"
 
 
@@ -17,7 +17,7 @@
 
 
 //TODO: move fib to lib
-class problem_2 : public problemBase
+class problem_2 : public problem_base
 {
     
     string desiredAnswer()
