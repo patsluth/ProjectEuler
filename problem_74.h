@@ -20,6 +20,29 @@ using namespace std;
 
 
 
+numberChain_nextNumberFunction sumOfFactoriailOfDigits()
+{
+    return [] (const uint64_t *currentEndOfChain){
+        
+        uint64_t nextEndOfChain = 0;
+        uint64_t currentEndOfChain_Copy = *currentEndOfChain;
+        
+        while (currentEndOfChain_Copy != 0){
+            
+            nextEndOfChain += factorial(currentEndOfChain_Copy % 10);
+            currentEndOfChain_Copy /= 10;
+            
+        }
+        
+        return nextEndOfChain;
+        
+    };
+}
+
+
+
+
+
 class problem_74 : public problem_base
 {
     

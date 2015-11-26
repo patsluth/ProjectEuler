@@ -21,6 +21,7 @@ using namespace std;
 
 
 
+//See problem 74, 92, 95 for examples
 typedef vector<uint64_t> numberChain;
 
 /**
@@ -40,58 +41,6 @@ typedef function<uint64_t (const uint64_t *)> numberChain_nextNumberFunction;
  *  @return numberChain_ContinueCalculatingFunction
  */
 typedef function<bool (const numberChain *)> numberChain_continueCalculatingFunction;
-
-
-
-
-
-inline numberChain_nextNumberFunction sumOfSquaresOfDigits()
-{
-    return [] (const uint64_t *currentEndOfChain){
-        
-        uint64_t nextEndOfChain = 0;
-        uint64_t currentEndOfChain_Copy = *currentEndOfChain;
-        
-        while (currentEndOfChain_Copy != 0){
-            
-            nextEndOfChain += ( (currentEndOfChain_Copy % 10) * (currentEndOfChain_Copy % 10) ); //sum of current digit squared
-            currentEndOfChain_Copy /= 10;
-            
-        }
-        
-        return nextEndOfChain;
-        
-    };
-}
-
-inline numberChain_nextNumberFunction sumOfFactoriailOfDigits()
-{
-    return [] (const uint64_t *currentEndOfChain){
-        
-        uint64_t nextEndOfChain = 0;
-        uint64_t currentEndOfChain_Copy = *currentEndOfChain;
-        
-        while (currentEndOfChain_Copy != 0){
-            
-            nextEndOfChain += factorial(currentEndOfChain_Copy % 10);
-            currentEndOfChain_Copy /= 10;
-            
-        }
-        
-        return nextEndOfChain;
-        
-    };
-}
-
-inline numberChain_nextNumberFunction sumOfProperDivisors()
-{
-    return [] (const uint64_t *currentEndOfChain){
-        
-        uint64_t currentEndOfChain_Copy = *currentEndOfChain;
-        return sumOfProperDivisors(calculateProperDivisors(currentEndOfChain_Copy));
-        
-    };
-}
 
 
 

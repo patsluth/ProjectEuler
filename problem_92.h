@@ -20,6 +20,29 @@ using namespace std;
 
 
 
+numberChain_nextNumberFunction sumOfSquaresOfDigits()
+{
+    return [] (const uint64_t *currentEndOfChain){
+        
+        uint64_t nextEndOfChain = 0;
+        uint64_t currentEndOfChain_Copy = *currentEndOfChain;
+        
+        while (currentEndOfChain_Copy != 0){
+            
+            nextEndOfChain += ( (currentEndOfChain_Copy % 10) * (currentEndOfChain_Copy % 10) ); //sum of current digit squared
+            currentEndOfChain_Copy /= 10;
+            
+        }
+        
+        return nextEndOfChain;
+        
+    };
+}
+
+
+
+
+
 class problem_92 : public problem_base
 {
     

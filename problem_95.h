@@ -21,8 +21,23 @@ using namespace std;
 
 
 
+numberChain_nextNumberFunction sumOfProperDivisors()
+{
+    return [] (const uint64_t *currentEndOfChain){
+        
+        uint64_t currentEndOfChain_Copy = *currentEndOfChain;
+        return sumOfProperDivisors(calculateProperDivisors(currentEndOfChain_Copy));
+        
+    };
+}
+
+
+
+
+
 class problem_95 : public problem_base
 {
+    
     
     string desiredAnswer()
     {
@@ -62,44 +77,6 @@ class problem_95 : public problem_base
         }
         
         calculatedAnswer << longest.back();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-//        vector<uint64_t> ttt = properDivisors(12496);
-//        
-//        uint64_t xxx = 0;
-//        for (uint64_t x : ttt){
-//            xxx += x;
-//        }
-//        
-//        cout << xxx << endl;
-//        uint64_t x = 0;
-//        
-//        chain_ShouldContinueFunction shouldContinueFunction = [] (const numberChain *currentChain){
-//            if (currentChain->size() > 60){ // stop calculating chain with 60 items
-//                return false;
-//            } else {
-//                return true;
-//            }
-//        };
-//        
-//        for (uint64_t start = 0; start < 1000000; start++){
-//            //+1 because the last term is guaranteed to be a repeated term
-//            if (chain_digitFactorial(start, shouldContinueFunction).size() == 60 + 1){
-//                x++;
-//            }
-//        }
-//        
-//        calculatedAnswer << x;
         
     }
     
