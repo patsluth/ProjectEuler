@@ -32,53 +32,53 @@ class problem_45 : public problem_base
         uint64_t n = 286;
         
         //number is triangle, pentagonal, and hexagonal
-        while (nForPentagonalNumber(triangleNumberForN(n)) == 0 || nForHexagonalNumber(triangleNumberForN(n)) == 0) {
+        while (nForPentagonal(triangleForN(n)) == 0 || nForHexagonal(triangleForN(n)) == 0) {
             n++;
         }
         
-        calculatedAnswer << triangleNumberForN(n);
+        calculatedAnswer << triangleForN(n);
         
     }
     
     void tdd()
     {
-        assert(triangleNumberForN(1) == 1);
-        assert(triangleNumberForN(2) == 3);
-        assert(triangleNumberForN(3) == 6);
-        assert(triangleNumberForN(4) == 10);
-        assert(triangleNumberForN(5) == 15);
+        assert(triangleForN(1) == 1);
+        assert(triangleForN(2) == 3);
+        assert(triangleForN(3) == 6);
+        assert(triangleForN(4) == 10);
+        assert(triangleForN(5) == 15);
         //
-        assert(nForTriangleNumber(1) == 1);
-        assert(nForTriangleNumber(3) == 2);
-        assert(nForTriangleNumber(6) == 3);
-        assert(nForTriangleNumber(10) == 4);
-        assert(nForTriangleNumber(15) == 5);
+        assert(nForTriangle(1) == 1);
+        assert(nForTriangle(3) == 2);
+        assert(nForTriangle(6) == 3);
+        assert(nForTriangle(10) == 4);
+        assert(nForTriangle(15) == 5);
         
         
-        assert(pentagonalNumberForN(1) == 1);
-        assert(pentagonalNumberForN(2) == 5);
-        assert(pentagonalNumberForN(3) == 12);
-        assert(pentagonalNumberForN(4) == 22);
-        assert(pentagonalNumberForN(5) == 35);
+        assert(pentagonalForN(1) == 1);
+        assert(pentagonalForN(2) == 5);
+        assert(pentagonalForN(3) == 12);
+        assert(pentagonalForN(4) == 22);
+        assert(pentagonalForN(5) == 35);
         //
-        assert(nForPentagonalNumber(1) == 1);
-        assert(nForPentagonalNumber(5) == 2);
-        assert(nForPentagonalNumber(12) == 3);
-        assert(nForPentagonalNumber(22) == 4);
-        assert(nForPentagonalNumber(35) == 5);
+        assert(nForPentagonal(1) == 1);
+        assert(nForPentagonal(5) == 2);
+        assert(nForPentagonal(12) == 3);
+        assert(nForPentagonal(22) == 4);
+        assert(nForPentagonal(35) == 5);
         
         
-        assert(hexagonalNumberForN(1) == 1);
-        assert(hexagonalNumberForN(2) == 6);
-        assert(hexagonalNumberForN(3) == 15);
-        assert(hexagonalNumberForN(4) == 28);
-        assert(hexagonalNumberForN(5) == 45);
+        assert(hexagonalForN(1) == 1);
+        assert(hexagonalForN(2) == 6);
+        assert(hexagonalForN(3) == 15);
+        assert(hexagonalForN(4) == 28);
+        assert(hexagonalForN(5) == 45);
         //
-        assert(nForHexagonalNumber(1) == 1);
-        assert(nForHexagonalNumber(6) == 2);
-        assert(nForHexagonalNumber(15) == 3);
-        assert(nForHexagonalNumber(28) == 4);
-        assert(nForHexagonalNumber(45) == 5);
+        assert(nForHexagonal(1) == 1);
+        assert(nForHexagonal(6) == 2);
+        assert(nForHexagonal(15) == 3);
+        assert(nForHexagonal(28) == 4);
+        assert(nForHexagonal(45) == 5);
     }
     
 };

@@ -68,7 +68,7 @@
 //#include "problem_58.h"
 //#include "problem_59.h"
 //#include "problem_60.h"
-//#include "problem_61.h"
+#include "problem_61.h"
 //#include "problem_62.h"
 //#include "problem_63.h"
 //#include "problem_64.h"
@@ -83,6 +83,7 @@
 #include "problem_76.h"
 #include "problem_80.h"
 
+#include "problem_87.h"
 
 
 #include "problem_92.h"
@@ -98,6 +99,8 @@ int main(int, char**)
 {
     cout << "Project Euler - Pat Sluth" << endl << "Starting..." << endl << endl;
     
+    problem_61().run();
+    problem_95().run();
     problem_52().run();
     
     
@@ -167,7 +170,7 @@ int main(int, char**)
 //    problem_58().run();
 //    problem_59().run();
 //    problem_60().run();
-//    problem_61().run();
+    problem_61().run();
 //    problem_62().run();
 //    problem_63().run();
 //    problem_64().run();
@@ -180,6 +183,7 @@ int main(int, char**)
     problem_74().run();
     
     problem_80().run();
+    problem_87().run();
     
     problem_92().run();
     problem_95().run();

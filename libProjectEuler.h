@@ -157,12 +157,24 @@ double quadraticSolveSolveDescriminant(quadratic q);
  */
 quadraticRoots quadraticSolveRoots(quadratic q);
 
-int64_t triangleNumberForN(uint64_t n);
-uint64_t nForTriangleNumber(int64_t Tn);
-uint64_t pentagonalNumberForN(uint64_t n);
-uint64_t nForPentagonalNumber(int64_t Pn);
-uint64_t hexagonalNumberForN(uint64_t n);
-uint64_t nForHexagonalNumber(int64_t Hn);
+
+
+
+//3
+int64_t triangleForN(uint64_t n);
+uint64_t nForTriangle(int64_t Tn);
+//5
+uint64_t pentagonalForN(uint64_t n);
+uint64_t nForPentagonal(int64_t Pn);
+//6
+uint64_t hexagonalForN(uint64_t n);
+uint64_t nForHexagonal(int64_t Hn);
+//7
+uint64_t heptagonalForN(uint64_t n);
+uint64_t nForHeptagonal(int64_t Hn);
+//8
+uint64_t octagonalForN(uint64_t n);
+uint64_t nForOctagonal(int64_t On);
 
 
 

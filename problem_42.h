@@ -44,7 +44,7 @@ class problem_42 : public problem_base
             
             while (getline(fileStream, word, ',')) {
                 
-                if (nForTriangleNumber(wordToNumber(word)) != 0){ //word number is a triangle word
+                if (nForTriangle(wordToNumber(word)) != 0){ //word number is a triangle word
                     triangleWordCount++;
                 }
                 

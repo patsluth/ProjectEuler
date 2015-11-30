@@ -8,6 +8,7 @@
 
 #include "libProjectEuler.h"
 
+#include <assert.h>
 #include <iostream>
 #include <string.h>
 #include <sstream>
@@ -263,14 +264,18 @@ quadraticRoots quadraticSolveRoots(quadratic q)
     return {numeratorAdd / denomenator, numeratorSubtract / denomenator};
 }
 
-int64_t triangleNumberForN(uint64_t n)
+
+
+
+
+int64_t triangleForN(uint64_t n)
 {
     uint64_t Tn = n * (n + 1);
     Tn /= 2;
     return Tn;
 }
 
-uint64_t nForTriangleNumber(int64_t Tn)
+uint64_t nForTriangle(int64_t Tn)
 {
     quadratic q = {1, 1, (-2 * Tn)};
     quadraticRoots roots = quadraticSolveRoots(q);
@@ -284,14 +289,14 @@ uint64_t nForTriangleNumber(int64_t Tn)
     return 0;
 }
 
-uint64_t pentagonalNumberForN(uint64_t n)
+uint64_t pentagonalForN(uint64_t n)
 {
     uint64_t Pn = n * ( (3 * n) - 1 );
     Pn /= 2;
     return Pn;
 }
 
-uint64_t nForPentagonalNumber(int64_t Pn)
+uint64_t nForPentagonal(int64_t Pn)
 {
     quadratic q = {3, -1, (-2 * Pn)};
     quadraticRoots roots = quadraticSolveRoots(q);
@@ -305,13 +310,13 @@ uint64_t nForPentagonalNumber(int64_t Pn)
     return 0;
 }
 
-uint64_t hexagonalNumberForN(uint64_t n)
+uint64_t hexagonalForN(uint64_t n)
 {
     uint64_t Hn = n * ( (2 * n) - 1 );
     return Hn;
 }
 
-uint64_t nForHexagonalNumber(int64_t Hn)
+uint64_t nForHexagonal(int64_t Hn)
 {
     quadratic q = {2, -1, (-1 * Hn)};
     quadraticRoots roots = quadraticSolveRoots(q);
@@ -323,6 +328,29 @@ uint64_t nForHexagonalNumber(int64_t Hn)
     }
     
     return 0;
+}
+
+uint64_t heptagonalForN(uint64_t n)
+{
+    uint64_t Hn = n * ( (5 * n) - 3 );
+    Hn /= 2;
+    return Hn;
+}
+
+uint64_t nForHeptagonal(int64_t Hn)
+{
+    assert(false);
+}
+
+uint64_t octagonalForN(uint64_t n)
+{
+    uint64_t On = n * ( (3 * n) - 2 );
+    return On;
+}
+
+uint64_t nForOctagonal(int64_t On)
+{
+    assert(false);
 }
 
 
