@@ -8,6 +8,8 @@
 
 #include <iostream>
 
+#ifdef RUN_ALL
+
 #include "problem_1.h"
 #include "problem_2.h"
 #include "problem_3.h"
@@ -82,14 +84,23 @@
 #include "problem_74.h"
 #include "problem_76.h"
 #include "problem_80.h"
+#include "problem_81.h"
 
-#include "problem_87.h"
+//#include "problem_87.h"
+//
+//
+//#include "problem_92.h"
+//
+//#include "problem_95.h"
+//#include "problem_99.h"
+
+#else
+
+#include "problem_81.h"
+
+#endif
 
 
-#include "problem_92.h"
-
-#include "problem_95.h"
-#include "problem_99.h"
 
 
 
@@ -99,14 +110,9 @@ int main(int, char**)
 {
     cout << "Project Euler - Pat Sluth" << endl << "Starting..." << endl << endl;
     
-    problem_61().run();
-    problem_95().run();
-    problem_52().run();
+    problem_81().run();
     
-    
-    
-    
-    
+    #ifdef BUILD_ALL
     
     
     
@@ -189,6 +195,8 @@ int main(int, char**)
     problem_95().run();
     
     problem_99().run();
+    
+#endif
 
     return EXIT_SUCCESS;
 }
