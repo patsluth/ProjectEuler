@@ -33,7 +33,7 @@ class problem_8 : public problem_base
         uint64_t greatestProduct = 1;
         uint64_t digits = 13;
         
-        for (uint x = 0; (x + digits - 1) < data.length(); x++){
+        for (uint x = 0; (x + digits - 1) < data.length(); x++) {
             
             uint64_t currentProduct = 1;
             
@@ -41,7 +41,7 @@ class problem_8 : public problem_base
                 currentProduct *= data[x + y] - 48; //ASCII integers start at 48
             }
             
-            if (currentProduct > greatestProduct){ //check new product
+            if (currentProduct > greatestProduct) { //check new product
                 greatestProduct = currentProduct;
             }
             

@@ -37,15 +37,15 @@ class problem_3 : public problem_base
         
         vector<uint64_t> primeFactors;
         
-        while (true){
+        while (true) {
             
             factor f = factorInteger(number);
             number = f.y;
             
-            if (f.x != 0 && f.y != 0){ //we can keep on factoring
+            if (f.x != 0 && f.y != 0) { //we can keep on factoring
                 
                 //pop the last added prime factor because it is still factorable
-                if (!primeFactors.empty()){
+                if (!primeFactors.empty()) {
                     primeFactors.pop_back();
                 }
                 
@@ -61,7 +61,7 @@ class problem_3 : public problem_base
             
         }
         
-        if (!primeFactors.empty()){
+        if (!primeFactors.empty()) {
             calculatedAnswer << primeFactors.back();
         }
     }

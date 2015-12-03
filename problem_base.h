@@ -34,9 +34,9 @@ protected:
     
     stringstream calculatedAnswer;
     
-    virtual string desiredAnswer(){ return ""; };
-    virtual void subrun(){};
-    virtual void tdd(){};
+    virtual string desiredAnswer() { return ""; };
+    virtual void subrun() {};
+    virtual void tdd() {};
     
 public:
     
@@ -61,7 +61,7 @@ public:
         cout.setf(ios::fixed);
         cout << " (" << showpoint << timerSeconds << " seconds) ==> ";
         
-        if (correct()){
+        if (correct()) {
             printf("  [C] [%s]\n", calculatedAnswer.str().c_str());
         } else {
             printf("  [X] [%s != %s]\n", calculatedAnswer.str().c_str(), desiredAnswer().c_str());

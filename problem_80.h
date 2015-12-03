@@ -36,11 +36,11 @@ class problem_80 : public problem_base
     {
 //        factor f = {1, 483};
 //        
-//        while (true){
+//        while (true) {
 //            f = factorInteger(f.y);
 //            cout << f.x << ' ' << f.y << endl;
 //            
-//            if (f.x == 0 || f.y == 0){
+//            if (f.x == 0 || f.y == 0) {
 //                break;
 //            }
 //        }
@@ -51,7 +51,7 @@ class problem_80 : public problem_base
 //        
 //        uint64_t x = 0;
 //        
-//        while (x < 100){
+//        while (x < 100) {
 //            
 //        }
 //        
@@ -59,7 +59,7 @@ class problem_80 : public problem_base
         
         
         
-//        for (uint x = 1; x <= 100; x++){ //1st 100 natural numbers
+//        for (uint x = 1; x <= 100; x++) { //1st 100 natural numbers
 //        }
         
         cout << endl << endl;

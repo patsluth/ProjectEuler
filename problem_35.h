@@ -30,18 +30,18 @@ class problem_35 : public problem_base
     {
         uint64_t primeCount = 0;
         
-        for (uint64_t x = 1; x < 1000000; x++){
+        for (uint64_t x = 1; x < 1000000; x++) {
             
             vector<uint64_t> circularValueVariations = circularVariations(x);
             bool allCircularVariationsPrime = true;
             
-            for (uint64_t cur : circularValueVariations){
-                if (allCircularVariationsPrime == true){
+            for (uint64_t cur : circularValueVariations) {
+                if (allCircularVariationsPrime == true) {
                     allCircularVariationsPrime = isPrimeFast(cur);
                 }
             }
             
-            if (allCircularVariationsPrime){
+            if (allCircularVariationsPrime) {
                 primeCount++;
             }
             

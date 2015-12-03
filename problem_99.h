@@ -44,7 +44,7 @@ class problem_99 : public problem_base
         float be2_changeOfBaseExponent = log(be1.front()) / log(be2.front());
         be2_changeOfBaseExponent *= be1.back();
         
-        if (be2.back() > be2_changeOfBaseExponent){ //if be2's original exponent is larger than the change of base, then be2 is larger
+        if (be2.back() > be2_changeOfBaseExponent) { //if be2's original exponent is larger than the change of base, then be2 is larger
             return be2;
         } else {
             return be1;
@@ -57,7 +57,7 @@ class problem_99 : public problem_base
         ifstream fileStream(file);
         
         
-        if (fileStream){
+        if (fileStream) {
             
             vector<baseExponent> exponents;
             
@@ -77,7 +77,7 @@ class problem_99 : public problem_base
                 
             }
             
-            while (exponents.size() > 1){
+            while (exponents.size() > 1) {
                 
                 baseExponent be1 = exponents.back();
                 exponents.pop_back();

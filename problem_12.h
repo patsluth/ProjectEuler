@@ -31,12 +31,12 @@ class problem_12 : public problem_base
         uint64_t triangleNumber = 1;
         uint64_t triangleValue = 1;
         
-        while (true){
+        while (true) {
             
             triangleNumber++;
             triangleValue += triangleNumber;
             
-            if (numberOfDivisors(triangleValue) > 500){
+            if (numberOfDivisors(triangleValue) > 500) {
                 calculatedAnswer << triangleValue;
                 return;
             }

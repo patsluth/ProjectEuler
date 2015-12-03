@@ -136,11 +136,11 @@ class problem_13 : public problem_base
         string result = numbers[0];
         bool carryover = false;
         
-        for (uint index = 1; index < 100; index++){
+        for (uint index = 1; index < 100; index++) {
             
             string number = numbers[index];
             
-            for (uint digit = 0; digit < result.length(); digit++){
+            for (uint digit = 0; digit < result.length(); digit++) {
                 
                 int resultDigitIndex = (int)(result.length() - 1 - digit);
                 int numberDigitIndex = (int)(number.length() - 1 - digit);
@@ -148,27 +148,27 @@ class problem_13 : public problem_base
                 uint64_t resultDigit = result[resultDigitIndex] - 48; //ASCII integers start at 48
                 uint64_t numberDigit = 0;
                 
-                if (numberDigitIndex >= 0){
+                if (numberDigitIndex >= 0) {
                     numberDigit = number[numberDigitIndex] - 48; //ASCII integers start at 48
                 }
                 
                 uint64_t sum = resultDigit + numberDigit;
                 
-                if (carryover == true){
+                if (carryover == true) {
                     sum++;
                     carryover = false;
                 }
                 
-                if (sum >= 10){
+                if (sum >= 10) {
                     carryover = true;
                     sum -= 10;
                 }
                 
                 result[resultDigitIndex] = sum + 48; //ASCII integers start at 48
                 
-                if (carryover && numberDigitIndex <= 0){ //last digit of new number
+                if (carryover && numberDigitIndex <= 0) { //last digit of new number
                     
-                    if (resultDigitIndex == 0){ //insert new digit
+                    if (resultDigitIndex == 0) { //insert new digit
                         result.insert(result.begin(), 1 + 48); //ASCII integers start at 48
                         carryover = false;
                     }

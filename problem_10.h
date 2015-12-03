@@ -32,9 +32,9 @@ class problem_10 : public problem_base
         uint64_t number = 2;
         uint64_t sum = 0;
         
-        while (number < primeLimit){
+        while (number < primeLimit) {
             
-            if (isPrimeFast(number)){
+            if (isPrimeFast(number)) {
                 sum += number;
             }
             

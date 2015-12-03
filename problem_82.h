@@ -1,6 +1,6 @@
 //
 //  problem_81.h
-//  Path sum: two ways
+//  Path sum: three ways
 //  ProjectEuler
 //
 //  Created by Pat Sluth on 2015-11-02.
@@ -21,17 +21,17 @@ using namespace std;
 
 
 
-class problem_81 : public problem_base
+class problem_82 : public problem_base
 {
     
     string desiredAnswer()
     {
-        return "427337";
+        return "260324";
     }
     
     void subrun()
     {
-        string file = "p081_matrix.txt";
+        string file = "p082_matrix.txt";
         ifstream fileStream(file);
         
         
@@ -56,16 +56,7 @@ class problem_81 : public problem_base
             }
             
             
-            for (int64_t x = matrix.size() - 2; x >= 0; x--) {
-                matrix[matrix.size() - 1][x] += matrix[matrix.size() - 1][x + 1];
-                matrix[x][matrix.size() - 1] += matrix[x + 1][matrix.size() - 1];
-            }
-            
-            for (int64_t x = matrix.size() - 2; x >= 0; x--) {
-                for (int64_t y = matrix.size() - 2; y >= 0; y--) {
-                    matrix[x][y] += min(matrix[x + 1][y], matrix[x][y + 1]);
-                }
-            }
+            //solution
             
             
             calculatedAnswer << matrix[0][0];
@@ -93,18 +84,7 @@ class problem_81 : public problem_base
             {805, 732, 524, 37, 331}
         };
         
-        for (int64_t x = matrix.size() - 2; x >= 0; x--) {
-            matrix[matrix.size() - 1][x] += matrix[matrix.size() - 1][x + 1];
-            matrix[x][matrix.size() - 1] += matrix[x + 1][matrix.size() - 1];
-        }
-        
-        for (int64_t x = matrix.size() - 2; x >= 0; x--) {
-            for (int64_t y = matrix.size() - 2; y >= 0; y--) {
-                matrix[x][y] += min(matrix[x + 1][y], matrix[x][y + 1]);
-            }
-        }
-        
-        assert(matrix[0][0] == 2427);
+        assert(matrix[0][0] == 994);
         
     }
     

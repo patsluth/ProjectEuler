@@ -30,7 +30,7 @@ class problem_76 : public problem_base
     {
         vector<uint64_t> result;
         
-        while (i > 2){
+        while (i > 2) {
             
             result.push_back( test(i - 1) );
             result.push_back( 1 );
@@ -43,9 +43,9 @@ class problem_76 : public problem_base
         return result.size();
        
         
-//        if (i == 2){
+//        if (i == 2) {
 //            x = 1;
-//        } else if (i == 3){
+//        } else if (i == 3) {
 //            x = 2;
 //        }
         

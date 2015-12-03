@@ -35,7 +35,7 @@ class problem_2 : public problem_base
         while (currentFib <= 4000000) {
             
             //process current fib
-            if (currentFib % 2 == 0){ //even
+            if (currentFib % 2 == 0) { //even
                 sum += currentFib;
             }
             

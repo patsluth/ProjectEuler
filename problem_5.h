@@ -38,22 +38,22 @@ class problem_5 : public problem_base
     {
         uint64_t m = b;
         
-        if (a == 0 || b == 0 || a > b){ //invalid
+        if (a == 0 || b == 0 || a > b) { //invalid
             return 0;
         }
         
-        while (true){
+        while (true) {
             
             bool success = true;
             
-            for (uint64_t x = a; x <= b; x++){
-                if (m % x != 0){
+            for (uint64_t x = a; x <= b; x++) {
+                if (m % x != 0) {
                     success = false;
                     break;
                 }
             }
             
-            if (success){
+            if (success) {
                 return m;
             }
             

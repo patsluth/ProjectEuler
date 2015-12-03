@@ -23,7 +23,7 @@ using namespace std;
 
 numberChain_nextNumberFunction sumOfProperDivisors()
 {
-    return [] (const uint64_t *currentEndOfChain){
+    return [] (const uint64_t *currentEndOfChain) {
         
         uint64_t currentEndOfChain_Copy = *currentEndOfChain;
         return sumOfProperDivisors(calculateProperDivisors(currentEndOfChain_Copy));
@@ -48,9 +48,9 @@ class problem_95 : public problem_base
     
     void subrun()
     {
-        numberChain_continueCalculatingFunction continueCalculating = [] (const numberChain *currentChain){
+        numberChain_continueCalculatingFunction continueCalculating = [] (const numberChain *currentChain) {
             
-            if (currentChain->back() == currentChain->front() || currentChain->back() > 1000000){
+            if (currentChain->back() == currentChain->front() || currentChain->back() > 1000000) {
                 return false;
             } else {
                 return true;
@@ -61,14 +61,14 @@ class problem_95 : public problem_base
         
         numberChain longest;
         
-        for (uint64_t start = 0; start < 1000000; start++){
+        for (uint64_t start = 0; start < 1000000; start++) {
             
             numberChain cur = numberChain_calculate(start, sumOfProperDivisors(), continueCalculating);
             
             //constraints
             if (cur.back() < 1000000 &&
                 cur.back() == cur.front() &&
-                cur.size() > longest.size()){
+                cur.size() > longest.size()) {
                 
                 longest = cur;
                 

@@ -54,52 +54,52 @@ class problem_11 : public problem_base
         uint64_t greatestProduct = 1;
         uint64_t prev = greatestProduct;
         
-        for (uint x = 0; x < 20; x++){
-            for (uint y = 0; y < 20; y++){
+        for (uint x = 0; x < 20; x++) {
+            for (uint y = 0; y < 20; y++) {
                 
                 prev = greatestProduct;
                 
                 bool xInBounds = (x + 3 < 20);
                 bool yInBounds = (y + 3 < 20);
                 
-                if (yInBounds){ //horizontal
+                if (yInBounds) { //horizontal
                     
                     greatestProduct = max(greatestProduct, data[x][y] * data[x][y + 1] * data[x][y + 2] * data[x][y + 3]);
                     
-                    //                if (prev != greatestProduct){
+                    //                if (prev != greatestProduct) {
                     //                    printf("HORIZONTAL => (%d, %d)     [%llu %llu %llu %llu] = [%llu]\n", x, y,
                     //                           data[x][y], data[x][y + 1], data[x][y + 2], data[x][y + 3],
                     //                           greatestProduct);
                     //                }
                 }
                 
-                if (xInBounds){ //vertical
+                if (xInBounds) { //vertical
                     
                     greatestProduct = max(greatestProduct, data[x][y] * data[x + 1][y] * data[x + 2][y] * data[x + 3][y]);
                     
-                    //                if (prev != greatestProduct){
+                    //                if (prev != greatestProduct) {
                     //                    printf("VERTICAL ===> (%d, %d)     [%llu %llu %llu %llu] = [%llu]\n", x, y,
                     //                           data[x][y], data[x + 1][y], data[x + 2][y], data[x + 3][y],
                     //                           greatestProduct);
                     //                }
                 }
                 
-                if (xInBounds && yInBounds){ //diagonal right
+                if (xInBounds && yInBounds) { //diagonal right
                     
                     greatestProduct = max(greatestProduct, data[x][y] * data[x + 1][y + 1] * data[x + 2][y + 2] * data[x + 3][y + 3]);
                     
-                    //                if (prev != greatestProduct){
+                    //                if (prev != greatestProduct) {
                     //                    printf("DIAGONAL R => (%d, %d)     [%llu %llu %llu %llu] = [%llu]\n", x, y,
                     //                           data[x][y], data[x + 1][y + 1], data[x + 2][y + 2], data[x + 3][y + 3],
                     //                           greatestProduct);
                     //                }
                 }
                 
-                if ((int)x - 3 >= 0 && yInBounds){ //diagonal left
+                if ((int)x - 3 >= 0 && yInBounds) { //diagonal left
                     
                     greatestProduct = max(greatestProduct, data[x][y] * data[x - 1][y + 1] * data[x - 2][y + 2] * data[x - 3][y + 3]);
                     
-                    //                if (prev != greatestProduct){
+                    //                if (prev != greatestProduct) {
                     //                    printf("DIAGONAL L => (%d, %d)     [%llu %llu %llu %llu] = [%llu]\n", x, y,
                     //                           data[x][y], data[x + 1][y + 1], data[x + 2][y + 2], data[x + 3][y + 3],
                     //                           greatestProduct);

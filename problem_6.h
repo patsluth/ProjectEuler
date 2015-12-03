@@ -31,7 +31,7 @@ class problem_6 : public problem_base
         uint64_t sumOfSquares = 0;
         uint64_t sum = 0;
         
-        for (uint x = 1; x <= 100; x++){
+        for (uint x = 1; x <= 100; x++) {
             sumOfSquares += (x * x);
             sum += x;
         }

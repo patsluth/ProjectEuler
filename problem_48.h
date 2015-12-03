@@ -34,11 +34,11 @@ class problem_48 : public problem_base
     {
         cpp_int selfPowerSum = 0;
         
-        for (uint x = 1; x <= 1000; x++){
+        for (uint x = 1; x <= 1000; x++) {
             
             cpp_int nextSelfPower = x;
             
-            for (uint pow = 1; pow < x; pow++){
+            for (uint pow = 1; pow < x; pow++) {
                 nextSelfPower *= x;
             }
             

@@ -61,12 +61,12 @@ inline numberChain numberChain_calculate(uint64_t start,
 {
     numberChain chain = {start};
     
-    while (true){
+    while (true) {
         
         uint64_t nextEndOfChain = nextNumber(&chain.back());
         
-        for (uint64_t i : chain){
-            if (i == nextEndOfChain){ //duplicate
+        for (uint64_t i : chain) {
+            if (i == nextEndOfChain) { //duplicate
                 chain.push_back(nextEndOfChain);
                 return chain;
             }
@@ -75,7 +75,7 @@ inline numberChain numberChain_calculate(uint64_t start,
         chain.push_back(nextEndOfChain);
         
         //stop calculating
-        if (continueCalculating && continueCalculating(&chain) == false){
+        if (continueCalculating && continueCalculating(&chain) == false) {
             return chain;
         }
         

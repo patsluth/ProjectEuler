@@ -32,25 +32,25 @@ class problem_52 : public problem_base
         vector<uint64_t> aDigits;
         vector<uint64_t> bDigits;
         
-        while (a != 0){
+        while (a != 0) {
             aDigits.push_back(a % 10);
             a /= 10;
         }
         
-        while (b != 0){
+        while (b != 0) {
             bDigits.push_back(b % 10);
             b /= 10;
         }
         
         
-        while (aDigits.size() == bDigits.size() && !aDigits.empty()){
+        while (aDigits.size() == bDigits.size() && !aDigits.empty()) {
             
             uint64_t aDigit = aDigits.back();
             aDigits.pop_back();
             
             for(vector<uint64_t>::iterator bItr = bDigits.begin(); bItr != bDigits.end(); ++bItr) {
                 
-                if (aDigit == *bItr){
+                if (aDigit == *bItr) {
                     bDigits.erase(bItr);
                     break;
                 }
@@ -59,7 +59,7 @@ class problem_52 : public problem_base
             
         }
         
-        if (aDigits.empty() && bDigits.empty()){
+        if (aDigits.empty() && bDigits.empty()) {
             return true;
         }
         
@@ -68,14 +68,14 @@ class problem_52 : public problem_base
     
     void subrun()
     {
-        for (uint64_t x = 1; ; x++){
+        for (uint64_t x = 1; ; x++) {
             
             //true for x*2 to x*6
-            if (intsContainSameDigits(x, x * 2)){
-                if (intsContainSameDigits(x, x * 3)){
-                    if (intsContainSameDigits(x, x * 4)){
-                        if (intsContainSameDigits(x, x * 5)){
-                            if (intsContainSameDigits(x, x * 6)){
+            if (intsContainSameDigits(x, x * 2)) {
+                if (intsContainSameDigits(x, x * 3)) {
+                    if (intsContainSameDigits(x, x * 4)) {
+                        if (intsContainSameDigits(x, x * 5)) {
+                            if (intsContainSameDigits(x, x * 6)) {
                                 calculatedAnswer << x;
                                 return;
                             }

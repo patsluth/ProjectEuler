@@ -37,14 +37,14 @@ class problem_42 : public problem_base
         
         ifstream fileStream(file);
         
-        if (fileStream){
+        if (fileStream) {
             
             string word;
             uint64_t triangleWordCount = 0;
             
             while (getline(fileStream, word, ',')) {
                 
-                if (nForTriangle(wordToNumber(word)) != 0){ //word number is a triangle word
+                if (nForTriangle(wordToNumber(word)) != 0) { //word number is a triangle word
                     triangleWordCount++;
                 }
                 
@@ -68,11 +68,11 @@ class problem_42 : public problem_base
     {
         uint64_t returnValue = 0;
         
-        for (char c : w){
+        for (char c : w) {
             
             uint64_t cIndex = toupper(c); //upper case letters 65-90 inclusive
             
-            if (cIndex > 64 && cIndex < 91){
+            if (cIndex > 64 && cIndex < 91) {
                 returnValue += cIndex - 64;
             }
         }

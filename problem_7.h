@@ -32,9 +32,9 @@ class problem_7 : public problem_base
         uint64_t number = 2;
         vector<uint64_t> primeNumbers;
         
-        while (primeNumbers.size() < 10001){
+        while (primeNumbers.size() < 10001) {
             
-            if (isPrime(factorInteger(number))){
+            if (isPrime(factorInteger(number))) {
                 primeNumbers.push_back(number);
             }
             
@@ -42,7 +42,7 @@ class problem_7 : public problem_base
             
         }
         
-        if (!primeNumbers.empty()){
+        if (!primeNumbers.empty()) {
             calculatedAnswer << primeNumbers.back();
         }
     }

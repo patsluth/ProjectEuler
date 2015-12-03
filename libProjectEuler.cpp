@@ -28,7 +28,7 @@ bool isPalindrome(uint64_t i)
     int numDigits = 0;
     int *digits = new int[numDigits];
     
-    while (i != 0){
+    while (i != 0) {
         
         //copy current digit array
         int *oldDigits = new int[numDigits];
@@ -47,9 +47,9 @@ bool isPalindrome(uint64_t i)
         
     }
     
-    for (int y = 0; y < numDigits / 2; y++){
+    for (int y = 0; y < numDigits / 2; y++) {
         
-        if (digits[y] != digits[numDigits - 1 - y]){ //compare corresponding elements
+        if (digits[y] != digits[numDigits - 1 - y]) { //compare corresponding elements
             return false;
         }
         
@@ -60,35 +60,35 @@ bool isPalindrome(uint64_t i)
 
 factor factorInteger(uint64_t i)
 {
-    for (uint64_t a = 2; a < i; a++){
-        if (i % a == 0){ //divisible
+    for (uint64_t a = 2; a < i; a++) {
+        if (i % a == 0) { //divisible
             
             //return factors
-            return (factor){a, i / a};
+            return (factor) {a, i / a};
             
         }
     }
     
-    return (factor){0, 0};
+    return (factor) {0, 0};
 }
 
 bool isPrimeFast(uint64_t i)
 {
-    if (i == 0 || i == 1){
+    if (i == 0 || i == 1) {
         
         return false;
         
-    } else if (i == 2){
+    } else if (i == 2) {
         
         return true;
         
     } else {
         
-        if (i % 2 == 0){ //if i is divisible by 2 and is not equal to 2, it is not prime
+        if (i % 2 == 0) { //if i is divisible by 2 and is not equal to 2, it is not prime
             return false;
         }
         
-        for (uint x = 3; x <= sqrt(i); x += 2){ //only check odds
+        for (uint x = 3; x <= sqrt(i); x += 2) { //only check odds
             
             if ( i % x == 0 ) {
                 return false;
@@ -103,16 +103,16 @@ bool isPrimeFast(uint64_t i)
 
 uint64_t numberOfDivisors(uint64_t i)
 {
-    if (i > 1){
+    if (i > 1) {
         
         uint64_t divisors = 0;
         
-        for (uint64_t x = 1; x <= sqrt(i); x++){
+        for (uint64_t x = 1; x <= sqrt(i); x++) {
             
-            if (i % x == 0){
+            if (i % x == 0) {
                 
                 divisors++;
-                if (i / x != x){ //dont add perfect squares
+                if (i / x != x) { //dont add perfect squares
                     divisors++;
                 }
                 
@@ -131,7 +131,7 @@ uint64_t numberOfDivisors(uint64_t i)
 
 uint64_t nextCollatzInt(uint64_t i)
 {
-    if (i % 2 == 0){
+    if (i % 2 == 0) {
         return i / 2;
     } else {
         return (3 * i) + 1;
@@ -143,7 +143,7 @@ pyramid pyramidFromFile(string file)
     ifstream fileStream(file);
     pyramid p;
     
-    if (fileStream){
+    if (fileStream) {
         
         string line;
         while (getline(fileStream, line, '\n')) { //split txt file by line
@@ -154,7 +154,7 @@ pyramid pyramidFromFile(string file)
             istream_iterator<uint> beg(buf), end;
             vector<uint> numbers(beg, end);
             
-            for(uint number: numbers){ //individual numbers
+            for(uint number: numbers) { //individual numbers
                 pRow.push_back(number);
             }
             
@@ -173,7 +173,7 @@ pyramid pyramidFromFile(string file)
 
 uint64_t pyramid_SumOfMaxPath(pyramid p)
 {
-    while (p.size() > 1){
+    while (p.size() > 1) {
         
         //pop both bottom rows
         pyramidRow pRow = p.back();
@@ -183,7 +183,7 @@ uint64_t pyramid_SumOfMaxPath(pyramid p)
         
         //calculate new bottom row and push back to stack
         //sets each parentRow value to the larger sum of itself and its children
-        for (uint x = 0; x < (uint)pParentRow.size(); x++){
+        for (uint x = 0; x < (uint)pParentRow.size(); x++) {
             
             uint64_t leftChild = pRow[x];
             uint64_t rightChild = pRow[x + 1];
@@ -201,8 +201,8 @@ uint64_t pyramid_SumOfMaxPath(pyramid p)
 
 void printPyramid(pyramid p)
 {
-    for (pyramidRow pRow : p){
-        for (uint64_t num : pRow){
+    for (pyramidRow pRow : p) {
+        for (uint64_t num : pRow) {
             printf("%llu ", num);
         }
         
@@ -226,14 +226,14 @@ vector<uint64_t> circularVariations(uint64_t i)
     
     vector<uint64_t> circularVariations;
     
-    for (uint x = 0; x < iDigits.size(); x++){ //move last digit to front
+    for (uint x = 0; x < iDigits.size(); x++) { //move last digit to front
         
         uint64_t lastDigit = iDigits.back();
         iDigits.pop_back();
         iDigits.insert(iDigits.begin(), lastDigit);
         
         uint64_t digitToInt = 0; //convert the vector of digits back into an integer
-        for (uint y = 0; y < iDigits.size(); y++){
+        for (uint y = 0; y < iDigits.size(); y++) {
             digitToInt += iDigits[iDigits.size() - y - 1] * pow(10, y);
         }
         
@@ -253,7 +253,7 @@ quadraticRoots quadraticSolveRoots(quadratic q)
 {
     int64_t descriminant = quadraticSolveSolveDescriminant(q);
     
-    if (descriminant < 0){
+    if (descriminant < 0) {
         return {0, 0};
     }
     
@@ -282,7 +282,7 @@ uint64_t nForTriangle(int64_t Tn)
     
     double largerRoot = max(roots.x, roots.y);
     
-    if (largerRoot - (int64_t)largerRoot == 0){ //whole number
+    if (largerRoot - (int64_t)largerRoot == 0) { //whole number
         return largerRoot;
     }
     
@@ -303,7 +303,7 @@ uint64_t nForPentagonal(int64_t Pn)
     
     double largerRoot = max(roots.x, roots.y);
     
-    if (largerRoot - (int64_t)largerRoot == 0){ //whole number
+    if (largerRoot - (int64_t)largerRoot == 0) { //whole number
         return largerRoot;
     }
     
@@ -323,7 +323,7 @@ uint64_t nForHexagonal(int64_t Hn)
     
     double largerRoot = max(roots.x, roots.y);
     
-    if (largerRoot - (int64_t)largerRoot == 0){ //whole number
+    if (largerRoot - (int64_t)largerRoot == 0) { //whole number
         return largerRoot;
     }
     
@@ -368,10 +368,10 @@ properDivisors calculateProperDivisors(uint64_t i)
 {
     vector<uint64_t> properDivisors = {1};
     
-    for (uint64_t x = 2; x <= sqrt(i); x++){
-        if ( (i / x) * x == i ){
+    for (uint64_t x = 2; x <= sqrt(i); x++) {
+        if ( (i / x) * x == i ) {
             properDivisors.push_back(x);
-            if ( (i / x) != x){ //dont add same multiple twice
+            if ( (i / x) != x) { //dont add same multiple twice
                 properDivisors.push_back(i / x);
             }
         }
@@ -384,7 +384,7 @@ uint64_t sumOfProperDivisors(properDivisors properDivisors)
 {
     uint64_t sum = 0;
     
-    for (uint64_t i : properDivisors){
+    for (uint64_t i : properDivisors) {
         sum += i;
     }
     

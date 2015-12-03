@@ -55,7 +55,7 @@
 //#include "problem_43.h"
 #include "problem_44.h"
 #include "problem_45.h"
-//#include "problem_46.h"
+#include "problem_46.h"
 //#include "problem_47.h"
 #include "problem_48.h"
 //#include "problem_49.h"
@@ -85,6 +85,7 @@
 #include "problem_76.h"
 #include "problem_80.h"
 #include "problem_81.h"
+#include "problem_82.h"
 
 //#include "problem_87.h"
 //
@@ -96,7 +97,9 @@
 
 #else
 
-#include "problem_81.h"
+#include "problem_82.h"
+#include "problem_61.h"
+#include "problem_46.h"
 
 #endif
 
@@ -110,7 +113,9 @@ int main(int, char**)
 {
     cout << "Project Euler - Pat Sluth" << endl << "Starting..." << endl << endl;
     
-    problem_81().run();
+    problem_46().run();
+   // problem_61().run();
+   // problem_82().run();
     
     #ifdef BUILD_ALL
     
@@ -161,7 +166,7 @@ int main(int, char**)
 //    problem_43().run();
     problem_44().run();
     problem_45().run();
-//    problem_46().run();
+    problem_46().run();
 //    problem_47().run();
     problem_48().run();
 //    problem_49().run();
@@ -189,6 +194,8 @@ int main(int, char**)
     problem_74().run();
     
     problem_80().run();
+    problem_81().run();
+    problem_82().run();
     problem_87().run();
     
     problem_92().run();

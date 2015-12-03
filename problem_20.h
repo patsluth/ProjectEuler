@@ -30,7 +30,7 @@ class problem_20 : public problem_base
     {
 //        uint64_t fact = 1;
 //        
-//        for (uint64_t x = 2; x <= 100; x++){
+//        for (uint64_t x = 2; x <= 100; x++) {
 //            cout << fact * x << endl;
 //            fact *= x;
 //        }

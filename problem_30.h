@@ -32,8 +32,8 @@ class problem_30 : public problem_base
     {
         uint64_t result = 0;
         
-        for (uint64_t x = 0; x < 1000000; x++){
-            if (intEqualsSumOfDigitsToPower(x, 5)){
+        for (uint64_t x = 0; x < 1000000; x++) {
+            if (intEqualsSumOfDigitsToPower(x, 5)) {
                 result += x;
             }
         }
@@ -52,7 +52,7 @@ class problem_30 : public problem_base
      */
     static bool intEqualsSumOfDigitsToPower(uint64_t i, uint64_t power)
     {
-        if (i == 0 || i == 1){
+        if (i == 0 || i == 1) {
             return false;
         }
         

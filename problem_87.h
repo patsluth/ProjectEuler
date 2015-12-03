@@ -34,8 +34,8 @@ class problem_87 : public problem_base
     {
         vector<uint64_t> primeCache;
         
-        for (uint64_t p = 2; p < sqrt(50000000); p++){
-            if (isPrimeFast(p)){
+        for (uint64_t p = 2; p < sqrt(50000000); p++) {
+            if (isPrimeFast(p)) {
                 primeCache.push_back(p);
             }
         }
@@ -48,7 +48,7 @@ class problem_87 : public problem_base
                     
                     uint64_t sum = ( (x * x) + (y * y * y) + (z * z * z * z) );
                     
-                    if (sum < 50000000){
+                    if (sum < 50000000) {
                         count.insert(sum);
                     } else {
                         break;

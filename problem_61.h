@@ -31,7 +31,7 @@ public:
     
     set<uint64_t> valueForKey(uint64_t key)
     {
-        if (this->data.count(key) == false){
+        if (this->data.count(key) == false) {
             this->data[key] = {};
         }
         
@@ -40,7 +40,7 @@ public:
     
     void appendValueForKey(uint64_t key, uint64_t value)
     {
-        if (this->data.count(key) == true){
+        if (this->data.count(key) == true) {
             this->data[key].insert(value);
         } else {
             this->data[key] = {value};
@@ -82,7 +82,7 @@ class problem_61 : public problem_base
             
             
             
-            if (triangle > 999 && triangle < 10000){
+            if (triangle > 999 && triangle < 10000) {
                 
                 triangles.insert(triangle);
                 
@@ -91,7 +91,7 @@ class problem_61 : public problem_base
                 
             }
             
-            if (square > 999 && square < 10000){
+            if (square > 999 && square < 10000) {
                 
                 squares.insert(square);
                 
@@ -100,7 +100,7 @@ class problem_61 : public problem_base
                 
             }
             
-            if (pentagonal > 999 && pentagonal < 10000){
+            if (pentagonal > 999 && pentagonal < 10000) {
                 
                 pentagonals.insert(pentagonal);
                 
@@ -109,7 +109,7 @@ class problem_61 : public problem_base
                 
             }
             
-            if (hexagonal > 999 && hexagonal < 10000){
+            if (hexagonal > 999 && hexagonal < 10000) {
                 
                 hexagonals.insert(hexagonal);
                 
@@ -118,7 +118,7 @@ class problem_61 : public problem_base
                 
             }
             
-            if (heptagonal > 999 && heptagonal < 10000){
+            if (heptagonal > 999 && heptagonal < 10000) {
                 
                 heptagonals.insert(heptagonal);
                 
@@ -127,7 +127,7 @@ class problem_61 : public problem_base
                 
             }
             
-            if (octagonal > 999 && octagonal < 10000){
+            if (octagonal > 999 && octagonal < 10000) {
                 
                 octagonals.insert(octagonal);
                 
@@ -140,7 +140,7 @@ class problem_61 : public problem_base
             
             if (triangle > 9999 && square > 9999 &&
                 pentagonal > 9999 && hexagonal > 9999 &&
-                heptagonal > 9999 && octagonal > 9999){
+                heptagonal > 9999 && octagonal > 9999) {
                 break;
             }
             
@@ -182,7 +182,7 @@ class problem_61 : public problem_base
                                     uint64_t backDigits = n6 % 100;
                                     auto nextDigitSet = frontDigitMap.valueForKey(backDigits);
                                     
-                                    if (backDigits == currentDigitSet.first){ //check the front of the loop
+                                    if (backDigits == currentDigitSet.first) { //check the front of the loop
                                         
                                         //vector<uint64_t> curChain = {n1, n2, n3, n4, n5, n6};
                                         set<uint64_t> curChainCopy; //remove duplicates
@@ -194,29 +194,29 @@ class problem_61 : public problem_base
                                         curChainCopy.insert(n5);
                                         curChainCopy.insert(n6);
                                         
-                                        if (curChainCopy.size() == 6){
+                                        if (curChainCopy.size() == 6) {
                                             
                                             bool hasTri, hasSqr, hasPent, hasHex, hasHept, hasOct;
                                             hasTri = hasSqr = hasPent = hasHex = hasHept = hasOct = false;
                                             
-                                            for (uint64_t i : curChainCopy){
+                                            for (uint64_t i : curChainCopy) {
                                                 
-                                                if (!hasOct && octagonals.count(i) == 1){
+                                                if (!hasOct && octagonals.count(i) == 1) {
                                                     hasOct = true;
-                                                } else if (!hasHept && heptagonals.count(i) == 1){
+                                                } else if (!hasHept && heptagonals.count(i) == 1) {
                                                     hasHept = true;
-                                                } else if (!hasHex && hexagonals.count(i) == 1){
+                                                } else if (!hasHex && hexagonals.count(i) == 1) {
                                                     hasHex = true;
-                                                } else if (!hasPent && pentagonals.count(i) == 1){
+                                                } else if (!hasPent && pentagonals.count(i) == 1) {
                                                     hasPent = true;
-                                                } else if (!hasSqr && squares.count(i) == 1){
+                                                } else if (!hasSqr && squares.count(i) == 1) {
                                                     hasSqr = true;
-                                                } else if (!hasTri && triangles.count(i) == 1){
+                                                } else if (!hasTri && triangles.count(i) == 1) {
                                                     hasTri = true;
                                                 }
                                             }
                                             
-                                            if (hasTri && hasSqr && hasPent && hasHex && hasHept && hasOct){
+                                            if (hasTri && hasSqr && hasPent && hasHex && hasHept && hasOct) {
                                                 //FOUND IT!
                                                 calculatedAnswer << ( n1 + n2 + n3 + n4 + n5 + n6 );
                                                 return;
