@@ -9,10 +9,13 @@
 
 #include <iostream>
 
+#include <boost/multiprecision/cpp_int.hpp>
+
 #include "problem_base.h"
 #include "libProjectEuler.h"
 
 using namespace std;
+using namespace boost::multiprecision;
 
 
 
@@ -28,14 +31,20 @@ class problem_20 : public problem_base
     
     void subrun()
     {
-//        uint64_t fact = 1;
-//        
-//        for (uint64_t x = 2; x <= 100; x++) {
-//            cout << fact * x << endl;
-//            fact *= x;
-//        }
-//        
-//        calculatedAnswer << fact;
+        cpp_int fact = 100;
+        
+        for (uint64_t x = 2; x <= 100; x++) {
+            fact *= x;
+        }
+        
+        cpp_int factDigitSum = 0;
+        
+        while (fact > 0){
+            factDigitSum += fact % 10;
+            fact /= 10;
+        }
+
+        calculatedAnswer << factDigitSum;
     }
     
 };
