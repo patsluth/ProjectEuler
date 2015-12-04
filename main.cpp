@@ -43,10 +43,10 @@
 //#include "problem_31.h"
 //#include "problem_32.h"
 //#include "problem_33.h"
-//#include "problem_34.h"
+#include "problem_34.h"
 #include "problem_35.h"
 //#include "problem_36.h"
-//#include "problem_37.h"
+#include "problem_37.h"
 //#include "problem_38.h"
 #include "problem_39.h"
 //#include "problem_40.h"
@@ -98,7 +98,7 @@
 #else
 
 #include "problem_20.h"
-#include "problem_37.h"
+#include "problem_34.h"
 #include "problem_82.h"
 #include "problem_61.h"
 #include "problem_46.h"
@@ -113,9 +113,9 @@
 
 int main(int, char**)
 {
-    cout << "Project Euler - Pat Sluth" << endl << "Starting..." << endl << endl;
+    cout << endl << "Project Euler - Pat Sluth" << endl << "Starting..." << endl << endl;
     
-    problem_37().run();
+    problem_34().run();
    // problem_61().run();
    // problem_82().run();
     
@@ -156,10 +156,10 @@ int main(int, char**)
 //    problem_31().run();
 //    problem_32().run();
 //    problem_33().run();
-//    problem_34().run();
+    problem_34().run();
     problem_35().run();
 //    problem_36().run();
-//    problem_37().run();
+    problem_37().run();
 //    problem_38().run();
 //    problem_39().run();
 //    problem_40().run();
@@ -206,6 +206,8 @@ int main(int, char**)
     problem_99().run();
     
 #endif
+    
+    cout << endl;
 
     return EXIT_SUCCESS;
 }

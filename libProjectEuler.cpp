@@ -341,6 +341,9 @@ uint64_t heptagonalForN(uint64_t n)
 
 uint64_t nForHeptagonal(int64_t Hn)
 {
+    if (Hn == 0){
+        
+    }
     assert(false);
 }
 
@@ -352,6 +355,9 @@ uint64_t octagonalForN(uint64_t n)
 
 uint64_t nForOctagonal(int64_t On)
 {
+    if (On == 0){
+        
+    }
     assert(false);
 }
 

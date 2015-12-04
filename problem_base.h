@@ -58,14 +58,12 @@ public:
         //class name
         cout << abi::__cxa_demangle(typeid(*this).name(), 0, 0, 0);
         
-        cout.setf(ios::fixed);
-        cout << " (" << showpoint << timerSeconds << " seconds) ==> ";
+        cout << "\t\t(" << calculatedAnswer.str();
+        cout << (correct() ? " == " : " != ");
+        cout << desiredAnswer() << ")";
         
-        if (correct()) {
-            printf("  [C] [%s]\n", calculatedAnswer.str().c_str());
-        } else {
-            printf("  [X] [%s != %s]\n", calculatedAnswer.str().c_str(), desiredAnswer().c_str());
-        }
+        cout.setf(ios::fixed);
+        cout << "\t\t" << showpoint << timerSeconds << endl;
         
     };
     
