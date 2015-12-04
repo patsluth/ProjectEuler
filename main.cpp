@@ -30,7 +30,7 @@
 #include "problem_18.h"
 //#include "problem_19.h"
 #include "problem_20.h"
-//#include "problem_21.h"
+#include "problem_21.h"
 //#include "problem_22.h"
 //#include "problem_23.h"
 //#include "problem_24.h"
@@ -97,7 +97,7 @@
 
 #else
 
-#include "problem_20.h"
+#include "problem_21.h"
 #include "problem_34.h"
 #include "problem_82.h"
 #include "problem_61.h"
@@ -115,7 +115,7 @@ int main(int, char**)
 {
     cout << endl << "Project Euler - Pat Sluth" << endl << "Starting..." << endl << endl;
     
-    problem_34().run();
+    problem_21().run();
    // problem_61().run();
    // problem_82().run();
     
