@@ -30,6 +30,7 @@ using namespace std;
  *  @return bool
  */
 bool isPalindrome(uint64_t x);
+bool isPalindrome(string i);
 
 struct factor
 {

@@ -27,17 +27,17 @@ using namespace std;
 
 bool isPalindrome(uint64_t i)
 {
-    int numDigits = 0;
-    int *digits = new int[numDigits];
+    uint64_t numDigits = 0;
+    uint64_t *digits = new uint64_t[numDigits];
     
     while (i != 0) {
         
         //copy current digit array
-        int *oldDigits = new int[numDigits];
+        uint64_t *oldDigits = new uint64_t[numDigits];
         copy(digits, digits + numDigits, oldDigits);
         
         //increase current digit arrray size and copy previous values back
-        digits = new int[numDigits + 1];
+        digits = new uint64_t[numDigits + 1];
         copy(oldDigits, oldDigits + numDigits, digits);
         
         //set new value to current digit
@@ -49,9 +49,22 @@ bool isPalindrome(uint64_t i)
         
     }
     
-    for (int y = 0; y < numDigits / 2; y++) {
+    for (uint64_t x = 0; x < numDigits / 2; x++) {
         
-        if (digits[y] != digits[numDigits - 1 - y]) { //compare corresponding elements
+        if (digits[x] != digits[numDigits - 1 - x]) { //compare corresponding elements
+            return false;
+        }
+        
+    }
+    
+    return true;
+}
+
+bool isPalindrome(string i)
+{
+    for (uint64_t x = 0; x < i.size() / 2; x++) {
+        
+        if (i[x] != i[i.size() - 1 - x]) { //compare corresponding elements
             return false;
         }
         

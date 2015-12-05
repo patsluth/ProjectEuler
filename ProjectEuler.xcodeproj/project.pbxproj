@@ -38,6 +38,7 @@
 		2E19963B1C035C3200BF50C3 /* problem_25.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_25.h; sourceTree = SOURCE_ROOT; };
 		2E19963C1C03692F00BF50C3 /* problem_92.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_92.h; sourceTree = SOURCE_ROOT; };
 		2E25A1E81C108B2D00B8D7AA /* problem_46.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_46.h; sourceTree = SOURCE_ROOT; };
+		2E2F3ADA1C1342EC0055CB52 /* problem_36.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_36.h; sourceTree = SOURCE_ROOT; };
 		2E584DFD1C078F0300FA689E /* problem_52.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_52.h; sourceTree = SOURCE_ROOT; };
 		2E5E9D3C1C080203008E8FA3 /* problem_87.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_87.h; sourceTree = SOURCE_ROOT; };
 		2E6223E61C015D5A007C1F13 /* problem_48.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = problem_48.h; sourceTree = SOURCE_ROOT; };
@@ -134,6 +135,7 @@
 				2E7F44881BFF861F00FCB85B /* problem_30.h */,
 				2EC8E1E11C11F09100F88B5F /* problem_34.h */,
 				2E7F44891BFF861F00FCB85B /* problem_35.h */,
+				2E2F3ADA1C1342EC0055CB52 /* problem_36.h */,
 				2EC8E1E01C11E30600F88B5F /* problem_37.h */,
 				2EF50E2A1C028D8C00541A9F /* problem_39.h */,
 				2E8EADEE1C00E3AC004F7B84 /* problem_42.h */,
