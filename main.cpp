@@ -97,11 +97,7 @@
 
 #else
 
-#include "problem_21.h"
-#include "problem_34.h"
-#include "problem_82.h"
-#include "problem_61.h"
-#include "problem_46.h"
+#include "problem_23.h"
 
 #endif
 
@@ -115,7 +111,7 @@ int main(int, char**)
 {
     cout << endl << "Project Euler - Pat Sluth" << endl << "Starting..." << endl << endl;
     
-    problem_21().run();
+    problem_23().run();
    // problem_61().run();
    // problem_82().run();
     

@@ -9,7 +9,7 @@
 
 #include <iostream>
 #include <vector>
-#include <stdlib.h>
+
 #include "problem_base.h"
 #include "libProjectEuler.h"
 

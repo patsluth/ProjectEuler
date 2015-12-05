@@ -399,6 +399,19 @@ uint64_t sumOfProperDivisors(properDivisors properDivisors)
     return sum;
 }
 
+numberType getNumberType(uint64_t i)
+{
+    uint64_t x = sumOfProperDivisors(calculateProperDivisors(i));
+    
+    if (x < i){
+        return NumberType_Deficient;
+    } else if (x > i){
+        return NumberType_Abundant;
+    } else {
+        return NumberType_Perfect;
+    }
+}
+
 
 
 

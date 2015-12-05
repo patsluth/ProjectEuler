@@ -190,7 +190,21 @@ typedef vector<uint64_t> properDivisors;
 properDivisors calculateProperDivisors(uint64_t i);
 uint64_t sumOfProperDivisors(properDivisors properDivisors);
 
+enum numberType
+{
+    NumberType_Deficient, // sum of proper divisors < n
+    NumberType_Perfect, // sum of proper divisors = n
+    NumberType_Abundant // sum of proper divisors > n
+};
 
+/**
+ *  Get the number type (Deficient, Perfect, Abundant)
+ *
+ *  @param i
+ *
+ *  @return bool
+ */
+numberType getNumberType(uint64_t i);
 
 
 

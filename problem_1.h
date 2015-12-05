@@ -8,10 +8,6 @@
 //
 
 #include <iostream>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <sstream>
 
 #include "problem_base.h"
 #include "libProjectEuler.h"
