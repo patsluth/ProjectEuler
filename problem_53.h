@@ -42,8 +42,8 @@ class problem_53 : public problem_base
     {
         uint64_t nCrCount = 0; //number of nCr combos over 1 million
         
-        for (uint64_t n = 1; n <= 100; n++){
-            for (uint64_t r = 1; r <= n; r++){
+        for (uint64_t n = 23; n <= 100; n++) { // we are given the first one doesnt occur until n = 23
+            for (uint64_t r = 1; r <= n; r++) {
                 
                 cpp_int nFact = cppint_factorial(n);
                 cpp_int rFact = cppint_factorial(r);
