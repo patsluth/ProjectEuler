@@ -31,23 +31,23 @@ class problem_25 : public problem_base
     
     void subrun()
     {
-        cpp_int prevF = 0;
-        cpp_int curF = 1;
-        uint64_t curFIndex = 1;
-        
-        while (curF.str().size() < 1000) {
-            
-            curFIndex++;
-            
-            cout << curFIndex << "==" << curF.str().size() << endl;
-            
-            cpp_int nextF = curF + prevF;
-            prevF = curF;
-            curF = nextF;
-            
-        }
-        
-        calculatedAnswer << curFIndex;
+//        cpp_int prevF = 0;
+//        cpp_int curF = 1;
+//        uint64_t curFIndex = 1;
+//        
+//        while (curF.str().size() < 1000) {
+//            
+//            curFIndex++;
+//            
+//            cout << curFIndex << "==" << curF.str().size() << endl;
+//            
+//            cpp_int nextF = curF + prevF;
+//            prevF = curF;
+//            curF = nextF;
+//            
+//        }
+//        
+//        calculatedAnswer << curFIndex;
         
     }
     

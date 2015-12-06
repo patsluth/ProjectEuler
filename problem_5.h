@@ -53,11 +53,11 @@ class problem_5 : public problem_base
                 }
             }
             
-            if (success) {
+            if (success == true) {
                 return m;
             }
             
-            m += 1;
+            m++;
         }
         
         return 0;

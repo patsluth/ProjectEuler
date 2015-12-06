@@ -21,6 +21,8 @@
 #include <sstream>
 #include <cxxabi.h>
 
+#include <map>
+
 using namespace std;
 
 
@@ -40,10 +42,6 @@ protected:
     
 public:
     
-    problem_base()
-    {
-    }
-    
     void run()
     {
         tdd();
@@ -58,12 +56,14 @@ public:
         //class name
         cout << abi::__cxa_demangle(typeid(*this).name(), 0, 0, 0);
         
+        cout.setf(ios::fixed);
+        cout << "\t\t" << showpoint << timerSeconds;
+        
         cout << "\t\t(" << calculatedAnswer.str();
         cout << (correct() ? " == " : " != ");
         cout << desiredAnswer() << ")";
         
-        cout.setf(ios::fixed);
-        cout << "\t\t" << showpoint << timerSeconds << endl;
+        cout << endl;
         
     };
     
