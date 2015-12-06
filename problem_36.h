@@ -12,10 +12,6 @@
 #include "problem_base.h"
 #include "libProjectEuler.h"
 
-
-
-
-
 using namespace std;
 
 

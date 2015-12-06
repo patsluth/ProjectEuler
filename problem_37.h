@@ -18,6 +18,7 @@ using namespace std;
 
 
 
+
 class problem_37 : public problem_base
 {
     
