@@ -12,6 +12,8 @@
 #include "problem_factory.h"
 #include "problem_base.h"
 
+#ifdef RELEASE
+
 #include "problem_1.h"
 #include "problem_2.h"
 #include "problem_3.h"
@@ -71,7 +73,7 @@
 //#include "problem_57.h"
 //#include "problem_58.h"
 //#include "problem_59.h"
-//#include "problem_60.h"
+#include "problem_60.h"
 #include "problem_61.h"
 //#include "problem_62.h"
 //#include "problem_63.h"
@@ -513,8 +515,17 @@
 //#include "problem_499.h"
 //#include "problem_500.h"
 
+#else
+
+#include "problem_29.h"
+#include "problem_60.h"
+
+#endif
+
 static void registerProblems()
 {
+#ifdef RELEASE
+    
     PROBLEM_FACTORY_REGISTER_CLASS(problem_1);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_2);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_3);
@@ -574,7 +585,7 @@ static void registerProblems()
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_57);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_58);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_59);
-    //PROBLEM_FACTORY_REGISTER_CLASS(problem_60);
+    PROBLEM_FACTORY_REGISTER_CLASS(problem_60);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_61);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_62);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_63);
@@ -1015,6 +1026,13 @@ static void registerProblems()
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_498);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_499);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_500);
+    
+#else
+    
+    PROBLEM_FACTORY_REGISTER_CLASS(problem_29);
+    PROBLEM_FACTORY_REGISTER_CLASS(problem_60);
+    
+#endif
 }
 
 int main(int, char**)
@@ -1027,6 +1045,7 @@ int main(int, char**)
     cout << "Options" << endl;
     cout << "[#]:                   run problem #" << endl;
     cout << "[a | all]:             run all problems" << endl;
+    cout << "[?]:                   list problems" << endl;
     cout << "[any other key]:       quit" << endl;
     cout << "************************************************************" << endl;
     
@@ -1067,6 +1086,14 @@ int main(int, char**)
                         problem->run();
                     }
                     
+                }
+                
+            } else if (rawInput.compare("?") == 0) {
+                
+                cout << endl << "Problem List" << endl;
+                cout <<  "------------" << endl;
+                for (auto problem : p_factory.m_classes) {
+                    cout << problem.first << endl;
                 }
                 
             } else {

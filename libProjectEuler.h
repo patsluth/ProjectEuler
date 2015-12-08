@@ -32,11 +32,7 @@ using namespace std;
 bool isPalindrome(uint64_t x);
 bool isPalindrome(string i);
 
-struct factor
-{
-    uint64_t x;
-    uint64_t y;
-};
+uint64_t numberOfDigits(uint64_t i);
 
 inline int64_t factorial(int64_t x)
 {
@@ -46,6 +42,12 @@ inline int64_t factorial(int64_t x)
         return x * factorial(x - 1);
     }
 }
+
+struct factor
+{
+    uint64_t x;
+    uint64_t y;
+};
 
 /**
  *  Calculate factors of an int by finding lowest divisble number and its corresponding factor (factor tree method)

@@ -73,6 +73,18 @@ bool isPalindrome(string i)
     return true;
 }
 
+uint64_t numberOfDigits(uint64_t i)
+{
+    uint64_t numberOfDigits = 0;
+    
+    while (i > 0) {
+        numberOfDigits++;
+        i /= 10;
+    }
+    
+    return numberOfDigits;
+}
+
 factor factorInteger(uint64_t i)
 {
     for (uint64_t a = 2; a < i; a++) {
@@ -115,6 +127,29 @@ bool isPrimeFast(uint64_t i)
         
     }
 }
+
+//bool isPrimeFast(uint64_t n)
+//{
+//    if (n == 2) return true;
+//    if (n == 3) return true;
+//    if (n % 2 == 0) return false;
+//    if (n % 3 == 0) return false;
+//                    
+//    uint64_t i = 5;
+//    uint64_t w = 2;
+//    
+//    while (i * i <= n) {
+//        if (n % i == 0) {
+//            return false;
+//        }
+//        
+//        i += w;
+//        w = 6 - w;
+//        
+//    }
+//    
+//    return true;
+//}
 
 uint64_t numberOfDivisors(uint64_t i)
 {

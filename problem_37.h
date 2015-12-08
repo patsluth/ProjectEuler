@@ -30,23 +30,16 @@ class problem_37 : public problem_base
     bool truncatablePrimeLeft(uint64_t i)
     {
         uint64_t iCopy = i;
-        uint64_t numberOfDigits = 0;
+        uint64_t digits = numberOfDigits(i);
         
-        while (iCopy > 0) { // get number of digits so we can truncate left to right
-            numberOfDigits++;
-            iCopy /= 10;
-        }
-
-        iCopy = i;
-        
-        while (numberOfDigits > 0) {
+        while (digits > 0) {
             
             if (!isPrimeFast(iCopy)){
                 return false;
             }
             
-            numberOfDigits--;
-            iCopy = iCopy % (int)pow(10, numberOfDigits);
+            digits--;
+            iCopy = iCopy % (int)pow(10, digits);
             
         }
         
