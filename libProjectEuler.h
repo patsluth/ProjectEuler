@@ -15,7 +15,13 @@
 
 #include <vector>
 
+#include <boost/multiprecision/cpp_int.hpp>
+
+#include "problem_base.h"
+#include "libProjectEuler.h"
+
 using namespace std;
+using namespace boost::multiprecision;
 
 
 
@@ -34,12 +40,21 @@ bool isPalindrome(string i);
 
 uint64_t numberOfDigits(uint64_t i);
 
-inline int64_t factorial(int64_t x)
+inline uint64_t factorial(uint64_t x)
 {
     if (x == 0 || x == 1) {
         return 1;
     } else {
         return x * factorial(x - 1);
+    }
+}
+
+inline cpp_int cppint_factorial(cpp_int x)
+{
+    if (x == 0 || x == 1) {
+        return 1;
+    } else {
+        return x * cppint_factorial(x - 1);
     }
 }
 
