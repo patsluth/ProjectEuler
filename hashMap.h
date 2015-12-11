@@ -19,12 +19,13 @@ using namespace std;
 
 
 
+template <class K, class V>
 class hashMap
 {
     
 private:
     
-    map<uint64_t, set<uint64_t>> data;
+    map<K, V> data;
     
 public:
     
@@ -33,10 +34,25 @@ public:
         return this->data.size();
     }
     
-    set<uint64_t> *setForKey(uint64_t key)
+    typename map<K, V>::iterator begin()
+    {
+        return this->data.begin();
+    }
+    
+    typename map<K, V>::iterator rbegin()
+    {
+        return this->data.rbegin();
+    }
+    
+    typename map<K, V>::iterator end()
+    {
+        return this->data.end();
+    }
+    
+    V *valueForKey(K key)
     {
         if (this->data.count(key) == false) {
-            this->data[key] = {};
+            this->data[key] = *new V();
         }
         
         return &this->data[key];

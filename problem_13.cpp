@@ -7,7 +7,6 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include <iostream>
 #include <string>
 
 #include "problem_base.h"

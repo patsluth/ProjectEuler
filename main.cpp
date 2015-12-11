@@ -6,15 +6,12 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include <iostream>
-#include <stdio.h>     // for fprintf(), sscanf(), etc.
-
 #include "primes.h"
 
 #include "problem_factory.h"
 #include "problem_base.h"
 
-#undef RELEASEEE
+#define RELEASEEEOOOO
 
 #ifdef RELEASEEEOOOO
 
@@ -528,7 +525,7 @@
 
 static void registerProblems()
 {
-#ifdef RELEASEEE
+#ifdef RELEASEEEOOOO
 
     PROBLEM_FACTORY_REGISTER_CLASS(problem_1);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_2);
@@ -1041,26 +1038,6 @@ static void registerProblems()
 
 int main(int, char**)
 {
-    uint64_t primes = 0;
-    for (int x = 99999; x < 99999999; x++){
-        if (primes::sharedPrimes()->isPrime(x)){
-            primes++;
-        }
-    }
-
-    cout << primes << endl;
-
-
-
-
-
-    //primes::sharedPrimes()->loadPrimes(4);
-
-    return 0;
-
-
-
-
     registerProblems();
 
     cout << endl << "Project Euler - Pat Sluth" << endl << "Starting..." << endl << endl;

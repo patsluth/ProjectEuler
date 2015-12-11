@@ -1,0 +1,32 @@
+//
+//  projectEuler.pch
+//  ProjectEuler
+//
+//  Created by Pat Sluth on 2015-12-11.
+//  Copyright © 2015 Pat Sluth. All rights reserved.
+//
+
+#ifndef projectEuler_pch
+#define projectEuler_pch
+
+
+
+
+
+#include <iostream>
+#include <stdio.h>     // for fprintf(), sscanf(), etc.
+
+#include <assert.h>
+
+#include <boost/multiprecision/cpp_int.hpp>
+#include <boost/foreach.hpp>
+
+
+
+
+
+#endif /* projectEuler_pch */
+
+
+
+

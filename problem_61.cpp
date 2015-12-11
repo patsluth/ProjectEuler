@@ -7,10 +7,7 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include <iostream>
-#include "hashMap.cpp"
-
-#include <boost/foreach.hpp>
+#include "hashMap.h"
 
 #include "problem_base.h"
 #include "libProjectEuler.h"
@@ -38,7 +35,7 @@ class problem_61 : public problem_base
         set<uint64_t> heptagonals;
         set<uint64_t> octagonals;
         
-        hashMap frontDigitMap;
+        hashMap<uint64_t, set<uint64_t>> frontDigitMap;
         
         for (uint64_t n = 0; ; n++) { //cache
             
@@ -56,7 +53,7 @@ class problem_61 : public problem_base
                 triangles.insert(triangle);
                 
                 uint64_t frontDigits = triangle / 100;
-                frontDigitMap.appendValueForKey(frontDigits, triangle);
+                frontDigitMap.valueForKey(frontDigits)->insert(triangle);
                 
             }
             
@@ -65,7 +62,7 @@ class problem_61 : public problem_base
                 squares.insert(square);
                 
                 uint64_t frontDigits = square / 100;
-                frontDigitMap.appendValueForKey(frontDigits, square);
+                frontDigitMap.valueForKey(frontDigits)->insert(square);
                 
             }
             
@@ -74,7 +71,7 @@ class problem_61 : public problem_base
                 pentagonals.insert(pentagonal);
                 
                 uint64_t frontDigits = pentagonal / 100;
-                frontDigitMap.appendValueForKey(frontDigits, pentagonal);
+                frontDigitMap.valueForKey(frontDigits)->insert(pentagonal);
                 
             }
             
@@ -83,7 +80,7 @@ class problem_61 : public problem_base
                 hexagonals.insert(hexagonal);
                 
                 uint64_t frontDigits = hexagonal / 100;
-                frontDigitMap.appendValueForKey(frontDigits, hexagonal);
+                frontDigitMap.valueForKey(frontDigits)->insert(hexagonal);
                 
             }
             
@@ -92,7 +89,7 @@ class problem_61 : public problem_base
                 heptagonals.insert(heptagonal);
                 
                 uint64_t frontDigits = heptagonal / 100;
-                frontDigitMap.appendValueForKey(frontDigits, heptagonal);
+                frontDigitMap.valueForKey(frontDigits)->insert(heptagonal);
                 
             }
             
@@ -101,7 +98,7 @@ class problem_61 : public problem_base
                 octagonals.insert(octagonal);
                 
                 uint64_t frontDigits = octagonal / 100;
-                frontDigitMap.appendValueForKey(frontDigits, octagonal);
+                frontDigitMap.valueForKey(frontDigits)->insert(octagonal);
                 
             }
             
@@ -118,40 +115,41 @@ class problem_61 : public problem_base
    
         
         
+        auto itr = frontDigitMap.begin();
         
-        BOOST_FOREACH(auto currentDigitSet, frontDigitMap.data) {
+        while (itr != frontDigitMap.end()) {
             
-            BOOST_FOREACH(auto n1, currentDigitSet.second) {
+            BOOST_FOREACH(auto n1, (*itr).second) {
                 
                 uint64_t backDigits = n1 % 100;
-                auto nextDigitSet = frontDigitMap.valueForKey(backDigits);
+                auto nextDigitSet = *frontDigitMap.valueForKey(backDigits);
                 
                 BOOST_FOREACH(auto n2, nextDigitSet) {
                     
                     uint64_t backDigits = n2 % 100;
-                    auto nextDigitSet = frontDigitMap.valueForKey(backDigits);
+                    auto nextDigitSet = *frontDigitMap.valueForKey(backDigits);
                     
                     BOOST_FOREACH(auto n3, nextDigitSet) {
                         
                         uint64_t backDigits = n3 % 100;
-                        auto nextDigitSet = frontDigitMap.valueForKey(backDigits);
+                        auto nextDigitSet = *frontDigitMap.valueForKey(backDigits);
                         
                         BOOST_FOREACH(auto n4, nextDigitSet) {
                             
                             uint64_t backDigits = n4 % 100;
-                            auto nextDigitSet = frontDigitMap.valueForKey(backDigits);
+                            auto nextDigitSet = *frontDigitMap.valueForKey(backDigits);
                             
                             BOOST_FOREACH(auto n5, nextDigitSet) {
                                 
                                 uint64_t backDigits = n5 % 100;
-                                auto nextDigitSet = frontDigitMap.valueForKey(backDigits);
+                                auto nextDigitSet = *frontDigitMap.valueForKey(backDigits);
                                 
                                 BOOST_FOREACH(auto n6, nextDigitSet) {
                                     
                                     uint64_t backDigits = n6 % 100;
-                                    auto nextDigitSet = frontDigitMap.valueForKey(backDigits);
+                                    auto nextDigitSet = *frontDigitMap.valueForKey(backDigits);
                                     
-                                    if (backDigits == currentDigitSet.first) { //check the front of the loop
+                                    if (backDigits == (*itr).first) { //check the front of the loop
                                         
                                         //vector<uint64_t> curChain = {n1, n2, n3, n4, n5, n6};
                                         set<uint64_t> curChainCopy; //remove duplicates
@@ -200,6 +198,9 @@ class problem_61 : public problem_base
                     }
                 }
             }
+            
+            advance(itr, 1);
+            
         }
         
     }

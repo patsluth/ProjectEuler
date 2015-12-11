@@ -7,7 +7,6 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include <iostream>
 #include <set>
 
 #include "problem_base.h"
@@ -33,9 +32,9 @@ class problem_21 : public problem_base
         
         for (uint64_t a = 1; a < 10000; a++){
             
-            uint64_t b = sumOfProperDivisors(calculateProperDivisors(a));
+            uint64_t b = sumOfVector(calculateProperDivisors(a));
             
-            if (a != b && sumOfProperDivisors(calculateProperDivisors(b)) == a) {
+            if (a != b && sumOfVector(calculateProperDivisors(b)) == a) {
                 amicableNumbers.insert(a);
                 amicableNumbers.insert(b);
             }

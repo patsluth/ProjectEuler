@@ -14,8 +14,7 @@
 
 
 #include <vector>
-
-#include <boost/multiprecision/cpp_int.hpp>
+#include <set>
 
 #include "problem_base.h"
 #include "libProjectEuler.h"
@@ -39,6 +38,9 @@ bool isPalindrome(uint64_t x);
 bool isPalindrome(string i);
 
 uint64_t numberOfDigits(uint64_t i);
+
+uint64_t sumOfVector(vector<uint64_t> *v);
+uint64_t sumOfSet(set<uint64_t> *s);
 
 inline uint64_t factorial(uint64_t x)
 {
@@ -205,8 +207,7 @@ typedef vector<uint64_t> properDivisors;
  *
  *  @return vector containing proper divisors
  */
-properDivisors calculateProperDivisors(uint64_t i);
-uint64_t sumOfProperDivisors(properDivisors properDivisors);
+properDivisors *calculateProperDivisors(uint64_t i);
 
 enum numberType
 {

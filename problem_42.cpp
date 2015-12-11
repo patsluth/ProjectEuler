@@ -7,8 +7,6 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include <iostream>
-#include <assert.h>
 #include <string.h>
 #include <sstream>
 #include <fstream>

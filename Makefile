@@ -18,15 +18,16 @@ LDFLAGS =
 
 
 all: clean
-	#clang++ $(CXXFLAGS) *.cpp $(CFLAGS) -o projecteuler;
-	clang++ $(CXXFLAGS) main.cpp problem_60.cpp libProjectEuler.cpp $(CFLAGS) -o projecteuler;
+	clang++ -x c++-header $(CXXFLAGS) projectEuler.pch -o prefix.pch;
+	clang++ -include-pch prefix.pch $(CXXFLAGS) *.cpp $(CFLAGS) -o projecteuler;
 
 
 
 
 
 clean:
-	rm -rf projecteuler
+	rm -rf projecteuler;
+	rm -rf prefix.pch;
 
 
 

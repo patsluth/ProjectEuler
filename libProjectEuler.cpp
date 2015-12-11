@@ -6,18 +6,13 @@
 //  Copyright © 2015 Pat Sluth. All rights reserved.
 //
 
-#include "libProjectEuler.h"
-
 #include <assert.h>
-#include <iostream>
 #include <string.h>
 #include <sstream>
 #include <fstream>
 #include <iterator>
 
-#include <math.h>
-
-#include <set>
+#include "libProjectEuler.h"
 
 using namespace std;
 
@@ -83,6 +78,28 @@ uint64_t numberOfDigits(uint64_t i)
     }
     
     return numberOfDigits;
+}
+
+uint64_t sumOfVector(vector<uint64_t> *v)
+{
+    uint64_t sum = 0;
+    
+    for (uint64_t i : *v) {
+        sum += i;
+    }
+    
+    return sum;
+}
+
+uint64_t sumOfSet(set<uint64_t> *s)
+{
+    uint64_t sum = 0;
+    
+    for (uint64_t i : *s) {
+        sum += i;
+    }
+    
+    return sum;
 }
 
 factor factorInteger(uint64_t i)
@@ -420,15 +437,15 @@ uint64_t nForOctagonal(int64_t On)
  *
  *  @return vector containing proper divisors
  */
-properDivisors calculateProperDivisors(uint64_t i)
+properDivisors *calculateProperDivisors(uint64_t i)
 {
-    vector<uint64_t> properDivisors = {1};
+    vector<uint64_t> *properDivisors = new vector<uint64_t>(1);
     
     for (uint64_t x = 2; x <= sqrt(i); x++) {
         if ( (i / x) * x == i ) {
-            properDivisors.push_back(x);
+            properDivisors->push_back(x);
             if ( (i / x) != x) { //dont add same multiple twice
-                properDivisors.push_back(i / x);
+                properDivisors->push_back(i / x);
             }
         }
     }
@@ -436,20 +453,9 @@ properDivisors calculateProperDivisors(uint64_t i)
     return properDivisors;
 }
 
-uint64_t sumOfProperDivisors(properDivisors properDivisors)
-{
-    uint64_t sum = 0;
-    
-    for (uint64_t i : properDivisors) {
-        sum += i;
-    }
-    
-    return sum;
-}
-
 numberType getNumberType(uint64_t i)
 {
-    uint64_t x = sumOfProperDivisors(calculateProperDivisors(i));
+    uint64_t x = sumOfVector(calculateProperDivisors(i));
     
     if (x < i){
         return NumberType_Deficient;

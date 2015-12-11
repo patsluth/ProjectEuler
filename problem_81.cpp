@@ -7,10 +7,8 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include <iostream>
 #include <fstream>
 #include <math.h>
-#include <assert.h>
 
 #include "problem_base.h"
 #include "libProjectEuler.h"

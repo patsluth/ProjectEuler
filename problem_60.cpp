@@ -7,18 +7,17 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include <iostream>
 #include <math.h>
 #include <set>
+#include <map>
 #include "hashMap.h"
-
-#include <boost/foreach.hpp>
 
 #include <algorithm>    // std::find
 #include <vector>       // std::vector
 
 #include "problem_base.h"
 #include "libProjectEuler.h"
+#include "primes.h"
 
 using namespace std;
 
@@ -28,260 +27,170 @@ using namespace std;
 
 class problem_60 : public problem_base
 {
-    //set<uint64_t> primeCache;
-    vector<uint64_t> primeCache2;
-
+    
     string desiredAnswer()
     {
         return "26033";
     }
-
-    //TODO: RENAME THIS BTICH
-    bool setPastsTest(set<uint64_t> *s)
-    {
-//       if (s.size() < 4){
-//           return false;
-//       }
-
-        // test current prime set
-        for (uint64_t primeAIndex : *s) {
-            for (uint64_t primeBIndex : *s) {
-                
-                if (primeAIndex != primeBIndex) {
-                    
-                    if (primeAIndex == 1 && primeBIndex == 2){
-                        
-                    }
-                    
-                    
-                    
-                    uint64_t concat_AB = concatanate(primeCache2[primeAIndex], primeCache2[primeBIndex]);
-                    
-                    
-                    //                    if (!isPrimeFast(concat_AB)){
-                    //                        return false;
-                    //                    }
-                    
-                    if (primeCache2.back() < concat_AB) { // to big
-                        return false;
-                    }
-                    
-                    auto searchAB = std::find(primeCache2.begin(), primeCache2.end(), concat_AB);
-                    if (searchAB == primeCache2.end()) { //not found
-                        return false;
-                    }
-                    
-                    
-                    
-                    
-                    
-                    uint64_t concat_BA = concatanate(primeCache2[primeBIndex], primeCache2[primeAIndex]);
-                    
-                    if (primeCache2.back() < concat_BA) { // to big
-                        return false;
-                    }
-                    
-                    
-                    auto searchBA = std::find(primeCache2.begin(), primeCache2.end(), concat_BA);
-                    if (searchBA == primeCache2.end()) { //not found
-                        return false;
-                    }
-                    
-                   
-                    
-                    
-                    
-                    
-                }
-
-
-            }
-        }
-
-        return true;
-    }
-
-    set<uint64_t> *findNext(set<uint64_t> *current)
-    {
-        if (current->size() == 0) {
-            return current;
-        }
-        
-        //uint64_t lastIndex = *current->rbegin();
-        
-        //we dont need to test all 100000, we just have that many so we can quickly check the concatanations
-        //for (uint64_t x = lastIndex + 1; x < lastIndex + 6000; x++) {
-        for (uint64_t x = 0; x < primeCacheSize; x++) {
-            
-            uint64_t prevSize = current->size();
-            current->insert(x);
-            
-            if (prevSize != current->size()) { //added element
-                
-                
-                
-                if (current->size() < 5){
-                
-                    uint64_t cursum = 0;
-                    for (uint64_t primeINDEX : *current){
-                        cursum += primeCache2[primeINDEX];
-                    }
-                    if (cursum > 27000){
-                        cout << "SKIPPING" << endl;
-                        return current;
-                    }
-                    
-                }
-                
-                
-                
-                
-                
-                if (!setPastsTest(current)){
-                    current->erase(x);
-                } else {
-                    
-                    if (current->size() == 5){
-                        
-                        return current;
-                        
-                    }
-                    
-                    
-                    
-                    
-                    
-                    return findNext(current);
-                    
-                }
-                
-            }
-            
-        }
-        
-        return current;
-    }
     
-    
-    
-    uint64_t primeCacheSize = 200000;
-
     void subrun()
     {
-        uint64_t n = 0;
-        uint64_t curPrime = 0;
+        // hashMap where key is the prime and the set contains all primes which can be concatonated with it to produce a prime
+        hashMap<uint64_t, set<uint64_t>> primeHash;
+        // 1st million primes
+        set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1);
         
-        hashMap hash;
-        
-        while (n < primeCacheSize){
-            if (isPrimeFast(curPrime)){
-                primeCache2.push_back(curPrime);
-                if (n < 500)
-                    //hash.addValueToSetForKey(n, n);
-                n++;
+        for (uint64_t prime : millionPrimes) {
+            
+            if (prime > 8500){
+                break;
             }
             
-            curPrime++;
-        }
-        n = 0;
-        curPrime = 0;
-        
-        while (n < 500){
+            set<uint64_t> &curPrimeSet = *primeHash.valueForKey(prime);
             
-            for (uint64_t x = 0; x < hash.size(); x++) {
+            auto itr = primeHash.begin();
+            
+            while (itr != primeHash.end()) { // iterate over all current primes to see if they pass the concatonate test
                 
+                set<uint64_t> &curPrimeSet2 = *primeHash.valueForKey((*itr).first);
                 
-                uint64_t prevSize = hash.setForKey(x)->size();
-                //hash.addValueToSetForKey(n, x);
+                //check both directions (a b) (b a)
+                if (isConcatPrime((*itr).first, prime)){
+                    curPrimeSet2.insert(prime);
+                }
+                if (isConcatPrime(prime, (*itr).first)){
+                    curPrimeSet.insert((*itr).first);
+                }
                 
-                if (prevSize != hash.setForKey(x)->size()){
+                advance(itr, 1);
+                
+            }
+            
+        }
+        
+        
+        uint64_t minPrimeSetSum = UINT64_MAX;
+        
+        for (uint64_t prime1 : millionPrimes) {
+            
+            set<uint64_t> prime1Concats = *primeHash.valueForKey(prime1);
+            
+            BOOST_FOREACH(uint64_t prime2, prime1Concats) {
+                
+                if (prime2 > prime1 && isConcatPrime(prime1, prime2) && isConcatPrime(prime2, prime1)) {
                     
-                    if (!setPastsTest(hash.setForKey(x))){
-                        hash.setForKey(x)->erase(n);
-                    } else {
+                    if (prime1 + prime2 > minPrimeSetSum) {
+                        goto fin;
+                    }
+                    
+                    set<uint64_t> prime2Concats = *primeHash.valueForKey(prime2);
+                    
+                    BOOST_FOREACH(uint64_t prime3, prime2Concats) {
                         
-                        if (hash.setForKey(x)->size() > 3){
-                            cout << hash.setForKey(x)->size() << endl;
-                        }
+                        if (prime3 > prime2 && isConcatPrime(prime2, prime3) && isConcatPrime(prime3, prime2)) {
+                            
+                            if (prime1 + prime2 + prime3 > minPrimeSetSum) {
+                                goto fin;
+                            }
                         
+                            set<uint64_t> prime3Concats = *primeHash.valueForKey(prime3);
+                             
+                            BOOST_FOREACH(uint64_t prime4, prime3Concats) {
+                                
+                                if (prime4 > prime3 && isConcatPrime(prime3, prime4) && isConcatPrime(prime4, prime3)) {
+                                    
+                                    if (prime1 + prime2 + prime3 + prime4 > minPrimeSetSum) {
+                                        goto fin;
+                                    }
+                                    
+                                    set<uint64_t> prime4Concats = *primeHash.valueForKey(prime4);
+                                    
+                                    BOOST_FOREACH(uint64_t prime5, prime4Concats) {
+                                        
+                                        if (prime5 > prime4 && isConcatPrime(prime4, prime5) && isConcatPrime(prime5, prime4)) {
+                                            
+                                            set<uint64_t> *primeSet = new set<uint64_t>();
+                                            
+                                            primeSet->insert(prime1);
+                                            primeSet->insert(prime2);
+                                            primeSet->insert(prime3);
+                                            primeSet->insert(prime4);
+                                            primeSet->insert(prime5);
+                                            
+                                            uint64_t sumOfPrimeSet = sumOfSet(primeSet);
+                                            
+                                            if (sumOfPrimeSet > minPrimeSetSum) {
+                                                goto fin;
+                                            }
+                                            
+                                            if (primeSet->size() == 5 && problem60Test(primeSet)) {
+                                                
+                                                minPrimeSetSum = sumOfPrimeSet;
+                                                
+                                            } else {
+                                                primeSet->clear();
+                                            }
+                                            
+                                        }
+                                        
+                                        
+                                        
+                                    }
+                                }
+                             }
+                             
+                         }
                     }
                     
                 }
-                
-                
+        
             }
             
-            n++;
-            
-        }
-        
-        
-        
-        
-        
-//        while (true) {
-//        
-//            for (uint64_t x = 0; x < primeCache2.size(); x++) {
-//                
-//                for (uint64_t y = 0; y < primeCache2.size(); y++) {
-//                    
-//                    
-//                    if (x != y) {
-//                        
-//                        
-//                        uint64_t prevSize = hash.setForKey(x)->size();
-//                        hash.addValueToSetForKey(y, x);
-//                        
-//                        if (prevSize != hash.setForKey(x)->size()){
-//                            
-//                            if (!setPastsTest(hash.setForKey(x))){
-//                                hash.setForKey(x)->erase(y);
-//                            } else {
-//                                
-//                                if (hash.setForKey(x)->size() > 3){
-//                                    cout << "H";
-//                                }
-//                                
-//                            }
-//                            
-//                        }
-//                        
-//                        
-//                    }
-//                    
-//                    
-//                    
-//                }
-//                
-//            }
-//            
-//        }
-        
-        
-        cout << "END: " << hash.size() << endl;
-        
-        uint64_t startIndex = 0;
-        while (true) {
-            set<uint64_t> sTemp = { startIndex };
-            set<uint64_t> *x = findNext(&sTemp);
-            
-            if (x->size() == 5 ){
-                cout << "5!!! ->";
-                uint64_t cursum = 0;
-                for (uint64_t primeINDEX : *x){
-                    cout << " " << primeCache2[primeINDEX] << " ";
-                    cursum += primeCache2[primeINDEX];
-                }
-                cout << "SUM: " << cursum << endl;
-            }
-            
-            startIndex++;
-            
-            if (startIndex > 100000){
-                break;
-            }
-        }
 
+        }
+        
+    fin:
+        
+        calculatedAnswer << minPrimeSetSum;
+    }
+    
+    /**
+     *  Check if the concatonations of all the primes in the set
+     *  are also prime. Assumes that all number in the set are prime.
+     *
+     *  @param s set of primes
+     *
+     *  @return bool
+     */
+    bool problem60Test(set<uint64_t> *primeSet)
+    {
+        for (uint64_t primeA : *primeSet) {
+            for (uint64_t primeB : *primeSet) {
+                
+                if (primeA != primeB) {
+                    
+                    // check both directions
+                    if (!isConcatPrime(primeA, primeB)) {
+                        return false;
+                    }
+                    if (!isConcatPrime(primeB, primeA)) {
+                        return false;
+                    }
+                    
+                }
+            }
+        }
+        
+        return true;
+    }
+    
+    bool isConcatPrime(uint64_t primeA, uint64_t primeB)
+    {
+        if (primeA != primeB) {
+            return primes::sharedPrimes()->isPrime(concatanate(primeA, primeB));
+        }
+        
+        return false;
     }
 
     uint64_t concatanate(uint64_t a, uint64_t b)

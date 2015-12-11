@@ -7,7 +7,6 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include <iostream>
 #include <math.h>
 
 #include "problem_base.h"
@@ -68,7 +67,7 @@ class problem_95 : public problem_base
         return [] (const uint64_t *currentEndOfChain) {
             
             uint64_t currentEndOfChain_Copy = *currentEndOfChain;
-            return sumOfProperDivisors(calculateProperDivisors(currentEndOfChain_Copy));
+            return sumOfVector(calculateProperDivisors(currentEndOfChain_Copy));
             
         };
     }

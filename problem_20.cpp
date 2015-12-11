@@ -7,10 +7,6 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include <iostream>
-
-#include <boost/multiprecision/cpp_int.hpp>
-
 #include "problem_base.h"
 #include "libProjectEuler.h"
 
