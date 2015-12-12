@@ -39,7 +39,7 @@
 //#include "problem_29.cpp"
 #include "problem_30.cpp"
 //#include "problem_31.cpp"
-//#include "problem_32.cpp"
+#include "problem_32.cpp"
 //#include "problem_33.cpp"
 #include "problem_34.cpp"
 #include "problem_35.cpp"
@@ -542,7 +542,7 @@ static void registerProblems()
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_29);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_30);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_31);
-    //PROBLEM_FACTORY_REGISTER_CLASS(problem_32);
+    PROBLEM_FACTORY_REGISTER_CLASS(problem_32);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_33);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_34);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_35);

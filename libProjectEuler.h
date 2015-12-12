@@ -238,6 +238,20 @@ uint64_t concatanate(uint64_t a, uint64_t b);
 
 
 
+/**
+ *  A number is pandigital if it contains the digits 1 through n exactly
+ *  ex- n = 9 123456789
+ *  ex- n = 4 4321
+ *  ex- n = 6 132465
+ *
+ *  @param i
+ *
+ *  @return bool
+ */
+bool isPandigital(uint64_t i, uint64_t n);
+
+
+
 #endif /* libProjectEuler_h */
 
 

@@ -22,31 +22,6 @@ class problem_38 : public problem_base
         return "932718654";
     }
     
-    /**
-     *  A number is pandigital if it contains the digits 1 through 9 exactly
-     *  ex- 123456789, 987654321, 789645123, etc
-     *
-     *  @param i
-     *
-     *  @return bool
-     */
-    bool isPandigital(uint64_t i)
-    {
-        set<uint64_t> *temp = new set<uint64_t>();
-        
-        while (i > 0) {
-            temp->insert(i % 10);
-            i /= 10;
-        }
-        
-        bool isPandigital = (temp->size() == 9 && sumOfSet(temp) == 45);
-        
-        temp->clear();
-        delete temp;
-        
-        return isPandigital;
-    }
-    
     void subrun()
     {
         uint64_t largestPandigital = 0;
@@ -59,11 +34,11 @@ class problem_38 : public problem_base
                 
                 y = concatanate(y, x * n);
                 
-                if (y > 987654321) { // largest possible pandigital number
+                if (y > 987654321) { // largest possible 9 digit pandigital number
                     break;
                 }
                 
-                if (isPandigital(y)){
+                if (isPandigital(y, 9)){
                     if (largestPandigital < y) {
                         largestPandigital = y;
                     } else {
@@ -76,15 +51,6 @@ class problem_38 : public problem_base
         }
         
         calculatedAnswer << largestPandigital;
-    }
-
-    void tdd()
-    {
-        assert(isPandigital(123456789) == true);
-        assert(isPandigital(987654321) == true);
-        assert(isPandigital(192837465) == true);
-        assert(isPandigital(564738291) == true);
-        assert(isPandigital(827354961) == true);
     }
 
 };

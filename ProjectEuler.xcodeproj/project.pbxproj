@@ -59,6 +59,7 @@
 		2E29BE2E1C1B0BEA00C800E3 /* problem_99.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EE0D41C176CA40018ECAD /* problem_99.cpp */; };
 		2E7F448C1BFF861F00FCB85B /* libProjectEuler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F44721BFF861F00FCB85B /* libProjectEuler.cpp */; };
 		2E7F448D1BFF861F00FCB85B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F44741BFF861F00FCB85B /* main.cpp */; };
+		2EA7B5721C1C9FF50034409C /* problem_32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EA7B5711C1C9FF50034409C /* problem_32.cpp */; };
 		2EA7CE471C19DB500066C3F1 /* primes1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE451C19DA130066C3F1 /* primes1.txt */; };
 		2EA7CE481C19DB500066C3F1 /* primes2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE461C19DA130066C3F1 /* primes2.txt */; };
 		2EA7CE491C19DB500066C3F1 /* primes3.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE131C19D9EA0066C3F1 /* primes3.txt */; };
@@ -249,6 +250,7 @@
 		2E7F44A51BFF863300FCB85B /* p018_triangle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p018_triangle.txt; sourceTree = SOURCE_ROOT; };
 		2E7F44A61BFF863300FCB85B /* p042_words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p042_words.txt; sourceTree = SOURCE_ROOT; };
 		2E7F44A71BFF863300FCB85B /* p067_triangle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p067_triangle.txt; sourceTree = SOURCE_ROOT; };
+		2EA7B5711C1C9FF50034409C /* problem_32.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = problem_32.cpp; sourceTree = "<group>"; };
 		2EA7CE0C1C19CF3C0066C3F1 /* primes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = primes.h; sourceTree = "<group>"; };
 		2EA7CE131C19D9EA0066C3F1 /* primes3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = primes3.txt; sourceTree = "<group>"; };
 		2EA7CE141C19D9EA0066C3F1 /* primes4.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = primes4.txt; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 				2E1EE0BA1C176CA40018ECAD /* problem_28.cpp */,
 				2E1EE0BB1C176CA40018ECAD /* problem_29.cpp */,
 				2E1EE0BC1C176CA40018ECAD /* problem_30.cpp */,
+				2EA7B5711C1C9FF50034409C /* problem_32.cpp */,
 				2E1EE0BD1C176CA40018ECAD /* problem_34.cpp */,
 				2E1EE0BE1C176CA40018ECAD /* problem_35.cpp */,
 				2E1EE0BF1C176CA40018ECAD /* problem_36.cpp */,
@@ -540,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E7F448D1BFF861F00FCB85B /* main.cpp in Sources */,
+				2EA7B5721C1C9FF50034409C /* problem_32.cpp in Sources */,
 				2E29BE281C1B0BEA00C800E3 /* problem_80.cpp in Sources */,
 				2E29BE071C1B0BEA00C800E3 /* problem_11.cpp in Sources */,
 				2E29BE041C1B0BEA00C800E3 /* problem_8.cpp in Sources */,

@@ -464,3 +464,30 @@ uint64_t concatanate(uint64_t a, uint64_t b)
 
 
 
+
+
+bool isPandigital(uint64_t i, uint64_t n)
+{
+    set<uint64_t> *temp = new set<uint64_t>();
+    uint64_t desiredSum = 0;
+    
+    for (uint64_t x = 1; x <= n; x++) {
+        desiredSum += x;
+    }
+    
+    while (i > 0) {
+        temp->insert(i % 10);
+        i /= 10;
+    }
+    
+    bool isPandigital = (temp->size() == n && sumOfSet(temp) == desiredSum);
+    
+    temp->clear();
+    delete temp;
+    
+    return isPandigital;
+}
+
+
+
+
