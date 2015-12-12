@@ -48,7 +48,7 @@
 #include "problem_38.cpp"
 #include "problem_39.cpp"
 //#include "problem_40.cpp"
-//#include "problem_41.cpp"
+#include "problem_41.cpp"
 #include "problem_42.cpp"
 //#include "problem_43.cpp"
 #include "problem_44.cpp"
@@ -78,7 +78,7 @@
 //#include "problem_68.cpp"
 //#include "problem_69.cpp"
 //#include "problem_70.cpp"
-//#include "problem_71.cpp"
+#include "problem_71.cpp"
 //#include "problem_72.cpp"
 //#include "problem_73.cpp"
 #include "problem_74.cpp"
@@ -551,7 +551,7 @@ static void registerProblems()
     PROBLEM_FACTORY_REGISTER_CLASS(problem_38);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_39);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_40);
-    //PROBLEM_FACTORY_REGISTER_CLASS(problem_41);
+    PROBLEM_FACTORY_REGISTER_CLASS(problem_41);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_42);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_43);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_44);
@@ -581,7 +581,7 @@ static void registerProblems()
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_68);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_69);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_70);
-    //PROBLEM_FACTORY_REGISTER_CLASS(problem_71);
+    PROBLEM_FACTORY_REGISTER_CLASS(problem_71);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_72);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_73);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_74);
