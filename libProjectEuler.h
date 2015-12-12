@@ -13,11 +13,6 @@
 
 
 
-#include <vector>
-#include <set>
-
-#include "problem_base.h"
-#include "libProjectEuler.h"
 
 using namespace std;
 using namespace boost::multiprecision;
@@ -224,6 +219,22 @@ enum numberType
  *  @return bool
  */
 numberType getNumberType(uint64_t i);
+
+
+
+
+
+/**
+ *  Concatonate 2 integers
+ *  ex 78 and 96 produce 7896
+ *  ex 96 and 78 produce 9678
+ *
+ *  @param a
+ *  @param b
+ *
+ *  @return uint64_t
+ */
+uint64_t concatanate(uint64_t a, uint64_t b);
 
 
 

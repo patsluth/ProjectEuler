@@ -13,7 +13,6 @@
 
 
 
-#include "libProjectEuler.h"
 
 using namespace std;
 

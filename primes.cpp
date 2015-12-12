@@ -6,12 +6,8 @@
 //  Copyright © 2015 Pat Sluth. All rights reserved.
 //
 
-#include "primes.h"
-
-#include <string.h>
 #include <sstream>
 #include <fstream>
-#include <iterator>
 
 using namespace std;
 

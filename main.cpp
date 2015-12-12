@@ -6,14 +6,7 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include "primes.h"
-
 #include "problem_factory.h"
-#include "problem_base.h"
-
-#define RELEASEEEOOOO
-
-#ifdef RELEASEEEOOOO
 
 #include "problem_1.cpp"
 #include "problem_2.cpp"
@@ -52,7 +45,7 @@
 #include "problem_35.cpp"
 #include "problem_36.cpp"
 #include "problem_37.cpp"
-//#include "problem_38.cpp"
+#include "problem_38.cpp"
 #include "problem_39.cpp"
 //#include "problem_40.cpp"
 //#include "problem_41.cpp"
@@ -516,17 +509,8 @@
 //#include "problem_499.cpp"
 //#include "problem_500.cpp"
 
-#else
-
-#include "problem_1.cpp"
-#include "problem_60.cpp"
-
-#endif
-
 static void registerProblems()
 {
-#ifdef RELEASEEEOOOO
-
     PROBLEM_FACTORY_REGISTER_CLASS(problem_1);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_2);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_3);
@@ -564,7 +548,7 @@ static void registerProblems()
     PROBLEM_FACTORY_REGISTER_CLASS(problem_35);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_36);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_37);
-    //PROBLEM_FACTORY_REGISTER_CLASS(problem_38);
+    PROBLEM_FACTORY_REGISTER_CLASS(problem_38);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_39);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_40);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_41);
@@ -1027,13 +1011,7 @@ static void registerProblems()
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_498);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_499);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_500);
-
-#else
-
-    PROBLEM_FACTORY_REGISTER_CLASS(problem_1);
-    PROBLEM_FACTORY_REGISTER_CLASS(problem_60);
-
-#endif
+    
 }
 
 int main(int, char**)

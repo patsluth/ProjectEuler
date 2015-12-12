@@ -7,13 +7,9 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include <string.h>
 #include <sstream>
 #include <fstream>
-#include <iterator>
 
-#include "problem_base.h"
-#include "libProjectEuler.h"
 
 using namespace std;
 

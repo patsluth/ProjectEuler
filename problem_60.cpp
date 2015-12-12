@@ -7,17 +7,9 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include <math.h>
-#include <set>
-#include <map>
 #include "hashMap.h"
 
 #include <algorithm>    // std::find
-#include <vector>       // std::vector
-
-#include "problem_base.h"
-#include "libProjectEuler.h"
-#include "primes.h"
 
 using namespace std;
 
@@ -191,25 +183,6 @@ class problem_60 : public problem_base
         }
         
         return false;
-    }
-
-    uint64_t concatanate(uint64_t a, uint64_t b)
-    {
-        uint64_t result = b;
-        uint64_t resultDigits = numberOfDigits(result);
-
-        while (a > 0) {
-
-            uint64_t aDigit = a % 10;
-
-            result += aDigit * pow(10, resultDigits);
-            resultDigits++;
-
-            a /= 10;
-
-        }
-
-        return result;
     }
 
 };

@@ -14,9 +14,6 @@
 
 
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include <sstream>
 #include <cxxabi.h>
 
@@ -41,7 +38,9 @@ public:
     
     void run()
     {
+#ifdef DEBUG
         tdd();
+#endif
         
         clock_t timer = clock();
         

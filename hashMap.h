@@ -9,10 +9,6 @@
 #ifndef hashMap_h
 #define hashMap_h
 
-#include <stdio.h>
-#include <set>
-#include <map>
-
 using namespace std;
 
 
