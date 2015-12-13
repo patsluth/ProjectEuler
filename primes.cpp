@@ -6,9 +6,6 @@
 //  Copyright © 2015 Pat Sluth. All rights reserved.
 //
 
-#include <sstream>
-#include <fstream>
-
 using namespace std;
 
 
@@ -85,7 +82,7 @@ set<uint64_t> &primes::loadPrimes(uint64_t nMillion)
         stringstream file;
         file << "primes" << nMillion << ".txt";
         
-        ifstream fileStream(file.str());
+        ifstream fileStream = readFile(file.str());
         
         if (fileStream) {
             
@@ -97,10 +94,6 @@ set<uint64_t> &primes::loadPrimes(uint64_t nMillion)
                 set.insert(*number);
                 
             }
-            
-        } else {
-            
-            fprintf(stderr, "Error reading %s\n", file.str().c_str());
             
         }
         

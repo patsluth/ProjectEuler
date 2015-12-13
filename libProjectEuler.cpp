@@ -6,9 +6,6 @@
 //  Copyright © 2015 Pat Sluth. All rights reserved.
 //
 
-#include <sstream>
-#include <fstream>
-
 using namespace std;
 
 
@@ -179,7 +176,7 @@ uint64_t nextCollatzInt(uint64_t i)
 
 pyramid pyramidFromFile(string file)
 {
-    ifstream fileStream(file);
+    ifstream fileStream = readFile(file);
     pyramid p;
 
     if (fileStream) {
@@ -200,10 +197,6 @@ pyramid pyramidFromFile(string file)
             p.push_back(pRow);
 
         }
-
-    } else {
-
-        fprintf(stderr, "Error reading %s\n", file.c_str());
 
     }
 
@@ -491,6 +484,19 @@ bool isPandigital(uint64_t i, uint64_t n)
     delete temp;
     
     return isPandigital;
+}
+
+
+
+ifstream readFile(string file)
+{
+    ifstream fileStream(file);
+    
+    if (!fileStream) {
+        fprintf(stderr, "Error reading %s\n", file.c_str());
+    }
+    
+    return fileStream;
 }
 
 

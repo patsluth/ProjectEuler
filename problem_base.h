@@ -14,7 +14,6 @@
 
 
 
-#include <sstream>
 #include <cxxabi.h>
 
 using namespace std;
@@ -60,6 +59,7 @@ public:
         cout << desiredAnswer() << ")";
         
         cout << endl;
+        calculatedAnswer = stringstream();
         
     };
     

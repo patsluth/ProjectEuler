@@ -7,9 +7,6 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include <fstream>
-
-
 using namespace std;
 
 
@@ -26,9 +23,7 @@ class problem_82 : public problem_base
     
     void subrun()
     {
-        string file = "p082_matrix.txt";
-        ifstream fileStream(file);
-        
+        ifstream fileStream = readFile("p082_matrix.txt");
         
         if (fileStream) {
             
@@ -50,23 +45,10 @@ class problem_82 : public problem_base
                 assert(matrix.size() == row.size());
             }
             
-            
-            //solution
-            
-            
             calculatedAnswer << matrix[0][0];
-            
-            
-        } else {
-            
-            fprintf(stderr, "Error reading %s\n", file.c_str());
             
         }
     }
-    
-    
-    
-    
     
     void tdd()
     {

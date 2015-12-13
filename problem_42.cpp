@@ -7,10 +7,6 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include <sstream>
-#include <fstream>
-
-
 using namespace std;
 
 
@@ -27,9 +23,7 @@ class problem_42 : public problem_base
     
     void subrun()
     {
-        string file = "p042_words.txt";
-        
-        ifstream fileStream(file);
+        ifstream fileStream = readFile("p042_words.txt");
         
         if (fileStream) {
             
@@ -45,10 +39,6 @@ class problem_42 : public problem_base
             }
             
             calculatedAnswer << triangleWordCount;
-            
-        } else {
-            
-            fprintf(stderr, "Error reading %s\n", file.c_str());
             
         }
     }

@@ -1,6 +1,6 @@
 //
 //  problem_71.h
-//  Prime summations
+//  Ordered fractions
 //  ProjectEuler
 //
 //  Created by Pat Sluth on 2015-11-02.
@@ -19,7 +19,7 @@ class problem_71 : public problem_base
 
     string desiredAnswer()
     {
-        return "71";
+        return "428570";
     }
     
     void subrun()

@@ -7,9 +7,6 @@
 //  Copyright (c) 2015 Pat Sluth. All rights reserved.
 //
 
-#include <fstream>
-
-
 using namespace std;
 
 
@@ -50,9 +47,7 @@ class problem_99 : public problem_base
     
     void subrun()
     {
-        string file = "p099_base_exp.txt";
-        ifstream fileStream(file);
-        
+        ifstream fileStream = readFile("p099_base_exp.txt");
         
         if (fileStream) {
             
@@ -85,10 +80,6 @@ class problem_99 : public problem_base
             }
             
             calculatedAnswer << exponents.front()[1]; //line number stored in center index
-            
-        } else {
-            
-            fprintf(stderr, "Error reading %s\n", file.c_str());
             
         }
     }

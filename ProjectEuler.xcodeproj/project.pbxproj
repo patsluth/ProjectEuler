@@ -7,6 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E27F2F61C1DBECA0012BBB5 /* p018_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E7F44A51BFF863300FCB85B /* p018_triangle.txt */; };
+		2E27F2F71C1DBECA0012BBB5 /* p022_names.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E27F2F51C1DBE910012BBB5 /* p022_names.txt */; };
+		2E27F2F81C1DBECA0012BBB5 /* p042_words.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E7F44A61BFF863300FCB85B /* p042_words.txt */; };
+		2E27F2F91C1DBECA0012BBB5 /* p067_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E7F44A71BFF863300FCB85B /* p067_triangle.txt */; };
+		2E27F2FA1C1DBECA0012BBB5 /* p081_matrix.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E6C675C1C0CD9A60055CF53 /* p081_matrix.txt */; };
+		2E27F2FB1C1DBECA0012BBB5 /* p082_matrix.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF4252A1C0F3C6200B7E34F /* p082_matrix.txt */; };
+		2E27F2FC1C1DBECA0012BBB5 /* p099_base_exp.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EC7466F1C024B29003F8119 /* p099_base_exp.txt */; };
+		2E27F2FD1C1DBECA0012BBB5 /* primes1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE451C19DA130066C3F1 /* primes1.txt */; };
+		2E27F2FE1C1DBECA0012BBB5 /* primes2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE461C19DA130066C3F1 /* primes2.txt */; };
+		2E27F2FF1C1DBECA0012BBB5 /* primes3.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE131C19D9EA0066C3F1 /* primes3.txt */; };
+		2E27F3001C1DBECA0012BBB5 /* primes4.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE141C19D9EA0066C3F1 /* primes4.txt */; };
+		2E27F3011C1DBECA0012BBB5 /* primes5.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE151C19D9EA0066C3F1 /* primes5.txt */; };
+		2E27F3021C1DBECA0012BBB5 /* primes6.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE161C19D9EA0066C3F1 /* primes6.txt */; };
+		2E27F3031C1DBECA0012BBB5 /* primes7.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE171C19D9EA0066C3F1 /* primes7.txt */; };
+		2E27F3041C1DBECA0012BBB5 /* primes8.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE181C19D9EA0066C3F1 /* primes8.txt */; };
+		2E27F3051C1DBECA0012BBB5 /* primes9.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE191C19D9EA0066C3F1 /* primes9.txt */; };
+		2E27F3061C1DBECA0012BBB5 /* primes10.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE1A1C19D9EA0066C3F1 /* primes10.txt */; };
+		2E27F3071C1DBECA0012BBB5 /* primes11.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE1B1C19D9EA0066C3F1 /* primes11.txt */; };
+		2E27F3081C1DBECA0012BBB5 /* primes12.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE1C1C19D9EA0066C3F1 /* primes12.txt */; };
+		2E27F3091C1DBECA0012BBB5 /* primes13.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE1D1C19D9EA0066C3F1 /* primes13.txt */; };
+		2E27F30A1C1DBECA0012BBB5 /* primes14.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE1E1C19D9EA0066C3F1 /* primes14.txt */; };
+		2E27F30B1C1DBECA0012BBB5 /* primes15.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE1F1C19D9EA0066C3F1 /* primes15.txt */; };
+		2E27F30C1C1DBECA0012BBB5 /* primes16.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE201C19D9EA0066C3F1 /* primes16.txt */; };
+		2E27F30D1C1DBECA0012BBB5 /* primes17.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE211C19D9EA0066C3F1 /* primes17.txt */; };
+		2E27F30E1C1DBECA0012BBB5 /* primes18.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE221C19D9EA0066C3F1 /* primes18.txt */; };
+		2E27F30F1C1DBECA0012BBB5 /* primes19.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE231C19D9EA0066C3F1 /* primes19.txt */; };
+		2E27F3101C1DBECA0012BBB5 /* primes20.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE241C19D9EA0066C3F1 /* primes20.txt */; };
+		2E27F3111C1DBECA0012BBB5 /* primes21.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE251C19D9EA0066C3F1 /* primes21.txt */; };
+		2E27F3121C1DBECA0012BBB5 /* primes22.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE261C19D9EA0066C3F1 /* primes22.txt */; };
+		2E27F3131C1DBECA0012BBB5 /* primes23.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE271C19D9EA0066C3F1 /* primes23.txt */; };
+		2E27F3141C1DBECA0012BBB5 /* primes24.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE281C19D9EA0066C3F1 /* primes24.txt */; };
+		2E27F3151C1DBECA0012BBB5 /* primes25.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE291C19D9EA0066C3F1 /* primes25.txt */; };
+		2E27F3161C1DBECA0012BBB5 /* primes26.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE2A1C19D9EA0066C3F1 /* primes26.txt */; };
+		2E27F3171C1DBECA0012BBB5 /* primes27.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE2B1C19D9EA0066C3F1 /* primes27.txt */; };
+		2E27F3181C1DBECA0012BBB5 /* primes28.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE2C1C19D9EA0066C3F1 /* primes28.txt */; };
+		2E27F3191C1DBECA0012BBB5 /* primes29.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE2D1C19D9EA0066C3F1 /* primes29.txt */; };
+		2E27F31A1C1DBECA0012BBB5 /* primes30.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE2E1C19D9EA0066C3F1 /* primes30.txt */; };
+		2E27F31B1C1DBECA0012BBB5 /* primes31.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE2F1C19D9EA0066C3F1 /* primes31.txt */; };
+		2E27F31C1C1DBECA0012BBB5 /* primes32.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE301C19D9EA0066C3F1 /* primes32.txt */; };
+		2E27F31D1C1DBECA0012BBB5 /* primes33.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE311C19D9EA0066C3F1 /* primes33.txt */; };
+		2E27F31E1C1DBECA0012BBB5 /* primes34.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE321C19D9EA0066C3F1 /* primes34.txt */; };
+		2E27F31F1C1DBECA0012BBB5 /* primes35.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE331C19D9EA0066C3F1 /* primes35.txt */; };
+		2E27F3201C1DBECA0012BBB5 /* primes36.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE341C19D9EA0066C3F1 /* primes36.txt */; };
+		2E27F3211C1DBECA0012BBB5 /* primes37.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE351C19D9EA0066C3F1 /* primes37.txt */; };
+		2E27F3221C1DBECA0012BBB5 /* primes38.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE361C19D9EA0066C3F1 /* primes38.txt */; };
+		2E27F3231C1DBECA0012BBB5 /* primes39.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE371C19D9EA0066C3F1 /* primes39.txt */; };
+		2E27F3241C1DBECA0012BBB5 /* primes40.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE381C19D9EA0066C3F1 /* primes40.txt */; };
+		2E27F3251C1DBECA0012BBB5 /* primes41.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE391C19D9EA0066C3F1 /* primes41.txt */; };
+		2E27F3261C1DBECA0012BBB5 /* primes42.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE3A1C19D9EA0066C3F1 /* primes42.txt */; };
+		2E27F3271C1DBECA0012BBB5 /* primes43.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE3B1C19D9EA0066C3F1 /* primes43.txt */; };
+		2E27F3281C1DBECA0012BBB5 /* primes44.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE3C1C19D9EA0066C3F1 /* primes44.txt */; };
+		2E27F3291C1DBECA0012BBB5 /* primes45.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE3D1C19D9EA0066C3F1 /* primes45.txt */; };
+		2E27F32A1C1DBECA0012BBB5 /* primes46.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE3E1C19D9EA0066C3F1 /* primes46.txt */; };
+		2E27F32B1C1DBECA0012BBB5 /* primes47.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE3F1C19D9EA0066C3F1 /* primes47.txt */; };
+		2E27F32C1C1DBECA0012BBB5 /* primes48.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE401C19D9EA0066C3F1 /* primes48.txt */; };
+		2E27F32D1C1DBECA0012BBB5 /* primes49.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE411C19D9EA0066C3F1 /* primes49.txt */; };
+		2E27F32E1C1DBECA0012BBB5 /* primes50.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE421C19D9EA0066C3F1 /* primes50.txt */; };
+		2E27F3301C1DBF240012BBB5 /* problem_22.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E27F32F1C1DBF240012BBB5 /* problem_22.cpp */; };
 		2E29BDFD1C1B0BEA00C800E3 /* problem_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F44751BFF861F00FCB85B /* problem_1.cpp */; };
 		2E29BDFE1C1B0BEA00C800E3 /* problem_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EE0A41C176CA40018ECAD /* problem_2.cpp */; };
 		2E29BDFF1C1B0BEA00C800E3 /* problem_3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EE0A51C176CA40018ECAD /* problem_3.cpp */; };
@@ -62,64 +120,9 @@
 		2E922A551C1CA8D700CBC7DF /* problem_41.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E922A541C1CA8D700CBC7DF /* problem_41.cpp */; };
 		2E922A571C1CAE3F00CBC7DF /* problem_71.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E922A561C1CAE3F00CBC7DF /* problem_71.cpp */; };
 		2EA7B5721C1C9FF50034409C /* problem_32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EA7B5711C1C9FF50034409C /* problem_32.cpp */; };
-		2EA7CE471C19DB500066C3F1 /* primes1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE451C19DA130066C3F1 /* primes1.txt */; };
-		2EA7CE481C19DB500066C3F1 /* primes2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE461C19DA130066C3F1 /* primes2.txt */; };
-		2EA7CE491C19DB500066C3F1 /* primes3.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE131C19D9EA0066C3F1 /* primes3.txt */; };
-		2EA7CE4A1C19DB500066C3F1 /* primes4.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE141C19D9EA0066C3F1 /* primes4.txt */; };
-		2EA7CE4B1C19DB500066C3F1 /* primes5.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE151C19D9EA0066C3F1 /* primes5.txt */; };
-		2EA7CE4C1C19DB500066C3F1 /* primes6.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE161C19D9EA0066C3F1 /* primes6.txt */; };
-		2EA7CE4D1C19DB500066C3F1 /* primes7.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE171C19D9EA0066C3F1 /* primes7.txt */; };
-		2EA7CE4E1C19DB500066C3F1 /* primes8.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE181C19D9EA0066C3F1 /* primes8.txt */; };
-		2EA7CE4F1C19DB500066C3F1 /* primes9.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE191C19D9EA0066C3F1 /* primes9.txt */; };
-		2EA7CE501C19DB500066C3F1 /* primes10.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE1A1C19D9EA0066C3F1 /* primes10.txt */; };
-		2EA7CE511C19DB500066C3F1 /* primes11.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE1B1C19D9EA0066C3F1 /* primes11.txt */; };
-		2EA7CE521C19DB500066C3F1 /* primes12.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE1C1C19D9EA0066C3F1 /* primes12.txt */; };
-		2EA7CE531C19DB500066C3F1 /* primes13.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE1D1C19D9EA0066C3F1 /* primes13.txt */; };
-		2EA7CE541C19DB500066C3F1 /* primes14.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE1E1C19D9EA0066C3F1 /* primes14.txt */; };
-		2EA7CE551C19DB500066C3F1 /* primes15.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE1F1C19D9EA0066C3F1 /* primes15.txt */; };
-		2EA7CE561C19DB500066C3F1 /* primes16.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE201C19D9EA0066C3F1 /* primes16.txt */; };
-		2EA7CE571C19DB500066C3F1 /* primes17.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE211C19D9EA0066C3F1 /* primes17.txt */; };
-		2EA7CE581C19DB500066C3F1 /* primes18.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE221C19D9EA0066C3F1 /* primes18.txt */; };
-		2EA7CE591C19DB500066C3F1 /* primes19.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE231C19D9EA0066C3F1 /* primes19.txt */; };
-		2EA7CE5A1C19DB500066C3F1 /* primes20.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE241C19D9EA0066C3F1 /* primes20.txt */; };
-		2EA7CE5B1C19DB500066C3F1 /* primes21.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE251C19D9EA0066C3F1 /* primes21.txt */; };
-		2EA7CE5C1C19DB500066C3F1 /* primes22.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE261C19D9EA0066C3F1 /* primes22.txt */; };
-		2EA7CE5D1C19DB500066C3F1 /* primes23.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE271C19D9EA0066C3F1 /* primes23.txt */; };
-		2EA7CE5E1C19DB500066C3F1 /* primes24.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE281C19D9EA0066C3F1 /* primes24.txt */; };
-		2EA7CE5F1C19DB500066C3F1 /* primes25.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE291C19D9EA0066C3F1 /* primes25.txt */; };
-		2EA7CE601C19DB500066C3F1 /* primes26.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE2A1C19D9EA0066C3F1 /* primes26.txt */; };
-		2EA7CE611C19DB500066C3F1 /* primes27.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE2B1C19D9EA0066C3F1 /* primes27.txt */; };
-		2EA7CE621C19DB500066C3F1 /* primes28.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE2C1C19D9EA0066C3F1 /* primes28.txt */; };
-		2EA7CE631C19DB500066C3F1 /* primes29.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE2D1C19D9EA0066C3F1 /* primes29.txt */; };
-		2EA7CE641C19DB500066C3F1 /* primes30.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE2E1C19D9EA0066C3F1 /* primes30.txt */; };
-		2EA7CE651C19DB500066C3F1 /* primes31.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE2F1C19D9EA0066C3F1 /* primes31.txt */; };
-		2EA7CE661C19DB500066C3F1 /* primes32.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE301C19D9EA0066C3F1 /* primes32.txt */; };
-		2EA7CE671C19DB500066C3F1 /* primes33.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE311C19D9EA0066C3F1 /* primes33.txt */; };
-		2EA7CE681C19DB500066C3F1 /* primes34.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE321C19D9EA0066C3F1 /* primes34.txt */; };
-		2EA7CE691C19DB500066C3F1 /* primes35.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE331C19D9EA0066C3F1 /* primes35.txt */; };
-		2EA7CE6A1C19DB500066C3F1 /* primes36.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE341C19D9EA0066C3F1 /* primes36.txt */; };
-		2EA7CE6B1C19DB500066C3F1 /* primes37.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE351C19D9EA0066C3F1 /* primes37.txt */; };
-		2EA7CE6C1C19DB500066C3F1 /* primes38.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE361C19D9EA0066C3F1 /* primes38.txt */; };
-		2EA7CE6D1C19DB500066C3F1 /* primes39.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE371C19D9EA0066C3F1 /* primes39.txt */; };
-		2EA7CE6E1C19DB500066C3F1 /* primes40.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE381C19D9EA0066C3F1 /* primes40.txt */; };
-		2EA7CE6F1C19DB500066C3F1 /* primes41.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE391C19D9EA0066C3F1 /* primes41.txt */; };
-		2EA7CE701C19DB500066C3F1 /* primes42.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE3A1C19D9EA0066C3F1 /* primes42.txt */; };
-		2EA7CE711C19DB500066C3F1 /* primes43.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE3B1C19D9EA0066C3F1 /* primes43.txt */; };
-		2EA7CE721C19DB500066C3F1 /* primes44.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE3C1C19D9EA0066C3F1 /* primes44.txt */; };
-		2EA7CE731C19DB500066C3F1 /* primes45.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE3D1C19D9EA0066C3F1 /* primes45.txt */; };
-		2EA7CE741C19DB500066C3F1 /* primes46.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE3E1C19D9EA0066C3F1 /* primes46.txt */; };
-		2EA7CE751C19DB500066C3F1 /* primes47.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE3F1C19D9EA0066C3F1 /* primes47.txt */; };
-		2EA7CE761C19DB500066C3F1 /* primes48.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE401C19D9EA0066C3F1 /* primes48.txt */; };
-		2EA7CE771C19DB500066C3F1 /* primes49.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE411C19D9EA0066C3F1 /* primes49.txt */; };
-		2EA7CE781C19DB500066C3F1 /* primes50.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EA7CE421C19D9EA0066C3F1 /* primes50.txt */; };
-		2EA7CE791C19DB500066C3F1 /* p018_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E7F44A51BFF863300FCB85B /* p018_triangle.txt */; };
-		2EA7CE7A1C19DB500066C3F1 /* p042_words.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E7F44A61BFF863300FCB85B /* p042_words.txt */; };
-		2EA7CE7B1C19DB500066C3F1 /* p067_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E7F44A71BFF863300FCB85B /* p067_triangle.txt */; };
-		2EA7CE7C1C19DB500066C3F1 /* p081_matrix.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E6C675C1C0CD9A60055CF53 /* p081_matrix.txt */; };
-		2EA7CE7D1C19DB500066C3F1 /* p082_matrix.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF4252A1C0F3C6200B7E34F /* p082_matrix.txt */; };
-		2EA7CE7E1C19DB500066C3F1 /* p099_base_exp.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EC7466F1C024B29003F8119 /* p099_base_exp.txt */; };
 		2EB9FE851C1C912C00FACDF3 /* problem_38.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9FE841C1C912C00FACDF3 /* problem_38.cpp */; };
 		2EBD56C41C1A368300D481AD /* primes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EBD56C21C1A323200D481AD /* primes.cpp */; };
+		2EFA3D0F1C1CF56C0088E0EB /* problem_77.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EFA3D0E1C1CF56C0088E0EB /* problem_77.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -129,62 +132,63 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				2EA7CE471C19DB500066C3F1 /* primes1.txt in CopyFiles */,
-				2EA7CE481C19DB500066C3F1 /* primes2.txt in CopyFiles */,
-				2EA7CE491C19DB500066C3F1 /* primes3.txt in CopyFiles */,
-				2EA7CE4A1C19DB500066C3F1 /* primes4.txt in CopyFiles */,
-				2EA7CE4B1C19DB500066C3F1 /* primes5.txt in CopyFiles */,
-				2EA7CE4C1C19DB500066C3F1 /* primes6.txt in CopyFiles */,
-				2EA7CE4D1C19DB500066C3F1 /* primes7.txt in CopyFiles */,
-				2EA7CE4E1C19DB500066C3F1 /* primes8.txt in CopyFiles */,
-				2EA7CE4F1C19DB500066C3F1 /* primes9.txt in CopyFiles */,
-				2EA7CE501C19DB500066C3F1 /* primes10.txt in CopyFiles */,
-				2EA7CE511C19DB500066C3F1 /* primes11.txt in CopyFiles */,
-				2EA7CE521C19DB500066C3F1 /* primes12.txt in CopyFiles */,
-				2EA7CE531C19DB500066C3F1 /* primes13.txt in CopyFiles */,
-				2EA7CE541C19DB500066C3F1 /* primes14.txt in CopyFiles */,
-				2EA7CE551C19DB500066C3F1 /* primes15.txt in CopyFiles */,
-				2EA7CE561C19DB500066C3F1 /* primes16.txt in CopyFiles */,
-				2EA7CE571C19DB500066C3F1 /* primes17.txt in CopyFiles */,
-				2EA7CE581C19DB500066C3F1 /* primes18.txt in CopyFiles */,
-				2EA7CE591C19DB500066C3F1 /* primes19.txt in CopyFiles */,
-				2EA7CE5A1C19DB500066C3F1 /* primes20.txt in CopyFiles */,
-				2EA7CE5B1C19DB500066C3F1 /* primes21.txt in CopyFiles */,
-				2EA7CE5C1C19DB500066C3F1 /* primes22.txt in CopyFiles */,
-				2EA7CE5D1C19DB500066C3F1 /* primes23.txt in CopyFiles */,
-				2EA7CE5E1C19DB500066C3F1 /* primes24.txt in CopyFiles */,
-				2EA7CE5F1C19DB500066C3F1 /* primes25.txt in CopyFiles */,
-				2EA7CE601C19DB500066C3F1 /* primes26.txt in CopyFiles */,
-				2EA7CE611C19DB500066C3F1 /* primes27.txt in CopyFiles */,
-				2EA7CE621C19DB500066C3F1 /* primes28.txt in CopyFiles */,
-				2EA7CE631C19DB500066C3F1 /* primes29.txt in CopyFiles */,
-				2EA7CE641C19DB500066C3F1 /* primes30.txt in CopyFiles */,
-				2EA7CE651C19DB500066C3F1 /* primes31.txt in CopyFiles */,
-				2EA7CE661C19DB500066C3F1 /* primes32.txt in CopyFiles */,
-				2EA7CE671C19DB500066C3F1 /* primes33.txt in CopyFiles */,
-				2EA7CE681C19DB500066C3F1 /* primes34.txt in CopyFiles */,
-				2EA7CE691C19DB500066C3F1 /* primes35.txt in CopyFiles */,
-				2EA7CE6A1C19DB500066C3F1 /* primes36.txt in CopyFiles */,
-				2EA7CE6B1C19DB500066C3F1 /* primes37.txt in CopyFiles */,
-				2EA7CE6C1C19DB500066C3F1 /* primes38.txt in CopyFiles */,
-				2EA7CE6D1C19DB500066C3F1 /* primes39.txt in CopyFiles */,
-				2EA7CE6E1C19DB500066C3F1 /* primes40.txt in CopyFiles */,
-				2EA7CE6F1C19DB500066C3F1 /* primes41.txt in CopyFiles */,
-				2EA7CE701C19DB500066C3F1 /* primes42.txt in CopyFiles */,
-				2EA7CE711C19DB500066C3F1 /* primes43.txt in CopyFiles */,
-				2EA7CE721C19DB500066C3F1 /* primes44.txt in CopyFiles */,
-				2EA7CE731C19DB500066C3F1 /* primes45.txt in CopyFiles */,
-				2EA7CE741C19DB500066C3F1 /* primes46.txt in CopyFiles */,
-				2EA7CE751C19DB500066C3F1 /* primes47.txt in CopyFiles */,
-				2EA7CE761C19DB500066C3F1 /* primes48.txt in CopyFiles */,
-				2EA7CE771C19DB500066C3F1 /* primes49.txt in CopyFiles */,
-				2EA7CE781C19DB500066C3F1 /* primes50.txt in CopyFiles */,
-				2EA7CE791C19DB500066C3F1 /* p018_triangle.txt in CopyFiles */,
-				2EA7CE7A1C19DB500066C3F1 /* p042_words.txt in CopyFiles */,
-				2EA7CE7B1C19DB500066C3F1 /* p067_triangle.txt in CopyFiles */,
-				2EA7CE7C1C19DB500066C3F1 /* p081_matrix.txt in CopyFiles */,
-				2EA7CE7D1C19DB500066C3F1 /* p082_matrix.txt in CopyFiles */,
-				2EA7CE7E1C19DB500066C3F1 /* p099_base_exp.txt in CopyFiles */,
+				2E27F2F61C1DBECA0012BBB5 /* p018_triangle.txt in CopyFiles */,
+				2E27F2F71C1DBECA0012BBB5 /* p022_names.txt in CopyFiles */,
+				2E27F2F81C1DBECA0012BBB5 /* p042_words.txt in CopyFiles */,
+				2E27F2F91C1DBECA0012BBB5 /* p067_triangle.txt in CopyFiles */,
+				2E27F2FA1C1DBECA0012BBB5 /* p081_matrix.txt in CopyFiles */,
+				2E27F2FB1C1DBECA0012BBB5 /* p082_matrix.txt in CopyFiles */,
+				2E27F2FC1C1DBECA0012BBB5 /* p099_base_exp.txt in CopyFiles */,
+				2E27F2FD1C1DBECA0012BBB5 /* primes1.txt in CopyFiles */,
+				2E27F2FE1C1DBECA0012BBB5 /* primes2.txt in CopyFiles */,
+				2E27F2FF1C1DBECA0012BBB5 /* primes3.txt in CopyFiles */,
+				2E27F3001C1DBECA0012BBB5 /* primes4.txt in CopyFiles */,
+				2E27F3011C1DBECA0012BBB5 /* primes5.txt in CopyFiles */,
+				2E27F3021C1DBECA0012BBB5 /* primes6.txt in CopyFiles */,
+				2E27F3031C1DBECA0012BBB5 /* primes7.txt in CopyFiles */,
+				2E27F3041C1DBECA0012BBB5 /* primes8.txt in CopyFiles */,
+				2E27F3051C1DBECA0012BBB5 /* primes9.txt in CopyFiles */,
+				2E27F3061C1DBECA0012BBB5 /* primes10.txt in CopyFiles */,
+				2E27F3071C1DBECA0012BBB5 /* primes11.txt in CopyFiles */,
+				2E27F3081C1DBECA0012BBB5 /* primes12.txt in CopyFiles */,
+				2E27F3091C1DBECA0012BBB5 /* primes13.txt in CopyFiles */,
+				2E27F30A1C1DBECA0012BBB5 /* primes14.txt in CopyFiles */,
+				2E27F30B1C1DBECA0012BBB5 /* primes15.txt in CopyFiles */,
+				2E27F30C1C1DBECA0012BBB5 /* primes16.txt in CopyFiles */,
+				2E27F30D1C1DBECA0012BBB5 /* primes17.txt in CopyFiles */,
+				2E27F30E1C1DBECA0012BBB5 /* primes18.txt in CopyFiles */,
+				2E27F30F1C1DBECA0012BBB5 /* primes19.txt in CopyFiles */,
+				2E27F3101C1DBECA0012BBB5 /* primes20.txt in CopyFiles */,
+				2E27F3111C1DBECA0012BBB5 /* primes21.txt in CopyFiles */,
+				2E27F3121C1DBECA0012BBB5 /* primes22.txt in CopyFiles */,
+				2E27F3131C1DBECA0012BBB5 /* primes23.txt in CopyFiles */,
+				2E27F3141C1DBECA0012BBB5 /* primes24.txt in CopyFiles */,
+				2E27F3151C1DBECA0012BBB5 /* primes25.txt in CopyFiles */,
+				2E27F3161C1DBECA0012BBB5 /* primes26.txt in CopyFiles */,
+				2E27F3171C1DBECA0012BBB5 /* primes27.txt in CopyFiles */,
+				2E27F3181C1DBECA0012BBB5 /* primes28.txt in CopyFiles */,
+				2E27F3191C1DBECA0012BBB5 /* primes29.txt in CopyFiles */,
+				2E27F31A1C1DBECA0012BBB5 /* primes30.txt in CopyFiles */,
+				2E27F31B1C1DBECA0012BBB5 /* primes31.txt in CopyFiles */,
+				2E27F31C1C1DBECA0012BBB5 /* primes32.txt in CopyFiles */,
+				2E27F31D1C1DBECA0012BBB5 /* primes33.txt in CopyFiles */,
+				2E27F31E1C1DBECA0012BBB5 /* primes34.txt in CopyFiles */,
+				2E27F31F1C1DBECA0012BBB5 /* primes35.txt in CopyFiles */,
+				2E27F3201C1DBECA0012BBB5 /* primes36.txt in CopyFiles */,
+				2E27F3211C1DBECA0012BBB5 /* primes37.txt in CopyFiles */,
+				2E27F3221C1DBECA0012BBB5 /* primes38.txt in CopyFiles */,
+				2E27F3231C1DBECA0012BBB5 /* primes39.txt in CopyFiles */,
+				2E27F3241C1DBECA0012BBB5 /* primes40.txt in CopyFiles */,
+				2E27F3251C1DBECA0012BBB5 /* primes41.txt in CopyFiles */,
+				2E27F3261C1DBECA0012BBB5 /* primes42.txt in CopyFiles */,
+				2E27F3271C1DBECA0012BBB5 /* primes43.txt in CopyFiles */,
+				2E27F3281C1DBECA0012BBB5 /* primes44.txt in CopyFiles */,
+				2E27F3291C1DBECA0012BBB5 /* primes45.txt in CopyFiles */,
+				2E27F32A1C1DBECA0012BBB5 /* primes46.txt in CopyFiles */,
+				2E27F32B1C1DBECA0012BBB5 /* primes47.txt in CopyFiles */,
+				2E27F32C1C1DBECA0012BBB5 /* primes48.txt in CopyFiles */,
+				2E27F32D1C1DBECA0012BBB5 /* primes49.txt in CopyFiles */,
+				2E27F32E1C1DBECA0012BBB5 /* primes50.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +245,8 @@
 		2E1EE0D21C176CA40018ECAD /* problem_92.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = problem_92.cpp; sourceTree = SOURCE_ROOT; };
 		2E1EE0D31C176CA40018ECAD /* problem_95.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = problem_95.cpp; sourceTree = SOURCE_ROOT; };
 		2E1EE0D41C176CA40018ECAD /* problem_99.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = problem_99.cpp; sourceTree = SOURCE_ROOT; };
+		2E27F2F51C1DBE910012BBB5 /* p022_names.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = p022_names.txt; sourceTree = "<group>"; };
+		2E27F32F1C1DBF240012BBB5 /* problem_22.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = problem_22.cpp; sourceTree = "<group>"; };
 		2E42457F1C1B7E6C00663C31 /* projectEuler.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = projectEuler.pch; sourceTree = "<group>"; };
 		2E6C675C1C0CD9A60055CF53 /* p081_matrix.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = p081_matrix.txt; sourceTree = SOURCE_ROOT; };
 		2E758DC01C05FCA80016F016 /* numberChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = numberChain.h; sourceTree = SOURCE_ROOT; };
@@ -312,6 +318,7 @@
 		2EC7E1651BFF47130068DA60 /* ProjectEuler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEuler; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF327361C14B357002FE5C3 /* problem_factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = problem_factory.h; sourceTree = SOURCE_ROOT; };
 		2EF4252A1C0F3C6200B7E34F /* p082_matrix.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = p082_matrix.txt; sourceTree = SOURCE_ROOT; };
+		2EFA3D0E1C1CF56C0088E0EB /* problem_77.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = problem_77.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +335,13 @@
 		2EA7CE0E1C19D0590066C3F1 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				2E7F44A51BFF863300FCB85B /* p018_triangle.txt */,
+				2E27F2F51C1DBE910012BBB5 /* p022_names.txt */,
+				2E7F44A61BFF863300FCB85B /* p042_words.txt */,
+				2E7F44A71BFF863300FCB85B /* p067_triangle.txt */,
+				2E6C675C1C0CD9A60055CF53 /* p081_matrix.txt */,
+				2EF4252A1C0F3C6200B7E34F /* p082_matrix.txt */,
+				2EC7466F1C024B29003F8119 /* p099_base_exp.txt */,
 				2EA7CE451C19DA130066C3F1 /* primes1.txt */,
 				2EA7CE461C19DA130066C3F1 /* primes2.txt */,
 				2EA7CE131C19D9EA0066C3F1 /* primes3.txt */,
@@ -378,12 +392,6 @@
 				2EA7CE401C19D9EA0066C3F1 /* primes48.txt */,
 				2EA7CE411C19D9EA0066C3F1 /* primes49.txt */,
 				2EA7CE421C19D9EA0066C3F1 /* primes50.txt */,
-				2E7F44A51BFF863300FCB85B /* p018_triangle.txt */,
-				2E7F44A61BFF863300FCB85B /* p042_words.txt */,
-				2E7F44A71BFF863300FCB85B /* p067_triangle.txt */,
-				2E6C675C1C0CD9A60055CF53 /* p081_matrix.txt */,
-				2EF4252A1C0F3C6200B7E34F /* p082_matrix.txt */,
-				2EC7466F1C024B29003F8119 /* p099_base_exp.txt */,
 			);
 			name = resources;
 			sourceTree = "<group>";
@@ -437,6 +445,7 @@
 				2E1EE0B41C176CA40018ECAD /* problem_18.cpp */,
 				2E1EE0B51C176CA40018ECAD /* problem_20.cpp */,
 				2E1EE0B61C176CA40018ECAD /* problem_21.cpp */,
+				2E27F32F1C1DBF240012BBB5 /* problem_22.cpp */,
 				2E1EE0B71C176CA40018ECAD /* problem_23.cpp */,
 				2E1EE0B81C176CA40018ECAD /* problem_25.cpp */,
 				2E1EE0B91C176CA40018ECAD /* problem_27.cpp */,
@@ -464,6 +473,7 @@
 				2E922A561C1CAE3F00CBC7DF /* problem_71.cpp */,
 				2E1EE0CC1C176CA40018ECAD /* problem_74.cpp */,
 				2E1EE0CD1C176CA40018ECAD /* problem_76.cpp */,
+				2EFA3D0E1C1CF56C0088E0EB /* problem_77.cpp */,
 				2E1EE0CE1C176CA40018ECAD /* problem_80.cpp */,
 				2E1EE0CF1C176CA40018ECAD /* problem_81.cpp */,
 				2E1EE0D01C176CA40018ECAD /* problem_82.cpp */,
@@ -561,6 +571,7 @@
 				2E29BE271C1B0BEA00C800E3 /* problem_76.cpp in Sources */,
 				2E29BE2D1C1B0BEA00C800E3 /* problem_95.cpp in Sources */,
 				2E29BE261C1B0BEA00C800E3 /* problem_74.cpp in Sources */,
+				2EFA3D0F1C1CF56C0088E0EB /* problem_77.cpp in Sources */,
 				2E29BE0F1C1B0BEA00C800E3 /* problem_20.cpp in Sources */,
 				2E29BE211C1B0BEA00C800E3 /* problem_52.cpp in Sources */,
 				2E29BE091C1B0BEA00C800E3 /* problem_13.cpp in Sources */,
@@ -585,6 +596,7 @@
 				2E29BE0B1C1B0BEA00C800E3 /* problem_15.cpp in Sources */,
 				2E29BE131C1B0BEA00C800E3 /* problem_27.cpp in Sources */,
 				2E29BE1C1C1B0BEA00C800E3 /* problem_42.cpp in Sources */,
+				2E27F3301C1DBF240012BBB5 /* problem_22.cpp in Sources */,
 				2E29BE121C1B0BEA00C800E3 /* problem_25.cpp in Sources */,
 				2E29BE001C1B0BEA00C800E3 /* problem_4.cpp in Sources */,
 				2E29BE081C1B0BEA00C800E3 /* problem_12.cpp in Sources */,

@@ -29,7 +29,7 @@
 //#include "problem_19.cpp"
 #include "problem_20.cpp"
 #include "problem_21.cpp"
-//#include "problem_22.cpp"
+#include "problem_22.cpp"
 #include "problem_23.cpp"
 //#include "problem_24.cpp"
 #include "problem_25.cpp"
@@ -84,7 +84,7 @@
 #include "problem_74.cpp"
 //#include "problem_75.cpp"
 #include "problem_76.cpp"
-//#include "problem_77.cpp"
+#include "problem_77.cpp"
 //#include "problem_78.cpp"
 //#include "problem_79.cpp"
 #include "problem_80.cpp"
@@ -532,7 +532,7 @@ static void registerProblems()
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_19);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_20);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_21);
-    //PROBLEM_FACTORY_REGISTER_CLASS(problem_22);
+    PROBLEM_FACTORY_REGISTER_CLASS(problem_22);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_23);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_24);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_25);
@@ -587,7 +587,7 @@ static void registerProblems()
     PROBLEM_FACTORY_REGISTER_CLASS(problem_74);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_75);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_76);
-    //PROBLEM_FACTORY_REGISTER_CLASS(problem_77);
+    PROBLEM_FACTORY_REGISTER_CLASS(problem_77);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_78);
     //PROBLEM_FACTORY_REGISTER_CLASS(problem_79);
     PROBLEM_FACTORY_REGISTER_CLASS(problem_80);
@@ -1017,7 +1017,7 @@ static void registerProblems()
 int main(int, char**)
 {
     registerProblems();
-
+    
     cout << endl << "Project Euler - Pat Sluth" << endl << "Starting..." << endl << endl;
 
     cout << "************************************************************" << endl;
@@ -1045,9 +1045,12 @@ int main(int, char**)
 
             if (problem != NULL){
                 problem->run();
+                delete problem;
             } else {
                 cout << problemClassName.str() << " does not exist!" << endl;
             }
+            
+            problemClassName = stringstream();
 
         } else { // not a number
 
@@ -1063,7 +1066,10 @@ int main(int, char**)
 
                     if (problem != NULL){
                         problem->run();
+                        delete problem;
                     }
+                    
+                    problemClassName = stringstream();
 
                 }
 

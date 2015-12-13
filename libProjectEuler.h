@@ -250,6 +250,15 @@ uint64_t concatanate(uint64_t a, uint64_t b);
  */
 bool isPandigital(uint64_t i, uint64_t n);
 
+/**
+ *  Return a filestream with file. Null if failed
+ *
+ *  @param file name
+ *
+ *  @return ifstream
+ */
+ifstream readFile(string file);
+
 
 
 #endif /* libProjectEuler_h */

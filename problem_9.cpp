@@ -31,7 +31,6 @@ class problem_9 : public problem_base
                 
                 if ( (x * x) + (y * y) == (z * z) ) {
                     
-                    //printf("The pythagorean triplet for [a + b + c = 1000] is [(%llu)^2 + (%llu)^2 = (%llu)^2]\n", x, y, z);
                     calculatedAnswer << (x * y * z);
                     return;
                     
