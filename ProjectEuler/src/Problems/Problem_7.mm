@@ -27,7 +27,7 @@
 - (id)solveProblem
 {
 	uint64_t number = 2;
-	std::vector<uint64_t> primeNumbers;
+	vector<uint64_t> primeNumbers;
 	
 	while (primeNumbers.size() < 10001) {
 		

@@ -209,20 +209,20 @@ extern quadraticRoots quadraticSolveRoots(quadratic q);
 
 
 //3
-extern uint64_t triangleForN(uint64_t n);
-extern uint64_t nForTriangle(int64_t Tn);
+extern int64_t triangleForN(int64_t n);
+extern int64_t nForTriangle(int64_t Tn);
 //5
-extern uint64_t pentagonalForN(uint64_t n);
-extern uint64_t nForPentagonal(int64_t Pn);
+extern int64_t pentagonalForN(int64_t n);
+extern int64_t nForPentagonal(int64_t Pn);
 //6
-extern uint64_t hexagonalForN(uint64_t n);
-extern uint64_t nForHexagonal(int64_t Hn);
+extern int64_t hexagonalForN(int64_t n);
+extern int64_t nForHexagonal(int64_t Hn);
 //7
-extern uint64_t heptagonalForN(uint64_t n);
-extern uint64_t nForHeptagonal(int64_t Hn);
+extern int64_t heptagonalForN(int64_t n);
+extern int64_t nForHeptagonal(int64_t Hn);
 //8
-extern uint64_t octagonalForN(uint64_t n);
-extern uint64_t nForOctagonal(int64_t On);
+extern int64_t octagonalForN(int64_t n);
+extern int64_t nForOctagonal(int64_t On);
 
 
 

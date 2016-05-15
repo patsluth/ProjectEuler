@@ -327,14 +327,14 @@ extern quadraticRoots quadraticSolveRoots(quadratic q)
     return {numeratorAdd / denomenator, numeratorSubtract / denomenator};
 }
 
-extern uint64_t triangleForN(uint64_t n)
+extern int64_t triangleForN(int64_t n)
 {
     uint64_t Tn = n * (n + 1);
     Tn /= 2;
     return Tn;
 }
 
-extern uint64_t nForTriangle(int64_t Tn)
+extern int64_t nForTriangle(int64_t Tn)
 {
     quadratic q = {1, 1, (-2 * Tn)};
     quadraticRoots roots = quadraticSolveRoots(q);
@@ -348,14 +348,14 @@ extern uint64_t nForTriangle(int64_t Tn)
     return 0;
 }
 
-extern uint64_t pentagonalForN(uint64_t n)
+extern int64_t pentagonalForN(int64_t n)
 {
     uint64_t Pn = n * ( (3 * n) - 1 );
     Pn /= 2;
     return Pn;
 }
 
-extern uint64_t nForPentagonal(int64_t Pn)
+extern int64_t nForPentagonal(int64_t Pn)
 {
     quadratic q = {3, -1, (-2 * Pn)};
     quadraticRoots roots = quadraticSolveRoots(q);
@@ -369,13 +369,13 @@ extern uint64_t nForPentagonal(int64_t Pn)
     return 0;
 }
 
-extern uint64_t hexagonalForN(uint64_t n)
+extern int64_t hexagonalForN(int64_t n)
 {
     uint64_t Hn = n * ( (2 * n) - 1 );
     return Hn;
 }
 
-extern uint64_t nForHexagonal(int64_t Hn)
+extern int64_t nForHexagonal(int64_t Hn)
 {
     quadratic q = {2, -1, (-1 * Hn)};
     quadraticRoots roots = quadraticSolveRoots(q);
@@ -389,14 +389,14 @@ extern uint64_t nForHexagonal(int64_t Hn)
     return 0;
 }
 
-extern uint64_t heptagonalForN(uint64_t n)
+extern int64_t heptagonalForN(int64_t n)
 {
     uint64_t Hn = n * ( (5 * n) - 3 );
     Hn /= 2;
     return Hn;
 }
 
-extern uint64_t nForHeptagonal(int64_t Hn)
+extern int64_t nForHeptagonal(int64_t Hn)
 {
     if (Hn == 0){
 
@@ -404,13 +404,13 @@ extern uint64_t nForHeptagonal(int64_t Hn)
     assert(false);
 }
 
-extern uint64_t octagonalForN(uint64_t n)
+extern int64_t octagonalForN(int64_t n)
 {
     uint64_t On = n * ( (3 * n) - 2 );
     return On;
 }
 
-extern uint64_t nForOctagonal(int64_t On)
+extern int64_t nForOctagonal(int64_t On)
 {
     if (On == 0){
 

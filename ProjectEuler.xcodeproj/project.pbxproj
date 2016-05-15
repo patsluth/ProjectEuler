@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E786ABF1CE8D2A4008BFEC4 /* Problem_78.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */; };
 		2EE5679A1CE7948600A1CE81 /* Primes in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EE567991CE7948100A1CE81 /* Primes */; };
 		2EF42B3C1CE7935C008D8C2B /* libProjectEuler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B001CE7935C008D8C2B /* libProjectEuler.mm */; };
 		2EF42B3D1CE7935C008D8C2B /* primes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B031CE7935C008D8C2B /* primes.mm */; };
@@ -96,6 +97,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_78.mm; sourceTree = "<group>"; };
 		2EE567991CE7948100A1CE81 /* Primes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Primes; sourceTree = "<group>"; };
 		2EF429FE1CE79287008D8C2B /* ProjectEuler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEuler; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF42AC11CE7935C008D8C2B /* p018_triangle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p018_triangle.txt; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				2EF42B2F1CE7935C008D8C2B /* Problem_61.mm */,
 				2EF42B301CE7935C008D8C2B /* Problem_67.mm */,
 				2EF42B321CE7935C008D8C2B /* Problem_74.mm */,
+				2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */,
 				2EF42B341CE7935C008D8C2B /* Problem_81.mm */,
 				2EF42B351CE7935C008D8C2B /* Problem_87.mm */,
 				2EF42B371CE7935C008D8C2B /* Problem_92.mm */,
@@ -398,6 +401,7 @@
 				2EF42B511CE7935C008D8C2B /* Problem_3.mm in Sources */,
 				2EF42B4B1CE7935C008D8C2B /* Problem_22.mm in Sources */,
 				2EF42B521CE7935C008D8C2B /* Problem_30.mm in Sources */,
+				2E786ABF1CE8D2A4008BFEC4 /* Problem_78.mm in Sources */,
 				2EF42B5F1CE7935C008D8C2B /* Problem_45.mm in Sources */,
 				2EF42B551CE7935C008D8C2B /* Problem_34.mm in Sources */,
 				2EF42B401CE7935C008D8C2B /* Problem_10.mm in Sources */,
