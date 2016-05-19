@@ -162,7 +162,6 @@ extern uint64_t pyramid_SumOfMaxPath(pyramid p);
  */
 extern void printPyramid(pyramid p);
 
-
 /**
  *  Calculate circular variations of a number
  *  Moves last digit to front for the number of digits in i
@@ -205,27 +204,21 @@ extern double quadraticSolveSolveDescriminant(quadratic q);
  */
 extern quadraticRoots quadraticSolveRoots(quadratic q);
 
-
-
-
-//3
+// 3
 extern int64_t triangleForN(int64_t n);
 extern int64_t nForTriangle(int64_t Tn);
-//5
+// 5
 extern int64_t pentagonalForN(int64_t n);
 extern int64_t nForPentagonal(int64_t Pn);
-//6
+// 6
 extern int64_t hexagonalForN(int64_t n);
 extern int64_t nForHexagonal(int64_t Hn);
-//7
+// 7
 extern int64_t heptagonalForN(int64_t n);
 extern int64_t nForHeptagonal(int64_t Hn);
-//8
+// 8
 extern int64_t octagonalForN(int64_t n);
 extern int64_t nForOctagonal(int64_t On);
-
-
-
 
 typedef vector<uint64_t> properDivisors;
 /**

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E786ABF1CE8D2A4008BFEC4 /* Problem_78.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */; };
+		2EACD1C41CEE01560092761A /* Problem_63.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EACD1C31CEE01560092761A /* Problem_63.mm */; };
+		2EC1AEF21CECD9F800553C6D /* Problem_24.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1AEF11CECD9F800553C6D /* Problem_24.mm */; };
 		2EE5679A1CE7948600A1CE81 /* Primes in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EE567991CE7948100A1CE81 /* Primes */; };
 		2EF42B3C1CE7935C008D8C2B /* libProjectEuler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B001CE7935C008D8C2B /* libProjectEuler.mm */; };
 		2EF42B3D1CE7935C008D8C2B /* primes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B031CE7935C008D8C2B /* primes.mm */; };
@@ -98,6 +100,8 @@
 
 /* Begin PBXFileReference section */
 		2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_78.mm; sourceTree = "<group>"; };
+		2EACD1C31CEE01560092761A /* Problem_63.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_63.mm; sourceTree = "<group>"; };
+		2EC1AEF11CECD9F800553C6D /* Problem_24.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_24.mm; sourceTree = "<group>"; };
 		2EE567991CE7948100A1CE81 /* Primes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Primes; sourceTree = "<group>"; };
 		2EF429FE1CE79287008D8C2B /* ProjectEuler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEuler; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF42AC11CE7935C008D8C2B /* p018_triangle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p018_triangle.txt; sourceTree = "<group>"; };
@@ -272,6 +276,7 @@
 				2EF42B111CE7935C008D8C2B /* Problem_21.mm */,
 				2EF42B121CE7935C008D8C2B /* Problem_22.mm */,
 				2EF42B131CE7935C008D8C2B /* Problem_23.mm */,
+				2EC1AEF11CECD9F800553C6D /* Problem_24.mm */,
 				2EF42B141CE7935C008D8C2B /* Problem_25.mm */,
 				2EF42B151CE7935C008D8C2B /* Problem_27.mm */,
 				2EF42B161CE7935C008D8C2B /* Problem_28.mm */,
@@ -296,6 +301,7 @@
 				2EF42B2C1CE7935C008D8C2B /* Problem_54.mm */,
 				2EF42B2E1CE7935C008D8C2B /* Problem_60.mm */,
 				2EF42B2F1CE7935C008D8C2B /* Problem_61.mm */,
+				2EACD1C31CEE01560092761A /* Problem_63.mm */,
 				2EF42B301CE7935C008D8C2B /* Problem_67.mm */,
 				2EF42B321CE7935C008D8C2B /* Problem_74.mm */,
 				2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */,
@@ -379,6 +385,7 @@
 				2EF42B731CE7935C008D8C2B /* ProblemBase.m in Sources */,
 				2EF42B571CE7935C008D8C2B /* Problem_36.mm in Sources */,
 				2EF42B681CE7935C008D8C2B /* Problem_61.mm in Sources */,
+				2EACD1C41CEE01560092761A /* Problem_63.mm in Sources */,
 				2EF42B621CE7935C008D8C2B /* Problem_5.mm in Sources */,
 				2EF42B3C1CE7935C008D8C2B /* libProjectEuler.mm in Sources */,
 				2EF42B6B1CE7935C008D8C2B /* Problem_74.mm in Sources */,
@@ -393,6 +400,7 @@
 				2EF42B701CE7935C008D8C2B /* Problem_92.mm in Sources */,
 				2EF42B4C1CE7935C008D8C2B /* Problem_23.mm in Sources */,
 				2EF42B3E1CE7935C008D8C2B /* main.m in Sources */,
+				2EC1AEF21CECD9F800553C6D /* Problem_24.mm in Sources */,
 				2EF42B671CE7935C008D8C2B /* Problem_60.mm in Sources */,
 				2EF42B3D1CE7935C008D8C2B /* primes.mm in Sources */,
 				2EF42B5D1CE7935C008D8C2B /* Problem_42.mm in Sources */,
