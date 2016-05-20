@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E786ABF1CE8D2A4008BFEC4 /* Problem_78.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */; };
+		2E9246281CEF71CB00695E74 /* Problem_49.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E9246271CEF71CB00695E74 /* Problem_49.mm */; };
 		2EACD1C41CEE01560092761A /* Problem_63.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EACD1C31CEE01560092761A /* Problem_63.mm */; };
 		2EC1AEF21CECD9F800553C6D /* Problem_24.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1AEF11CECD9F800553C6D /* Problem_24.mm */; };
 		2EE5679A1CE7948600A1CE81 /* Primes in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EE567991CE7948100A1CE81 /* Primes */; };
@@ -100,6 +101,7 @@
 
 /* Begin PBXFileReference section */
 		2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_78.mm; sourceTree = "<group>"; };
+		2E9246271CEF71CB00695E74 /* Problem_49.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_49.mm; sourceTree = "<group>"; };
 		2EACD1C31CEE01560092761A /* Problem_63.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_63.mm; sourceTree = "<group>"; };
 		2EC1AEF11CECD9F800553C6D /* Problem_24.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_24.mm; sourceTree = "<group>"; };
 		2EE567991CE7948100A1CE81 /* Primes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Primes; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				2EF42B261CE7935C008D8C2B /* Problem_45.mm */,
 				2EF42B271CE7935C008D8C2B /* Problem_46.mm */,
 				2EF42B281CE7935C008D8C2B /* Problem_48.mm */,
+				2E9246271CEF71CB00695E74 /* Problem_49.mm */,
 				2EF42B2A1CE7935C008D8C2B /* Problem_52.mm */,
 				2EF42B2B1CE7935C008D8C2B /* Problem_53.mm */,
 				2EF42B2C1CE7935C008D8C2B /* Problem_54.mm */,
@@ -404,6 +407,7 @@
 				2EF42B671CE7935C008D8C2B /* Problem_60.mm in Sources */,
 				2EF42B3D1CE7935C008D8C2B /* primes.mm in Sources */,
 				2EF42B5D1CE7935C008D8C2B /* Problem_42.mm in Sources */,
+				2E9246281CEF71CB00695E74 /* Problem_49.mm in Sources */,
 				2EF42B6C1CE7935C008D8C2B /* Problem_8.mm in Sources */,
 				2EF42B6F1CE7935C008D8C2B /* Problem_9.mm in Sources */,
 				2EF42B511CE7935C008D8C2B /* Problem_3.mm in Sources */,

@@ -1,6 +1,6 @@
 //
 //  libProjectEuler.h
-//  projecteuler
+//  ProjectEuler
 //
 //  Created by Pat Sluth on 2015-11-20.
 //  Copyright © 2015 Pat Sluth. All rights reserved.
@@ -20,6 +20,8 @@
 #import <string>
 #import <vector>
 #import <set>
+#import <list>
+#import <forward_list>
 
 #import <boost/multiprecision/cpp_int.hpp>
 
@@ -53,10 +55,20 @@ extern ifstream readFile(string file);
 extern bool isPalindrome(uint64_t x);
 extern bool isPalindrome(string i);
 
+/**
+ *  Get a list of individual digits of a number
+ *
+ *  @param i
+ *
+ *  @return list
+ */
+extern forward_list<uint64_t> getDigits(uint64_t i);
 extern uint64_t numberOfDigits(uint64_t i);
 
 extern uint64_t sumOfVector(vector<uint64_t> *v);
 extern uint64_t sumOfSet(set<uint64_t> *s);
+extern uint64_t sumOfList(list<uint64_t> *l);
+extern uint64_t sumOfList(forward_list<uint64_t> *l);
 
 inline uint64_t factorial(uint64_t x)
 {
@@ -269,6 +281,17 @@ extern uint64_t concatanate(uint64_t a, uint64_t b);
  *  @return bool
  */
 extern bool isPandigital(uint64_t i, uint64_t n);
+
+/**
+ *  A number a is a permutation of another number b
+ *	if it contains the exact same digits in any order
+ *
+ *  @param a
+ *  @param b
+ *
+ *  @return bool
+ */
+extern bool isPermutation(uint64_t a, uint64_t b);
 
 #endif
 

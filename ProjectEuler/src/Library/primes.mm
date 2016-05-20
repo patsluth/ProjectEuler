@@ -41,7 +41,7 @@ bool primes::isPrime(uint64_t i)
  *  Get the prime after p
  *  TODO: search for the next prime if p is not prime
  *
- *  @param p prime
+ *  @param p
  *
  *  @return uint64_t
  */
@@ -51,19 +51,20 @@ uint64_t primes::nextPrime(uint64_t p)
         
         set<uint64_t> &nPrimeSet = loadPrimes(n); // current set for this million
         
-        if (p < *nPrimeSet.begin()) { // it was not found in the previous set, but is smaller than the smallest prime in this set
-            return p;
+        if (p <= *nPrimeSet.begin()) {
+            return *nPrimeSet.begin();
         }
-        
-        std::set<uint64_t>::iterator itr = nPrimeSet.find(p);
-        
-        if (itr != nPrimeSet.end()) {
-            std::advance(itr, 1);
-            return *itr;
-        }
-        
+		
+		if (p < *nPrimeSet.end()) {
+			
+			auto itr = nPrimeSet.find(p);
+			std::advance(itr, 1);
+			return *itr;
+			
+		}
+		
     }
-    
+	
     return p;
 }
 

@@ -1,6 +1,6 @@
 //
 //  Problem_41.m
-//  projecteuler
+//  ProjectEuler
 //
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
@@ -28,10 +28,9 @@
 
 - (id)solveProblem
 {
-	// 1st million primes
-	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1);
-	
-	auto itr = millionPrimes.rbegin(); // reverse iterator. Since we are looking for the largest, the first prime to pass is the answer
+	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1); // 1st million primes
+	auto itr = millionPrimes.rbegin(); // reverse iterator
+									   // Since we are looking for the largest, the first prime to pass is the answer
 	
 	while (itr != millionPrimes.rend()) {
 		

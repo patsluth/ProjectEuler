@@ -1,6 +1,6 @@
 //
 //  libProjectEuler.mm
-//  projecteuler
+//  ProjectEuler
 //
 //  Created by Pat Sluth on 2015-11-20.
 //  Copyright © 2015 Pat Sluth. All rights reserved.
@@ -73,16 +73,34 @@ extern bool isPalindrome(string i)
     return true;
 }
 
+extern forward_list<uint64_t> getDigits(uint64_t i)
+{
+	forward_list<uint64_t> digits;
+	
+	while (i > 0) {
+		
+		uint64_t digit = i % 10;
+		digits.push_front(digit);
+		i /= 10;
+		
+	}
+	
+	return digits;
+}
+
+
 extern uint64_t numberOfDigits(uint64_t i)
 {
-    uint64_t numberOfDigits = 0;
+	// TODO: test
+//    uint64_t numberOfDigits = 0;
+//
+//    while (i > 0) {
+//        numberOfDigits++;
+//        i /= 10;
+//    }
 
-    while (i > 0) {
-        numberOfDigits++;
-        i /= 10;
-    }
-
-    return numberOfDigits;
+	forward_list<uint64_t> digits = getDigits(i);
+    return distance(digits.begin(), digits.end());
 }
 
 extern uint64_t sumOfVector(vector<uint64_t> *v)
@@ -105,6 +123,28 @@ extern uint64_t sumOfSet(set<uint64_t> *s)
     }
 
     return sum;
+}
+
+extern uint64_t sumOfList(list<uint64_t> *l)
+{
+	uint64_t sum = 0;
+	
+	for (uint64_t i : *l) {
+		sum += i;
+	}
+	
+	return sum;
+}
+
+extern uint64_t sumOfList(forward_list<uint64_t> *l)
+{
+	uint64_t sum = 0;
+	
+	for (uint64_t i : *l) {
+		sum += i;
+	}
+	
+	return sum;
 }
 
 extern Factor factorInteger(uint64_t i)
@@ -500,8 +540,16 @@ extern bool isPandigital(uint64_t i, uint64_t n)
     return isPandigital;
 }
 
-
-
+extern bool isPermutation(uint64_t a, uint64_t b)
+{
+	forward_list<uint64_t> aDigits = getDigits(a);
+	forward_list<uint64_t> bDigits = getDigits(b);
+	
+	aDigits.sort();
+	bDigits.sort();
+	
+	return (aDigits == bDigits);
+}
 
 
 
