@@ -293,6 +293,15 @@ extern bool isPandigital(uint64_t i, uint64_t n);
  */
 extern bool isPermutation(uint64_t a, uint64_t b);
 
+/**
+ *  Get the nth fibonacci number
+ *
+ *  @param n
+ *
+ *  @return uint64_t
+ */
+extern uint64_t fibonacci(uint64_t n);
+
 #endif
 
 #endif /* libProjectEuler_h */

@@ -551,6 +551,15 @@ extern bool isPermutation(uint64_t a, uint64_t b)
 	return (aDigits == bDigits);
 }
 
+extern uint64_t fibonacci(uint64_t n)
+{
+	if (n < 2) {
+		return n;
+	} else {
+		return fibonacci(n - 1) + fibonacci(n - 2);
+	}
+}
+
 
 
 

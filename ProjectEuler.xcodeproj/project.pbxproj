@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2E786ABF1CE8D2A4008BFEC4 /* Problem_78.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */; };
+		2E8042C91CF4B01F00D2BEDD /* Problem_543.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E8042C81CF4B01F00D2BEDD /* Problem_543.mm */; };
 		2E9246281CEF71CB00695E74 /* Problem_49.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E9246271CEF71CB00695E74 /* Problem_49.mm */; };
+		2EA0714B1CF4DC0A007B06A4 /* Problem_50.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0714A1CF4D90F007B06A4 /* Problem_50.mm */; };
 		2EACD1C41CEE01560092761A /* Problem_63.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EACD1C31CEE01560092761A /* Problem_63.mm */; };
 		2EC1AEF21CECD9F800553C6D /* Problem_24.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1AEF11CECD9F800553C6D /* Problem_24.mm */; };
 		2EE5679A1CE7948600A1CE81 /* Primes in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EE567991CE7948100A1CE81 /* Primes */; };
@@ -101,7 +103,9 @@
 
 /* Begin PBXFileReference section */
 		2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_78.mm; sourceTree = "<group>"; };
+		2E8042C81CF4B01F00D2BEDD /* Problem_543.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_543.mm; sourceTree = "<group>"; };
 		2E9246271CEF71CB00695E74 /* Problem_49.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_49.mm; sourceTree = "<group>"; };
+		2EA0714A1CF4D90F007B06A4 /* Problem_50.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_50.mm; sourceTree = "<group>"; };
 		2EACD1C31CEE01560092761A /* Problem_63.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_63.mm; sourceTree = "<group>"; };
 		2EC1AEF11CECD9F800553C6D /* Problem_24.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_24.mm; sourceTree = "<group>"; };
 		2EE567991CE7948100A1CE81 /* Primes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Primes; sourceTree = "<group>"; };
@@ -242,12 +246,12 @@
 		2EF42AFD1CE7935C008D8C2B /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				2EF42AFE1CE7935C008D8C2B /* hashMap.h */,
 				2EF42AFF1CE7935C008D8C2B /* libProjectEuler.h */,
 				2EF42B001CE7935C008D8C2B /* libProjectEuler.mm */,
-				2EF42B011CE7935C008D8C2B /* numberChain.h */,
 				2EF42B021CE7935C008D8C2B /* primes.h */,
 				2EF42B031CE7935C008D8C2B /* primes.mm */,
+				2EF42AFE1CE7935C008D8C2B /* hashMap.h */,
+				2EF42B011CE7935C008D8C2B /* numberChain.h */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -299,6 +303,7 @@
 				2EF42B271CE7935C008D8C2B /* Problem_46.mm */,
 				2EF42B281CE7935C008D8C2B /* Problem_48.mm */,
 				2E9246271CEF71CB00695E74 /* Problem_49.mm */,
+				2EA0714A1CF4D90F007B06A4 /* Problem_50.mm */,
 				2EF42B2A1CE7935C008D8C2B /* Problem_52.mm */,
 				2EF42B2B1CE7935C008D8C2B /* Problem_53.mm */,
 				2EF42B2C1CE7935C008D8C2B /* Problem_54.mm */,
@@ -313,6 +318,7 @@
 				2EF42B371CE7935C008D8C2B /* Problem_92.mm */,
 				2EF42B381CE7935C008D8C2B /* Problem_95.mm */,
 				2EF42B391CE7935C008D8C2B /* Problem_99.mm */,
+				2E8042C81CF4B01F00D2BEDD /* Problem_543.mm */,
 			);
 			path = Problems;
 			sourceTree = "<group>";
@@ -373,9 +379,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EA0714B1CF4DC0A007B06A4 /* Problem_50.mm in Sources */,
 				2EF42B461CE7935C008D8C2B /* Problem_16.mm in Sources */,
 				2EF42B561CE7935C008D8C2B /* Problem_35.mm in Sources */,
 				2EF42B531CE7935C008D8C2B /* Problem_31.mm in Sources */,
+				2E8042C91CF4B01F00D2BEDD /* Problem_543.mm in Sources */,
 				2EF42B611CE7935C008D8C2B /* Problem_48.mm in Sources */,
 				2EF42B631CE7935C008D8C2B /* Problem_52.mm in Sources */,
 				2EF42B581CE7935C008D8C2B /* Problem_37.mm in Sources */,
