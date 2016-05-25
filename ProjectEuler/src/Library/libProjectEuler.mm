@@ -438,7 +438,7 @@ extern int64_t heptagonalForN(int64_t n)
 
 extern int64_t nForHeptagonal(int64_t Hn)
 {
-    if (Hn == 0){
+    if (Hn == 0) {
 
     }
     assert(false);
@@ -452,7 +452,7 @@ extern int64_t octagonalForN(int64_t n)
 
 extern int64_t nForOctagonal(int64_t On)
 {
-    if (On == 0){
+    if (On == 0) {
 
     }
     assert(false);
@@ -485,9 +485,9 @@ extern numberType getNumberType(uint64_t i)
 {
     uint64_t x = sumOfVector(calculateProperDivisors(i));
 
-    if (x < i){
+    if (x < i) {
         return NumberType_Deficient;
-    } else if (x > i){
+    } else if (x > i) {
         return NumberType_Abundant;
     } else {
         return NumberType_Perfect;
@@ -518,7 +518,9 @@ extern bool isPandigital(uint64_t i, uint64_t n)
     set<uint64_t> *temp = new set<uint64_t>();
     
     while (i > 0) {
-        temp->insert(i % 10);
+		if (i % 10 != 0) { // don't add zeros
+			temp->insert(i % 10);
+		}
         i /= 10;
     }
     
@@ -538,6 +540,36 @@ extern bool isPandigital(uint64_t i, uint64_t n)
     delete temp;
     
     return isPandigital;
+}
+
+extern bool isPandigital(uint64_t i, uint64_t a, uint64_t b)
+{
+	set<uint64_t> *temp = new set<uint64_t>();
+	
+	while (i > 0) {
+		temp->insert(i % 10);
+		i /= 10;
+	}
+	
+	// n = number of digits
+	// lower and upper bounds match
+	uint64_t n = (b + 1) - a;
+	bool isPandigital = temp->size() == n && *temp->begin() == a && *temp->rbegin() == b;
+	
+	if (isPandigital) {
+		
+		for (uint64_t x = a; x <= b; x++) { // remove each digit
+			temp->erase(x);
+		}
+		
+		isPandigital = (temp->size() == 0);
+		
+	}
+	
+	temp->clear();
+	delete temp;
+	
+	return isPandigital;
 }
 
 extern bool isPermutation(uint64_t a, uint64_t b)

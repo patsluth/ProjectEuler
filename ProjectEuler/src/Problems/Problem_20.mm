@@ -34,7 +34,7 @@
 	
 	cpp_int factDigitSum = 0;
 	
-	while (fact > 0){
+	while (fact > 0) {
 		factDigitSum += fact % 10;
 		fact /= 10;
 	}

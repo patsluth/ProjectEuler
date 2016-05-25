@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E1967331CF604D200EF3601 /* Problem_17.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E1967321CF604D200EF3601 /* Problem_17.mm */; };
+		2E1967351CF60D3500EF3601 /* Problem_43.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E1967341CF60D3500EF3601 /* Problem_43.mm */; };
 		2E786ABF1CE8D2A4008BFEC4 /* Problem_78.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */; };
 		2E8042C91CF4B01F00D2BEDD /* Problem_543.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E8042C81CF4B01F00D2BEDD /* Problem_543.mm */; };
 		2E9246281CEF71CB00695E74 /* Problem_49.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E9246271CEF71CB00695E74 /* Problem_49.mm */; };
@@ -104,6 +105,7 @@
 
 /* Begin PBXFileReference section */
 		2E1967321CF604D200EF3601 /* Problem_17.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_17.mm; sourceTree = "<group>"; };
+		2E1967341CF60D3500EF3601 /* Problem_43.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_43.mm; sourceTree = "<group>"; };
 		2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_78.mm; sourceTree = "<group>"; };
 		2E8042C81CF4B01F00D2BEDD /* Problem_543.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_543.mm; sourceTree = "<group>"; };
 		2E9246271CEF71CB00695E74 /* Problem_49.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_49.mm; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				2EF42B211CE7935C008D8C2B /* Problem_39.mm */,
 				2EF42B231CE7935C008D8C2B /* Problem_41.mm */,
 				2EF42B241CE7935C008D8C2B /* Problem_42.mm */,
+				2E1967341CF60D3500EF3601 /* Problem_43.mm */,
 				2EF42B251CE7935C008D8C2B /* Problem_44.mm */,
 				2EF42B261CE7935C008D8C2B /* Problem_45.mm */,
 				2EF42B271CE7935C008D8C2B /* Problem_46.mm */,
@@ -426,6 +429,7 @@
 				2EF42B521CE7935C008D8C2B /* Problem_30.mm in Sources */,
 				2E786ABF1CE8D2A4008BFEC4 /* Problem_78.mm in Sources */,
 				2EF42B5F1CE7935C008D8C2B /* Problem_45.mm in Sources */,
+				2E1967351CF60D3500EF3601 /* Problem_43.mm in Sources */,
 				2EF42B551CE7935C008D8C2B /* Problem_34.mm in Sources */,
 				2EF42B401CE7935C008D8C2B /* Problem_10.mm in Sources */,
 				2EF42B441CE7935C008D8C2B /* Problem_14.mm in Sources */,

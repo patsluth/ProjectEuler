@@ -34,7 +34,7 @@
 	
 	while (itr != millionPrimes.rend()) {
 		
-		if (isPandigital(*itr, numberOfDigits(*itr))) {
+		if (isPandigital(*itr, 1, numberOfDigits(*itr))) {
 			return @(*itr);
 		}
 		

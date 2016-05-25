@@ -38,7 +38,7 @@
 	
 	for (uint64_t prime : millionPrimes) {
 		
-		if (prime > 8500){
+		if (prime > 8500) {
 			break;
 		}
 		
@@ -51,10 +51,10 @@
 			set<uint64_t> &curPrimeSet2 = *primeHash.valueForKey((*itr).first);
 			
 			//check both directions (a b) (b a)
-			if (isConcatPrime((*itr).first, prime)){
+			if (isConcatPrime((*itr).first, prime)) {
 				curPrimeSet2.insert(prime);
 			}
-			if (isConcatPrime(prime, (*itr).first)){
+			if (isConcatPrime(prime, (*itr).first)) {
 				curPrimeSet.insert((*itr).first);
 			}
 			

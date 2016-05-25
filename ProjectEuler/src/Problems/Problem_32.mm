@@ -39,7 +39,7 @@
 				break;
 			}
 			
-			if (isPandigital(concat, 9) == true){
+			if (isPandigital(concat, 1, 9) == true) {
 				
 				products->insert(product);
 				

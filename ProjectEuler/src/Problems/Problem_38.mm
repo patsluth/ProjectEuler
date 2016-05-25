@@ -40,7 +40,7 @@
 				break;
 			}
 			
-			if (isPandigital(y, 9)){
+			if (isPandigital(y, 1, 9)) {
 				if (largestPandigital < y) {
 					largestPandigital = y;
 				} else {

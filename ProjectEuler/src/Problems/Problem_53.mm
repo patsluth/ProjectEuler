@@ -38,7 +38,7 @@
 			
 			cpp_int result = nFact / (rFact * n_minus_rFact);
 			
-			if (result > 1000000){
+			if (result > 1000000) {
 				nCrCount++;
 			}
 			

@@ -29,9 +29,9 @@
 	uint64_t sum = 0;
 	uint64_t count = 0;
 	
-	for (uint64_t x = 11; count < 11 ; x++){ // 1 - 7 dont count
+	for (uint64_t x = 11; count < 11 ; x++) { // 1 - 7 dont count
 		
-		if (truncatablePrimeLeft(x) && truncatablePrimeRight(x)){
+		if (truncatablePrimeLeft(x) && truncatablePrimeRight(x)) {
 			count++;
 			sum += x;
 		}
@@ -48,7 +48,7 @@ bool truncatablePrimeLeft(uint64_t i)
 	
 	while (digits > 0) {
 		
-		if (!isPrime(iCopy)){
+		if (!isPrime(iCopy)) {
 			return false;
 		}
 		
@@ -66,7 +66,7 @@ bool truncatablePrimeRight(uint64_t i)
 	
 	while (iCopy > 0) {
 		
-		if (!isPrime(iCopy)){
+		if (!isPrime(iCopy)) {
 			return false;
 		}
 		

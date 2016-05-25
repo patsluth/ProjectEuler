@@ -271,16 +271,21 @@ extern numberType getNumberType(uint64_t i);
 extern uint64_t concatanate(uint64_t a, uint64_t b);
 
 /**
- *  A number is pandigital if it contains the digits 1 through n exactly
- *  ex- n = 9 123456789
- *  ex- n = 4 4321
- *  ex- n = 6 132465
+ *  We shall say that an n-digit number, i, is pandigital if it makes use of all the digits a to b exactly once
+ *  ex		i = 123456789
+ *			a = 1
+ *			b = 9
+ *  ex		i = 145320
+ *			a = 0
+ *			b = 5
  *
  *  @param i
+ *  @param a
+ *  @param b
  *
- *  @return bool
+ *  @return
  */
-extern bool isPandigital(uint64_t i, uint64_t n);
+extern bool isPandigital(uint64_t i, uint64_t a, uint64_t b);
 
 /**
  *  A number a is a permutation of another number b
