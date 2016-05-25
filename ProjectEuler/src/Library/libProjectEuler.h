@@ -302,6 +302,15 @@ extern bool isPermutation(uint64_t a, uint64_t b);
  */
 extern uint64_t fibonacci(uint64_t n);
 
+/**
+ *  Get the english word for a given number n
+ *
+ *  @param n
+ *
+ *  @return string
+ */
+extern string englishRepresentationOfNumber(uint64_t n);
+
 #endif
 
 #endif /* libProjectEuler_h */

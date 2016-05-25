@@ -560,6 +560,70 @@ extern uint64_t fibonacci(uint64_t n)
 	}
 }
 
+static string englishNumbers_0_19[] = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+	"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+
+extern string englishRepresentationOfNumber(uint64_t n)
+{
+	string returnVal = "";
+	
+	if (n < 20) {
+		
+		returnVal = englishNumbers_0_19[n];
+		
+	} else if (n >= 20 && n < 100) {
+		
+		uint64_t tensDigit = n / 10;
+		
+		if (tensDigit == 2) {
+			returnVal = "twenty";
+		} else if (tensDigit == 3) {
+			returnVal = "thirty";
+		} else if (tensDigit == 4) {
+			returnVal = "forty";
+		} else if (tensDigit == 5) {
+			returnVal = "fifty";
+		} else if (tensDigit == 6) {
+			returnVal = "sixty";
+		} else if (tensDigit == 7) {
+			returnVal = "seventy";
+		} else if (tensDigit == 8) {
+			returnVal = "eighty";
+		} else if (tensDigit == 9) {
+			returnVal = "ninety";
+		} else {
+			return returnVal;
+		}
+		
+		uint64_t onesDigit = n % 10;
+		
+		if (onesDigit > 0) {
+			returnVal += englishRepresentationOfNumber(onesDigit);
+		}
+		
+	} else if (n >= 100 && n < 1000) {
+		
+		uint64_t hundredsDigit = n / 100;
+		returnVal = englishRepresentationOfNumber(hundredsDigit) + "hundred";
+		
+		if (n % 100 != 0) {
+			returnVal += "and" + englishRepresentationOfNumber(n % 100);
+		}
+		
+	} else if (n >= 1000) {
+		
+		uint64_t thousandsDigit = n / 1000;
+		returnVal = englishRepresentationOfNumber(thousandsDigit) + "thousand";
+		
+		if (n % 1000 != 0) {
+			returnVal += englishRepresentationOfNumber(n % 1000);
+		}
+		
+	}
+	
+	return returnVal;
+}
+
 
 
 

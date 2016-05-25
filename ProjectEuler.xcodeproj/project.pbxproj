@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1967331CF604D200EF3601 /* Problem_17.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E1967321CF604D200EF3601 /* Problem_17.mm */; };
 		2E786ABF1CE8D2A4008BFEC4 /* Problem_78.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */; };
 		2E8042C91CF4B01F00D2BEDD /* Problem_543.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E8042C81CF4B01F00D2BEDD /* Problem_543.mm */; };
 		2E9246281CEF71CB00695E74 /* Problem_49.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E9246271CEF71CB00695E74 /* Problem_49.mm */; };
@@ -102,6 +103,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E1967321CF604D200EF3601 /* Problem_17.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_17.mm; sourceTree = "<group>"; };
 		2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_78.mm; sourceTree = "<group>"; };
 		2E8042C81CF4B01F00D2BEDD /* Problem_543.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_543.mm; sourceTree = "<group>"; };
 		2E9246271CEF71CB00695E74 /* Problem_49.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_49.mm; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				2EF42B0B1CE7935C008D8C2B /* Problem_14.mm */,
 				2EF42B0C1CE7935C008D8C2B /* Problem_15.mm */,
 				2EF42B0D1CE7935C008D8C2B /* Problem_16.mm */,
+				2E1967321CF604D200EF3601 /* Problem_17.mm */,
 				2EF42B0E1CE7935C008D8C2B /* Problem_18.mm */,
 				2EF42B101CE7935C008D8C2B /* Problem_20.mm */,
 				2EF42B111CE7935C008D8C2B /* Problem_21.mm */,
@@ -440,6 +443,7 @@
 				2EF42B501CE7935C008D8C2B /* Problem_29.mm in Sources */,
 				2EF42B691CE7935C008D8C2B /* Problem_67.mm in Sources */,
 				2EF42B6E1CE7935C008D8C2B /* Problem_87.mm in Sources */,
+				2E1967331CF604D200EF3601 /* Problem_17.mm in Sources */,
 				2EF42B4F1CE7935C008D8C2B /* Problem_28.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
