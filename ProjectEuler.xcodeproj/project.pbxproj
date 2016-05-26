@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2E1967331CF604D200EF3601 /* Problem_17.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E1967321CF604D200EF3601 /* Problem_17.mm */; };
 		2E1967351CF60D3500EF3601 /* Problem_43.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E1967341CF60D3500EF3601 /* Problem_43.mm */; };
+		2E44F8AE1CF76FD000A4B22A /* Problem_59.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */; };
+		2E44F8B01CF7702E00A4B22A /* p059_cipher.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E44F8AF1CF7702000A4B22A /* p059_cipher.txt */; };
 		2E786ABF1CE8D2A4008BFEC4 /* Problem_78.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */; };
 		2E8042C91CF4B01F00D2BEDD /* Problem_543.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E8042C81CF4B01F00D2BEDD /* Problem_543.mm */; };
 		2E9246281CEF71CB00695E74 /* Problem_49.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E9246271CEF71CB00695E74 /* Problem_49.mm */; };
@@ -93,6 +95,7 @@
 				2EF42B751CE79377008D8C2B /* p022_names.txt in CopyFiles */,
 				2EF42B761CE79377008D8C2B /* p042_words.txt in CopyFiles */,
 				2EF42B771CE79377008D8C2B /* p054_poker.txt in CopyFiles */,
+				2E44F8B01CF7702E00A4B22A /* p059_cipher.txt in CopyFiles */,
 				2EF42B781CE79377008D8C2B /* p067_triangle.txt in CopyFiles */,
 				2EF42B791CE79377008D8C2B /* p081_matrix.txt in CopyFiles */,
 				2EF42B7A1CE79377008D8C2B /* p082_matrix.txt in CopyFiles */,
@@ -106,6 +109,8 @@
 /* Begin PBXFileReference section */
 		2E1967321CF604D200EF3601 /* Problem_17.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_17.mm; sourceTree = "<group>"; };
 		2E1967341CF60D3500EF3601 /* Problem_43.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_43.mm; sourceTree = "<group>"; };
+		2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_59.mm; sourceTree = "<group>"; };
+		2E44F8AF1CF7702000A4B22A /* p059_cipher.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p059_cipher.txt; sourceTree = "<group>"; };
 		2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_78.mm; sourceTree = "<group>"; };
 		2E8042C81CF4B01F00D2BEDD /* Problem_543.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_543.mm; sourceTree = "<group>"; };
 		2E9246271CEF71CB00695E74 /* Problem_49.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_49.mm; sourceTree = "<group>"; };
@@ -228,6 +233,7 @@
 				2EF42AC21CE7935C008D8C2B /* p022_names.txt */,
 				2EF42AC31CE7935C008D8C2B /* p042_words.txt */,
 				2EF42AC41CE7935C008D8C2B /* p054_poker.txt */,
+				2E44F8AF1CF7702000A4B22A /* p059_cipher.txt */,
 				2EF42AC51CE7935C008D8C2B /* p067_triangle.txt */,
 				2EF42AC61CE7935C008D8C2B /* p081_matrix.txt */,
 				2EF42AC71CE7935C008D8C2B /* p082_matrix.txt */,
@@ -313,6 +319,7 @@
 				2EF42B2A1CE7935C008D8C2B /* Problem_52.mm */,
 				2EF42B2B1CE7935C008D8C2B /* Problem_53.mm */,
 				2EF42B2C1CE7935C008D8C2B /* Problem_54.mm */,
+				2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */,
 				2EF42B2E1CE7935C008D8C2B /* Problem_60.mm */,
 				2EF42B2F1CE7935C008D8C2B /* Problem_61.mm */,
 				2EACD1C31CEE01560092761A /* Problem_63.mm */,
@@ -417,6 +424,7 @@
 				2EF42B701CE7935C008D8C2B /* Problem_92.mm in Sources */,
 				2EF42B4C1CE7935C008D8C2B /* Problem_23.mm in Sources */,
 				2EF42B3E1CE7935C008D8C2B /* main.m in Sources */,
+				2E44F8AE1CF76FD000A4B22A /* Problem_59.mm in Sources */,
 				2EC1AEF21CECD9F800553C6D /* Problem_24.mm in Sources */,
 				2EF42B671CE7935C008D8C2B /* Problem_60.mm in Sources */,
 				2EF42B3D1CE7935C008D8C2B /* primes.mm in Sources */,

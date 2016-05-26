@@ -65,6 +65,7 @@ extern bool isPalindrome(string i);
 extern forward_list<uint64_t> getDigits(uint64_t i);
 extern uint64_t numberOfDigits(uint64_t i);
 
+extern uint64_t sumOfString(string &s);
 extern uint64_t sumOfVector(vector<uint64_t> *v);
 extern uint64_t sumOfSet(set<uint64_t> *s);
 extern uint64_t sumOfList(list<uint64_t> *l);
@@ -286,7 +287,6 @@ extern uint64_t concatanate(uint64_t a, uint64_t b);
  *  @return bool
  */
 extern bool isPandigital(uint64_t i, uint64_t a, uint64_t b);
-extern bool isPandigital(string i, uint64_t a, uint64_t b);
 
 /**
  *  A number a is a permutation of another number b

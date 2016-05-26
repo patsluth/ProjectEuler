@@ -88,19 +88,21 @@ extern forward_list<uint64_t> getDigits(uint64_t i)
 	return digits;
 }
 
-
 extern uint64_t numberOfDigits(uint64_t i)
 {
-	// TODO: test
-//    uint64_t numberOfDigits = 0;
-// 
-//    while (i > 0) {
-//        numberOfDigits++;
-//        i /= 10;
-//    }
-
 	forward_list<uint64_t> digits = getDigits(i);
     return distance(digits.begin(), digits.end());
+}
+
+extern uint64_t sumOfString(string &s)
+{
+	uint64_t sum = 0;
+	
+	for (uint64_t i = 0; i < s.length(); i += 1) {
+		sum += (uint64_t)s[i];
+	}
+	
+	return sum;
 }
 
 extern uint64_t sumOfVector(vector<uint64_t> *v)
@@ -549,36 +551,6 @@ extern bool isPandigital(uint64_t i, uint64_t a, uint64_t b)
 	while (i > 0) {
 		digits->insert(i % 10);
 		i /= 10;
-	}
-	
-	// n = number of digits
-	// lower and upper bounds match
-	uint64_t n = (b + 1) - a;
-	bool isPandigital = digits->size() == n && *digits->begin() == a && *digits->rbegin() == b;
-	
-	if (isPandigital) {
-		
-		for (uint64_t x = a; x <= b; x++) { // remove each digit
-			digits->erase(x);
-		}
-		
-		isPandigital = (digits->size() == 0);
-		
-	}
-	
-	digits->clear();
-	delete digits;
-	
-	return isPandigital;
-}
-
-extern bool isPandigital(string i, uint64_t a, uint64_t b)
-{
-	set<uint64_t> *digits = new set<uint64_t>();
-	
-	while (i.length() > 0) {
-		uint64_t digit = i[0] - 48; // ASCII integers start at 48
-		digits->insert(digit);
 	}
 	
 	// n = number of digits
