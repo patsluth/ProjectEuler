@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_99.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -37,7 +37,7 @@ typedef vector<uint64_t> baseExponent;
 		string line;
 		uint64_t lineNumber = 0;
 		
-		while (getline(fileStream, line, '\n')) { //iterate file line by line
+		while (getline(fileStream, line, '\n')) { // iterate file line by line
 			
 			lineNumber++;
 			
@@ -45,7 +45,7 @@ typedef vector<uint64_t> baseExponent;
 			istream_iterator<uint64_t> beg(buf), end;
 			
 			baseExponent be(beg, end);
-			be.insert(be.begin() + 1, lineNumber); //line number stored in center index
+			be.insert(be.begin() + 1, lineNumber); // line number stored in center index
 			exponents.push_back(be);
 			
 		}
@@ -60,7 +60,7 @@ typedef vector<uint64_t> baseExponent;
 			exponents.push_back(largerExponent(be1, be2));
 		}
 		
-		return @(exponents.front()[1]); //line number stored in center index
+		return @(exponents.front()[1]); // line number stored in center index
 		
 	}
 	

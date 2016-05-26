@@ -1,10 +1,10 @@
-//
+// 
 //  numberChain.h
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2015-11-20.
 //  Copyright © 2015 Pat Sluth. All rights reserved.
-//
+// 
 
 #ifndef numberChain_h
 #define numberChain_h
@@ -20,7 +20,7 @@ using namespace std;
 
 
 
-//See problem 74, 92, 95 for examples
+// See problem 74, 92, 95 for examples
 typedef vector<uint64_t> numberChain;
 
 /**
@@ -65,7 +65,7 @@ inline numberChain numberChain_calculate(uint64_t start,
         uint64_t nextEndOfChain = nextNumber(&chain.back());
         
         for (uint64_t i : chain) {
-            if (i == nextEndOfChain) { //duplicate
+            if (i == nextEndOfChain) { // duplicate
                 chain.push_back(nextEndOfChain);
                 return chain;
             }
@@ -73,7 +73,7 @@ inline numberChain numberChain_calculate(uint64_t start,
         
         chain.push_back(nextEndOfChain);
         
-        //stop calculating
+        // stop calculating
         if (continueCalculating && continueCalculating(&chain) == false) {
             return chain;
         }

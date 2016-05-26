@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_81.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -34,7 +34,7 @@
 		
 		string line;
 		
-		while (getline(fileStream, line, '\n')) { //iterate file line by line
+		while (getline(fileStream, line, '\n')) { // iterate file line by line
 			
 			istringstream buf(line);
 			istream_iterator<uint64_t> beg(buf), end;
@@ -44,7 +44,7 @@
 			
 		}
 		
-		for (auto row : matrix) { //make sure its a square
+		for (auto row : matrix) { // make sure its a square
 			assert(matrix.size() == row.size());
 		}
 		

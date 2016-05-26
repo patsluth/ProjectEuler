@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_11.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -60,7 +60,7 @@
 			bool xInBounds = (x + 3 < 20);
 			bool yInBounds = (y + 3 < 20);
 			
-			if (yInBounds) { //horizontal
+			if (yInBounds) { // horizontal
 				
 				greatestProduct = MAX(greatestProduct, data[x][y] * data[x][y + 1] * data[x][y + 2] * data[x][y + 3]);
 				
@@ -71,7 +71,7 @@
 				//                }
 			}
 			
-			if (xInBounds) { //vertical
+			if (xInBounds) { // vertical
 				
 				greatestProduct = MAX(greatestProduct, data[x][y] * data[x + 1][y] * data[x + 2][y] * data[x + 3][y]);
 				
@@ -82,7 +82,7 @@
 				//                }
 			}
 			
-			if (xInBounds && yInBounds) { //diagonal right
+			if (xInBounds && yInBounds) { // diagonal right
 				
 				greatestProduct = MAX(greatestProduct, data[x][y] * data[x + 1][y + 1] * data[x + 2][y + 2] * data[x + 3][y + 3]);
 				
@@ -93,7 +93,7 @@
 				//                }
 			}
 			
-			if ((int)x - 3 >= 0 && yInBounds) { //diagonal left
+			if ((int)x - 3 >= 0 && yInBounds) { // diagonal left
 				
 				greatestProduct = MAX(greatestProduct, data[x][y] * data[x - 1][y + 1] * data[x - 2][y + 2] * data[x - 3][y + 3]);
 				

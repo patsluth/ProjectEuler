@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_16.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -36,7 +36,7 @@
 		while (digit >= 0) {
 			
 			int digitIndex = digit;
-			uint digitValue = number[digitIndex] - 48; //ASCII integers start at 48
+			uint digitValue = number[digitIndex] - 48; // ASCII integers start at 48
 			
 			uint product = digitValue * 2;
 			
@@ -50,11 +50,11 @@
 				product -= 10;
 			}
 			
-			number[digitIndex] = product + 48; //ASCII integers start at 48
+			number[digitIndex] = product + 48; // ASCII integers start at 48
 			
-			if (carryover && digitIndex == 0) { //last digit
+			if (carryover && digitIndex == 0) { // last digit
 				
-				number.insert(number.begin(), 1 + 48); //ASCII integers start at 48
+				number.insert(number.begin(), 1 + 48); // ASCII integers start at 48
 				carryover = false;
 				
 			}
@@ -65,10 +65,10 @@
 		
 	}
 	
-	//add up all digits
+	// add up all digits
 	uint64_t sum = 0;
 	for (uint digit = 0; digit < number.length(); digit++) {
-		sum += (number[digit] - 48); //ASCII integers start at 48
+		sum += (number[digit] - 48); // ASCII integers start at 48
 	}
 	
 	return @(sum);

@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_87.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -36,7 +36,7 @@
 		}
 	}
 	
-	set<uint64_t> count; //no duplicates
+	set<uint64_t> count; // no duplicates
 	
 	BOOST_FOREACH (uint64_t x, primeCache) {
 		BOOST_FOREACH (uint64_t y, primeCache) {

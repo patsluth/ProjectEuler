@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_42.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -35,7 +35,7 @@
 		
 		while (getline(fileStream, word, ',')) {
 			
-			if (nForTriangle(wordToNumber(word)) != 0) { //word number is a triangle word
+			if (nForTriangle(wordToNumber(word)) != 0) { // word number is a triangle word
 				triangleWordCount++;
 			}
 			
@@ -54,7 +54,7 @@ uint64_t wordToNumber(string w)
 	
 	for (char c : w) {
 		
-		uint64_t cIndex = toupper(c); //upper case letters 65-90 inclusive
+		uint64_t cIndex = toupper(c); // upper case letters 65-90 inclusive
 		
 		if (cIndex > 64 && cIndex < 91) {
 			returnValue += cIndex - 64;

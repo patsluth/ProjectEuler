@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_45.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -28,7 +28,7 @@
 {
 	uint64_t n = 286;
 	
-	//number is triangle, pentagonal, and hexagonal
+	// number is triangle, pentagonal, and hexagonal
 	while (nForPentagonal(triangleForN(n)) == 0 || nForHexagonal(triangleForN(n)) == 0) {
 		n++;
 	}

@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_92.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -57,7 +57,7 @@ numberChain_nextNumberFunction sumOfSquaresOfDigits_Chain()
 		
 		while (currentEndOfChain_Copy != 0) {
 			
-			nextEndOfChain += ( (currentEndOfChain_Copy % 10) * (currentEndOfChain_Copy % 10) ); //sum of current digit squared
+			nextEndOfChain += ( (currentEndOfChain_Copy % 10) * (currentEndOfChain_Copy % 10) ); // sum of current digit squared
 			currentEndOfChain_Copy /= 10;
 			
 		}

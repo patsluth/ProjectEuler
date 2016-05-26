@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_60.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -50,7 +50,7 @@
 			
 			set<uint64_t> &curPrimeSet2 = *primeHash.valueForKey((*itr).first);
 			
-			//check both directions (a b) (b a)
+			// check both directions (a b) (b a)
 			if (isConcatPrime((*itr).first, prime)) {
 				curPrimeSet2.insert(prime);
 			}

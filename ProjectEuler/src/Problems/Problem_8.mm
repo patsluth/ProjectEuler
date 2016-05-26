@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_8.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -35,11 +35,11 @@
 		
 		uint64_t currentProduct = 1;
 		
-		for (uint y = 0; y < digits; y++) { //multiply groups of digits
-			currentProduct *= data[x + y] - 48; //ASCII integers start at 48
+		for (uint y = 0; y < digits; y++) { // multiply groups of digits
+			currentProduct *= data[x + y] - 48; // ASCII integers start at 48
 		}
 		
-		if (currentProduct > greatestProduct) { //check new product
+		if (currentProduct > greatestProduct) { // check new product
 			greatestProduct = currentProduct;
 		}
 		

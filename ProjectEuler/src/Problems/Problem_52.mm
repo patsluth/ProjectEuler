@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_52.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -28,7 +28,7 @@
 {
 	for (uint64_t x = 1; ; x++) {
 		
-		//true for x*2 to x*6
+		// true for x*2 to x*6
 		if ([self int:x containsSameDigitsAsInt:x * 2]) {
 			if ([self int:x containsSameDigitsAsInt:x * 3]) {
 				if ([self int:x containsSameDigitsAsInt:x * 4]) {

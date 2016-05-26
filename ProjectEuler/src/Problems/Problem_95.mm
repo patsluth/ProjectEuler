@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_95.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -46,7 +46,7 @@
 		
 		numberChain cur = numberChain_calculate(start, sumOfProperDivisors_Chain(), continueCalculating);
 		
-		//constraints
+		// constraints
 		if (cur.back() < 1000000 &&
 			cur.back() == cur.front() &&
 			cur.size() > longest.size()) {

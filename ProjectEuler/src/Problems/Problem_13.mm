@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_13.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -143,11 +143,11 @@
 			int resultDigitIndex = (int)(result.length() - 1 - digit);
 			int numberDigitIndex = (int)(number.length() - 1 - digit);
 			
-			uint64_t resultDigit = result[resultDigitIndex] - 48; //ASCII integers start at 48
+			uint64_t resultDigit = result[resultDigitIndex] - 48; // ASCII integers start at 48
 			uint64_t numberDigit = 0;
 			
 			if (numberDigitIndex >= 0) {
-				numberDigit = number[numberDigitIndex] - 48; //ASCII integers start at 48
+				numberDigit = number[numberDigitIndex] - 48; // ASCII integers start at 48
 			}
 			
 			uint64_t sum = resultDigit + numberDigit;
@@ -162,12 +162,12 @@
 				sum -= 10;
 			}
 			
-			result[resultDigitIndex] = sum + 48; //ASCII integers start at 48
+			result[resultDigitIndex] = sum + 48; // ASCII integers start at 48
 			
-			if (carryover && numberDigitIndex <= 0) { //last digit of new number
+			if (carryover && numberDigitIndex <= 0) { // last digit of new number
 				
-				if (resultDigitIndex == 0) { //insert new digit
-					result.insert(result.begin(), 1 + 48); //ASCII integers start at 48
+				if (resultDigitIndex == 0) { // insert new digit
+					result.insert(result.begin(), 1 + 48); // ASCII integers start at 48
 					carryover = false;
 				}
 				

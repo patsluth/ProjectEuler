@@ -1,10 +1,10 @@
-//
+// 
 //  primes.cpp
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2015-12-10.
 //  Copyright © 2015 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "primes.h"
 

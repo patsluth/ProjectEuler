@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_27.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -26,9 +26,9 @@
 
 - (id)solveProblem
 {
-	//quadratic in form n^2 + an + b
+	// quadratic in form n^2 + an + b
 	
-	pair<uint64_t, int64_t> maxContainer = {0, 0}; //first = # of primes, second = (a * b)
+	pair<uint64_t, int64_t> maxContainer = {0, 0}; // first = # of primes, second = (a * b)
 	
 	for (int64_t a = -999; a < 1000; a++) {
 		

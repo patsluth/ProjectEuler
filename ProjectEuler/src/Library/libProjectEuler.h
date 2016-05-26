@@ -1,10 +1,10 @@
-//
+// 
 //  libProjectEuler.h
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2015-11-20.
 //  Copyright © 2015 Pat Sluth. All rights reserved.
-//
+// 
 
 #ifndef libProjectEuler_h
 #define libProjectEuler_h
@@ -283,9 +283,10 @@ extern uint64_t concatanate(uint64_t a, uint64_t b);
  *  @param a
  *  @param b
  *
- *  @return
+ *  @return bool
  */
 extern bool isPandigital(uint64_t i, uint64_t a, uint64_t b);
+extern bool isPandigital(string i, uint64_t a, uint64_t b);
 
 /**
  *  A number a is a permutation of another number b
@@ -315,6 +316,15 @@ extern uint64_t fibonacci(uint64_t n);
  *  @return string
  */
 extern string englishRepresentationOfNumber(uint64_t n);
+
+/**
+ *  Swaps elements in provided string to give the next permutation
+ *
+ *  @param permutation
+ *
+ *  @return bool true if there are more possible permutations
+ */
+bool nextPermutation(string &permutation);
 
 #endif
 

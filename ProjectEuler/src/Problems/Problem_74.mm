@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_74.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -39,7 +39,7 @@
 	};
 	
 	for (uint64_t start = 0; start < 1000000; start++) {
-		//+1 because the last term is guaranteed to be a repeated term
+		// +1 because the last term is guaranteed to be a repeated term
 		if (numberChain_calculate(start, sumOfFactorialOfDigits_Chain(), continueCalculating).size() == 60 + 1) {
 			x++;
 		}

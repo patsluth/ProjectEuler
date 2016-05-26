@@ -1,10 +1,10 @@
-//
+// 
 //  primes.h
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2015-12-10.
 //  Copyright © 2015 Pat Sluth. All rights reserved.
-//
+// 
 
 #ifndef primes_h
 #define primes_h
@@ -28,8 +28,8 @@ private:
     
     static primes *shared_instance;
     
-    //the key of the first map is the n of the prime text file ex- primes2.txt key = 2
-    //the key of the map of primes of that text file is the prime number
+    // the key of the first map is the n of the prime text file ex- primes2.txt key = 2
+    // the key of the map of primes of that text file is the prime number
     hashMap<uint64_t, set<uint64_t>> primeData;
     
 public:

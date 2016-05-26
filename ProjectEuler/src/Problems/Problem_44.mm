@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_44.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -35,8 +35,8 @@
 		
 		uint64_t p_k = pentagonalForN(k);
 		
-		//if the difference between the prev pentagonal and this one is greater than the minDifference
-		//then all previous pentagonals will be as well
+		// if the difference between the prev pentagonal and this one is greater than the minDifference
+		// then all previous pentagonals will be as well
 		if (pentagonalForN(p_k - 1) > minDifference) {
 			break;
 		}

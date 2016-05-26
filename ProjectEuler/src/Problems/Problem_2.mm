@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_2.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -33,8 +33,8 @@
 	
 	while (currentFib <= 4000000) {
 		
-		//process current fib
-		if (currentFib % 2 == 0) { //even
+		// process current fib
+		if (currentFib % 2 == 0) { // even
 			sum += currentFib;
 		}
 		

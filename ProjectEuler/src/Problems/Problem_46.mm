@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_46.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -59,7 +59,7 @@
 			
 		}
 		
-		n += 2; //odd
+		n += 2; // odd
 	}
 }
 

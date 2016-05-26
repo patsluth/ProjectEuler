@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_61.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -39,7 +39,7 @@
 	
 	hashMap<uint64_t, set<uint64_t>> frontDigitMap;
 	
-	for (uint64_t n = 0; ; n++) { //cache
+	for (uint64_t n = 0; ; n++) { // cache
 		
 		uint64_t triangle = triangleForN(n);
 		uint64_t square = (n * n);
@@ -151,10 +151,10 @@
 								uint64_t backDigits = n6 % 100;
 								auto nextDigitSet = *frontDigitMap.valueForKey(backDigits);
 								
-								if (backDigits == (*itr).first) { //check the front of the loop
+								if (backDigits == (*itr).first) { // check the front of the loop
 									
-									//vector<uint64_t> curChain = {n1, n2, n3, n4, n5, n6};
-									set<uint64_t> curChainCopy; //remove duplicates
+									// vector<uint64_t> curChain = {n1, n2, n3, n4, n5, n6};
+									set<uint64_t> curChainCopy; // remove duplicates
 									
 									curChainCopy.insert(n1);
 									curChainCopy.insert(n2);

@@ -1,10 +1,10 @@
-//
+// 
 //  Problem_5.m
 //  ProjectEuler
-//
+// 
 //  Created by Pat Sluth on 2016-04-21.
 //  Copyright © 2016 Pat Sluth. All rights reserved.
-//
+// 
 
 #import "ProblemBase.h"
 
@@ -36,7 +36,7 @@ static uint64_t smallestMultipleOfRange(uint64_t a, uint64_t b)
 {
 	uint64_t m = b;
 	
-	if (a == 0 || b == 0 || a > b) { //invalid
+	if (a == 0 || b == 0 || a > b) { // invalid
 		return 0;
 	}
 	
