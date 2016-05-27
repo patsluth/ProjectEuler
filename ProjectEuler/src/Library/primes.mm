@@ -93,11 +93,11 @@ set<uint64_t> &primes::loadPrimes(uint64_t nMillion)
         if (fileStream) {
             
             string line;
-            while (getline(fileStream, line, '\n')) { // iterate over each line
+            while (getline(fileStream, line, '\n')) { // iterate each line
                 
                 istringstream buffer(line);
-                istream_iterator<uint64_t> number(buffer); // convert to int
-                set.insert(*number);
+                istream_iterator<uint64_t> value(buffer);
+                set.insert(*value);
                 
             }
             

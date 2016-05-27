@@ -10,7 +10,19 @@
 		2E1967331CF604D200EF3601 /* Problem_17.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E1967321CF604D200EF3601 /* Problem_17.mm */; };
 		2E1967351CF60D3500EF3601 /* Problem_43.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E1967341CF60D3500EF3601 /* Problem_43.mm */; };
 		2E44F8AE1CF76FD000A4B22A /* Problem_59.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */; };
-		2E44F8B01CF7702E00A4B22A /* p059_cipher.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E44F8AF1CF7702000A4B22A /* p059_cipher.txt */; };
+		2E77CD7E1CF88B97003A49E3 /* Problem_77.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E77CD7D1CF88B97003A49E3 /* Problem_77.mm */; };
+		2E77CD801CF88EA8003A49E3 /* Problem_79.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E77CD7F1CF88EA8003A49E3 /* Problem_79.mm */; };
+		2E77CD831CF88EFF003A49E3 /* p018_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC11CE7935C008D8C2B /* p018_triangle.txt */; };
+		2E77CD841CF88EFF003A49E3 /* p022_names.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC21CE7935C008D8C2B /* p022_names.txt */; };
+		2E77CD851CF88EFF003A49E3 /* p042_words.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC31CE7935C008D8C2B /* p042_words.txt */; };
+		2E77CD861CF88EFF003A49E3 /* p054_poker.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC41CE7935C008D8C2B /* p054_poker.txt */; };
+		2E77CD871CF88EFF003A49E3 /* p059_cipher.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E44F8AF1CF7702000A4B22A /* p059_cipher.txt */; };
+		2E77CD881CF88EFF003A49E3 /* p067_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC51CE7935C008D8C2B /* p067_triangle.txt */; };
+		2E77CD891CF88EFF003A49E3 /* p079_keylog.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E77CD811CF88EDB003A49E3 /* p079_keylog.txt */; };
+		2E77CD8A1CF88EFF003A49E3 /* p096_sudoku.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E77CD821CF88EE1003A49E3 /* p096_sudoku.txt */; };
+		2E77CD8B1CF88EFF003A49E3 /* p081_matrix.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC61CE7935C008D8C2B /* p081_matrix.txt */; };
+		2E77CD8C1CF88EFF003A49E3 /* p082_matrix.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC71CE7935C008D8C2B /* p082_matrix.txt */; };
+		2E77CD8D1CF88EFF003A49E3 /* p099_base_exp.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC81CE7935C008D8C2B /* p099_base_exp.txt */; };
 		2E786ABF1CE8D2A4008BFEC4 /* Problem_78.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */; };
 		2E8042C91CF4B01F00D2BEDD /* Problem_543.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E8042C81CF4B01F00D2BEDD /* Problem_543.mm */; };
 		2E9246281CEF71CB00695E74 /* Problem_49.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E9246271CEF71CB00695E74 /* Problem_49.mm */; };
@@ -74,14 +86,6 @@
 		2EF42B711CE7935C008D8C2B /* Problem_95.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B381CE7935C008D8C2B /* Problem_95.mm */; };
 		2EF42B721CE7935C008D8C2B /* Problem_99.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B391CE7935C008D8C2B /* Problem_99.mm */; };
 		2EF42B731CE7935C008D8C2B /* ProblemBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B3B1CE7935C008D8C2B /* ProblemBase.m */; };
-		2EF42B741CE79377008D8C2B /* p018_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC11CE7935C008D8C2B /* p018_triangle.txt */; };
-		2EF42B751CE79377008D8C2B /* p022_names.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC21CE7935C008D8C2B /* p022_names.txt */; };
-		2EF42B761CE79377008D8C2B /* p042_words.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC31CE7935C008D8C2B /* p042_words.txt */; };
-		2EF42B771CE79377008D8C2B /* p054_poker.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC41CE7935C008D8C2B /* p054_poker.txt */; };
-		2EF42B781CE79377008D8C2B /* p067_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC51CE7935C008D8C2B /* p067_triangle.txt */; };
-		2EF42B791CE79377008D8C2B /* p081_matrix.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC61CE7935C008D8C2B /* p081_matrix.txt */; };
-		2EF42B7A1CE79377008D8C2B /* p082_matrix.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC71CE7935C008D8C2B /* p082_matrix.txt */; };
-		2EF42B7B1CE79377008D8C2B /* p099_base_exp.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC81CE7935C008D8C2B /* p099_base_exp.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -91,15 +95,17 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				2EF42B741CE79377008D8C2B /* p018_triangle.txt in CopyFiles */,
-				2EF42B751CE79377008D8C2B /* p022_names.txt in CopyFiles */,
-				2EF42B761CE79377008D8C2B /* p042_words.txt in CopyFiles */,
-				2EF42B771CE79377008D8C2B /* p054_poker.txt in CopyFiles */,
-				2E44F8B01CF7702E00A4B22A /* p059_cipher.txt in CopyFiles */,
-				2EF42B781CE79377008D8C2B /* p067_triangle.txt in CopyFiles */,
-				2EF42B791CE79377008D8C2B /* p081_matrix.txt in CopyFiles */,
-				2EF42B7A1CE79377008D8C2B /* p082_matrix.txt in CopyFiles */,
-				2EF42B7B1CE79377008D8C2B /* p099_base_exp.txt in CopyFiles */,
+				2E77CD831CF88EFF003A49E3 /* p018_triangle.txt in CopyFiles */,
+				2E77CD841CF88EFF003A49E3 /* p022_names.txt in CopyFiles */,
+				2E77CD851CF88EFF003A49E3 /* p042_words.txt in CopyFiles */,
+				2E77CD861CF88EFF003A49E3 /* p054_poker.txt in CopyFiles */,
+				2E77CD871CF88EFF003A49E3 /* p059_cipher.txt in CopyFiles */,
+				2E77CD881CF88EFF003A49E3 /* p067_triangle.txt in CopyFiles */,
+				2E77CD891CF88EFF003A49E3 /* p079_keylog.txt in CopyFiles */,
+				2E77CD8A1CF88EFF003A49E3 /* p096_sudoku.txt in CopyFiles */,
+				2E77CD8B1CF88EFF003A49E3 /* p081_matrix.txt in CopyFiles */,
+				2E77CD8C1CF88EFF003A49E3 /* p082_matrix.txt in CopyFiles */,
+				2E77CD8D1CF88EFF003A49E3 /* p099_base_exp.txt in CopyFiles */,
 				2EE5679A1CE7948600A1CE81 /* Primes in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +117,10 @@
 		2E1967341CF60D3500EF3601 /* Problem_43.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_43.mm; sourceTree = "<group>"; };
 		2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_59.mm; sourceTree = "<group>"; };
 		2E44F8AF1CF7702000A4B22A /* p059_cipher.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p059_cipher.txt; sourceTree = "<group>"; };
+		2E77CD7D1CF88B97003A49E3 /* Problem_77.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_77.mm; sourceTree = "<group>"; };
+		2E77CD7F1CF88EA8003A49E3 /* Problem_79.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_79.mm; sourceTree = "<group>"; };
+		2E77CD811CF88EDB003A49E3 /* p079_keylog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p079_keylog.txt; sourceTree = "<group>"; };
+		2E77CD821CF88EE1003A49E3 /* p096_sudoku.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p096_sudoku.txt; sourceTree = "<group>"; };
 		2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_78.mm; sourceTree = "<group>"; };
 		2E8042C81CF4B01F00D2BEDD /* Problem_543.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_543.mm; sourceTree = "<group>"; };
 		2E9246271CEF71CB00695E74 /* Problem_49.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_49.mm; sourceTree = "<group>"; };
@@ -235,6 +245,8 @@
 				2EF42AC41CE7935C008D8C2B /* p054_poker.txt */,
 				2E44F8AF1CF7702000A4B22A /* p059_cipher.txt */,
 				2EF42AC51CE7935C008D8C2B /* p067_triangle.txt */,
+				2E77CD811CF88EDB003A49E3 /* p079_keylog.txt */,
+				2E77CD821CF88EE1003A49E3 /* p096_sudoku.txt */,
 				2EF42AC61CE7935C008D8C2B /* p081_matrix.txt */,
 				2EF42AC71CE7935C008D8C2B /* p082_matrix.txt */,
 				2EF42AC81CE7935C008D8C2B /* p099_base_exp.txt */,
@@ -325,7 +337,9 @@
 				2EACD1C31CEE01560092761A /* Problem_63.mm */,
 				2EF42B301CE7935C008D8C2B /* Problem_67.mm */,
 				2EF42B321CE7935C008D8C2B /* Problem_74.mm */,
+				2E77CD7D1CF88B97003A49E3 /* Problem_77.mm */,
 				2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */,
+				2E77CD7F1CF88EA8003A49E3 /* Problem_79.mm */,
 				2EF42B341CE7935C008D8C2B /* Problem_81.mm */,
 				2EF42B351CE7935C008D8C2B /* Problem_87.mm */,
 				2EF42B371CE7935C008D8C2B /* Problem_92.mm */,
@@ -393,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EA0714B1CF4DC0A007B06A4 /* Problem_50.mm in Sources */,
+				2E77CD7E1CF88B97003A49E3 /* Problem_77.mm in Sources */,
 				2EF42B461CE7935C008D8C2B /* Problem_16.mm in Sources */,
 				2EF42B561CE7935C008D8C2B /* Problem_35.mm in Sources */,
 				2EF42B531CE7935C008D8C2B /* Problem_31.mm in Sources */,
@@ -401,6 +416,7 @@
 				2EF42B631CE7935C008D8C2B /* Problem_52.mm in Sources */,
 				2EF42B581CE7935C008D8C2B /* Problem_37.mm in Sources */,
 				2EF42B5E1CE7935C008D8C2B /* Problem_44.mm in Sources */,
+				2E77CD801CF88EA8003A49E3 /* Problem_79.mm in Sources */,
 				2EF42B4A1CE7935C008D8C2B /* Problem_21.mm in Sources */,
 				2EF42B541CE7935C008D8C2B /* Problem_32.mm in Sources */,
 				2EF42B5A1CE7935C008D8C2B /* Problem_39.mm in Sources */,

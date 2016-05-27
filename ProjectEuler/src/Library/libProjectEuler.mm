@@ -251,7 +251,7 @@ extern pyramid pyramidFromFile(string file)
     if (fileStream) {
 
         string line;
-        while (getline(fileStream, line, '\n')) { // split txt file by line
+        while (getline(fileStream, line, '\n')) { // iterate each line
 
             pyramidRow pRow;
 

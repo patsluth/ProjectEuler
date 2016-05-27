@@ -37,7 +37,7 @@ typedef vector<uint64_t> baseExponent;
 		string line;
 		uint64_t lineNumber = 0;
 		
-		while (getline(fileStream, line, '\n')) { // iterate file line by line
+		while (getline(fileStream, line, '\n')) { // iterate each line
 			
 			lineNumber++;
 			

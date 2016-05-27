@@ -37,26 +37,25 @@
 	if (fileStream) {
 		
 		string line;
-		while (getline(fileStream, line, ',')) { // split file by ,
+		while (getline(fileStream, line, ',')) { // split with , delimiter
 			
 			istringstream buffer(line);
-			istream_iterator<uint64_t> number(buffer); // convert to int
-			cipher.push_back((char)*number);
+			istream_iterator<uint64_t> value(buffer);
+			cipher.push_back((char)*value);
 			
 		}
 		
 	}
 	
 	string key = findPossibleKey(cipher, 3);
-	sort(key.begin(), key.end()); // sort so we can use nextPermutation
 	
 	while (nextPermutation(key)) {
 		
-		string decodedMessage = decodeMessage(cipher, key);
-//		printf("\n\nKEY:\n\t%s\nMESSAGE:\n\t%s\nCHAR COUNT:\n\t%llu\n\n", key.c_str(), decodedMessage.c_str(), sumOfString(decodedMessage));
+		string decryptedMessage = encryptXOR(cipher, key);
+//		printf("\n\nKEY:\n\t%s\nMESSAGE:\n\t%s\nCHAR COUNT:\n\t%llu\n\n", key.c_str(), decryptedMessage.c_str(), sumOfString(decryptedMessage));
 		
-		if (key == "god") {
-			return @(sumOfString(decodedMessage));
+		if (key == "god") { // hardcode from printed answer
+			return @(sumOfString(decryptedMessage));
 		}
 		
 	}
@@ -64,6 +63,14 @@
 	return nil;
 }
 
+/**
+ *  Search the message for the characters that occur most often and return a string of length keyLength containing those characters
+ *
+ *  @param message
+ *  @param keyLength
+ *
+ *  @return key
+ */
 string findPossibleKey(string message, uint64_t keyLength)
 {
 	// Key = character
@@ -94,10 +101,11 @@ string findPossibleKey(string message, uint64_t keyLength)
 		key += tolower((*itr).second);
 	}
 	
+	sort(key.begin(), key.end()); // sort so we can use nextPermutation
 	return key;
 }
 
-string decodeMessage(string message, string key)
+string encryptXOR(string message, string key)
 {
 	string decodedMessage;
 	

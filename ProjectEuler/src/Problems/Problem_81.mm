@@ -34,7 +34,7 @@
 		
 		string line;
 		
-		while (getline(fileStream, line, '\n')) { // iterate file line by line
+		while (getline(fileStream, line, '\n')) { // iterate each line
 			
 			istringstream buf(line);
 			istream_iterator<uint64_t> beg(buf), end;

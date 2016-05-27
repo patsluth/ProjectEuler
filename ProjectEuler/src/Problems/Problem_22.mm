@@ -34,7 +34,7 @@
 		set<string> *names = new set<string>(); // sort alphabetically
 		
 		string line;
-		while (getline(fileStream, line, '\n')) { // iterate over each line
+		while (getline(fileStream, line, '\n')) { // iterate each line
 			names->insert(line);
 		}
 		
