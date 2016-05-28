@@ -38,16 +38,13 @@ uint64_t largestConsecutivePrimeSumThatIsPrime(uint64_t max)
 	
 	auto startItr = millionPrimes.begin();
 	auto endItr = millionPrimes.begin();
-	auto itr = startItr;
 	
-	while (itr != millionPrimes.end()) {
+	for (auto itr = startItr; itr != millionPrimes.end(); advance(itr, 1)) {
 		
 		if (sum + *itr < max) {
 			endItr = itr;
 			sum += *itr;
 		}
-		
-		advance(itr, 1);
 		
 	}
 	

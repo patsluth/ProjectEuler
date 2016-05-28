@@ -63,7 +63,7 @@
 		uint64_t aDigit = aDigits.back();
 		aDigits.pop_back();
 		
-		for(vector<uint64_t>::iterator bItr = bDigits.begin(); bItr != bDigits.end(); ++bItr) {
+		for (auto bItr = bDigits.begin(); bItr != bDigits.end(); advance(bItr, 1)) {
 			
 			if (aDigit == *bItr) {
 				bDigits.erase(bItr);

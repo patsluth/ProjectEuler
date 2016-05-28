@@ -44,9 +44,8 @@
 		
 		set<uint64_t> &curPrimeSet = *primeHash.valueForKey(prime);
 		
-		auto itr = primeHash.begin();
-		
-		while (itr != primeHash.end()) { // iterate over all current primes to see if they pass the concatonate test
+		// iterate over all current primes to see if they pass the concatonate test
+		for (auto itr = primeHash.begin(); itr != primeHash.end(); advance(itr, 1)) {
 			
 			set<uint64_t> &curPrimeSet2 = *primeHash.valueForKey((*itr).first);
 			
@@ -57,8 +56,6 @@
 			if (isConcatPrime(prime, (*itr).first)) {
 				curPrimeSet.insert((*itr).first);
 			}
-			
-			advance(itr, 1);
 			
 		}
 		

@@ -117,9 +117,7 @@
 	
 	
 	
-	auto itr = frontDigitMap.begin();
-	
-	while (itr != frontDigitMap.end()) {
+	for (auto itr = frontDigitMap.begin(); itr != frontDigitMap.end(); advance(itr, 1)) {
 		
 		BOOST_FOREACH(auto n1, (*itr).second) {
 			
@@ -198,8 +196,6 @@
 				}
 			}
 		}
-		
-		advance(itr, 1);
 		
 	}
 	

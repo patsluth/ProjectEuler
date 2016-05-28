@@ -63,9 +63,7 @@ typedef graph_traits<Graph_79>::vertex_descriptor Vertex_79_Descriptor;
 			istringstream buffer(line);
 			istream_iterator<string> passcode(buffer);
 			
-			auto itr = (*passcode).begin();
-			
-			while (itr + 1 != (*passcode).end()) {
+			for (auto itr = (*passcode).begin(); itr + 1 != (*passcode).end(); advance(itr, 1)) {
 				
 				char from = *itr;
 				char to = *(itr + 1);
@@ -76,7 +74,6 @@ typedef graph_traits<Graph_79>::vertex_descriptor Vertex_79_Descriptor;
 				
 				add_edge_by_label(from, to, graph);
 				
-				advance(itr, 1);
 			}
 			
 		}
@@ -87,18 +84,15 @@ typedef graph_traits<Graph_79>::vertex_descriptor Vertex_79_Descriptor;
 	vector<Vertex_79_Descriptor> sortedVertices;
 	topological_sort(graph.graph(), back_inserter(sortedVertices));
 	
-	auto itr = sortedVertices.rbegin();
 	NSMutableString *solution = [NSMutableString new];
 	
-	while (itr != sortedVertices.rend()) {
+	for (auto itr = sortedVertices.rbegin(); itr != sortedVertices.rend(); advance(itr, 1)) {
 		
 		Vertex_79_Descriptor vertex = *itr;
 		char vertexName = get(&Vertex_79::name, graph, vertex);
 		[solution appendFormat:@"%c", vertexName];
 		
-		advance(itr, 1);
 	}
-	
 	
 	return solution;
 }

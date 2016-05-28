@@ -29,16 +29,12 @@
 - (id)solveProblem
 {
 	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1); // 1st million primes
-	auto itr = millionPrimes.rbegin(); // reverse iterator
-									   // Since we are looking for the largest, the first prime to pass is the answer
 	
-	while (itr != millionPrimes.rend()) {
-		
+	// reverse iterator, since we are looking for the largest, the first prime to pass is the answer
+	for (auto itr = millionPrimes.rbegin(); itr != millionPrimes.rend(); advance(itr, 1)) {
 		if (isPandigital(*itr, 1, numberOfDigits(*itr))) {
 			return @(*itr);
 		}
-		
-		advance(itr, 1);
 	}
 	
 	return nil;

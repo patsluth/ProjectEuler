@@ -52,10 +52,9 @@ uint64_t P(uint64_t n, uint64_t k)
 // 	} else {
 // 		
 // 		set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1); // 1st million primes
-// 		auto itr = millionPrimes.begin();
 // 		
-// 		while (itr != millionPrimes.end()) {
-// 			
+// 		for (auto itr = millionPrimes.begin(); itr != millionPrimes.end(); advance(itr, 1)) {
+//
 // 			if (*itr < n) {
 // 				if (P(n - *itr, k - 1) == 1) {
 // 					break;

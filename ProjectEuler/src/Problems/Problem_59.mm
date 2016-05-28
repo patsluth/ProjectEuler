@@ -86,10 +86,8 @@ string findPossibleKey(string message, uint64_t keyLength)
 	
 	// save into a set so we can easily characters that occur the most often
 	set<pair<uint64_t, char>> sortedCharacterCounts;
-	auto itr = characterCounts.begin();
-	while (itr != characterCounts.end()) {
+	for (auto itr = characterCounts.begin(); itr != characterCounts.end(); advance(itr, 1)) {
 		sortedCharacterCounts.insert({ (*itr).second, (*itr).first });
-		advance(itr, 1);
 	}
 	
 	

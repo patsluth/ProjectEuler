@@ -29,9 +29,8 @@
 - (id)solveProblem
 {
 	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1); // 1st million primes
-	auto itr = millionPrimes.begin();
 	
-	while (itr != millionPrimes.end()) {
+	for (auto itr = millionPrimes.begin(); itr != millionPrimes.end(); advance(itr, 1)) {
 		
 		uint64_t p1 = *itr;
 		
@@ -40,12 +39,9 @@
 				break;
 			}
 			
-			auto itr2 = itr;
-			advance(itr2, 1);
-			
 			// Valid 4 digit prime
 			
-			while (itr2 != millionPrimes.end()) {
+			for (auto itr2 = next(itr); itr2 != millionPrimes.end(); advance(itr2, 1)) {
 				
 				uint64_t p2 = *itr2;
 				
@@ -69,13 +65,9 @@
 					
 				}
 				
-				advance(itr2, 1);
-				
 			}
 			
 		}
-		
-		advance(itr, 1);
 	}
 	
 	return nil;

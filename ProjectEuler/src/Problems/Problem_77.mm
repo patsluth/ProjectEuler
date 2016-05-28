@@ -30,11 +30,8 @@
 - (id)solveProblem
 {
 //	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1); // 1st million primes
-//	auto itr = millionPrimes.begin();
 //	
-//	while (itr != millionPrimes.end()) {
-//		
-//		advance(itr, 1);
+//	for (auto itr = millionPrimes.begin(); itr != millionPrimes.end(); advance(itr, 1)) {
 //		
 //	}
 	
