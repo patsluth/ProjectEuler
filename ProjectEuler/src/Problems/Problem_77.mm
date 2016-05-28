@@ -9,6 +9,7 @@
 #import "ProblemBase.h"
 
 #import "primes.h"
+#import "hashMap.h"
 
 
 
@@ -18,6 +19,8 @@
 {
 }
 
+@property (strong, nonatomic) NSArray *coins;
+
 @end
 
 
@@ -26,16 +29,27 @@
 
 @implementation Problem_77
 
-// See problem 31 - coin problem
 - (id)solveProblem
 {
-//	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1); // 1st million primes
-//	
-//	for (auto itr = millionPrimes.begin(); itr != millionPrimes.end(); advance(itr, 1)) {
-//		
-//	}
+	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1); // 1st million primes
 	
-	return @(0);
+	hashMap<uint64_t, uint64_t> solutions;
+	*solutions.valueForKey(0) = 1;
+	
+	for (auto itr = millionPrimes.begin(); itr != millionPrimes.end(); advance(itr, 1)) {
+		
+		uint64_t prime = *itr;
+		
+		for (uint64_t j = prime; j < 100; j += 1) {
+			*solutions.valueForKey(j) += *solutions.valueForKey(j - prime);
+		}
+		
+		if (*solutions.valueForKey(prime) > 5000) {
+			return @(prime);
+		}
+	}
+	
+	return nil;
 }
 
 @end

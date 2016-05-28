@@ -28,11 +28,11 @@
 
 - (id)solveProblem
 {
-	NSInteger solutions[201] = { 0 };
+	uint64_t solutions[201] = { 0 };
 	solutions[0] = 1;
  
 	for (id coin in self.coins) {
-		for (NSInteger j = [coin intValue]; j < 201; j++) {
+		for (uint64_t j = [coin unsignedIntValue]; j < 201; j += 1) {
 			solutions[j] += solutions[j - [coin intValue]];
 		}
 	}
