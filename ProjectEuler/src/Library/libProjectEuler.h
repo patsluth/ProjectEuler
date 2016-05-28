@@ -52,8 +52,8 @@ extern ifstream readFile(string file);
  *
  *  @return bool
  */
-extern bool isPalindrome(uint64_t x);
-extern bool isPalindrome(string i);
+extern bool isPalindrome(uint64_t n);
+extern bool isPalindrome(string n);
 
 /**
  *  Get a list of individual digits of a number
@@ -62,8 +62,8 @@ extern bool isPalindrome(string i);
  *
  *  @return list
  */
-extern forward_list<uint64_t> getDigits(uint64_t i);
-extern uint64_t numberOfDigits(uint64_t i);
+extern forward_list<uint64_t> getDigits(uint64_t n);
+extern uint64_t numberOfDigits(uint64_t n);
 
 extern uint64_t sumOfString(string &s);
 extern uint64_t sumOfVector(vector<uint64_t> *v);
@@ -115,7 +115,7 @@ extern bool isFactorPrime(Factor f);
  *
  *  @return bool
  */
-extern bool isPrime(uint64_t i);
+extern bool isPrime(uint64_t n);
 
 /**
  *  Calcualte number of divisors
@@ -124,7 +124,7 @@ extern bool isPrime(uint64_t i);
  *
  *  @return divisors
  */
-extern uint64_t numberOfDivisors(uint64_t i);
+extern uint64_t numberOfDivisors(uint64_t n);
 
 /**
  *  Get next integer in sequence (Collatz problem)
@@ -184,7 +184,7 @@ extern void printPyramid(pyramid p);
  *
  *  @return vector
  */
-extern vector<uint64_t> circularVariations(uint64_t i);
+extern vector<uint64_t> circularVariations(uint64_t n);
 
 struct quadratic
 {
@@ -241,7 +241,7 @@ typedef vector<uint64_t> properDivisors;
  *
  *  @return vector containing proper divisors
  */
-extern properDivisors *calculateProperDivisors(uint64_t i);
+extern properDivisors *calculateProperDivisors(uint64_t n);
 
 enum numberType
 {
@@ -257,7 +257,7 @@ enum numberType
  *
  *  @return bool
  */
-extern numberType getNumberType(uint64_t i);
+extern numberType getNumberType(uint64_t n);
 
 /**
  *  Concatonate 2 integers
@@ -286,7 +286,7 @@ extern uint64_t concatanate(uint64_t a, uint64_t b);
  *
  *  @return bool
  */
-extern bool isPandigital(uint64_t i, uint64_t a, uint64_t b);
+extern bool isPandigital(uint64_t n, uint64_t a, uint64_t b);
 
 /**
  *  A number a is a permutation of another number b

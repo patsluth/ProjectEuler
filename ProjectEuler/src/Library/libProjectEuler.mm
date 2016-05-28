@@ -25,33 +25,16 @@ extern ifstream readFile(string file)
 	return fileStream;
 }
 
-extern bool isPalindrome(uint64_t i)
+extern bool isPalindrome(uint64_t n)
 {
-    uint64_t numDigits = 0;
-    uint64_t *digits = new uint64_t[numDigits];
+	return isPalindrome(to_string(n));
+}
 
-    while (i != 0) {
+extern bool isPalindrome(string n)
+{
+    for (uint64_t x = 0; x < n.size() / 2; x++) {
 
-        // copy current digit array
-        uint64_t *oldDigits = new uint64_t[numDigits];
-		copy(digits, digits + numDigits, oldDigits);
-
-        // increase current digit arrray size and copy previous values back
-        digits = new uint64_t[numDigits + 1];
-        copy(oldDigits, oldDigits + numDigits, digits);
-
-        // set new value to current digit
-        digits[numDigits] = i % 10;
-
-        // remove current digit from x
-        i /= 10;
-        numDigits++;
-
-    }
-
-    for (uint64_t x = 0; x < numDigits / 2; x++) {
-
-        if (digits[x] != digits[numDigits - 1 - x]) { // compare corresponding elements
+        if (n[x] != n[n.size() - 1 - x]) { // compare corresponding elements
             return false;
         }
 
@@ -60,37 +43,24 @@ extern bool isPalindrome(uint64_t i)
     return true;
 }
 
-extern bool isPalindrome(string i)
-{
-    for (uint64_t x = 0; x < i.size() / 2; x++) {
-
-        if (i[x] != i[i.size() - 1 - x]) { // compare corresponding elements
-            return false;
-        }
-
-    }
-
-    return true;
-}
-
-extern forward_list<uint64_t> getDigits(uint64_t i)
+extern forward_list<uint64_t> getDigits(uint64_t n)
 {
 	forward_list<uint64_t> digits;
 	
-	while (i > 0) {
+	while (n > 0) {
 		
-		uint64_t digit = i % 10;
+		uint64_t digit = n % 10;
 		digits.push_front(digit);
-		i /= 10;
+		n /= 10;
 		
 	}
 	
 	return digits;
 }
 
-extern uint64_t numberOfDigits(uint64_t i)
+extern uint64_t numberOfDigits(uint64_t n)
 {
-	forward_list<uint64_t> digits = getDigits(i);
+	forward_list<uint64_t> digits = getDigits(n);
     return distance(digits.begin(), digits.end());
 }
 
@@ -168,25 +138,25 @@ extern bool isFactorPrime(Factor f)
 	return (f.x == 0 && f.y == 0);
 }
 
-extern bool isPrime(uint64_t i)
+extern bool isPrime(uint64_t n)
 {
-    if (i == 0 || i == 1) {
+    if (n == 0 || n == 1) {
 
         return false;
 
-    } else if (i == 2) {
+    } else if (n == 2) {
 
         return true;
 
     } else {
 
-        if (i % 2 == 0) { // if i is divisible by 2 and is not equal to 2, it is not prime
+        if (n % 2 == 0) { // if i is divisible by 2 and is not equal to 2, it is not prime
             return false;
         }
 
-        for (uint64_t x = 3; x <= sqrt(i); x += 2) { // only check odds
+        for (uint64_t x = 3; x <= sqrt(n); x += 2) { // only check odds
 
-            if ( i % x == 0 ) {
+            if (n % x == 0) {
                 return false;
             }
 
@@ -197,18 +167,18 @@ extern bool isPrime(uint64_t i)
     }
 }
 
-extern uint64_t numberOfDivisors(uint64_t i)
+extern uint64_t numberOfDivisors(uint64_t n)
 {
-    if (i > 1) {
+    if (n > 1) {
 
         uint64_t divisors = 0;
 
-        for (uint64_t x = 1; x <= sqrt(i); x++) {
+        for (uint64_t x = 1; x <= sqrt(n); x++) {
 
-            if (i % x == 0) {
+            if (n % x == 0) {
 
                 divisors++;
-                if (i / x != x) { // dont add perfect squares
+                if (n / x != x) { // dont add perfect squares
                     divisors++;
                 }
 
@@ -220,7 +190,7 @@ extern uint64_t numberOfDivisors(uint64_t i)
 
     } else {
 
-        return (i == 0) ? 0 : 1;
+        return (n == 0) ? 0 : 1;
 
     }
 }
@@ -316,16 +286,16 @@ extern void printPyramid(pyramid p)
     }
 }
 
-extern vector<uint64_t> circularVariations(uint64_t i)
+extern vector<uint64_t> circularVariations(uint64_t n)
 {
     vector<uint64_t> iDigits;
 
-    uint64_t iCopy = i;
+    uint64_t _n = n;
 
-    while (iCopy != 0) {
+    while (_n != 0) {
 
-        iDigits.insert(iDigits.begin(), iCopy % 10);
-        iCopy /= 10;
+        iDigits.insert(iDigits.begin(), _n % 10);
+        _n /= 10;
 
     }
 
@@ -467,15 +437,15 @@ extern int64_t nForOctagonal(int64_t On)
  *
  *  @return vector containing proper divisors
  */
-extern properDivisors *calculateProperDivisors(uint64_t i)
+extern properDivisors *calculateProperDivisors(uint64_t n)
 {
     vector<uint64_t> *properDivisors = new vector<uint64_t>(1);
 
-    for (uint64_t x = 2; x <= sqrt(i); x++) {
-        if ( (i / x) * x == i ) {
+    for (uint64_t x = 2; x <= sqrt(n); x++) {
+        if ( (n / x) * x == n ) {
             properDivisors->push_back(x);
-            if ( (i / x) != x) { // dont add same multiple twice
-                properDivisors->push_back(i / x);
+            if ( (n / x) != x) { // dont add same multiple twice
+                properDivisors->push_back(n / x);
             }
         }
     }
@@ -483,13 +453,13 @@ extern properDivisors *calculateProperDivisors(uint64_t i)
     return properDivisors;
 }
 
-extern numberType getNumberType(uint64_t i)
+extern numberType getNumberType(uint64_t n)
 {
-    uint64_t x = sumOfVector(calculateProperDivisors(i));
+    uint64_t x = sumOfVector(calculateProperDivisors(n));
 
-    if (x < i) {
+    if (x < n) {
         return NumberType_Deficient;
-    } else if (x > i) {
+    } else if (x > n) {
         return NumberType_Abundant;
     } else {
         return NumberType_Perfect;
