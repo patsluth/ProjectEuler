@@ -27,20 +27,18 @@
 - (id)solveProblem
 {
 	uint64_t sum = 1;
-	uint64_t cur = 1;
+	uint64_t corner = 1;
 	
 	for (uint64_t x = 3; x <= 1001; x += 2) {
 		for (uint64_t y = 0; y < 4; y++) { //  calculate each corner
 			
-			//  this will give us the current corner value
-			cur = cur + (x - 1);
-			sum += cur;
+			corner += (x - 1);
+			sum += corner;
 			
 		}
 	}
 	
 	return @(sum);
-
 }
 
 @end
