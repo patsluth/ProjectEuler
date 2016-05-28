@@ -655,6 +655,37 @@ bool nextPermutation(string &permutation)
 	return true;
 }
 
+extern bool isIncreasingNumber(uint64_t n)
+{
+	string _n = to_string(n);
+	
+	for (auto itr = _n.begin(); itr + 1 != _n.end(); advance(itr, 1)) {
+		if (*itr > *next(itr)) {
+			return false;
+		}
+	}
+	
+	return true;
+}
+
+extern bool isDecreasingNumber(uint64_t n)
+{
+	string _n = to_string(n);
+	
+	for (auto itr = _n.begin(); itr + 1 != _n.end(); advance(itr, 1)) {
+		if (*itr < *next(itr)) {
+			return false;
+		}
+	}
+	
+	return true;
+}
+
+extern bool isBouncyNumber(uint64_t n)
+{
+	return (!isIncreasingNumber(n) && !isDecreasingNumber(n));
+}
+
 
 
 

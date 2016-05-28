@@ -326,6 +326,36 @@ extern string englishRepresentationOfNumber(uint64_t n);
  */
 bool nextPermutation(string &permutation);
 
+/**
+ *  A number n is called increasing if no digit is exceeded by the digit to its left
+ *  ex		n = 134468
+ *
+ *  @param n
+ *
+ *  @return bool
+ */
+extern bool isIncreasingNumber(uint64_t n);
+
+/**
+ *  A number n is called decreasing if no digit is exceeded by the digit to its right
+ *  ex		n = 66420
+ *
+ *  @param n
+ *
+ *  @return bool
+ */
+extern bool isDecreasingNumber(uint64_t n);
+
+/**
+ *  A number n that is neither increasing nor decreasing is called a 'bouncy' number
+ *  ex		n = 155349
+ *
+ *  @param n
+ *
+ *  @return bool
+ */
+extern bool isBouncyNumber(uint64_t n);
+
 #endif
 
 #endif /* libProjectEuler_h */
