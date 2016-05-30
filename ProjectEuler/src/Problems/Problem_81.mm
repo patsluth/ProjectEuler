@@ -56,7 +56,7 @@
 		
 		for (int64_t x = matrix.size() - 2; x >= 0; x--) {
 			for (int64_t y = matrix.size() - 2; y >= 0; y--) {
-				matrix[x][y] += min(matrix[x + 1][y], matrix[x][y + 1]);
+				matrix[x][y] += MIN(matrix[x + 1][y], matrix[x][y + 1]);
 			}
 		}
 		

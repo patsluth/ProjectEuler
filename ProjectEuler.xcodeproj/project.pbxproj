@@ -32,6 +32,9 @@
 		2E9246281CEF71CB00695E74 /* Problem_49.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E9246271CEF71CB00695E74 /* Problem_49.mm */; };
 		2EA0714B1CF4DC0A007B06A4 /* Problem_50.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0714A1CF4D90F007B06A4 /* Problem_50.mm */; };
 		2EACD1C41CEE01560092761A /* Problem_63.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EACD1C31CEE01560092761A /* Problem_63.mm */; };
+		2EACDFE21CFC9CDF0048C81A /* p089_roman.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EACDFE11CFC9CD40048C81A /* p089_roman.txt */; };
+		2EACDFE41CFC9CF90048C81A /* Problem_89.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EACDFE31CFC9CF90048C81A /* Problem_89.mm */; };
+		2EBF59131CFBB2AE000F86BF /* Problem_26.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EBF59121CFBB2AE000F86BF /* Problem_26.mm */; };
 		2EC1AEF21CECD9F800553C6D /* Problem_24.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1AEF11CECD9F800553C6D /* Problem_24.mm */; };
 		2EE5679A1CE7948600A1CE81 /* Primes in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EE567991CE7948100A1CE81 /* Primes */; };
 		2EF42B3C1CE7935C008D8C2B /* libProjectEuler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B001CE7935C008D8C2B /* libProjectEuler.mm */; };
@@ -109,6 +112,7 @@
 				2E77CD8A1CF88EFF003A49E3 /* p096_sudoku.txt in CopyFiles */,
 				2E77CD8B1CF88EFF003A49E3 /* p081_matrix.txt in CopyFiles */,
 				2E77CD8C1CF88EFF003A49E3 /* p082_matrix.txt in CopyFiles */,
+				2EACDFE21CFC9CDF0048C81A /* p089_roman.txt in CopyFiles */,
 				2E77CD8D1CF88EFF003A49E3 /* p099_base_exp.txt in CopyFiles */,
 				2EE5679A1CE7948600A1CE81 /* Primes in CopyFiles */,
 			);
@@ -134,6 +138,9 @@
 		2E9246271CEF71CB00695E74 /* Problem_49.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_49.mm; sourceTree = "<group>"; };
 		2EA0714A1CF4D90F007B06A4 /* Problem_50.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_50.mm; sourceTree = "<group>"; };
 		2EACD1C31CEE01560092761A /* Problem_63.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_63.mm; sourceTree = "<group>"; };
+		2EACDFE11CFC9CD40048C81A /* p089_roman.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p089_roman.txt; sourceTree = "<group>"; };
+		2EACDFE31CFC9CF90048C81A /* Problem_89.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_89.mm; sourceTree = "<group>"; };
+		2EBF59121CFBB2AE000F86BF /* Problem_26.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_26.mm; sourceTree = "<group>"; };
 		2EC1AEF11CECD9F800553C6D /* Problem_24.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_24.mm; sourceTree = "<group>"; };
 		2EE567991CE7948100A1CE81 /* Primes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Primes; sourceTree = "<group>"; };
 		2EF429FE1CE79287008D8C2B /* ProjectEuler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEuler; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,9 +261,10 @@
 				2E44F8AF1CF7702000A4B22A /* p059_cipher.txt */,
 				2EF42AC51CE7935C008D8C2B /* p067_triangle.txt */,
 				2E77CD811CF88EDB003A49E3 /* p079_keylog.txt */,
-				2E77CD821CF88EE1003A49E3 /* p096_sudoku.txt */,
 				2EF42AC61CE7935C008D8C2B /* p081_matrix.txt */,
 				2EF42AC71CE7935C008D8C2B /* p082_matrix.txt */,
+				2EACDFE11CFC9CD40048C81A /* p089_roman.txt */,
+				2E77CD821CF88EE1003A49E3 /* p096_sudoku.txt */,
 				2EF42AC81CE7935C008D8C2B /* p099_base_exp.txt */,
 				2EE567991CE7948100A1CE81 /* Primes */,
 			);
@@ -316,6 +324,7 @@
 				2EF42B131CE7935C008D8C2B /* Problem_23.mm */,
 				2EC1AEF11CECD9F800553C6D /* Problem_24.mm */,
 				2EF42B141CE7935C008D8C2B /* Problem_25.mm */,
+				2EBF59121CFBB2AE000F86BF /* Problem_26.mm */,
 				2EF42B151CE7935C008D8C2B /* Problem_27.mm */,
 				2EF42B161CE7935C008D8C2B /* Problem_28.mm */,
 				2EF42B171CE7935C008D8C2B /* Problem_29.mm */,
@@ -352,6 +361,7 @@
 				2E77CD7F1CF88EA8003A49E3 /* Problem_79.mm */,
 				2EF42B341CE7935C008D8C2B /* Problem_81.mm */,
 				2EF42B351CE7935C008D8C2B /* Problem_87.mm */,
+				2EACDFE31CFC9CF90048C81A /* Problem_89.mm */,
 				2EF42B371CE7935C008D8C2B /* Problem_92.mm */,
 				2EF42B381CE7935C008D8C2B /* Problem_95.mm */,
 				2EF42B391CE7935C008D8C2B /* Problem_99.mm */,
@@ -431,6 +441,7 @@
 				2E77CD801CF88EA8003A49E3 /* Problem_79.mm in Sources */,
 				2EF42B4A1CE7935C008D8C2B /* Problem_21.mm in Sources */,
 				2EF42B541CE7935C008D8C2B /* Problem_32.mm in Sources */,
+				2EBF59131CFBB2AE000F86BF /* Problem_26.mm in Sources */,
 				2EF42B5A1CE7935C008D8C2B /* Problem_39.mm in Sources */,
 				2EF42B651CE7935C008D8C2B /* Problem_54.mm in Sources */,
 				2EF42B4E1CE7935C008D8C2B /* Problem_27.mm in Sources */,
@@ -458,6 +469,7 @@
 				2EF42B671CE7935C008D8C2B /* Problem_60.mm in Sources */,
 				2EF42B3D1CE7935C008D8C2B /* primes.mm in Sources */,
 				2EF42B5D1CE7935C008D8C2B /* Problem_42.mm in Sources */,
+				2EACDFE41CFC9CF90048C81A /* Problem_89.mm in Sources */,
 				2E9246281CEF71CB00695E74 /* Problem_49.mm in Sources */,
 				2EF42B6C1CE7935C008D8C2B /* Problem_8.mm in Sources */,
 				2EF42B6F1CE7935C008D8C2B /* Problem_9.mm in Sources */,
