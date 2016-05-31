@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E144F791CFCB7ED008FF342 /* Primes in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E144F781CFCB7E0008FF342 /* Primes */; };
+		2E144F7B1CFCB9B4008FF342 /* Problem_96.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E144F7A1CFCB9B4008FF342 /* Problem_96.mm */; };
 		2E1967331CF604D200EF3601 /* Problem_17.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E1967321CF604D200EF3601 /* Problem_17.mm */; };
 		2E1967351CF60D3500EF3601 /* Problem_43.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E1967341CF60D3500EF3601 /* Problem_43.mm */; };
 		2E44F8AE1CF76FD000A4B22A /* Problem_59.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */; };
@@ -34,9 +36,9 @@
 		2EACD1C41CEE01560092761A /* Problem_63.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EACD1C31CEE01560092761A /* Problem_63.mm */; };
 		2EACDFE21CFC9CDF0048C81A /* p089_roman.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EACDFE11CFC9CD40048C81A /* p089_roman.txt */; };
 		2EACDFE41CFC9CF90048C81A /* Problem_89.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EACDFE31CFC9CF90048C81A /* Problem_89.mm */; };
+		2EACDFE61CFCB5F20048C81A /* Problem_265.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EACDFE51CFCB5F20048C81A /* Problem_265.mm */; };
 		2EBF59131CFBB2AE000F86BF /* Problem_26.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EBF59121CFBB2AE000F86BF /* Problem_26.mm */; };
 		2EC1AEF21CECD9F800553C6D /* Problem_24.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1AEF11CECD9F800553C6D /* Problem_24.mm */; };
-		2EE5679A1CE7948600A1CE81 /* Primes in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EE567991CE7948100A1CE81 /* Primes */; };
 		2EF42B3C1CE7935C008D8C2B /* libProjectEuler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B001CE7935C008D8C2B /* libProjectEuler.mm */; };
 		2EF42B3D1CE7935C008D8C2B /* primes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B031CE7935C008D8C2B /* primes.mm */; };
 		2EF42B3E1CE7935C008D8C2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B041CE7935C008D8C2B /* main.m */; };
@@ -114,13 +116,15 @@
 				2E77CD8C1CF88EFF003A49E3 /* p082_matrix.txt in CopyFiles */,
 				2EACDFE21CFC9CDF0048C81A /* p089_roman.txt in CopyFiles */,
 				2E77CD8D1CF88EFF003A49E3 /* p099_base_exp.txt in CopyFiles */,
-				2EE5679A1CE7948600A1CE81 /* Primes in CopyFiles */,
+				2E144F791CFCB7ED008FF342 /* Primes in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E144F781CFCB7E0008FF342 /* Primes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Primes; sourceTree = "<group>"; };
+		2E144F7A1CFCB9B4008FF342 /* Problem_96.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_96.mm; sourceTree = "<group>"; };
 		2E1967321CF604D200EF3601 /* Problem_17.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_17.mm; sourceTree = "<group>"; };
 		2E1967341CF60D3500EF3601 /* Problem_43.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_43.mm; sourceTree = "<group>"; };
 		2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_59.mm; sourceTree = "<group>"; };
@@ -140,9 +144,9 @@
 		2EACD1C31CEE01560092761A /* Problem_63.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_63.mm; sourceTree = "<group>"; };
 		2EACDFE11CFC9CD40048C81A /* p089_roman.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p089_roman.txt; sourceTree = "<group>"; };
 		2EACDFE31CFC9CF90048C81A /* Problem_89.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_89.mm; sourceTree = "<group>"; };
+		2EACDFE51CFCB5F20048C81A /* Problem_265.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_265.mm; sourceTree = "<group>"; };
 		2EBF59121CFBB2AE000F86BF /* Problem_26.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_26.mm; sourceTree = "<group>"; };
 		2EC1AEF11CECD9F800553C6D /* Problem_24.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_24.mm; sourceTree = "<group>"; };
-		2EE567991CE7948100A1CE81 /* Primes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Primes; sourceTree = "<group>"; };
 		2EF429FE1CE79287008D8C2B /* ProjectEuler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEuler; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF42AC11CE7935C008D8C2B /* p018_triangle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p018_triangle.txt; sourceTree = "<group>"; };
 		2EF42AC21CE7935C008D8C2B /* p022_names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p022_names.txt; sourceTree = "<group>"; };
@@ -266,7 +270,7 @@
 				2EACDFE11CFC9CD40048C81A /* p089_roman.txt */,
 				2E77CD821CF88EE1003A49E3 /* p096_sudoku.txt */,
 				2EF42AC81CE7935C008D8C2B /* p099_base_exp.txt */,
-				2EE567991CE7948100A1CE81 /* Primes */,
+				2E144F781CFCB7E0008FF342 /* Primes */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -364,9 +368,11 @@
 				2EACDFE31CFC9CF90048C81A /* Problem_89.mm */,
 				2EF42B371CE7935C008D8C2B /* Problem_92.mm */,
 				2EF42B381CE7935C008D8C2B /* Problem_95.mm */,
+				2E144F7A1CFCB9B4008FF342 /* Problem_96.mm */,
 				2EF42B391CE7935C008D8C2B /* Problem_99.mm */,
 				2E8830E21CF9F2D3003FD187 /* Problem_112.mm */,
 				2E8830E41CFA0084003FD187 /* Problem_113.mm */,
+				2EACDFE51CFCB5F20048C81A /* Problem_265.mm */,
 				2E8042C81CF4B01F00D2BEDD /* Problem_543.mm */,
 			);
 			path = Problems;
@@ -431,9 +437,11 @@
 				2EA0714B1CF4DC0A007B06A4 /* Problem_50.mm in Sources */,
 				2E77CD7E1CF88B97003A49E3 /* Problem_77.mm in Sources */,
 				2EF42B461CE7935C008D8C2B /* Problem_16.mm in Sources */,
+				2EACDFE61CFCB5F20048C81A /* Problem_265.mm in Sources */,
 				2EF42B561CE7935C008D8C2B /* Problem_35.mm in Sources */,
 				2EF42B531CE7935C008D8C2B /* Problem_31.mm in Sources */,
 				2E8042C91CF4B01F00D2BEDD /* Problem_543.mm in Sources */,
+				2E144F7B1CFCB9B4008FF342 /* Problem_96.mm in Sources */,
 				2EF42B611CE7935C008D8C2B /* Problem_48.mm in Sources */,
 				2EF42B631CE7935C008D8C2B /* Problem_52.mm in Sources */,
 				2EF42B581CE7935C008D8C2B /* Problem_37.mm in Sources */,

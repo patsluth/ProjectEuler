@@ -39,12 +39,19 @@
 		
 	};
 	
+	numberChain_nextNumberFunction sumOfProperDivisors_Chain = [] (const uint64_t *currentEndOfChain) {
+		
+		uint64_t currentEndOfChain_Copy = *currentEndOfChain;
+		return sumOfVector(calculateProperDivisors(currentEndOfChain_Copy));
+		
+	};
+	
 	
 	numberChain longest;
 	
 	for (uint64_t start = 0; start < 1000000; start++) {
 		
-		numberChain cur = numberChain_calculate(start, sumOfProperDivisors_Chain(), continueCalculating);
+		numberChain cur = numberChain_calculate(start, sumOfProperDivisors_Chain, continueCalculating);
 		
 		// constraints
 		if (cur.back() < 1000000 &&
@@ -58,16 +65,6 @@
 	}
 	
 	return @(longest.back());
-}
-
-numberChain_nextNumberFunction sumOfProperDivisors_Chain()
-{
-	return [] (const uint64_t *currentEndOfChain) {
-		
-		uint64_t currentEndOfChain_Copy = *currentEndOfChain;
-		return sumOfVector(calculateProperDivisors(currentEndOfChain_Copy));
-		
-	};
 }
 
 @end
