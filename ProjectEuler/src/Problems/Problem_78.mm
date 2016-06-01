@@ -26,14 +26,14 @@
 
 - (id)solveProblem
 {
-	uint64_t n = 1;
-	vector<int64_t> p;// = new vector<int64_t>;
+	vector<int64_t> p;
 	p.push_back(1);
 	
 	while (true) {
 		
 		uint64_t i = 0;
 		uint64_t pentagonalN = 1;
+		uint64_t n = p.size();
 		
 		p.push_back(0);
 		
@@ -53,13 +53,13 @@
 		}
 		
 		if (p[n] == 0) { // divisble by 1000000
-			break;
+			return @(n);
 		}
 		
-		n += 1;
+		n = p.size();
 	}
 	
-	return @(p.size());
+	return nil;
 }
 
 @end
