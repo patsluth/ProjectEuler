@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0E76EE1CFF26F200C98C26 /* Problem_71.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E76ED1CFF26F200C98C26 /* Problem_71.mm */; };
 		2E144F791CFCB7ED008FF342 /* Primes in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E144F781CFCB7E0008FF342 /* Primes */; };
 		2E144F7B1CFCB9B4008FF342 /* Problem_96.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E144F7A1CFCB9B4008FF342 /* Problem_96.mm */; };
 		2E1967331CF604D200EF3601 /* Problem_17.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E1967321CF604D200EF3601 /* Problem_17.mm */; };
@@ -123,6 +124,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E0E76ED1CFF26F200C98C26 /* Problem_71.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_71.mm; sourceTree = "<group>"; };
 		2E144F781CFCB7E0008FF342 /* Primes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Primes; sourceTree = "<group>"; };
 		2E144F7A1CFCB9B4008FF342 /* Problem_96.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_96.mm; sourceTree = "<group>"; };
 		2E1967321CF604D200EF3601 /* Problem_17.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_17.mm; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 				2EF42B2F1CE7935C008D8C2B /* Problem_61.mm */,
 				2EACD1C31CEE01560092761A /* Problem_63.mm */,
 				2EF42B301CE7935C008D8C2B /* Problem_67.mm */,
+				2E0E76ED1CFF26F200C98C26 /* Problem_71.mm */,
 				2EF42B321CE7935C008D8C2B /* Problem_74.mm */,
 				2E77CD7D1CF88B97003A49E3 /* Problem_77.mm */,
 				2E786ABE1CE8D2A4008BFEC4 /* Problem_78.mm */,
@@ -439,6 +442,7 @@
 				2EF42B461CE7935C008D8C2B /* Problem_16.mm in Sources */,
 				2EACDFE61CFCB5F20048C81A /* Problem_265.mm in Sources */,
 				2EF42B561CE7935C008D8C2B /* Problem_35.mm in Sources */,
+				2E0E76EE1CFF26F200C98C26 /* Problem_71.mm in Sources */,
 				2EF42B531CE7935C008D8C2B /* Problem_31.mm in Sources */,
 				2E8042C91CF4B01F00D2BEDD /* Problem_543.mm in Sources */,
 				2E144F7B1CFCB9B4008FF342 /* Problem_96.mm in Sources */,

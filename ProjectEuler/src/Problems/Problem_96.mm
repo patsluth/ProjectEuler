@@ -8,6 +8,8 @@
 
 #import "ProblemBase.h"
 
+#import <CoreGraphics/CoreGraphics.h>
+
 typedef vector<string> sudokuPuzzle;
 
 
@@ -197,20 +199,20 @@ bool sudokuBlockContainsValue(sudokuPuzzle &puzzle, uint64_t x, uint64_t y, char
  *
  *  @param puzzle
  *
- *  @return
+ *  @return CGPoint
  */
-pair<uint64_t, uint64_t> sudokuGetNextEmptySquare(sudokuPuzzle &puzzle)
+CGPoint sudokuGetNextEmptySquare(sudokuPuzzle &puzzle)
 {
 	for (uint64_t y = 0; y < puzzle.size(); y += 1) {
 		auto row = puzzle[y];
 		for (uint64_t x = 0; x < row.length(); x += 1) {
 			if (row[x] == '0') {
-				return { x, y };
+				return CGPointMake(x, y);
 			}
 		}
 	}
 	
-	return { 0, 0 };
+	return CGPointZero;
 }
 
 bool sudokuSolvePuzzle(sudokuPuzzle &puzzle)
@@ -221,21 +223,21 @@ bool sudokuSolvePuzzle(sudokuPuzzle &puzzle)
 	
 	auto emptySquare = sudokuGetNextEmptySquare(puzzle);
 	
-	if (puzzle[emptySquare.second][emptySquare.first] == '0') {
+	if (puzzle[emptySquare.y][emptySquare.x] == '0') {
 		
 		for (char i = '1'; i <= '9'; i += 1) {
 			
-			if (!sudokuRowContainsValue(puzzle, emptySquare.second, i) &&
-				!sudokuColumnContainsValue(puzzle, emptySquare.first, i) &&
-				!sudokuBlockContainsValue(puzzle, emptySquare.first / 3, emptySquare.second / 3, i)) {
+			if (!sudokuRowContainsValue(puzzle, emptySquare.y, i) &&
+				!sudokuColumnContainsValue(puzzle, emptySquare.x, i) &&
+				!sudokuBlockContainsValue(puzzle, emptySquare.x / 3, emptySquare.y / 3, i)) {
 				
-				puzzle[emptySquare.second][emptySquare.first] = i;
+				puzzle[emptySquare.y][emptySquare.x] = i;
 				
 				if (sudokuSolvePuzzle(puzzle)) {
 					return true;
 				}
 				
-				puzzle[emptySquare.second][emptySquare.first] = '0';
+				puzzle[emptySquare.y][emptySquare.x] = '0';
 
 			}
 			

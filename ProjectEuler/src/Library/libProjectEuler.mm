@@ -686,6 +686,23 @@ extern bool isBouncyNumber(uint64_t n)
 	return (!isIncreasingNumber(n) && !isDecreasingNumber(n));
 }
 
+extern void reduceFraction(uint64_t &a, uint64_t &b)
+{
+	uint64_t _gcd = gcd(a, b);
+	
+	a /= _gcd;
+	b /= _gcd;
+}
+
+extern uint64_t gcd(uint64_t a, uint64_t b)
+{
+	if (b == 0 ) {
+		return a;
+	} else {
+		return gcd(b, a % b);
+	}
+}
+
 
 
 

@@ -9,9 +9,9 @@
 #ifndef libProjectEuler_h
 #define libProjectEuler_h
 
-#import <Foundation/Foundation.h>
-
 #ifdef __cplusplus
+
+#import <Foundation/Foundation.h>
 
 #include <iostream>
 #import <sstream>
@@ -355,6 +355,24 @@ extern bool isDecreasingNumber(uint64_t n);
  *  @return bool
  */
 extern bool isBouncyNumber(uint64_t n);
+
+/**
+ *  Reduce fraction a / b
+ *
+ *  @param a
+ *  @param b
+ */
+extern void reduceFraction(uint64_t &a, uint64_t &b);
+
+/**
+ *  Greatest Common Divisor. Eulers Algorithm
+ *
+ *  @param a
+ *  @param b
+ *
+ *  @return uint64_t
+ */
+extern uint64_t gcd(uint64_t a, uint64_t b);
 
 #endif
 
