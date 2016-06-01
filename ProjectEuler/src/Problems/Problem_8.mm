@@ -36,7 +36,7 @@
 		uint64_t currentProduct = 1;
 		
 		for (uint y = 0; y < digits; y++) { // multiply groups of digits
-			currentProduct *= data[x + y] - 48; // ASCII integers start at 48
+			currentProduct *= stoi(data.substr(x + y, 1));
 		}
 		
 		if (currentProduct > greatestProduct) { // check new product
@@ -45,7 +45,7 @@
 		
 	}
 	
-	return @(greatestProduct);
+	return @(greatestProduct); // 23514624000
 }
 
 @end

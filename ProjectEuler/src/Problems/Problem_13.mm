@@ -134,20 +134,20 @@
 	string result = numbers[0];
 	bool carryover = false;
 	
-	for (uint index = 1; index < 100; index++) {
+	for (uint64_t index = 1; index < 100; index++) {
 		
 		string number = numbers[index];
 		
 		for (uint digit = 0; digit < result.length(); digit++) {
 			
-			int resultDigitIndex = (int)(result.length() - 1 - digit);
-			int numberDigitIndex = (int)(number.length() - 1 - digit);
+			int64_t resultDigitIndex = (int)(result.length() - 1 - digit);
+			int64_t numberDigitIndex = (int)(number.length() - 1 - digit);
 			
-			uint64_t resultDigit = result[resultDigitIndex] - 48; // ASCII integers start at 48
+			uint64_t resultDigit = stoi(result.substr(resultDigitIndex, 1));
 			uint64_t numberDigit = 0;
 			
 			if (numberDigitIndex >= 0) {
-				numberDigit = number[numberDigitIndex] - 48; // ASCII integers start at 48
+				numberDigit = stoi(number.substr(numberDigitIndex, 1));
 			}
 			
 			uint64_t sum = resultDigit + numberDigit;
@@ -162,12 +162,12 @@
 				sum -= 10;
 			}
 			
-			result[resultDigitIndex] = sum + 48; // ASCII integers start at 48
+			result[resultDigitIndex] = to_string(sum)[0];
 			
 			if (carryover && numberDigitIndex <= 0) { // last digit of new number
 				
 				if (resultDigitIndex == 0) { // insert new digit
-					result.insert(result.begin(), 1 + 48); // ASCII integers start at 48
+					result.insert(result.begin(), '1');
 					carryover = false;
 				}
 				
@@ -176,7 +176,7 @@
 		}
 	}
 	
-	return @(result.substr(0, 10).c_str());
+	return @(result.substr(0, 10).c_str()); // 5537376230
 }
 
 @end

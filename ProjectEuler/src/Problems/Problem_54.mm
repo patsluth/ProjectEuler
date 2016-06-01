@@ -64,7 +64,7 @@ typedef struct Hand Hand;
 {
 	[self parsePokerHands];
 	
-	return @(self.playerOneWins);
+	return @(self.playerOneWins); // 376
 }
 
 - (void)parsePokerHands
@@ -142,26 +142,27 @@ typedef struct Hand Hand;
 - (Card)cardForString:(NSString *)cardStr
 {
 	Card card;
-	char value = cardStr.UTF8String[0];
+	string value = [cardStr substringWithRange:NSMakeRange(0, 1)].UTF8String;
 	card.type = cardStr.UTF8String[1];
 	
-	if (value - 48 >= 1 && value - 48 <= 9) {
-		card.value = value - 48;
-	}
-	if (value == 'T') {
-		card.value = 10;
-	}
-	if (value == 'J') {
-		card.value = 11;
-	}
-	if (value == 'Q') {
-		card.value = 12;
-	}
-	if (value == 'K') {
-		card.value = 13;
-	}
-	if (value == 'A') {
-		card.value = 14;
+	if (isnumber(value[0])) {
+		card.value = stoi(value);
+	} else {
+		if (value == "T") {
+			card.value = 10;
+		}
+		if (value == "J") {
+			card.value = 11;
+		}
+		if (value == "Q") {
+			card.value = 12;
+		}
+		if (value == "K") {
+			card.value = 13;
+		}
+		if (value == "A") {
+			card.value = 14;
+		}
 	}
 	
 	return card;

@@ -29,16 +29,16 @@
 	string number = "2";
 	bool carryover = false;
 	
-	for (uint x = 1; x < 1000; x++) {
+	for (uint64_t x = 1; x < 1000; x++) {
 		
-		int digit = (int)(number.length() - 1);
+		int64_t digit = number.length() - 1;
 		
 		while (digit >= 0) {
 			
-			int digitIndex = digit;
-			uint digitValue = number[digitIndex] - 48; // ASCII integers start at 48
+			int64_t digitIndex = digit;
+			uint64_t digitValue = stoull(number.substr(digitIndex, 1));
 			
-			uint product = digitValue * 2;
+			uint64_t product = digitValue * 2;
 			
 			if (carryover) {
 				product++;
@@ -50,11 +50,11 @@
 				product -= 10;
 			}
 			
-			number[digitIndex] = product + 48; // ASCII integers start at 48
+			number[digitIndex] = to_string(product)[0];
 			
-			if (carryover && digitIndex == 0) { // last digit
+			if (carryover && digitIndex == 0) { // insert new digit
 				
-				number.insert(number.begin(), 1 + 48); // ASCII integers start at 48
+				number.insert(number.begin(), '1');
 				carryover = false;
 				
 			}
@@ -67,11 +67,11 @@
 	
 	// add up all digits
 	uint64_t sum = 0;
-	for (uint digit = 0; digit < number.length(); digit++) {
-		sum += (number[digit] - 48); // ASCII integers start at 48
+	for (uint64_t digit = 0; digit < number.length(); digit += 1) {
+		sum += stoull(number.substr(digit, 1));
 	}
 	
-	return @(sum);
+	return @(sum); // 1366
 }
 
 @end
