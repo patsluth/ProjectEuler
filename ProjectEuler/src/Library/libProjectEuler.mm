@@ -703,6 +703,42 @@ extern uint64_t gcd(uint64_t a, uint64_t b)
 	}
 }
 
+extern bool isLychrel(uint64_t n)
+{
+	cpp_int _n(n);
+	
+	for (uint64_t i = 0; i < 50; i += 1) {
+		
+		string reverseN(_n.str());
+		reverse(begin(reverseN), end(reverseN));
+		while (reverseN[0] == '0') { // Trim leading 0's for cpp_int conversion
+			reverseN = reverseN.substr(1, reverseN.length() - 1);
+		}
+		
+		_n += cpp_int(reverseN);
+		
+		if (isPalindrome(_n.str())) {
+			return false;
+		}
+		
+	}
+	
+	return true;
+}
+
+extern uint64_t reverseNumber(uint64_t n)
+{
+	uint64_t reverseN = 0;
+	
+	while (n > 0) {
+		reverseN *= 10;
+		reverseN += n % 10;
+		n /= 10;
+	}
+	
+	return reverseN;
+}
+
 
 
 

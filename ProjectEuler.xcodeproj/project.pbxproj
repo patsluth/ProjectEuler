@@ -13,6 +13,7 @@
 		2E144F7B1CFCB9B4008FF342 /* Problem_96.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E144F7A1CFCB9B4008FF342 /* Problem_96.mm */; };
 		2E1967331CF604D200EF3601 /* Problem_17.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E1967321CF604D200EF3601 /* Problem_17.mm */; };
 		2E1967351CF60D3500EF3601 /* Problem_43.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E1967341CF60D3500EF3601 /* Problem_43.mm */; };
+		2E3D3CA61D00A57200B57BB9 /* Problem_145.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D3CA51D00A57200B57BB9 /* Problem_145.mm */; };
 		2E44F8AE1CF76FD000A4B22A /* Problem_59.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */; };
 		2E77CD7E1CF88B97003A49E3 /* Problem_77.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E77CD7D1CF88B97003A49E3 /* Problem_77.mm */; };
 		2E77CD801CF88EA8003A49E3 /* Problem_79.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E77CD7F1CF88EA8003A49E3 /* Problem_79.mm */; };
@@ -131,6 +132,7 @@
 		2E144F7A1CFCB9B4008FF342 /* Problem_96.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_96.mm; sourceTree = "<group>"; };
 		2E1967321CF604D200EF3601 /* Problem_17.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_17.mm; sourceTree = "<group>"; };
 		2E1967341CF60D3500EF3601 /* Problem_43.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_43.mm; sourceTree = "<group>"; };
+		2E3D3CA51D00A57200B57BB9 /* Problem_145.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_145.mm; sourceTree = "<group>"; };
 		2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_59.mm; sourceTree = "<group>"; };
 		2E44F8AF1CF7702000A4B22A /* p059_cipher.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p059_cipher.txt; sourceTree = "<group>"; };
 		2E77CD7D1CF88B97003A49E3 /* Problem_77.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_77.mm; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 				2EF42B391CE7935C008D8C2B /* Problem_99.mm */,
 				2E8830E21CF9F2D3003FD187 /* Problem_112.mm */,
 				2E8830E41CFA0084003FD187 /* Problem_113.mm */,
+				2E3D3CA51D00A57200B57BB9 /* Problem_145.mm */,
 				2EACDFE51CFCB5F20048C81A /* Problem_265.mm */,
 				2E8042C81CF4B01F00D2BEDD /* Problem_543.mm */,
 			);
@@ -444,6 +447,7 @@
 				2E77CD7E1CF88B97003A49E3 /* Problem_77.mm in Sources */,
 				2EF42B461CE7935C008D8C2B /* Problem_16.mm in Sources */,
 				2EACDFE61CFCB5F20048C81A /* Problem_265.mm in Sources */,
+				2E3D3CA61D00A57200B57BB9 /* Problem_145.mm in Sources */,
 				2EF42B561CE7935C008D8C2B /* Problem_35.mm in Sources */,
 				2E0E76EE1CFF26F200C98C26 /* Problem_71.mm in Sources */,
 				2EF42B531CE7935C008D8C2B /* Problem_31.mm in Sources */,

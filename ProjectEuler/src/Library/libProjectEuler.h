@@ -374,6 +374,24 @@ extern void reduceFraction(uint64_t &a, uint64_t &b);
  */
 extern uint64_t gcd(uint64_t a, uint64_t b);
 
+/**
+ *  A number n is called lychrel if it cannot form a palindrome through the iterative process of adding the reverse of it's digits (50 iterations)
+ *
+ *  @param n
+ *
+ *  @return bool
+ */
+extern bool isLychrel(uint64_t n);
+
+/**
+ *  Reverse a numbers digits
+ *
+ *  @param n
+ *
+ *  @return uint64_t
+ */
+extern uint64_t reverseNumber(uint64_t n);
+
 #endif
 
 #endif /* libProjectEuler_h */

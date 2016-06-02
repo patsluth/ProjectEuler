@@ -37,29 +37,6 @@
 	return @(solution);
 }
 
-bool isLychrel(uint64_t n)
-{
-	cpp_int _n(n);
-	
-	for (uint64_t j = 0; j < 50; j += 1) {
-		
-		string reverseN(_n.str());
-		reverse(begin(reverseN), end(reverseN));
-		while (reverseN[0] == '0') {
-			reverseN = reverseN.substr(1, reverseN.length() - 1);
-		}
-		
-		_n += cpp_int(reverseN);
-		
-		if (isPalindrome(_n.str())) {
-			return false;
-		}
-		
-	}
-	
-	return true;
-}
-
 @end
 
 
