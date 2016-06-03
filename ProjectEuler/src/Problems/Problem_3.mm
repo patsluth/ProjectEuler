@@ -24,11 +24,13 @@
 
 @implementation Problem_3
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t number = 600851475143;
 	
-	std::vector<uint64_t> primeFactors;
+	vector<uint64_t> primeFactors;
 	
 	while (true) {
 		
@@ -54,11 +56,11 @@
 		
 	}
 	
-	if (!primeFactors.empty()) {
-		return @(primeFactors.back());
+	if (primeFactors.empty()) {
+		completion(nil, self.endTime);
+	} else {
+		completion(@(primeFactors.back()), self.endTime);	// 6857
 	}
-	
-	return nil;
 }
 
 @end

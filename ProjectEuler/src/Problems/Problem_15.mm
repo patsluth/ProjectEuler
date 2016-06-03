@@ -26,11 +26,13 @@
 
 @implementation Problem_15
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	cpp_int n = 20;
 	
-	return @(static_cast<int64_t>(nCr(n * 2, n)));
+	completion(@(static_cast<int64_t>(nCr(n * 2, n))), self.endTime);	// 137846528820
 }
 
 @end

@@ -24,6 +24,13 @@
 
 @implementation Problem_81
 
+- (void)solveProblem:(solutionBlock)completion
+{
+	[super solveProblem:completion];
+	
+	completion([self solveProblem], self.endTime);	// 427337
+}
+
 - (id)solveProblem
 {
 	ifstream fileStream = readFile("p081_matrix.txt");
@@ -60,9 +67,7 @@
 			}
 		}
 		
-		
 		return @(matrix[0][0]);
-		
 	}
 	
 	return nil;

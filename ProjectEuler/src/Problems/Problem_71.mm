@@ -43,8 +43,10 @@ bool operator ==(const CGPoint &x, const CGPoint &y)
 
 @implementation Problem_71
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	set<CGPoint> fractions;
 	CGPoint a = CGPointMake(3, 7);
 	CGPoint b = CGPointMake(0, 1);
@@ -60,7 +62,7 @@ bool operator ==(const CGPoint &x, const CGPoint &y)
 		
 	}
 	
-	return @((uint64_t)b.x);
+	completion(@((uint64_t)b.x), self.endTime);	// 428570
 }
 
 @end

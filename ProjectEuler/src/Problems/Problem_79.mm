@@ -18,6 +18,10 @@ using namespace boost;
 
 
 
+@interface Problem_79 : ProblemBase
+{
+}
+
 struct Vertex_79
 {
 	char name;
@@ -30,14 +34,6 @@ struct Edge_79
 typedef labeled_graph<adjacency_list<listS, vecS, directedS, Vertex_79, Edge_79>, char> Graph_79;
 typedef graph_traits<Graph_79>::vertex_descriptor Vertex_79_Descriptor;
 
-
-
-
-
-@interface Problem_79 : ProblemBase
-{
-}
-
 @end
 
 
@@ -46,8 +42,10 @@ typedef graph_traits<Graph_79>::vertex_descriptor Vertex_79_Descriptor;
 
 @implementation Problem_79
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	Graph_79 graph;
 	
 	stringstream file;
@@ -94,7 +92,7 @@ typedef graph_traits<Graph_79>::vertex_descriptor Vertex_79_Descriptor;
 		
 	}
 	
-	return solution;
+	completion(solution, self.endTime);	// 73162890
 }
 
 @end

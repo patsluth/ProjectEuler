@@ -24,11 +24,14 @@
 
 @implementation Problem_113
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
-	// http://www.mathblog.dk/project-euler-113-googol-not-bouncy/
+	[super solveProblem:completion];
+	
+	// Help from http://www.mathblog.dk/project-euler-113-googol-not-bouncy/
 	cpp_int solution = nCr(100 + 10, 10) + nCr(100 + 9, 9) - 10 * 100 - 2;
-	return [NSString stringWithFormat:@"%s", solution.str().c_str()];
+	
+	completion([NSString stringWithFormat:@"%s", solution.str().c_str()], self.endTime);	// 51161058134250
 }
 
 @end

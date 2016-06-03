@@ -24,8 +24,10 @@
 
 @implementation Problem_78
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	vector<int64_t> p;
 	p.push_back(1);
 	
@@ -53,13 +55,12 @@
 		}
 		
 		if (p[n] == 0) { // divisble by 1000000
-			return @(n);
+			completion(@(n), self.endTime);	// 55374
+			return;
 		}
 		
 		n = p.size();
 	}
-	
-	return nil;
 }
 
 @end

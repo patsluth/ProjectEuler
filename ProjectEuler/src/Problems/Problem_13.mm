@@ -26,8 +26,10 @@
 
 @implementation Problem_13
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	string numbers[100] = {
 		"37107287533902102798797998220837590246510135740250",
 		"46376937677490009712648124896970078050417018260538",
@@ -134,11 +136,11 @@
 	string result = numbers[0];
 	bool carryover = false;
 	
-	for (uint64_t index = 1; index < 100; index++) {
+	for (uint64_t index = 1; index < 100; index += 1) {
 		
 		string number = numbers[index];
 		
-		for (uint digit = 0; digit < result.length(); digit++) {
+		for (uint digit = 0; digit < result.length(); digit += 1) {
 			
 			int64_t resultDigitIndex = (int)(result.length() - 1 - digit);
 			int64_t numberDigitIndex = (int)(number.length() - 1 - digit);
@@ -153,7 +155,7 @@
 			uint64_t sum = resultDigit + numberDigit;
 			
 			if (carryover == true) {
-				sum++;
+				sum += 1;
 				carryover = false;
 			}
 			
@@ -176,7 +178,7 @@
 		}
 	}
 	
-	return @(result.substr(0, 10).c_str()); // 5537376230
+	completion(@(result.substr(0, 10).c_str()), self.endTime);	// 5537376230
 }
 
 @end

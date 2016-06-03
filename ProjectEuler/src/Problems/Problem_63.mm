@@ -24,8 +24,10 @@
 
 @implementation Problem_63
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t solutions = 0;
 	
 	for (uint64_t base = 1; base <= 9; base += 1) {
@@ -40,7 +42,7 @@
 		}
 	}
 	
-	return @(solutions);
+	completion(@(solutions), self.endTime);	// 49
 }
 
 @end

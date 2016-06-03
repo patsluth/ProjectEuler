@@ -26,8 +26,10 @@
 
 @implementation Problem_49
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1); // 1st million primes
 	
 	for (auto itr = millionPrimes.begin(); itr != millionPrimes.end(); advance(itr, 1)) {
@@ -58,7 +60,8 @@
 						break;
 					} else if (isPermutation(p1, p3)) { // found it
 						if (p1 != 1487 && p1 != 4817 && p1 != 8147) {
-							return @(concatanate(concatanate(p1, p2), p3));
+							completion( @(concatanate(concatanate(p1, p2), p3)), self.endTime);	// 296962999629
+							return;
 						}
 					}
 					
@@ -69,6 +72,13 @@
 			
 		}
 	}
+	
+	completion(nil, self.endTime);
+}
+
+- (id)solveProblem
+{
+	
 	
 	return nil;
 }

@@ -24,16 +24,18 @@
 
 @implementation Problem_39
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
-	pair<uint64_t, uint64_t> maxSolutions = {0, 0}; // first = # of solutions, second = p
+	[super solveProblem:completion];
 	
-	for (uint64_t p = 1; p <= 1000; p++) { // try all p
+	pair<uint64_t, uint64_t> maxSolutions = { 0, 0 }; // first = # of solutions, second = p
+	
+	for (uint64_t p = 1; p <= 1000; p += 1) { // try all p
 		
 		uint64_t numberOfSolutions = 0;
 		
-		for (uint64_t a = 1; a <= (p / 2); a++) {
-			for (uint64_t b = a; b <= (p / 2); b++) {
+		for (uint64_t a = 1; a <= (p / 2); a += 1) {
+			for (uint64_t b = a; b <= (p / 2); b += 1) {
 				
 				double c = sqrt((a * a) + (b * b));
 				
@@ -45,7 +47,7 @@
 						double angle2 = atan((double)b / (double)a);
 						
 						if ((angle1 + angle2) == M_PI_2) { // right triangle
-							numberOfSolutions++;
+							numberOfSolutions += 1;
 						}
 						
 					}
@@ -62,7 +64,7 @@
 		
 	}
 	
-	return @(maxSolutions.second);
+	completion(@(maxSolutions.second), self.endTime);	// 840
 }
 
 @end

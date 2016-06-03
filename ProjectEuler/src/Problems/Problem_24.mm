@@ -24,8 +24,10 @@
 
 @implementation Problem_24
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	string permutation = "0123456789";		// Current Permutation
 	uint64_t permutationIndex = 1;			// Initial permutation
 	
@@ -38,7 +40,7 @@
 		
 	}
 	
-	return @(permutation.c_str());
+	completion(@(permutation.c_str()), self.endTime);	// 2783915460
 }
 
 @end

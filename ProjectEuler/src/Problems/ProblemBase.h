@@ -7,6 +7,7 @@
 // 
 
 #import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
 
 #import "libProjectEuler.h"
 
@@ -18,7 +19,13 @@
 {
 }
 
-- (id)solveProblem;
+typedef void (^solutionBlock)(id problemSolution, CGFloat problemDuration);
+
+- (void)solveProblem:(solutionBlock)completion;
+
+@property (nonatomic, readonly) CGFloat endTime;
+
+- (void)tdd;
 
 @end
 

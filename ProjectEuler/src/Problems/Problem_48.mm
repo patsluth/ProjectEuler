@@ -24,15 +24,17 @@
 
 @implementation Problem_48
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	cpp_int selfPowerSum = 0;
 	
-	for (uint x = 1; x <= 1000; x++) {
+	for (uint x = 1; x <= 1000; x += 1) {
 		
 		cpp_int nextSelfPower = x;
 		
-		for (uint pow = 1; pow < x; pow++) {
+		for (uint pow = 1; pow < x; pow += 1) {
 			nextSelfPower *= x;
 		}
 		
@@ -40,7 +42,8 @@
 	}
 	
 	string temp = selfPowerSum.str();
-	return @(temp.substr(temp.size() - 10, temp.size() - 1).c_str());
+	
+	completion(@(temp.substr(temp.size() - 10, temp.size() - 1).c_str()), self.endTime);	// 9110846700
 }
 
 @end

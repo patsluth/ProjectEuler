@@ -24,8 +24,10 @@
 
 @implementation Problem_43
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	string pandigital = "0123456789";		// First Pandigital 0-9
 	uint64_t sum = 0;
 	
@@ -35,7 +37,7 @@
 		}
 	}
 	
-	return @(sum);
+	completion(@(sum), self.endTime);	// 16695334890
 }
 
 bool passesSubstringDivisibilityProperty(string i)

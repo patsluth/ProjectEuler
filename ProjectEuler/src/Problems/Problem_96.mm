@@ -10,8 +10,6 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 
-typedef vector<string> sudokuPuzzle;
-
 
 
 
@@ -19,6 +17,8 @@ typedef vector<string> sudokuPuzzle;
 @interface Problem_96 : ProblemBase
 {
 }
+
+typedef vector<string> sudokuPuzzle;
 
 @end
 
@@ -28,28 +28,44 @@ typedef vector<string> sudokuPuzzle;
 
 @implementation Problem_96
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
-	test();
+	[super solveProblem:completion];
 	
 	ifstream fileStream = readFile("p096_sudoku.txt");
 	
 	if (fileStream) {
 		
 		sudokuPuzzle currentPuzzle;
-		uint64_t solution = 0;		// Sum of 3 numbers in the top left corner of each solved puzzle
+		__block vector<uint64_t> solutions;				// Sum of 3 numbers in the top left corner of each solved puzzle
 		
 		string line;
-		while (getline(fileStream, line, '\n')) { // iterate each line
+		while (getline(fileStream, line, '\n')) {		// iterate each line
 			if (line.length() == 9 && line.substr(0, 4) != "Grid") {
 				
 				currentPuzzle.push_back(line);
 				
-				if (currentPuzzle.size() == 9) {									// Complete puzzle
+				if (currentPuzzle.size() == 9) {									// Full puzzle
 					
-					if (sudokuSolvePuzzle(currentPuzzle)) {
-						solution += stoull(currentPuzzle[0].substr(0, 3));			// 3 digit number in top left corner of solved puzzle
-					}
+					__block sudokuPuzzle _puzzle(currentPuzzle);					// Copy
+					
+					dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+					dispatch_async(queue, ^{
+						
+						uint64_t solution = 0;
+						
+						if (sudokuSolvePuzzle(_puzzle)) {
+							solution = stoull(_puzzle[0].substr(0, 3));				// 3 digit number in top left corner of solved puzzle
+						}
+						
+						solutions.push_back(solution);
+						
+						if (solutions.size() == 50) {
+							completion(@(sumOfVector(&solutions)), self.endTime);	// 24702
+							return;
+						}
+						
+					});
 					
 					currentPuzzle.clear();											// Start new puzzle
 				}
@@ -57,14 +73,14 @@ typedef vector<string> sudokuPuzzle;
 			}
 		}
 		
-		return @(solution);
+	} else {
+		
+		completion(nil, self.endTime);
 		
 	}
-	
-	return nil;
 }
 
-void test()
+- (void)tdd
 {
 	sudokuPuzzle puzzle = {
 		"003020600",

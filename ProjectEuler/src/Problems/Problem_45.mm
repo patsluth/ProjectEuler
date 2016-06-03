@@ -24,16 +24,18 @@
 
 @implementation Problem_45
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t n = 286;
 	
 	// number is triangle, pentagonal, and hexagonal
 	while (nForPentagonal(triangleForN(n)) == 0 || nForHexagonal(triangleForN(n)) == 0) {
-		n++;
+		n += 1;
 	}
 	
-	return @(triangleForN(n));
+	completion(@(triangleForN(n)), self.endTime);	// 1533776805
 }
 
 @end

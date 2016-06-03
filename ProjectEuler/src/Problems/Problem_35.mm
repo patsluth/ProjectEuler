@@ -24,11 +24,13 @@
 
 @implementation Problem_35
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t primeCount = 0;
 	
-	for (uint64_t x = 1; x < 1000000; x++) {
+	for (uint64_t x = 1; x < 1000000; x += 1) {
 		
 		vector<uint64_t> circularValueVariations = circularVariations(x);
 		bool allCircularVariationsPrime = true;
@@ -40,12 +42,12 @@
 		}
 		
 		if (allCircularVariationsPrime) {
-			primeCount++;
+			primeCount += 1;
 		}
 		
 	}
 	
-	return @(primeCount);
+	completion(@(primeCount), self.endTime);	// 55
 }
 
 @end

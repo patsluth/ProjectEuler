@@ -24,23 +24,24 @@
 
 @implementation Problem_12
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t triangleNumber = 1;
 	uint64_t triangleValue = 1;
 	
 	while (true) {
 		
-		triangleNumber++;
+		triangleNumber += 1;
 		triangleValue += triangleNumber;
 		
 		if (numberOfDivisors(triangleValue) > 500) {
-			return @(triangleValue);
+			completion(@(triangleValue), self.endTime);	// 76576500
+			return;
 		}
 		
 	}
-	
-	return nil;
 }
 
 @end

@@ -24,14 +24,16 @@
 
 @implementation Problem_4
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t factorOne = 0;
 	uint64_t factorTwo = 0;
 	uint64_t largestProduct = 0;
 	
-	for (uint64_t x = 100; x <= 999; x++) { // all 3 digit integers
-		for (uint64_t y = 100; y <= 999; y++) { // all 3 digit integers
+	for (uint64_t x = 100; x <= 999; x += 1) { // all 3 digit integers
+		for (uint64_t y = 100; y <= 999; y += 1) { // all 3 digit integers
 			
 			uint64_t currentProduct = x * y;
 			
@@ -43,8 +45,8 @@
 			
 		}
 	}
-	
-	return @(largestProduct);
+		
+	completion(@(largestProduct), self.endTime);	// 906609
 }
 
 @end

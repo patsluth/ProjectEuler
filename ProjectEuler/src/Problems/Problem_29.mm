@@ -24,18 +24,19 @@
 
 @implementation Problem_29
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	set<cpp_int> distinctTerms;
 	
-	for (cpp_int a = 2; a <= 100; a++) {
-		for (uint64_t b = 2; b <= 100; b++) {
+	for (cpp_int a = 2; a <= 100; a += 1) {
+		for (uint64_t b = 2; b <= 100; b += 1) {
 			distinctTerms.insert( pow(a, b) );
 		}
 	}
 	
-	return @(distinctTerms.size());
-
+	completion(@(distinctTerms.size()), self.endTime);	// 9183
 }
 
 @end

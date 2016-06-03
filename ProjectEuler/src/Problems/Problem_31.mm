@@ -26,8 +26,10 @@
 
 @implementation Problem_31
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t solutions[201] = { 0 };
 	solutions[0] = 1;
  
@@ -37,7 +39,7 @@
 		}
 	}
 	
-	return @(solutions[200]);
+	completion(@(solutions[200]), self.endTime);	// 73682
 }
 
 - (NSArray *)coins

@@ -24,12 +24,14 @@
 
 @implementation Problem_32
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	set<uint64_t> *products = new set<uint64_t>();;
 	
-	for (uint64_t x = 1; x < 10000; x++) {
-		for (uint64_t y = 1; y < 10000; y++) {
+	for (uint64_t x = 1; x < 10000; x += 1) {
+		for (uint64_t y = 1; y < 10000; y += 1) {
 			
 			uint64_t concat = concatanate(x, y);
 			uint64_t product = x * y;
@@ -53,8 +55,8 @@
 	
 	products->clear();
 	delete products;
-
-	return returnValue;
+	
+	completion(returnValue, self.endTime);	// 45228
 }
 
 /**

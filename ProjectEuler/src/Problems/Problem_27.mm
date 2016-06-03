@@ -24,15 +24,17 @@
 
 @implementation Problem_27
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	// quadratic in form n^2 + an + b
 	
 	pair<uint64_t, int64_t> maxContainer = {0, 0}; // first = # of primes, second = (a * b)
 	
-	for (int64_t a = -999; a < 1000; a++) {
+	for (int64_t a = -999; a < 1000; a += 1) {
 		
-		for (int64_t b = -999; b < 1000; b++) {
+		for (int64_t b = -999; b < 1000; b += 1) {
 			
 			uint64_t n = 0;
 			
@@ -44,7 +46,7 @@
 					break;
 				}
 				
-				n++;
+				n += 1;
 				
 			}
 			
@@ -57,8 +59,7 @@
 		
 	}
 	
-	return @(maxContainer.second);
-
+	completion(@(maxContainer.second), self.endTime);	// -59231
 }
 
 @end

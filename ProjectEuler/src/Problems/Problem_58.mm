@@ -24,13 +24,15 @@
 
 @implementation Problem_58
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t primeCount = 0;
 	uint64_t corner = 1;
 	
 	for (uint64_t x = 3; ; x += 2) {
-		for (uint64_t y = 0; y < 4; y++) { //  calculate each corner
+		for (uint64_t y = 0; y < 4; y += 1) { //  calculate each corner
 			
 			corner += (x - 1);
 			
@@ -44,12 +46,11 @@
 		float primeRatio = (float)primeCount / (float)cornerCount;
 		
 		if (primeRatio <= 0.1) {
-			return @(x);
+			completion(@(x), self.endTime);	// 26241
+			return;
 		}
 		
 	}
-	
-	return nil;
 }
 
 @end

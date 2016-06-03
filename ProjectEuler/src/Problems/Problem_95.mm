@@ -27,6 +27,13 @@
 
 @implementation Problem_95
 
+- (void)solveProblem:(solutionBlock)completion
+{
+	[super solveProblem:completion];
+	
+	completion([self solveProblem], self.endTime);	// 14316
+}
+
 - (id)solveProblem
 {
 	numberChain_continueCalculatingFunction continueCalculating = [] (const numberChain *currentChain) {
@@ -49,7 +56,7 @@
 	
 	numberChain longest;
 	
-	for (uint64_t start = 0; start < 1000000; start++) {
+	for (uint64_t start = 0; start < 1000000; start += 1) {
 		
 		numberChain cur = numberChain_calculate(start, sumOfProperDivisors_Chain, continueCalculating);
 		

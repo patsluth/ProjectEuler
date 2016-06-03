@@ -24,11 +24,13 @@
 
 @implementation Problem_21
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	set<uint64_t> amicableNumbers; // make sure there are no duplicates
 	
-	for (uint64_t a = 1; a < 10000; a++) {
+	for (uint64_t a = 1; a < 10000; a += 1) {
 		
 		uint64_t b = sumOfVector(calculateProperDivisors(a));
 		
@@ -45,7 +47,7 @@
 		sum += x;
 	}
 	
-	return @(sum);
+	completion(@(sum), self.endTime);	// 31626
 }
 
 @end

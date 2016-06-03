@@ -26,18 +26,21 @@
 
 @implementation Problem_41
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1); // 1st million primes
 	
 	// reverse iterator, since we are looking for the largest, the first prime to pass is the answer
 	for (auto itr = millionPrimes.rbegin(); itr != millionPrimes.rend(); advance(itr, 1)) {
 		if (isPandigital(*itr, 1, numberOfDigits(*itr))) {
-			return @(*itr);
+			completion(@(*itr), self.endTime);	// 7652413
+			return;
 		}
 	}
 	
-	return nil;
+	completion(nil, self.endTime);
 }
 
 @end

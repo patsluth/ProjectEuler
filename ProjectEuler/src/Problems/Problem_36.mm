@@ -24,11 +24,13 @@
 
 @implementation Problem_36
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t sum = 0;
 	
-	for (uint64_t i = 0; i < 1000000; i++) {
+	for (uint64_t i = 0; i < 1000000; i += 1) {
 		
 		if (isPalindrome(i)) {
 			
@@ -43,7 +45,7 @@
 		
 	}
 	
-	return @(sum);
+	completion(@(sum), self.endTime);	// 872187
 }
 
 @end

@@ -12,6 +12,10 @@
 
 
 
+@interface Problem_54 : ProblemBase
+{
+}
+
 typedef NS_ENUM(NSInteger, PokerHandType) {
 	PokerHandTypeHighCard = 1,
 	PokerHandTypeOnePair = 10,
@@ -40,14 +44,6 @@ struct Hand
 };
 typedef struct Hand Hand;
 
-
-
-
-
-@interface Problem_54 : ProblemBase
-{
-}
-
 @property (readwrite, nonatomic) NSInteger playerOneWins;
 @property (readwrite, nonatomic) NSInteger playerTwoWins;
 @property (readwrite, nonatomic) NSInteger ties;
@@ -60,11 +56,13 @@ typedef struct Hand Hand;
 
 @implementation Problem_54
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	[self parsePokerHands];
 	
-	return @(self.playerOneWins); // 376
+	completion(@(self.playerOneWins), self.endTime);	// 376
 }
 
 - (void)parsePokerHands
@@ -197,7 +195,7 @@ typedef struct Hand Hand;
 	BOOL straight = YES;
 	BOOL flush = YES;
 	
-	for (NSUInteger x = 0; x < 5; x++) {
+	for (NSUInteger x = 0; x < 5; x += 1) {
 		
 		Card card = [self cardForString:(*cards)[x]];
 		

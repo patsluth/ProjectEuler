@@ -16,6 +16,8 @@
 {
 }
 
+@property (nonatomic) CGFloat startTime;
+
 @end
 
 
@@ -28,6 +30,23 @@
 {
 	NSAssert(false, @"You must override this method");
 	return nil;
+}
+
+- (void)solveProblem:(solutionBlock)completion
+{
+	[self tdd];
+	
+	self.startTime = CACurrentMediaTime();
+}
+
+- (CGFloat)endTime
+{
+	return CACurrentMediaTime() - self.startTime;
+}
+
+- (void)tdd
+{
+	
 }
 
 @end

@@ -11,6 +11,8 @@
 
 #import "ProblemBase.h"
 
+static ProblemBase *currentProblem = nil;
+
 
 
 
@@ -27,18 +29,19 @@ ProblemBase *getProblem(NSUInteger index)
 	return problem;
 }
 
-
-
 void runProblem(ProblemBase *problem)
 {
+	currentProblem = problem;
+	
 	if (problem) {
 		
-		CGFloat startTime = CACurrentMediaTime();
-		id solution = [problem solveProblem];
-		CGFloat endTime = CACurrentMediaTime() - startTime;
+		printf("\nRunning ...");
+		printf("\n%s", NSStringFromClass([problem class]).UTF8String);
 		
-		NSString *output = [NSString stringWithFormat:@"%@:\t\t%@\t\t%.2fs\n", NSStringFromClass([problem class]), solution, endTime];
-		printf("%s", output.UTF8String);
+		[problem solveProblem:^(id problemSolution, CGFloat problemDuration) {
+			printf("%s", [NSString stringWithFormat:@"\n%@\n%.2fs\n\n", problemSolution, problemDuration].UTF8String);
+			currentProblem = nil;
+		}];
 		
 	}
 }
@@ -54,41 +57,48 @@ int main(int argc, const char * argv[])
 		printf("[a]:\t\trun all problems\n");
 		printf("[?]:\t\tlist problems\n");
 		printf("[q]:\t\tquit\n");
-		printf("************************************\n");
+		printf("************************************\n\n");
 		
 		while (true) {
-			
-			printf("\nEnter Option:");
-			
-			NSInteger inputInt = 0;
-			char inputChar;
-			
-			if (scanf("%ld", &inputInt) == 1) { // Number
+			if (!currentProblem) {
 				
-				runProblem(getProblem(inputInt));
+				printf("Enter Option:");
 				
-			} else if (scanf("%s", &inputChar) == 1) {
+				NSInteger inputInt = 0;
+				char inputChar;
 				
-				
-				if (inputChar == 'a') {
+				if (scanf("%ld", &inputInt) == 1) { // Number
 					
-					for (NSUInteger x = 1; x < 600; x++) {
-						runProblem(getProblem(x));
-					}
+					runProblem(getProblem(inputInt));
 					
-				} else if (inputChar == '?') {
+				} else if (scanf("%s", &inputChar) == 1) {
 					
-					for (NSUInteger x = 1; x < 600; x++) {
-						ProblemBase *problem = getProblem(x);
-						if (problem) {
-							printf("%s", NSStringFromClass([problem class]).UTF8String);
-							printf("\n");
+					
+					if (inputChar == 'a') {
+						
+						for (NSUInteger x = 1; x < 600; x += 1) {
+							runProblem(getProblem(x));
 						}
+						
+					} else if (inputChar == '?') {
+						
+						for (NSUInteger x = 1; x < 600; x += 1) {
+							ProblemBase *problem = getProblem(x);
+							if (problem) {
+								printf("%s\n", NSStringFromClass([problem class]).UTF8String);
+							}
+						}
+						
+					} else if (inputChar == 'q') {
+						
+						break;
+						
+					} else {
+						
+						printf("Invalid Input!\n");
+						
 					}
 					
-				} else if (inputChar == 'q') {
-					
-					break;
 					
 				} else {
 					
@@ -96,13 +106,7 @@ int main(int argc, const char * argv[])
 					
 				}
 				
-				
-			} else {
-				
-				printf("Invalid Input!\n");
-				
 			}
-			
 		}
 		
 		printf("\nGoodbye\n");

@@ -24,8 +24,10 @@
 
 @implementation Problem_26
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	for (uint64_t d = 2; d < 20; d += 1) {
 		
 		CGFloat fraction = 1.0 / d;
@@ -44,7 +46,7 @@
 		
 	}
 	
-	return @(0);
+	completion(@(0), self.endTime);	// ???
 }
 
 vector<uint64_t> recurringDigitCycle(CGFloat f)

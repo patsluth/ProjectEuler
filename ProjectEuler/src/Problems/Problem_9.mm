@@ -24,23 +24,26 @@
 
 @implementation Problem_9
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
-	for (uint64_t x = 1; x < 1000; x++) {
-		for (uint64_t y = x + 1; y < 1000; y++) {
+	[super solveProblem:completion];
+	
+	for (uint64_t x = 1; x < 1000; x += 1) {
+		for (uint64_t y = x + 1; y < 1000; y += 1) {
 			
 			uint64_t z = 1000 - x - y;
 			
 			if ( (x * x) + (y * y) == (z * z) ) {
 				
-				return @(x * y * z);
+				completion(@(x * y * z), self.endTime);	// 31875000
+				return;
 				
 			}
 			
 		}
 	}
 	
-	return nil;
+	completion(nil, self.endTime);
 }
 
 @end

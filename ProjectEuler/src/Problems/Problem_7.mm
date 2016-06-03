@@ -24,8 +24,10 @@
 
 @implementation Problem_7
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t number = 2;
 	vector<uint64_t> primeNumbers;
 	
@@ -35,15 +37,15 @@
 			primeNumbers.push_back(number);
 		}
 		
-		number++;
+		number += 1;
 		
 	}
 	
-	if (!primeNumbers.empty()) {
-		return @(primeNumbers.back());
+	if (primeNumbers.empty()) {
+		completion(nil, self.endTime);
+	} else {
+		completion(@(primeNumbers.back()), self.endTime);	// 104743
 	}
-	
-	return nil;
 }
 
 @end

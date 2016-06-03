@@ -26,11 +26,13 @@
 
 @implementation Problem_543
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	printf("***%llu***\n", P(10, 2));
 	
-	return nil;
+	completion(nil, self.endTime);	// ???
 }
 
 uint64_t P(uint64_t n, uint64_t k)

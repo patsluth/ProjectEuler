@@ -24,8 +24,10 @@
 
 @implementation Problem_22
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	ifstream fileStream = readFile("p022_names.txt");
 	uint64_t sumOfNameScores = 0; // return value
 	
@@ -52,7 +54,7 @@
 	fileStream.clear();
 	fileStream.close();
 	
-	return @(sumOfNameScores);
+	completion(@(sumOfNameScores), self.endTime);	// 871198282
 }
 
 /**

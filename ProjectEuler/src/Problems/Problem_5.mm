@@ -24,15 +24,17 @@
 
 @implementation Problem_5
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t a = 1;
 	uint64_t b = 20;
 	
-	return @(smallestMultipleOfRange(a, b));
+	completion(@(smallestMultipleOfRange(a, b)), self.endTime);	// 232792560
 }
 
-static uint64_t smallestMultipleOfRange(uint64_t a, uint64_t b)
+uint64_t smallestMultipleOfRange(uint64_t a, uint64_t b)
 {
 	uint64_t m = b;
 	
@@ -44,7 +46,7 @@ static uint64_t smallestMultipleOfRange(uint64_t a, uint64_t b)
 		
 		bool success = true;
 		
-		for (uint64_t x = a; x <= b; x++) {
+		for (uint64_t x = a; x <= b; x += 1) {
 			if (m % x != 0) {
 				success = false;
 				break;
@@ -55,7 +57,7 @@ static uint64_t smallestMultipleOfRange(uint64_t a, uint64_t b)
 			return m;
 		}
 		
-		m++;
+		m += 1;
 	}
 	
 	return 0;

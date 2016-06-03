@@ -24,8 +24,10 @@
 
 @implementation Problem_11
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t data[20][20] = {
 		{8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8},
 		{49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0},
@@ -52,8 +54,8 @@
 	uint64_t greatestProduct = 1;
 	uint64_t prev = greatestProduct;
 	
-	for (uint x = 0; x < 20; x++) {
-		for (uint y = 0; y < 20; y++) {
+	for (uint x = 0; x < 20; x += 1) {
+		for (uint y = 0; y < 20; y += 1) {
 			
 			prev = greatestProduct;
 			
@@ -107,7 +109,7 @@
 		}
 	}
 	
-	return @(greatestProduct);
+	completion(@(greatestProduct), self.endTime);	// 70600674
 }
 
 @end

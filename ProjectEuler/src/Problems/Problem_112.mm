@@ -24,8 +24,10 @@
 
 @implementation Problem_112
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t bouncyCount = 0;
 	
 	for (uint64_t i = 1; i < UINT64_MAX; i += 1) {
@@ -37,11 +39,10 @@
 		double bouncyProportion = (double)bouncyCount / (double)i;
 		
 		if (ABS(bouncyProportion - 0.99) == 0.0000000000000) {
-			return @(i);
+			completion(@(i), self.endTime);	// 1587000
+			return;
 		}
 	}
-	
-	return nil;
 }
 
 @end

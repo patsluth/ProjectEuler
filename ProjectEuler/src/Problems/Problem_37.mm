@@ -24,21 +24,23 @@
 
 @implementation Problem_37
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t sum = 0;
 	uint64_t count = 0;
 	
-	for (uint64_t x = 11; count < 11 ; x++) { // 1 - 7 dont count
+	for (uint64_t x = 11; count < 11 ; x += 1) { // 1 - 7 dont count
 		
 		if (truncatablePrimeLeft(x) && truncatablePrimeRight(x)) {
-			count++;
+			count += 1;
 			sum += x;
 		}
 		
 	}
 	
-	return @(sum);
+	completion(@(sum), self.endTime);	// 748317
 }
 
 bool truncatablePrimeLeft(uint64_t i)

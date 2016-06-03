@@ -24,17 +24,19 @@
 
 @implementation Problem_1
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
-	NSInteger sum = 0;
+	[super solveProblem:completion];
 	
-	for (NSUInteger x = 0; x < 1000; x++) {
+	uint64_t sum = 0;
+	
+	for (uint64_t x = 0; x < 1000; x += 1) {
 		if (x % 3 == 0 || x % 5 == 0) {
 			sum += x;
 		}
 	}
 	
-	return @(sum);
+	completion(@(sum), self.endTime);	// 233168
 }
 
 @end

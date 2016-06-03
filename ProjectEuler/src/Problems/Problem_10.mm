@@ -24,8 +24,10 @@
 
 @implementation Problem_10
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t primeLimit = 2000000;
 	uint64_t number = 2;
 	uint64_t sum = 0;
@@ -36,11 +38,11 @@
 			sum += number;
 		}
 		
-		number++;
+		number += 1;
 		
 	}
 	
-	return @(sum);
+	completion(@(sum), self.endTime);	// 142913828922
 }
 
 @end

@@ -26,6 +26,13 @@ typedef vector<uint64_t> baseExponent;
 
 @implementation Problem_99
 
+- (void)solveProblem:(solutionBlock)completion
+{
+	[super solveProblem:completion];
+	
+	completion([self solveProblem], self.endTime);	// 709
+}
+
 - (id)solveProblem
 {
 	ifstream fileStream = readFile("p099_base_exp.txt");
@@ -39,7 +46,7 @@ typedef vector<uint64_t> baseExponent;
 		
 		while (getline(fileStream, line, '\n')) { // iterate each line
 			
-			lineNumber++;
+			lineNumber += 1;
 			
 			istringstream buf(line);
 			istream_iterator<uint64_t> beg(buf), end;

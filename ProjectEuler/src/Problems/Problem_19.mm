@@ -24,8 +24,10 @@
 
 @implementation Problem_19
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t sundaysOnFirstDayOfMonth = 0;
 	
 	NSDateComponents *startDateComponents = [NSDateComponents new];
@@ -53,8 +55,7 @@
 		
 	}
 	
-	
-	return @(sundaysOnFirstDayOfMonth);
+	completion(@(sundaysOnFirstDayOfMonth), self.endTime);	// 171
 }
 
 @end

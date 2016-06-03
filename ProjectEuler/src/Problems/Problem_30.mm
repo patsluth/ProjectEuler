@@ -24,18 +24,19 @@
 
 @implementation Problem_30
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t result = 0;
 	
-	for (uint64_t x = 0; x < 1000000; x++) {
+	for (uint64_t x = 0; x < 1000000; x += 1) {
 		if ([self intEqualsSumItsOfDigits:x toPower:5]) {
 			result += x;
 		}
 	}
 	
-	return @(result);
-
+	completion(@(result), self.endTime);	// 443839
 }
 
 /**

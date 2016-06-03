@@ -24,9 +24,11 @@
 
 @implementation Problem_265
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
-	return nil;
+	[super solveProblem:completion];
+	
+	completion(nil, self.endTime);	// ???
 }
 
 @end

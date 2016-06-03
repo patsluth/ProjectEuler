@@ -24,19 +24,21 @@
 
 @implementation Problem_6
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t sumOfSquares = 0;
 	uint64_t sum = 0;
 	
-	for (uint x = 1; x <= 100; x++) {
+	for (uint x = 1; x <= 100; x += 1) {
 		sumOfSquares += (x * x);
 		sum += x;
 	}
-	
+ 
 	uint64_t sumSquared = (sum * sum);
 	
-	return @(sumSquared - sumOfSquares);
+	completion(@(sumSquared - sumOfSquares), self.endTime);	// 25164150
 }
 
 @end

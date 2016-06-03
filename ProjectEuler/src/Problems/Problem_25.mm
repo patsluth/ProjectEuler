@@ -24,15 +24,17 @@
 
 @implementation Problem_25
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	cpp_int prevF = 0;
 	cpp_int curF = 1;
 	uint64_t curFIndex = 1;
 	
 	while (curF.str().size() < 1000) {
 		
-		curFIndex++;
+		curFIndex += 1;
 		
 		cpp_int nextF = curF + prevF;
 		prevF = curF;
@@ -40,7 +42,7 @@
 		
 	}
 	
-	return @(curFIndex);
+	completion(@(curFIndex), self.endTime);	// 4782
 }
 
 @end

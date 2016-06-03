@@ -29,8 +29,10 @@
 
 @implementation Problem_77
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1); // 1st million primes
 	
 	hashMap<uint64_t, uint64_t> solutions;
@@ -45,11 +47,12 @@
 		}
 		
 		if (*solutions.valueForKey(prime) > 5000) {
-			return @(prime);
+			completion(@(prime), self.endTime);	// 71
+			return;
 		}
 	}
 	
-	return nil;
+	completion(nil, self.endTime);
 }
 
 @end

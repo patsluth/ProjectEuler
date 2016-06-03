@@ -24,11 +24,13 @@
 
 @implementation Problem_34
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t sum = 0;
 	
-	for (uint64_t x = 3; x < 1000000; x++) { // 1! and 2! dont count
+	for (uint64_t x = 3; x < 1000000; x += 1) { // 1! and 2! dont count
 		
 		if ([self intEqualsSumOfFactorialOfItsDigits:x]) {
 			sum += x;
@@ -36,7 +38,7 @@
 		
 	}
 	
-	return @(sum);
+	completion(@(sum), self.endTime);	// 40730
 }
 
 - (bool)intEqualsSumOfFactorialOfItsDigits:(uint64_t)i

@@ -24,8 +24,10 @@
 
 @implementation Problem_46
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t n = 3;
 	
 	while (true) {
@@ -34,7 +36,7 @@
 			
 			bool success = false;
 			
-			for (uint64_t x = 1; x < n; x++) {
+			for (uint64_t x = 1; x < n; x += 1) {
 				if (isPrime(x)) {
 					
 					uint64_t difference = n - x;
@@ -54,7 +56,8 @@
 			}
 			
 			if (!success) { // this odd composite is not the sum of a prime and 2 * a square
-				return @(n);
+				completion(@(n), self.endTime);	// 5777
+				return;
 			}
 			
 		}

@@ -24,8 +24,10 @@
 
 @implementation Problem_42
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	ifstream fileStream = readFile("p042_words.txt");
 	
 	if (fileStream) {
@@ -36,16 +38,18 @@
 		while (getline(fileStream, word, ',')) {
 			
 			if (nForTriangle(wordToNumber(word)) != 0) { // word number is a triangle word
-				triangleWordCount++;
+				triangleWordCount += 1;
 			}
 			
 		}
 		
-		return @(triangleWordCount);
+		completion(@(triangleWordCount), self.endTime);	// 162
+		
+	} else {
+		
+		completion(nil, self.endTime);
 		
 	}
-	
-	return nil;
 }
 
 uint64_t wordToNumber(string w)

@@ -29,6 +29,13 @@
 
 @implementation Problem_60
 
+- (void)solveProblem:(solutionBlock)completion
+{
+	[super solveProblem:completion];
+	
+	completion([self solveProblem], self.endTime);	// 26033
+}
+
 - (id)solveProblem
 {
 	// hashMap where key is the prime and the set contains all primes which can be concatonated with it to produce a prime

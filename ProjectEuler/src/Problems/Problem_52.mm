@@ -24,9 +24,11 @@
 
 @implementation Problem_52
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
-	for (uint64_t x = 1; ; x++) {
+	[super solveProblem:completion];
+	
+	for (uint64_t x = 1; ; x += 1) {
 		
 		// true for x*2 to x*6
 		if ([self int:x containsSameDigitsAsInt:x * 2]) {
@@ -34,7 +36,8 @@
 				if ([self int:x containsSameDigitsAsInt:x * 4]) {
 					if ([self int:x containsSameDigitsAsInt:x * 5]) {
 						if ([self int:x containsSameDigitsAsInt:x * 6]) {
-							return @(x);
+							completion(@(x), self.endTime);	// 142857
+							return;
 						}
 					}
 				}

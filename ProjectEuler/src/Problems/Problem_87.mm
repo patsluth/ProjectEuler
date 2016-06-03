@@ -26,11 +26,13 @@
 
 @implementation Problem_87
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	vector<uint64_t> primeCache; // TODO: use primes.h
 	
-	for (uint64_t p = 2; p < sqrt(50000000); p++) {
+	for (uint64_t p = 2; p < sqrt(50000000); p += 1) {
 		if (isPrime(p)) {
 			primeCache.push_back(p);
 		}
@@ -54,7 +56,7 @@
 		}
 	}
 	
-	return @(count.size());
+	completion(@(count.size()), self.endTime);	// 1097343
 }
 
 @end

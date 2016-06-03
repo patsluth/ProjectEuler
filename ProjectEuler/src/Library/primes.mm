@@ -24,7 +24,7 @@ primes *primes::shared_instance = NULL;
 
 bool primes::isPrime(uint64_t i)
 {
-    for (uint64_t n = 1; n <= 50; n++) {
+    for (uint64_t n = 1; n <= 50; n += 1) {
         
         set<uint64_t> &nPrimeSet = loadPrimes(n); // current set for this million
         
@@ -47,7 +47,7 @@ bool primes::isPrime(uint64_t i)
  */
 uint64_t primes::nextPrime(uint64_t p)
 {
-    for (uint64_t n = 1; n <= 50; n++) {
+    for (uint64_t n = 1; n <= 50; n += 1) {
         
         set<uint64_t> &nPrimeSet = loadPrimes(n); // current set for this million
         
@@ -81,7 +81,7 @@ set<uint64_t> &primes::loadPrimes(uint64_t nMillion)
     
     if (set.size() != 1000000) { // we havent loaded this million yet
 		
-		printf("Loading %llu x 10^6 primes\n", nMillion);
+		printf("\nLoading %llu x 10^6 primes", nMillion);
         
         set.clear();
         

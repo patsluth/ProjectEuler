@@ -32,7 +32,7 @@ extern bool isPalindrome(uint64_t n)
 
 extern bool isPalindrome(string n)
 {
-    for (uint64_t x = 0; x < n.size() / 2; x++) {
+    for (uint64_t x = 0; x < n.size() / 2; x += 1) {
 
         if (n[x] != n[n.size() - 1 - x]) { // compare corresponding elements
             return false;
@@ -121,7 +121,7 @@ extern uint64_t sumOfList(forward_list<uint64_t> *l)
 
 extern Factor factorInteger(uint64_t i)
 {
-    for (uint64_t a = 2; a < i; a++) {
+    for (uint64_t a = 2; a < i; a += 1) {
         if (i % a == 0) { // divisible
 
             // return factors
@@ -173,13 +173,13 @@ extern uint64_t numberOfDivisors(uint64_t n)
 
         uint64_t divisors = 0;
 
-        for (uint64_t x = 1; x <= sqrt(n); x++) {
+        for (uint64_t x = 1; x <= sqrt(n); x += 1) {
 
             if (n % x == 0) {
 
-                divisors++;
+                divisors += 1;
                 if (n / x != x) { // dont add perfect squares
-                    divisors++;
+                    divisors += 1;
                 }
 
             }
@@ -258,7 +258,7 @@ extern uint64_t pyramid_SumOfMaxPath(pyramid p)
 
         // calculate new bottom row and push back to stack
         // sets each parentRow value to the larger sum of itself and its children
-        for (uint x = 0; x < (uint)pParentRow.size(); x++) {
+        for (uint x = 0; x < (uint)pParentRow.size(); x += 1) {
 
             uint64_t leftChild = pRow[x];
             uint64_t rightChild = pRow[x + 1];
@@ -301,14 +301,14 @@ extern vector<uint64_t> circularVariations(uint64_t n)
 
     vector<uint64_t> circularVariations;
 
-    for (uint x = 0; x < iDigits.size(); x++) { // move last digit to front
+    for (uint x = 0; x < iDigits.size(); x += 1) { // move last digit to front
 
         uint64_t lastDigit = iDigits.back();
         iDigits.pop_back();
         iDigits.insert(iDigits.begin(), lastDigit);
 
         uint64_t digitToInt = 0; // convert the vector of digits back into an integer
-        for (uint y = 0; y < iDigits.size(); y++) {
+        for (uint y = 0; y < iDigits.size(); y += 1) {
             digitToInt += iDigits[iDigits.size() - y - 1] * pow(10, y);
         }
 
@@ -441,7 +441,7 @@ extern properDivisors *calculateProperDivisors(uint64_t n)
 {
     vector<uint64_t> *properDivisors = new vector<uint64_t>(1);
 
-    for (uint64_t x = 2; x <= sqrt(n); x++) {
+    for (uint64_t x = 2; x <= sqrt(n); x += 1) {
         if ( (n / x) * x == n ) {
             properDivisors->push_back(x);
             if ( (n / x) != x) { // dont add same multiple twice
@@ -476,7 +476,7 @@ extern uint64_t concatanate(uint64_t a, uint64_t b)
         uint64_t aDigit = a % 10;
         
         result += aDigit * pow(10, resultDigits);
-        resultDigits++;
+        resultDigits += 1;
         
         a /= 10;
         
@@ -500,7 +500,7 @@ extern bool isPandigital(uint64_t i, uint64_t n)
     
     if (isPandigital) {
         
-        for (uint64_t x = 1; x <= n; x++) { // remove each digit
+        for (uint64_t x = 1; x <= n; x += 1) { // remove each digit
             temp->erase(x);
         }
         
@@ -530,7 +530,7 @@ extern bool isPandigital(uint64_t i, uint64_t a, uint64_t b)
 	
 	if (isPandigital) {
 		
-		for (uint64_t x = a; x <= b; x++) { // remove each digit
+		for (uint64_t x = a; x <= b; x += 1) { // remove each digit
 			digits->erase(x);
 		}
 		
@@ -564,16 +564,18 @@ extern uint64_t fibonacci(uint64_t n)
 	}
 }
 
-static string englishNumbers_0_19[] = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
-	"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
-
 extern string englishRepresentationOfNumber(uint64_t n)
 {
 	string returnVal = "";
 	
 	if (n < 20) {
 		
-		returnVal = englishNumbers_0_19[n];
+		returnVal =  ((NSString *)@[
+									@"zero", @"one", @"two", @"three", @"four",
+									@"five", @"six", @"seven", @"eight", @"nine",
+									@"ten", @"eleven",  @"twelve", @"thirteen", @"fourteen",
+									@"fifteen", @"sixteen", @"seventeen", @"eighteen", @"nineteen"
+									][n]).UTF8String;
 		
 	} else if (n >= 20 && n < 100) {
 		

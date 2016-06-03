@@ -24,8 +24,10 @@
 
 @implementation Problem_145
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t reversibleNumberCount = 0;
 	
 	for (uint64_t i = 1; i < 1000000000; i += 1) {
@@ -34,7 +36,7 @@
 		}
 	}
 	
-	return @(reversibleNumberCount);
+	completion(@(reversibleNumberCount), self.endTime);	// 608720
 }
 
 /**

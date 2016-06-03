@@ -26,9 +26,11 @@
 
 @implementation Problem_50
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
-	return @(largestConsecutivePrimeSumThatIsPrime(1000000));
+	[super solveProblem:completion];
+	
+	completion(@(largestConsecutivePrimeSumThatIsPrime(1000000)), self.endTime);	// 997651
 }
 
 uint64_t largestConsecutivePrimeSumThatIsPrime(uint64_t max)

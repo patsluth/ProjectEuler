@@ -26,8 +26,10 @@
 
 @implementation Problem_59
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	string cipher;
 	stringstream file;
 	file << "p059_cipher.txt";
@@ -45,22 +47,23 @@
 			
 		}
 		
-	}
-	
-	string key = findPossibleKey(cipher, 3);
-	
-	while (nextPermutation(key)) {
+		string key = findPossibleKey(cipher, 3);
 		
-		string decryptedMessage = encryptXOR(cipher, key);
-//		printf("\n\nKEY:\n\t%s\nMESSAGE:\n\t%s\nCHAR COUNT:\n\t%llu\n\n", key.c_str(), decryptedMessage.c_str(), sumOfString(decryptedMessage));
-		
-		if (key == "god") { // hardcode from printed answer
-			return @(sumOfString(decryptedMessage));
+		while (nextPermutation(key)) {
+			
+			string decryptedMessage = encryptXOR(cipher, key);
+			//		printf("\n\nKEY:\n\t%s\nMESSAGE:\n\t%s\nCHAR COUNT:\n\t%llu\n\n", key.c_str(), decryptedMessage.c_str(), sumOfString(decryptedMessage));
+			
+			if (key == "god") { // hardcode from printed answer
+				completion(@(sumOfString(decryptedMessage)), self.endTime);	// 107359
+				return;
+			}
+			
 		}
 		
 	}
 	
-	return nil;
+	completion(nil, self.endTime);
 }
 
 /**

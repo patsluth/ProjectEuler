@@ -24,10 +24,13 @@
 
 @implementation Problem_18
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	pyramid p = pyramidFromFile("p018_triangle.txt");
-	return @(pyramid_SumOfMaxPath(p));
+	
+	completion(@(pyramid_SumOfMaxPath(p)), self.endTime);	// 1074
 }
 
 @end

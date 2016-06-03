@@ -24,12 +24,14 @@
 
 @implementation Problem_16
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	string number = "2";
 	bool carryover = false;
 	
-	for (uint64_t x = 1; x < 1000; x++) {
+	for (uint64_t x = 1; x < 1000; x += 1) {
 		
 		int64_t digit = number.length() - 1;
 		
@@ -41,7 +43,7 @@
 			uint64_t product = digitValue * 2;
 			
 			if (carryover) {
-				product++;
+				product += 1;
 				carryover = false;
 			}
 			
@@ -71,7 +73,7 @@
 		sum += stoull(number.substr(digit, 1));
 	}
 	
-	return @(sum); // 1366
+	completion(@(sum), self.endTime);	// 1366
 }
 
 @end

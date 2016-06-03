@@ -24,11 +24,13 @@
 
 @implementation Problem_23
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	set<uint64_t> abundantNumberCache;
 	
-	for (uint64_t aN = 1; aN < 28123; aN++) {
+	for (uint64_t aN = 1; aN < 28123; aN += 1) {
 		if (getNumberType(aN) == NumberType_Abundant) {
 			abundantNumberCache.insert(aN);
 		}
@@ -36,7 +38,7 @@
 	
 	uint64_t sum = 0;
 	
-	for (uint64_t x = 1; x < 28123; x++) { // check all integers less than 28123 (it is proven all ints > 28123 can be written as sum of 2 abundants)
+	for (uint64_t x = 1; x < 28123; x += 1) { // check all integers less than 28123 (it is proven all ints > 28123 can be written as sum of 2 abundants)
 		
 		bool isSumOfTwoAbundantNumbers = false;
 		
@@ -61,8 +63,8 @@
 		}
 		
 	}
-	
-	return @(sum);
+
+	completion(@(sum), self.endTime);	// 4179871
 }
 
 @end

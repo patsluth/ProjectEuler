@@ -24,14 +24,16 @@
 
 @implementation Problem_44
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t minDifference = UINT64_MAX;
 	uint64_t k = 0;
 	
 	while (true) {
 		
-		k++;
+		k += 1;
 		
 		uint64_t p_k = pentagonalForN(k);
 		
@@ -61,7 +63,7 @@
 		}
 	}
 	
-	return @(minDifference);
+	completion(@(minDifference), self.endTime);	// 5482660
 }
 
 @end

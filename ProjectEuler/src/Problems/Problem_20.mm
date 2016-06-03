@@ -24,11 +24,13 @@
 
 @implementation Problem_20
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	cpp_int fact = 100;
 	
-	for (uint64_t x = 2; x <= 100; x++) {
+	for (uint64_t x = 2; x <= 100; x += 1) {
 		fact *= x;
 	}
 	
@@ -39,7 +41,7 @@
 		fact /= 10;
 	}
 	
-	return @(static_cast<int64_t>(factDigitSum));
+	completion(@(static_cast<int64_t>(factDigitSum)), self.endTime);	// 648
 }
 
 @end

@@ -27,8 +27,10 @@
 
 @implementation Problem_92
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t x = 0;
 	
 	numberChain_continueCalculatingFunction continueCalculating = [] (const numberChain *currentChain) {
@@ -39,13 +41,13 @@
 		}
 	};
 	
-	for (uint64_t start = 0; start < 10000000; start++) {
+	for (uint64_t start = 0; start < 10000000; start += 1) {
 		if (numberChain_calculate(start, sumOfSquaresOfDigits_Chain(), continueCalculating).back() == 89) {
-			x++;
+			x += 1;
 		}
 	}
 	
-	return @(x);
+	completion(@(x), self.endTime);	// 8581146
 }
 
 numberChain_nextNumberFunction sumOfSquaresOfDigits_Chain()

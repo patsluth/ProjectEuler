@@ -24,15 +24,17 @@
 
 @implementation Problem_38
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t largestPandigital = 0;
 	
-	for (uint64_t x = 1; x < 10000; x++) {
+	for (uint64_t x = 1; x < 10000; x += 1) {
 		
 		uint64_t y = x;
 		
-		for (uint64_t n = 2; n < 10; n++) { // 2 - 9. We already have 1 by setting y to x
+		for (uint64_t n = 2; n < 10; n += 1) { // 2 - 9. We already have 1 by setting y to x
 			
 			y = concatanate(y, x * n);
 			
@@ -52,7 +54,7 @@
 		
 	}
 	
-	return @(largestPandigital);
+	completion(@(largestPandigital), self.endTime);	// 932718654
 }
 
 @end

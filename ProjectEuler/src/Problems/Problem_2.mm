@@ -24,12 +24,14 @@
 
 @implementation Problem_2
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
-	NSInteger sum = 0;
+	[super solveProblem:completion];
 	
-	NSInteger previousFib = 1;
-	NSInteger currentFib = 1;
+	uint64_t sum = 0;
+	
+	uint64_t previousFib = 1;
+	uint64_t currentFib = 1;
 	
 	while (currentFib <= 4000000) {
 		
@@ -38,13 +40,13 @@
 			sum += currentFib;
 		}
 		
-		NSInteger temp = previousFib;
+		uint64_t temp = previousFib;
 		previousFib = currentFib;
 		currentFib = currentFib + temp;
 		
 	}
 	
-	return @(sum);
+	completion(@(sum), self.endTime);	// 4613732
 }
 
 @end

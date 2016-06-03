@@ -26,8 +26,10 @@
 
 @implementation Problem_74
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t x = 0;
 	
 	numberChain_continueCalculatingFunction continueCalculating = [] (const numberChain *currentChain) {
@@ -38,14 +40,14 @@
 		}
 	};
 	
-	for (uint64_t start = 0; start < 1000000; start++) {
+	for (uint64_t start = 0; start < 1000000; start += 1) {
 		// +1 because the last term is guaranteed to be a repeated term
 		if (numberChain_calculate(start, sumOfFactorialOfDigits_Chain(), continueCalculating).size() == 60 + 1) {
-			x++;
+			x += 1;
 		}
 	}
 	
-	return @(x);
+	completion(@(x), self.endTime);	// 402
 }
 
 numberChain_nextNumberFunction sumOfFactorialOfDigits_Chain()

@@ -24,11 +24,13 @@
 
 @implementation Problem_14
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	vector<uint64_t> greatestSequence;
 	
-	for (uint64_t x = 1; x < 1000000; x++) {
+	for (uint64_t x = 1; x < 1000000; x += 1) {
 		
 		vector<uint64_t> currentSequence;
 		currentSequence.push_back(x);
@@ -43,7 +45,7 @@
 		
 	}
 	
-	return @(greatestSequence.front());
+	completion(@(greatestSequence.front()), self.endTime);	// 837799
 }
 
 @end

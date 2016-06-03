@@ -24,8 +24,10 @@
 
 @implementation Problem_75
 
-- (id)solveProblem
+- (void)solveProblem:(solutionBlock)completion
 {
+	[super solveProblem:completion];
+	
 	uint64_t maxP = 1500000;
 	uint64_t count = 0;
 	uint64_t *triangles = new uint64_t[maxP + 1];
@@ -61,33 +63,7 @@
 	
 	delete [] triangles;
 	
-	return @(count);
-}
-
-uint64_t integerRightTriangleCombinationsForPerimeter(uint64_t p)
-{
-	uint64_t count = 0;
-	
-	
-	
-	
-	
-	
-//	for (uint64_t c = (p / 3); c < (p / 2); c += 1) {
-//		for (uint64_t a = 1; a < c; a += 1) {
-//			uint64_t b = p - c - a;
-//			
-//			if (a > b) {
-//				break;
-//			} else if (sqrt((a * a) + (b * b)) == c) {
-////				printf("%llu -> %llu %llu %llu\n" , p, a, b, c);
-//				count += 1;
-//			}
-//			
-//		}
-//	}
-	
-	return count;
+	completion(@(count), self.endTime);	// 161667
 }
 
 @end
