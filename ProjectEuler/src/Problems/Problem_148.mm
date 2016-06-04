@@ -39,20 +39,20 @@ uint64_t changeBase(uint64_t n, uint64_t base)
 	return returnVal;
 }
 
-#define SOLVE_WITH_MULTITHREADING true
+#define SOLVE_WITH_MULTITHREADING 1
 
 - (void)solveProblem:(solutionBlock)completion
 {
 	[super solveProblem:completion];
 	
-	
 	uint64_t maxRow = pow(10, 9);
 	uint64_t base = 7;
-	
-	
-#if SOLVE_WITH_MULTITHREADING == true
-	
 	auto threads = [[NSProcessInfo processInfo] processorCount];
+	
+#if SOLVE_WITH_MULTITHREADING == 0
+	threads = 1;
+#endif
+	
 	maxRow /= threads;
 	__block vector<uint64_t> solutions;
 	
@@ -62,8 +62,10 @@ uint64_t changeBase(uint64_t n, uint64_t base)
 		dispatch_async(queue, ^{
 			
 			uint64_t solution = 0;
+			uint64_t fromIndex = i * maxRow;
+			uint64_t toIndex = (i + 1) * maxRow;
 			
-			for (uint64_t row = i * maxRow; row < ((i + 1) * maxRow); row += 1) {
+			for (uint64_t row = fromIndex; row < toIndex; row += 1) {
 				
 				uint64_t _row = row;
 				uint64_t digitProduct = 1;
@@ -78,40 +80,17 @@ uint64_t changeBase(uint64_t n, uint64_t base)
 				
 			}
 			
-			solutions.push_back(solution);
-			
-			if (solutions.size() == threads) {
-				completion(@(sumOfVector(&solutions)), self.endTime);	// 2129970655314432
-			}
+			dispatch_sync(queue, ^{	// Thread finished
+				solutions.push_back(solution);
+				
+				if (solutions.size() == threads) {
+					completion(@(sumOfVector(&solutions)), self.endTime);	// 2129970655314432
+				}
+			});
 			
 		});
 		
 	}
-	
-#else
-	
-	uint64_t solution = 0;
-	
-	for (uint64_t row = 0; row < maxRow; row += 1) {
-		
-		uint64_t _row = row;
-		uint64_t digitProduct = 1;
-		
-		while (_row > 0) {
-			uint64_t digit = _row % base;
-			digitProduct *= (digit + 1);
-			_row /= base;
-		}
-		
-		solution += digitProduct;
-		
-	}
-	
-	completion(@(solution), self.endTime);	// 2129970655314432
-
-	
-#endif
-	
 }
 
 @end
