@@ -8,6 +8,8 @@
 
 #import "ProblemBase.h"
 
+#import <map>
+
 
 
 
@@ -28,52 +30,31 @@
 {
 	[super solveProblem:completion];
 	
-	for (uint64_t d = 2; d < 20; d += 1) {
+	// first = d
+	// second = cycle length
+	pair<uint64_t, uint64_t> max = { 0, 0 };
+	
+	for (uint64_t denomenator = 1; denomenator <= 1000; denomenator += 1) {
 		
-		CGFloat fraction = 1.0 / d;
-		uint64_t n = 1;
+		uint64_t numerator = 1;
+		uint64_t digitIndex = 0;
+		uint64_t *remainders = new uint64_t[1000];
 		
-		printf("%llu\t%f\t%lu\t", d, fraction, recurringDigitCycle(fraction).size());
-		
-		for (uint64_t x = 1; x < 40; x += 1) {
-			n *= 10;
-			fraction = (n / d) * 1.0;
-			uint64_t digit = (uint64_t)fraction % 10;
-			printf("%llu", digit);
+		while (remainders[numerator] == 0 && numerator > 0) {
+			
+			remainders[numerator] = digitIndex;
+			numerator = (numerator * 10) % denomenator;
+			digitIndex += 1;
+			
 		}
 		
-		printf("\n");
-		
-	}
-	
-	completion(@(0), self.endTime);	// ???
-}
-
-vector<uint64_t> recurringDigitCycle(CGFloat f)
-{
-	vector<uint64_t> cycle;
-	
-	for (uint64_t i = 1; ; i += 1) {
-		
-		f *= 10;
-		uint64_t digit = (uint64_t)f % 10;
-		
-		if (cycle.size() == 0) {
-			cycle.push_back(digit);
-		} else {
-			if (cycle.back() == digit) {
-				cycle.pop_back();
-				break;
-			} else if (cycle.front() == digit) {
-				break;
-			} else {
-				cycle.push_back(digit);
-			}
+		if (max.second < digitIndex - remainders[numerator]) {
+			max = { denomenator, digitIndex - remainders[numerator] };
 		}
 		
 	}
 	
-	return cycle;
+	completion(@(max.first), self.endTime);	// 983
 }
 
 @end

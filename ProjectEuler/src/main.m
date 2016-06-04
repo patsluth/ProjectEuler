@@ -35,8 +35,7 @@ void runProblem(ProblemBase *problem)
 	
 	if (problem) {
 		
-		printf("\nRunning ...");
-		printf("\n%s", NSStringFromClass([problem class]).UTF8String);
+		printf("\n%s ...", NSStringFromClass([problem class]).UTF8String);
 		
 		[problem solveProblem:^(id problemSolution, CGFloat problemDuration) {
 			printf("%s", [NSString stringWithFormat:@"\n%@\n%.2fs\n\n", problemSolution, problemDuration].UTF8String);
