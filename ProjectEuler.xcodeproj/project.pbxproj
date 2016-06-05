@@ -18,6 +18,7 @@
 		2E3D3CA81D00BEF400B57BB9 /* Problem_75.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D3CA71D00BEF400B57BB9 /* Problem_75.mm */; };
 		2E44F8AE1CF76FD000A4B22A /* Problem_59.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */; };
 		2E6046F61D047A1700FE84B6 /* Problem_33.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E6046F51D047A1700FE84B6 /* Problem_33.mm */; };
+		2E6046FB1D04940500FE84B6 /* Problem_40.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E6046FA1D04940500FE84B6 /* Problem_40.mm */; };
 		2E77CD7E1CF88B97003A49E3 /* Problem_77.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E77CD7D1CF88B97003A49E3 /* Problem_77.mm */; };
 		2E77CD801CF88EA8003A49E3 /* Problem_79.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E77CD7F1CF88EA8003A49E3 /* Problem_79.mm */; };
 		2E77CD831CF88EFF003A49E3 /* p018_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC11CE7935C008D8C2B /* p018_triangle.txt */; };
@@ -142,6 +143,7 @@
 		2E44F8AF1CF7702000A4B22A /* p059_cipher.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p059_cipher.txt; sourceTree = "<group>"; };
 		2E6046F51D047A1700FE84B6 /* Problem_33.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_33.mm; sourceTree = "<group>"; };
 		2E6046F71D047AAA00FE84B6 /* sudoku.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sudoku.h; sourceTree = "<group>"; };
+		2E6046FA1D04940500FE84B6 /* Problem_40.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_40.mm; sourceTree = "<group>"; };
 		2E77CD7D1CF88B97003A49E3 /* Problem_77.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_77.mm; sourceTree = "<group>"; };
 		2E77CD7F1CF88EA8003A49E3 /* Problem_79.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_79.mm; sourceTree = "<group>"; };
 		2E77CD811CF88EDB003A49E3 /* p079_keylog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p079_keylog.txt; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				2EF42B1F1CE7935C008D8C2B /* Problem_37.mm */,
 				2EF42B201CE7935C008D8C2B /* Problem_38.mm */,
 				2EF42B211CE7935C008D8C2B /* Problem_39.mm */,
+				2E6046FA1D04940500FE84B6 /* Problem_40.mm */,
 				2EF42B231CE7935C008D8C2B /* Problem_41.mm */,
 				2EF42B241CE7935C008D8C2B /* Problem_42.mm */,
 				2E1967341CF60D3500EF3601 /* Problem_43.mm */,
@@ -489,6 +492,7 @@
 				2EF42B721CE7935C008D8C2B /* Problem_99.mm in Sources */,
 				2EF42B711CE7935C008D8C2B /* Problem_95.mm in Sources */,
 				2EF42B411CE7935C008D8C2B /* Problem_11.mm in Sources */,
+				2E6046FB1D04940500FE84B6 /* Problem_40.mm in Sources */,
 				2EF42B481CE7935C008D8C2B /* Problem_2.mm in Sources */,
 				2EF42B641CE7935C008D8C2B /* Problem_53.mm in Sources */,
 				2EF42B3F1CE7935C008D8C2B /* Problem_1.mm in Sources */,
