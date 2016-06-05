@@ -55,14 +55,6 @@ extern ifstream readFile(string file);
 extern bool isPalindrome(uint64_t n);
 extern bool isPalindrome(string n);
 
-/**
- *  Get a list of individual digits of a number
- *
- *  @param i
- *
- *  @return list
- */
-extern forward_list<uint64_t> getDigits(uint64_t n);
 extern uint64_t numberOfDigits(uint64_t n);
 
 extern uint64_t sumOfString(string &s);
@@ -363,6 +355,7 @@ extern bool isBouncyNumber(uint64_t n);
  *  @param b
  */
 extern void reduceFraction(uint64_t &a, uint64_t &b);
+extern pair<uint64_t, uint64_t> reduceFraction2(uint64_t a, uint64_t b);
 
 /**
  *  Greatest Common Divisor. Eulers Algorithm

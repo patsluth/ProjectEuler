@@ -43,25 +43,9 @@ extern bool isPalindrome(string n)
     return true;
 }
 
-extern forward_list<uint64_t> getDigits(uint64_t n)
-{
-	forward_list<uint64_t> digits;
-	
-	while (n > 0) {
-		
-		uint64_t digit = n % 10;
-		digits.push_front(digit);
-		n /= 10;
-		
-	}
-	
-	return digits;
-}
-
 extern uint64_t numberOfDigits(uint64_t n)
 {
-	forward_list<uint64_t> digits = getDigits(n);
-    return distance(digits.begin(), digits.end());
+    return to_string(n).length();
 }
 
 extern uint64_t sumOfString(string &s)
@@ -546,11 +530,11 @@ extern bool isPandigital(uint64_t i, uint64_t a, uint64_t b)
 
 extern bool isPermutation(uint64_t a, uint64_t b)
 {
-	forward_list<uint64_t> aDigits = getDigits(a);
-	forward_list<uint64_t> bDigits = getDigits(b);
+	string aDigits = to_string(a);
+	string bDigits = to_string(b);
 	
-	aDigits.sort();
-	bDigits.sort();
+	sort(aDigits.begin(), aDigits.end());
+	sort(bDigits.begin(), bDigits.end());
 	
 	return (aDigits == bDigits);
 }
@@ -694,6 +678,13 @@ extern void reduceFraction(uint64_t &a, uint64_t &b)
 	
 	a /= _gcd;
 	b /= _gcd;
+}
+
+extern pair<uint64_t, uint64_t> reduceFraction2(uint64_t a, uint64_t b)
+{
+	uint64_t _gcd = gcd(a, b);
+	
+	return { a / _gcd, b / _gcd };
 }
 
 extern uint64_t gcd(uint64_t a, uint64_t b)

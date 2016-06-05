@@ -38,7 +38,7 @@ bool runProblem(ProblemBase *problem)
 		printf("\n%s ...\n", NSStringFromClass([problem class]).UTF8String);
 		
 		[problem solveProblem:^(id problemSolution, CGFloat problemDuration) {
-			printf("%s", [NSString stringWithFormat:@"%@\n%.2fs\n\n", problemSolution, problemDuration].UTF8String);
+			printf("%s", [NSString stringWithFormat:@"%@\n%.4fs\n\n", problemSolution, problemDuration].UTF8String);
 			currentProblem = nil;
 		}];
 		
@@ -56,7 +56,7 @@ int main(int argc, const char * argv[])
 		printf("************************************\n");
 		printf("[#]:\t\trun problem #\n");
 		printf("[a]:\t\trun all problems\n");
-		printf("[l]:\t\trun most recently ran problem #\n");
+		printf("[l]:\t\trun last ran problem\n");
 		printf("[?]:\t\tlist problems\n");
 		printf("[q]:\t\tquit\n");
 		printf("************************************\n\n");
@@ -72,7 +72,7 @@ int main(int argc, const char * argv[])
 				if (scanf("%ld", &inputInt) == 1) { // Number
 					
 					if (runProblem(getProblem(inputInt))) {
-						[[NSUserDefaults standardUserDefaults] setInteger:inputInt forKey:@"patsluth.ProjectEuler.MostRecentlyRanProblem"];
+						[[NSUserDefaults standardUserDefaults] setInteger:inputInt forKey:@"patsluth.ProjectEuler.LastRanProblemNumber"];
 					}
 					
 				} else if (scanf("%s", &inputChar) == 1) {
@@ -85,7 +85,7 @@ int main(int argc, const char * argv[])
 						
 					} else if (inputChar == 'l') {
 						
-						if (!runProblem(getProblem([[NSUserDefaults standardUserDefaults] integerForKey:@"patsluth.ProjectEuler.MostRecentlyRanProblem"]))) {
+						if (!runProblem(getProblem([[NSUserDefaults standardUserDefaults] integerForKey:@"patsluth.ProjectEuler.LastRanProblemNumber"]))) {
 						}
 						
 					} else if (inputChar == '?') {
