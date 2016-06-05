@@ -19,6 +19,7 @@
 		2E44F8AE1CF76FD000A4B22A /* Problem_59.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */; };
 		2E6046F61D047A1700FE84B6 /* Problem_33.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E6046F51D047A1700FE84B6 /* Problem_33.mm */; };
 		2E6046FB1D04940500FE84B6 /* Problem_40.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E6046FA1D04940500FE84B6 /* Problem_40.mm */; };
+		2E6046FD1D049CB000FE84B6 /* Problem_57.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E6046FC1D049CB000FE84B6 /* Problem_57.mm */; };
 		2E77CD7E1CF88B97003A49E3 /* Problem_77.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E77CD7D1CF88B97003A49E3 /* Problem_77.mm */; };
 		2E77CD801CF88EA8003A49E3 /* Problem_79.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E77CD7F1CF88EA8003A49E3 /* Problem_79.mm */; };
 		2E77CD831CF88EFF003A49E3 /* p018_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC11CE7935C008D8C2B /* p018_triangle.txt */; };
@@ -144,6 +145,7 @@
 		2E6046F51D047A1700FE84B6 /* Problem_33.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_33.mm; sourceTree = "<group>"; };
 		2E6046F71D047AAA00FE84B6 /* sudoku.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sudoku.h; sourceTree = "<group>"; };
 		2E6046FA1D04940500FE84B6 /* Problem_40.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_40.mm; sourceTree = "<group>"; };
+		2E6046FC1D049CB000FE84B6 /* Problem_57.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_57.mm; sourceTree = "<group>"; };
 		2E77CD7D1CF88B97003A49E3 /* Problem_77.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_77.mm; sourceTree = "<group>"; };
 		2E77CD7F1CF88EA8003A49E3 /* Problem_79.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_79.mm; sourceTree = "<group>"; };
 		2E77CD811CF88EDB003A49E3 /* p079_keylog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p079_keylog.txt; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 				2EF42B2B1CE7935C008D8C2B /* Problem_53.mm */,
 				2EF42B2C1CE7935C008D8C2B /* Problem_54.mm */,
 				2E0E76EF1CFF6E6500C98C26 /* Problem_55.mm */,
+				2E6046FC1D049CB000FE84B6 /* Problem_57.mm */,
 				2E8830E81CFA0E78003FD187 /* Problem_58.mm */,
 				2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */,
 				2EF42B2E1CE7935C008D8C2B /* Problem_60.mm */,
@@ -506,6 +509,7 @@
 				2EF42B5D1CE7935C008D8C2B /* Problem_42.mm in Sources */,
 				2EACDFE41CFC9CF90048C81A /* Problem_89.mm in Sources */,
 				2E9246281CEF71CB00695E74 /* Problem_49.mm in Sources */,
+				2E6046FD1D049CB000FE84B6 /* Problem_57.mm in Sources */,
 				2EF42B6C1CE7935C008D8C2B /* Problem_8.mm in Sources */,
 				2EF42B6F1CE7935C008D8C2B /* Problem_9.mm in Sources */,
 				2EF42B511CE7935C008D8C2B /* Problem_3.mm in Sources */,

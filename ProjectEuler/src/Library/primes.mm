@@ -81,7 +81,7 @@ set<uint64_t> &primes::loadPrimes(uint64_t nMillion)
     
     if (set.size() != 1000000) { // we havent loaded this million yet
 		
-		printf("\nLoading %llu x 10^6 primes", nMillion);
+		printf("\nLoading %llu x 10^6 primes\n", nMillion);
         
         set.clear();
         

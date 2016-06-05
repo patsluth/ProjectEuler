@@ -45,7 +45,7 @@ extern bool isPalindrome(string n)
 
 extern uint64_t numberOfDigits(uint64_t n)
 {
-    return to_string(n).length();
+	return ceil(log10(n + 1.0));
 }
 
 extern uint64_t sumOfString(string &s)
@@ -54,6 +54,17 @@ extern uint64_t sumOfString(string &s)
 	
 	for (uint64_t i = 0; i < s.length(); i += 1) {
 		sum += (uint64_t)s[i];
+	}
+	
+	return sum;
+}
+
+extern uint64_t sumOfDigitsInString(string &s)
+{
+	uint64_t sum = 0;
+	
+	for (uint64_t i = 0; i < s.length(); i += 1) {
+		sum += stoull(s.substr(i, 1));
 	}
 	
 	return sum;
