@@ -324,7 +324,7 @@ extern string englishRepresentationOfNumber(uint64_t n);
  *
  *  @return bool true if there are more possible permutations
  */
-bool nextPermutation(string &permutation);
+extern bool nextPermutation(string &permutation);
 
 /**
  *  A number n is called increasing if no digit is exceeded by the digit to its left
@@ -391,6 +391,16 @@ extern bool isLychrel(uint64_t n);
  *  @return uint64_t
  */
 extern uint64_t reverseNumber(uint64_t n);
+
+/**
+ *  Change the base of a number n to the specified base
+ *
+ *  @param n
+ *  @param base
+ *
+ *  @return uint64_t
+ */
+extern uint64_t changeBase(uint64_t n, uint64_t base);
 
 #endif
 

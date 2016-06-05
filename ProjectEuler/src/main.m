@@ -29,7 +29,7 @@ ProblemBase *getProblem(NSUInteger index)
 	return problem;
 }
 
-void runProblem(ProblemBase *problem)
+bool runProblem(ProblemBase *problem)
 {
 	currentProblem = problem;
 	
@@ -43,6 +43,8 @@ void runProblem(ProblemBase *problem)
 		}];
 		
 	}
+	
+	return (problem != nil);
 }
 
 int main(int argc, const char * argv[])
@@ -54,6 +56,7 @@ int main(int argc, const char * argv[])
 		printf("************************************\n");
 		printf("[#]:\t\trun problem #\n");
 		printf("[a]:\t\trun all problems\n");
+		printf("[l]:\t\trun most recently ran problem #\n");
 		printf("[?]:\t\tlist problems\n");
 		printf("[q]:\t\tquit\n");
 		printf("************************************\n\n");
@@ -68,15 +71,21 @@ int main(int argc, const char * argv[])
 				
 				if (scanf("%ld", &inputInt) == 1) { // Number
 					
-					runProblem(getProblem(inputInt));
+					if (runProblem(getProblem(inputInt))) {
+						[[NSUserDefaults standardUserDefaults] setInteger:inputInt forKey:@"patsluth.ProjectEuler.MostRecentlyRanProblem"];
+					}
 					
 				} else if (scanf("%s", &inputChar) == 1) {
-					
 					
 					if (inputChar == 'a') {
 						
 						for (NSUInteger x = 1; x < 600; x += 1) {
 							runProblem(getProblem(x));
+						}
+						
+					} else if (inputChar == 'l') {
+						
+						if (!runProblem(getProblem([[NSUserDefaults standardUserDefaults] integerForKey:@"patsluth.ProjectEuler.MostRecentlyRanProblem"]))) {
 						}
 						
 					} else if (inputChar == '?') {

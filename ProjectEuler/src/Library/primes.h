@@ -39,7 +39,6 @@ public:
      *
      *  @return primes
      */
-    
     static primes *sharedPrimes()
     {
         if (shared_instance == NULL) {

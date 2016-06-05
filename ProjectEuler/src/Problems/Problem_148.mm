@@ -24,21 +24,6 @@
 
 @implementation Problem_148
 
-uint64_t changeBase(uint64_t n, uint64_t base)
-{
-	uint64_t returnVal = 0;
-	uint64_t count = 1;
-	
-	while (n > 0) {
-		uint64_t remainder = n % base;
-		n = floor(n / base);
-		returnVal += remainder * count;
-		count *= 10;
-	}
-	
-	return returnVal;
-}
-
 #define SOLVE_WITH_MULTITHREADING 1
 
 - (void)solveProblem:(solutionBlock)completion

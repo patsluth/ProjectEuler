@@ -630,7 +630,7 @@ extern string englishRepresentationOfNumber(uint64_t n)
 	return returnVal;
 }
 
-bool nextPermutation(string &permutation)
+extern bool nextPermutation(string &permutation)
 {
 	uint64_t n = permutation.length();
 	int64_t i = n - 2;								// Find the largest i
@@ -739,6 +739,21 @@ extern uint64_t reverseNumber(uint64_t n)
 	}
 	
 	return reverseN;
+}
+
+extern uint64_t changeBase(uint64_t n, uint64_t base)
+{
+	uint64_t returnVal = 0;
+	uint64_t count = 1;
+	
+	while (n > 0) {
+		uint64_t remainder = n % base;
+		n = floor(n / base);
+		returnVal += remainder * count;
+		count *= 10;
+	}
+	
+	return returnVal;
 }
 
 

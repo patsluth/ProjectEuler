@@ -17,6 +17,7 @@
 		2E3D3CA61D00A57200B57BB9 /* Problem_145.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D3CA51D00A57200B57BB9 /* Problem_145.mm */; };
 		2E3D3CA81D00BEF400B57BB9 /* Problem_75.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D3CA71D00BEF400B57BB9 /* Problem_75.mm */; };
 		2E44F8AE1CF76FD000A4B22A /* Problem_59.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */; };
+		2E6046F61D047A1700FE84B6 /* Problem_33.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E6046F51D047A1700FE84B6 /* Problem_33.mm */; };
 		2E77CD7E1CF88B97003A49E3 /* Problem_77.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E77CD7D1CF88B97003A49E3 /* Problem_77.mm */; };
 		2E77CD801CF88EA8003A49E3 /* Problem_79.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E77CD7F1CF88EA8003A49E3 /* Problem_79.mm */; };
 		2E77CD831CF88EFF003A49E3 /* p018_triangle.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EF42AC11CE7935C008D8C2B /* p018_triangle.txt */; };
@@ -139,6 +140,8 @@
 		2E3D3CA71D00BEF400B57BB9 /* Problem_75.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_75.mm; sourceTree = "<group>"; };
 		2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_59.mm; sourceTree = "<group>"; };
 		2E44F8AF1CF7702000A4B22A /* p059_cipher.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p059_cipher.txt; sourceTree = "<group>"; };
+		2E6046F51D047A1700FE84B6 /* Problem_33.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_33.mm; sourceTree = "<group>"; };
+		2E6046F71D047AAA00FE84B6 /* sudoku.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sudoku.h; sourceTree = "<group>"; };
 		2E77CD7D1CF88B97003A49E3 /* Problem_77.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_77.mm; sourceTree = "<group>"; };
 		2E77CD7F1CF88EA8003A49E3 /* Problem_79.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_79.mm; sourceTree = "<group>"; };
 		2E77CD811CF88EDB003A49E3 /* p079_keylog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p079_keylog.txt; sourceTree = "<group>"; };
@@ -304,6 +307,7 @@
 				2EF42B031CE7935C008D8C2B /* primes.mm */,
 				2EF42AFE1CE7935C008D8C2B /* hashMap.h */,
 				2EF42B011CE7935C008D8C2B /* numberChain.h */,
+				2E6046F71D047AAA00FE84B6 /* sudoku.h */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -345,6 +349,7 @@
 				2EF42B191CE7935C008D8C2B /* Problem_30.mm */,
 				2EF42B1A1CE7935C008D8C2B /* Problem_31.mm */,
 				2EF42B1B1CE7935C008D8C2B /* Problem_32.mm */,
+				2E6046F51D047A1700FE84B6 /* Problem_33.mm */,
 				2EF42B1C1CE7935C008D8C2B /* Problem_34.mm */,
 				2EF42B1D1CE7935C008D8C2B /* Problem_35.mm */,
 				2EF42B1E1CE7935C008D8C2B /* Problem_36.mm */,
@@ -528,6 +533,7 @@
 				2E8830E91CFA0E78003FD187 /* Problem_58.mm in Sources */,
 				2EF42B6E1CE7935C008D8C2B /* Problem_87.mm in Sources */,
 				2E1967331CF604D200EF3601 /* Problem_17.mm in Sources */,
+				2E6046F61D047A1700FE84B6 /* Problem_33.mm in Sources */,
 				2EF42B4F1CE7935C008D8C2B /* Problem_28.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
