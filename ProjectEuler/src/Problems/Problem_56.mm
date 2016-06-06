@@ -37,9 +37,9 @@ typedef number<cpp_dec_float<200> > cpp_dec_float_p56;
 	for (uint64_t a = 1; a < 100; a += 1) {
 		for (uint64_t b = 1; b < 100; b += 1) {
 			
-			cpp_dec_float_p56 p = pow(cpp_dec_float_p56(a), cpp_dec_float_p56(b));
-			string pString = p.str();
-			uint64_t digitSum = sumOfDigitsInString(pString);
+			cpp_dec_float_p56 value = pow(cpp_dec_float_p56(a), cpp_dec_float_p56(b));
+			string str = value.str();
+			uint64_t digitSum = sumOfDigitsInString(str);
 			
 			solution = MAX(solution, digitSum);
 			

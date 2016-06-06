@@ -30,37 +30,27 @@
 	
 	uint64_t a = 1;
 	uint64_t b = 20;
-	
-	completion(@(smallestMultipleOfRange(a, b)), self.endTime);	// 232792560
-}
-
-uint64_t smallestMultipleOfRange(uint64_t a, uint64_t b)
-{
-	uint64_t m = b;
-	
-	if (a == 0 || b == 0 || a > b) { // invalid
-		return 0;
-	}
+	uint64_t i = 2520 * 20;
 	
 	while (true) {
 		
 		bool success = true;
 		
-		for (uint64_t x = a; x <= b; x += 1) {
-			if (m % x != 0) {
+		for (uint64_t x = b; x >= a; x -= 1) {
+			if (i % x != 0) {
 				success = false;
 				break;
 			}
 		}
 		
 		if (success == true) {
-			return m;
+			break;
 		}
 		
-		m += 1;
+		i += 2;
 	}
 	
-	return 0;
+	completion(@(i), self.endTime);	// 232792560
 }
 
 @end
