@@ -48,6 +48,9 @@
 		2EB384771D02052900030F35 /* Problem_61.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EB384761D02052800030F35 /* Problem_61.mm */; };
 		2EBF59131CFBB2AE000F86BF /* Problem_26.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EBF59121CFBB2AE000F86BF /* Problem_26.mm */; };
 		2EC1AEF21CECD9F800553C6D /* Problem_24.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1AEF11CECD9F800553C6D /* Problem_24.mm */; };
+		2ED7849A1D05B6560073528D /* p102_triangles.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2ED784991D05B6410073528D /* p102_triangles.txt */; };
+		2ED7849C1D05B6700073528D /* Problem_102.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7849B1D05B6700073528D /* Problem_102.mm */; };
+		2ED7849E1D05C4FF0073528D /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED7849D1D05C4FE0073528D /* GLKit.framework */; };
 		2EF42B3C1CE7935C008D8C2B /* libProjectEuler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B001CE7935C008D8C2B /* libProjectEuler.mm */; };
 		2EF42B3D1CE7935C008D8C2B /* primes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B031CE7935C008D8C2B /* primes.mm */; };
 		2EF42B3E1CE7935C008D8C2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B041CE7935C008D8C2B /* main.m */; };
@@ -124,6 +127,7 @@
 				2E77CD8C1CF88EFF003A49E3 /* p082_matrix.txt in CopyFiles */,
 				2EACDFE21CFC9CDF0048C81A /* p089_roman.txt in CopyFiles */,
 				2E77CD8D1CF88EFF003A49E3 /* p099_base_exp.txt in CopyFiles */,
+				2ED7849A1D05B6560073528D /* p102_triangles.txt in CopyFiles */,
 				2E144F791CFCB7ED008FF342 /* Primes in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +169,9 @@
 		2EB384761D02052800030F35 /* Problem_61.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_61.mm; sourceTree = "<group>"; };
 		2EBF59121CFBB2AE000F86BF /* Problem_26.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_26.mm; sourceTree = "<group>"; };
 		2EC1AEF11CECD9F800553C6D /* Problem_24.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_24.mm; sourceTree = "<group>"; };
+		2ED784991D05B6410073528D /* p102_triangles.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p102_triangles.txt; sourceTree = "<group>"; };
+		2ED7849B1D05B6700073528D /* Problem_102.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_102.mm; sourceTree = "<group>"; };
+		2ED7849D1D05C4FE0073528D /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		2EF429FE1CE79287008D8C2B /* ProjectEuler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEuler; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF42AC11CE7935C008D8C2B /* p018_triangle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p018_triangle.txt; sourceTree = "<group>"; };
 		2EF42AC21CE7935C008D8C2B /* p022_names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p022_names.txt; sourceTree = "<group>"; };
@@ -241,16 +248,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ED7849E1D05C4FF0073528D /* GLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2ED7849F1D05C5200073528D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2ED7849D1D05C4FE0073528D /* GLKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2EF429F51CE79287008D8C2B = {
 			isa = PBXGroup;
 			children = (
 				2EF42A001CE79287008D8C2B /* ProjectEuler */,
+				2ED7849F1D05C5200073528D /* Frameworks */,
 				2EF429FF1CE79287008D8C2B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -287,6 +304,7 @@
 				2EACDFE11CFC9CD40048C81A /* p089_roman.txt */,
 				2E77CD821CF88EE1003A49E3 /* p096_sudoku.txt */,
 				2EF42AC81CE7935C008D8C2B /* p099_base_exp.txt */,
+				2ED784991D05B6410073528D /* p102_triangles.txt */,
 				2E144F781CFCB7E0008FF342 /* Primes */,
 			);
 			path = Resources;
@@ -394,6 +412,7 @@
 				2EF42B381CE7935C008D8C2B /* Problem_95.mm */,
 				2E144F7A1CFCB9B4008FF342 /* Problem_96.mm */,
 				2EF42B391CE7935C008D8C2B /* Problem_99.mm */,
+				2ED7849B1D05B6700073528D /* Problem_102.mm */,
 				2E8830E21CF9F2D3003FD187 /* Problem_112.mm */,
 				2E8830E41CFA0084003FD187 /* Problem_113.mm */,
 				2E3D3CA51D00A57200B57BB9 /* Problem_145.mm */,
@@ -477,6 +496,7 @@
 				2EF42B5E1CE7935C008D8C2B /* Problem_44.mm in Sources */,
 				2E77CD801CF88EA8003A49E3 /* Problem_79.mm in Sources */,
 				2EF42B4A1CE7935C008D8C2B /* Problem_21.mm in Sources */,
+				2ED7849C1D05B6700073528D /* Problem_102.mm in Sources */,
 				2EF42B541CE7935C008D8C2B /* Problem_32.mm in Sources */,
 				2EBF59131CFBB2AE000F86BF /* Problem_26.mm in Sources */,
 				2EF42B5A1CE7935C008D8C2B /* Problem_39.mm in Sources */,

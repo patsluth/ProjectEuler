@@ -31,7 +31,7 @@
 	uint64 solution = 0;
 	pair<cpp_int, cpp_int> f = { 3, 2 };
 	
-	for (uint64_t i = 1; i <= 1000; i += 1) {
+	for (uint64_t i = 0; i < 1000; i += 1) {
 		
 		f.first += 2 * f.second;
 		f.second = f.first - f.second;

@@ -43,9 +43,9 @@
 				
 				currentPuzzle.push_back(line);
 				
-				if (currentPuzzle.size() == 9) {									// Full puzzle
+				if (currentPuzzle.size() == 9) {										// Full puzzle
 					
-					__block sudokuPuzzle _puzzle(currentPuzzle);					// Copy
+					__block sudokuPuzzle _puzzle(currentPuzzle);						// Copy
 					
 					dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
 					dispatch_async(queue, ^{
@@ -53,19 +53,23 @@
 						uint64_t solution = 0;
 						
 						if (sudoku::solve(_puzzle)) {
-							solution = stoull(_puzzle[0].substr(0, 3));				// 3 digit number in top left corner of solved puzzle
+							solution = stoull(_puzzle[0].substr(0, 3));					// 3 digit number in top left corner of solved puzzle
 						}
 						
-						solutions.push_back(solution);
-						
-						if (solutions.size() == 50) {
-							completion(@(sumOfVector(&solutions)), self.endTime);	// 24702
-							return;
-						}
+						dispatch_sync(queue, ^{											// Thread finished
+							
+							solutions.push_back(solution);
+							
+							if (solutions.size() == 50) {
+								completion(@(sumOfVector(&solutions)), self.endTime);	// 24702
+								return;
+							}
+							
+						});
 						
 					});
 					
-					currentPuzzle.clear();											// Start new puzzle
+					currentPuzzle.clear();												// Start new puzzle
 				}
 				
 			}
