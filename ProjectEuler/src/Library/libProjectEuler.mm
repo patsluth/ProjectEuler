@@ -628,23 +628,23 @@ extern string englishRepresentationOfNumber(uint64_t n)
 extern bool nextPermutation(string &permutation)
 {
 	uint64_t n = permutation.length();
-	int64_t i = n - 2;								// Find the largest i
-	while ((i >= 0) && (permutation[i] > permutation[i + 1])) {
+	int64_t i = n - 2;								// largest i
+	while ((i >= 0) && (permutation[i] >= permutation[i + 1])) {
 		i -= 1;
 	}
  
-	if (i < 0) {									// No more permutations
+	if (i < 0) {									// Done
 		return false;
 	}
 	
-	int64_t k =n - 1;								// Find the largest element after i but not larger than i
-	while (permutation[i] > permutation[k]) {
+	int64_t k = n - 1;								// Find the largest element after i still less than i
+	while (permutation[i] >= permutation[k]) {
 		k -= 1;
 	}
 	
 	swap(permutation[i], permutation[k]);
  
-	k = 0;											// Swap the last n - i elements
+	k = 0;											// Swap
 	for (int64_t j = i + 1; j < ((n + i) / 2) + 1; j += 1, k += 1) {
 		swap(permutation[j], permutation[n - k - 1]);
 	}

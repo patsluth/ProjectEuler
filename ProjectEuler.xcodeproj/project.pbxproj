@@ -51,6 +51,8 @@
 		2ED7849A1D05B6560073528D /* p102_triangles.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2ED784991D05B6410073528D /* p102_triangles.txt */; };
 		2ED7849C1D05B6700073528D /* Problem_102.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7849B1D05B6700073528D /* Problem_102.mm */; };
 		2ED7849E1D05C4FF0073528D /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED7849D1D05C4FE0073528D /* GLKit.framework */; };
+		2ED784A11D05D5D90073528D /* Problem_62.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ED784A01D05D5D90073528D /* Problem_62.mm */; };
+		2ED784A31D05DD060073528D /* Problem_56.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ED784A21D05DD060073528D /* Problem_56.mm */; };
 		2EF42B3C1CE7935C008D8C2B /* libProjectEuler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B001CE7935C008D8C2B /* libProjectEuler.mm */; };
 		2EF42B3D1CE7935C008D8C2B /* primes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B031CE7935C008D8C2B /* primes.mm */; };
 		2EF42B3E1CE7935C008D8C2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF42B041CE7935C008D8C2B /* main.m */; };
@@ -172,6 +174,8 @@
 		2ED784991D05B6410073528D /* p102_triangles.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p102_triangles.txt; sourceTree = "<group>"; };
 		2ED7849B1D05B6700073528D /* Problem_102.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_102.mm; sourceTree = "<group>"; };
 		2ED7849D1D05C4FE0073528D /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		2ED784A01D05D5D90073528D /* Problem_62.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_62.mm; sourceTree = "<group>"; };
+		2ED784A21D05DD060073528D /* Problem_56.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_56.mm; sourceTree = "<group>"; };
 		2EF429FE1CE79287008D8C2B /* ProjectEuler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEuler; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF42AC11CE7935C008D8C2B /* p018_triangle.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p018_triangle.txt; sourceTree = "<group>"; };
 		2EF42AC21CE7935C008D8C2B /* p022_names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p022_names.txt; sourceTree = "<group>"; };
@@ -392,11 +396,13 @@
 				2EF42B2B1CE7935C008D8C2B /* Problem_53.mm */,
 				2EF42B2C1CE7935C008D8C2B /* Problem_54.mm */,
 				2E0E76EF1CFF6E6500C98C26 /* Problem_55.mm */,
+				2ED784A21D05DD060073528D /* Problem_56.mm */,
 				2E6046FC1D049CB000FE84B6 /* Problem_57.mm */,
 				2E8830E81CFA0E78003FD187 /* Problem_58.mm */,
 				2E44F8AD1CF76FD000A4B22A /* Problem_59.mm */,
 				2EF42B2E1CE7935C008D8C2B /* Problem_60.mm */,
 				2EB384761D02052800030F35 /* Problem_61.mm */,
+				2ED784A01D05D5D90073528D /* Problem_62.mm */,
 				2EACD1C31CEE01560092761A /* Problem_63.mm */,
 				2EF42B2F1CE7935C008D8C2B /* Problem_67.mm */,
 				2E0E76ED1CFF26F200C98C26 /* Problem_71.mm */,
@@ -481,11 +487,13 @@
 			files = (
 				2EA0714B1CF4DC0A007B06A4 /* Problem_50.mm in Sources */,
 				2E77CD7E1CF88B97003A49E3 /* Problem_77.mm in Sources */,
+				2ED784A11D05D5D90073528D /* Problem_62.mm in Sources */,
 				2EF42B461CE7935C008D8C2B /* Problem_16.mm in Sources */,
 				2EACDFE61CFCB5F20048C81A /* Problem_265.mm in Sources */,
 				2E3D3CA61D00A57200B57BB9 /* Problem_145.mm in Sources */,
 				2EF42B561CE7935C008D8C2B /* Problem_35.mm in Sources */,
 				2E0E76EE1CFF26F200C98C26 /* Problem_71.mm in Sources */,
+				2ED784A31D05DD060073528D /* Problem_56.mm in Sources */,
 				2EF42B531CE7935C008D8C2B /* Problem_31.mm in Sources */,
 				2E8042C91CF4B01F00D2BEDD /* Problem_543.mm in Sources */,
 				2E144F7B1CFCB9B4008FF342 /* Problem_96.mm in Sources */,

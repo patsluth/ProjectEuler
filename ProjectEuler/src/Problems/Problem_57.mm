@@ -28,7 +28,7 @@
 {
 	[super solveProblem:completion];
 	
-	uint64 solution = 0;
+	uint64_t solution = 0;
 	pair<cpp_int, cpp_int> f = { 3, 2 };
 	
 	for (uint64_t i = 0; i < 1000; i += 1) {
