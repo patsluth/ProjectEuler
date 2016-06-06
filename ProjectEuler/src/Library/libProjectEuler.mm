@@ -70,48 +70,26 @@ extern uint64_t sumOfDigitsInString(string &s)
 	return sum;
 }
 
-extern uint64_t sumOfVector(vector<uint64_t> *v)
+extern uint64_t sumOfVector(vector<uint64_t> &v)
 {
     uint64_t sum = 0;
 
-    for (uint64_t i : *v) {
+    for (uint64_t i : v) {
         sum += i;
     }
 
     return sum;
 }
 
-extern uint64_t sumOfSet(set<uint64_t> *s)
+extern uint64_t sumOfSet(set<uint64_t> &s)
 {
     uint64_t sum = 0;
 
-    for (uint64_t i : *s) {
+    for (uint64_t i : s) {
         sum += i;
     }
 
     return sum;
-}
-
-extern uint64_t sumOfList(list<uint64_t> *l)
-{
-	uint64_t sum = 0;
-	
-	for (uint64_t i : *l) {
-		sum += i;
-	}
-	
-	return sum;
-}
-
-extern uint64_t sumOfList(forward_list<uint64_t> *l)
-{
-	uint64_t sum = 0;
-	
-	for (uint64_t i : *l) {
-		sum += i;
-	}
-	
-	return sum;
 }
 
 extern Factor factorInteger(uint64_t i)
@@ -432,25 +410,30 @@ extern int64_t nForOctagonal(int64_t On)
  *
  *  @return vector containing proper divisors
  */
-extern properDivisors *calculateProperDivisors(uint64_t n)
+extern properDivisors calculateProperDivisors(uint64_t n)
 {
-    vector<uint64_t> *properDivisors = new vector<uint64_t>(1);
+    vector<uint64_t> pd;
+	pd.push_back(1);
 
     for (uint64_t x = 2; x <= sqrt(n); x += 1) {
-        if ( (n / x) * x == n ) {
-            properDivisors->push_back(x);
-            if ( (n / x) != x) { // dont add same multiple twice
-                properDivisors->push_back(n / x);
+		
+		uint64_t n_x = n / x;
+		
+        if (n_x * x == n) {
+            pd.push_back(x);
+            if (n_x != x) { // dont add same multiple twice
+                pd.push_back(n_x);
             }
         }
     }
 
-    return properDivisors;
+    return pd;
 }
 
 extern numberType getNumberType(uint64_t n)
 {
-    uint64_t x = sumOfVector(calculateProperDivisors(n));
+	auto pd = calculateProperDivisors(n);
+    uint64_t x = sumOfVector(pd);
 
     if (x < n) {
         return NumberType_Deficient;

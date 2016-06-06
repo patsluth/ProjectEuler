@@ -69,7 +69,7 @@
 				solutions.push_back(solution);
 				
 				if (solutions.size() == threads) {
-					completion(@(sumOfVector(&solutions)), self.endTime);	// 2129970655314432
+					completion(@(sumOfVector(solutions)), self.endTime);	// 2129970655314432
 				}
 			});
 			

@@ -49,7 +49,8 @@
 	numberChain_nextNumberFunction sumOfProperDivisors_Chain = [] (const uint64_t *currentEndOfChain) {
 		
 		uint64_t currentEndOfChain_Copy = *currentEndOfChain;
-		return sumOfVector(calculateProperDivisors(currentEndOfChain_Copy));
+		auto pd = calculateProperDivisors(currentEndOfChain_Copy);
+		return sumOfVector(pd);
 		
 	};
 	

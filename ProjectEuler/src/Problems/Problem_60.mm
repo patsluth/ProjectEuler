@@ -117,16 +117,14 @@
 										primeSet->insert(prime4);
 										primeSet->insert(prime5);
 										
-										uint64_t sumOfPrimeSet = sumOfSet(primeSet);
+										uint64_t sumOfPrimeSet = sumOfSet(*primeSet);
 										
 										if (sumOfPrimeSet > minPrimeSetSum) {
 											goto fin;
 										}
 										
-										if (primeSet->size() == 5 && problem60Test(primeSet)) {
-											
+										if (primeSet->size() == 5 && p60Condition(primeSet)) {
 											minPrimeSetSum = sumOfPrimeSet;
-											
 										} else {
 											primeSet->clear();
 										}
@@ -162,7 +160,7 @@ fin:
  *
  *  @return bool
  */
-bool problem60Test(set<uint64_t> *primeSet)
+bool p60Condition(set<uint64_t> *primeSet)
 {
 	for (uint64_t primeA : *primeSet) {
 		for (uint64_t primeB : *primeSet) {

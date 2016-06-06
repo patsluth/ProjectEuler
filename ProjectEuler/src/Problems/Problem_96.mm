@@ -61,7 +61,7 @@
 							solutions.push_back(solution);
 							
 							if (solutions.size() == 50) {
-								completion(@(sumOfVector(&solutions)), self.endTime);	// 24702
+								completion(@(sumOfVector(solutions)), self.endTime);	// 24702
 								return;
 							}
 							

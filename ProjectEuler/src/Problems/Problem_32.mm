@@ -51,7 +51,7 @@
 		
 	}
 	
-	id returnValue = @(sumOfSet(products));
+	id returnValue = @(sumOfSet(*products));
 	
 	products->clear();
 	delete products;

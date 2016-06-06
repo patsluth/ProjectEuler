@@ -28,26 +28,27 @@
 {
 	[super solveProblem:completion];
 	
-	set<uint64_t> amicableNumbers; // make sure there are no duplicates
+	set<uint64_t> amicableNumbers;
 	
 	for (uint64_t a = 1; a < 10000; a += 1) {
 		
-		uint64_t b = sumOfVector(calculateProperDivisors(a));
+		auto pdA = calculateProperDivisors(a);
+		uint64_t b = sumOfVector(pdA);
 		
-		if (a != b && sumOfVector(calculateProperDivisors(b)) == a) {
-			amicableNumbers.insert(a);
-			amicableNumbers.insert(b);
+		if (a != b) {
+			
+			auto pdB = calculateProperDivisors(b);
+			
+			if (sumOfVector(pdB) == a) {
+				amicableNumbers.insert(a);
+				amicableNumbers.insert(b);
+			}
+			
 		}
 		
 	}
 	
-	uint64_t sum = 0;
-	
-	for (auto x : amicableNumbers) {
-		sum += x;
-	}
-	
-	completion(@(sum), self.endTime);	// 31626
+	completion(@(sumOfSet(amicableNumbers)), self.endTime);	// 31626
 }
 
 @end
