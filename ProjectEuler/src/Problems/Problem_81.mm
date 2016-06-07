@@ -51,10 +51,6 @@
 			
 		}
 		
-		for (auto row : matrix) { // make sure its a square
-			assert(matrix.size() == row.size());
-		}
-		
 		
 		for (int64_t x = matrix.size() - 2; x >= 0; x--) {
 			matrix[matrix.size() - 1][x] += matrix[matrix.size() - 1][x + 1];
@@ -71,6 +67,11 @@
 	}
 	
 	return nil;
+}
+
+void test(vector<vector<uint64_t>> &matrix)
+{
+	
 }
 
 @end
