@@ -12,6 +12,7 @@
 #import <Foundation/Foundation.h>
 
 #import <set>
+#import <vector>
 
 #import "hashMap.h"
 
@@ -27,10 +28,8 @@ class primes
 private:
     
     static primes *shared_instance;
-    
-    // the key of the first map is the n of the prime text file ex- primes2.txt key = 2
-    // the key of the map of primes of that text file is the prime number
-    hashMap<uint64_t, set<uint64_t>> primeData;
+	
+	vector<uint64_t> primeData;
     
 public:
     
@@ -47,28 +46,31 @@ public:
         
         return shared_instance;
     }
-    
-    bool isPrime(uint64_t i);
-    
-    /**
-     *  Get the prime after p
-     *  TODO: search for the next prime if p is not prime
-     *
-     *  @param p prime
-     *
-     *  @return uint64_t
-     */
-    uint64_t nextPrime(uint64_t p);
-    
-    /**
-     *  Load (if needed) and return set
-     *
-     *  @param nMillion
-     *
-     *  @return set<uint64_t> for primes'nMillion'.txt
-     */
-    set<uint64_t> &loadPrimes(uint64_t nMillion);
-    
+	
+	static typename vector<uint64_t>::iterator begin()
+	{
+		return primes::sharedPrimes()->primeData.begin();
+	}
+	
+	static typename vector<uint64_t>::iterator end()
+	{
+		return primes::sharedPrimes()->primeData.end();
+	}
+	
+	static typename vector<uint64_t>::reverse_iterator rbegin()
+	{
+		return primes::sharedPrimes()->primeData.rbegin();
+	}
+	
+	static typename vector<uint64_t>::reverse_iterator rend()
+	{
+		return primes::sharedPrimes()->primeData.rend();
+	}
+	
+	static bool isPrime(uint64_t i);
+	
+	static bool loadPrimes(uint64_t nMillion);
+	
 };
 
 #endif /* primes_h */

@@ -33,12 +33,12 @@
 {
 	[super solveProblem:completion];
 	
-	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1); // 1st million primes
+	primes::loadPrimes(1);
 	
 	hashMap<uint64_t, uint64_t> solutions;
 	*solutions.valueForKey(0) = 1;
 	
-	for (auto itr = millionPrimes.begin(); itr != millionPrimes.end(); advance(itr, 1)) {
+	for (auto itr = primes::begin(); itr != primes::end(); advance(itr, 1)) {
 		
 		uint64_t prime = *itr;
 		

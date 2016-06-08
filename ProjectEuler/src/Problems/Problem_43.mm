@@ -31,7 +31,7 @@
 	string pandigital = "0123456789";		// First Pandigital 0-9
 	uint64_t sum = 0;
 	
-	while (nextPermutation(pandigital)) {
+	while (next_permutation(pandigital.begin(), pandigital.end())) {
 		if (passesSubstringDivisibilityProperty(pandigital)) {
 			sum += stoull(pandigital);
 		}

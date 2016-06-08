@@ -29,15 +29,11 @@
 	[super solveProblem:completion];
 	
 	string permutation = "0123456789";		// Current Permutation
-	uint64_t permutationIndex = 1;			// Initial permutation
 	
-	while (nextPermutation(permutation)) {
-		
-		permutationIndex += 1;
-		if (permutationIndex >= 1000000) {
+	for (uint64_t i = 1; i < 1000000; i += 1) {
+		if (!next_permutation(permutation.begin(), permutation.end())) {
 			break;
 		}
-		
 	}
 	
 	completion(@(permutation.c_str()), self.endTime);	// 2783915460

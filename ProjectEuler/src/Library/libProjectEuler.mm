@@ -522,17 +522,6 @@ extern bool isPandigital(uint64_t i, uint64_t a, uint64_t b)
 	return isPandigital;
 }
 
-extern bool isPermutation(uint64_t a, uint64_t b)
-{
-	string aDigits = to_string(a);
-	string bDigits = to_string(b);
-	
-	sort(aDigits.begin(), aDigits.end());
-	sort(bDigits.begin(), bDigits.end());
-	
-	return (aDigits == bDigits);
-}
-
 extern uint64_t fibonacci(uint64_t n)
 {
 	if (n < 2) {
@@ -606,33 +595,6 @@ extern string englishRepresentationOfNumber(uint64_t n)
 	}
 	
 	return returnVal;
-}
-
-extern bool nextPermutation(string &permutation)
-{
-	uint64_t n = permutation.length();
-	int64_t i = n - 2;								// largest i
-	while ((i >= 0) && (permutation[i] >= permutation[i + 1])) {
-		i -= 1;
-	}
- 
-	if (i < 0) {									// Done
-		return false;
-	}
-	
-	int64_t k = n - 1;								// Find the largest element after i still less than i
-	while (permutation[i] >= permutation[k]) {
-		k -= 1;
-	}
-	
-	swap(permutation[i], permutation[k]);
- 
-	k = 0;											// Swap
-	for (int64_t j = i + 1; j < ((n + i) / 2) + 1; j += 1, k += 1) {
-		swap(permutation[j], permutation[n - k - 1]);
-	}
- 
-	return true;
 }
 
 extern bool isIncreasingNumber(uint64_t n)

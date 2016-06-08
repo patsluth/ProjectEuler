@@ -49,7 +49,7 @@
 		
 		string key = findPossibleKey(cipher, 3);
 		
-		while (nextPermutation(key)) {
+		while (next_permutation(key.begin(), key.end())) {
 			
 			string decryptedMessage = encryptXOR(cipher, key);
 			//		printf("\n\nKEY:\n\t%s\nMESSAGE:\n\t%s\nCHAR COUNT:\n\t%llu\n\n", key.c_str(), decryptedMessage.c_str(), sumOfString(decryptedMessage));

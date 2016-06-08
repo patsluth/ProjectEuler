@@ -35,13 +35,14 @@
 
 uint64_t largestConsecutivePrimeSumThatIsPrime(uint64_t max)
 {
-	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1); // 1st million primes
+	primes::loadPrimes(1);
+	
 	uint64_t sum = 0;
 	
-	auto startItr = millionPrimes.begin();
-	auto endItr = millionPrimes.begin();
+	auto startItr = primes::begin();
+	auto endItr = primes::begin();
 	
-	for (auto itr = startItr; itr != millionPrimes.end(); advance(itr, 1)) {
+	for (auto itr = startItr; itr != primes::end(); advance(itr, 1)) {
 		
 		if (sum + *itr < max) {
 			endItr = itr;
@@ -56,7 +57,7 @@ uint64_t largestConsecutivePrimeSumThatIsPrime(uint64_t max)
 	
 	while (startItr != endItr) { // remove end until we find largest prime
 		
-		if (primes::sharedPrimes()->isPrime(sum) && sum < max) {
+		if (primes::isPrime(sum) && sum < max) {
 			break;
 		}
 		
@@ -67,7 +68,7 @@ uint64_t largestConsecutivePrimeSumThatIsPrime(uint64_t max)
 	
 	while (_startItr != _endItr) { // remove start and try to increase end until we find largest prime
 		
-		if (primes::sharedPrimes()->isPrime(_sum) && _sum < max) {
+		if (primes::isPrime(_sum) && _sum < max) {
 			break;
 		}
 		

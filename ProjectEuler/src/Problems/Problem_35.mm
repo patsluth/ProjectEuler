@@ -8,6 +8,8 @@
 
 #import "ProblemBase.h"
 
+#import "primes.h"
+
 
 
 
@@ -37,7 +39,7 @@
 		
 		for (uint64_t cur : circularValueVariations) {
 			if (allCircularVariationsPrime == true) {
-				allCircularVariationsPrime = isPrime(cur);
+				allCircularVariationsPrime = primes::isPrime(cur);
 			}
 		}
 		

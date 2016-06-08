@@ -30,8 +30,15 @@
 {
 	[super solveProblem:completion];
 	
-//	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1); // 1st million primes
-//	
+	assert(primes::isPrime(982451654));
+	uint64_t x = 0;
+	
+	for (auto itr = primes::begin(); itr != primes::end(); advance(itr, 1)) {
+		x += 1;
+	}
+	
+	printf("%llu", x);
+//
 //	for (uint64_t i = 644; i < 1000; i += 1) {
 //		
 //	}

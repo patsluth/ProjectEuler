@@ -40,16 +40,15 @@
 {
 	// hashMap where key is the prime and the set contains all primes which can be concatonated with it to produce a prime
 	hashMap<uint64_t, set<uint64_t>> primeHash;
-	// 1st million primes
-	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1);
+	primes::loadPrimes(1);
 	
-	for (uint64_t prime : millionPrimes) {
+	for (auto prime = primes::begin(); prime != primes::end(); advance(prime, 1)) {
 		
-		if (prime > 8500) {
+		if (*prime > 8500) {
 			break;
 		}
 		
-		set<uint64_t> &curPrimeSet = *primeHash.valueForKey(prime);
+		set<uint64_t> &curPrimeSet = *primeHash.valueForKey(*prime);
 		
 		// iterate over all current primes to see if they pass the concatonate test
 		for (auto itr = primeHash.begin(); itr != primeHash.end(); advance(itr, 1)) {
@@ -57,10 +56,10 @@
 			set<uint64_t> &curPrimeSet2 = *primeHash.valueForKey((*itr).first);
 			
 			// check both directions (a b) (b a)
-			if (isConcatPrime((*itr).first, prime)) {
-				curPrimeSet2.insert(prime);
+			if (isConcatPrime((*itr).first, *prime)) {
+				curPrimeSet2.insert(*prime);
 			}
-			if (isConcatPrime(prime, (*itr).first)) {
+			if (isConcatPrime(*prime, (*itr).first)) {
 				curPrimeSet.insert((*itr).first);
 			}
 			
@@ -71,15 +70,15 @@
 	
 	uint64_t minPrimeSetSum = UINT64_MAX;
 	
-	for (uint64_t prime1 : millionPrimes) {
+	for (auto prime1 = primes::begin(); prime1 != primes::end(); advance(prime1, 1)) {
 		
-		set<uint64_t> prime1Concats = *primeHash.valueForKey(prime1);
+		set<uint64_t> prime1Concats = *primeHash.valueForKey(*prime1);
 		
 		BOOST_FOREACH(uint64_t prime2, prime1Concats) {
 			
-			if (prime2 > prime1 && isConcatPrime(prime1, prime2) && isConcatPrime(prime2, prime1)) {
+			if (prime2 > *prime1 && isConcatPrime(*prime1, prime2) && isConcatPrime(prime2, *prime1)) {
 				
-				if (prime1 + prime2 > minPrimeSetSum) {
+				if (*prime1 + prime2 > minPrimeSetSum) {
 					goto fin;
 				}
 				
@@ -89,7 +88,7 @@
 					
 					if (prime3 > prime2 && isConcatPrime(prime2, prime3) && isConcatPrime(prime3, prime2)) {
 						
-						if (prime1 + prime2 + prime3 > minPrimeSetSum) {
+						if (*prime1 + prime2 + prime3 > minPrimeSetSum) {
 							goto fin;
 						}
 						
@@ -99,7 +98,7 @@
 							
 							if (prime4 > prime3 && isConcatPrime(prime3, prime4) && isConcatPrime(prime4, prime3)) {
 								
-								if (prime1 + prime2 + prime3 + prime4 > minPrimeSetSum) {
+								if (*prime1 + prime2 + prime3 + prime4 > minPrimeSetSum) {
 									goto fin;
 								}
 								
@@ -111,7 +110,7 @@
 										
 										set<uint64_t> *primeSet = new set<uint64_t>();
 										
-										primeSet->insert(prime1);
+										primeSet->insert(*prime1);
 										primeSet->insert(prime2);
 										primeSet->insert(prime3);
 										primeSet->insert(prime4);
@@ -185,7 +184,7 @@ bool p60Condition(set<uint64_t> *primeSet)
 bool isConcatPrime(uint64_t primeA, uint64_t primeB)
 {
 	if (primeA != primeB) {
-		return primes::sharedPrimes()->isPrime(concatanate(primeA, primeB));
+		return primes::isPrime(concatanate(primeA, primeB));
 	}
 	
 	return false;

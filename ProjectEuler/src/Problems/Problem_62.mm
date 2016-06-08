@@ -44,7 +44,8 @@
 		vector<string> perms;
 		perms.push_back(cube);
 		
-		while (nextPermutation(cube)) {
+		while (next_permutation(cube.begin(), cube.end())) {
+			
 			if (cubes.find(stoull(cube)) != cubes.end()) {
 				perms.push_back(cube);
 			}

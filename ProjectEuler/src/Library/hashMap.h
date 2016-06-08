@@ -39,14 +39,14 @@ public:
 		return this->data.begin();
 	}
 	
-	typename map<K, V>::reverse_iterator rbegin()
-	{
-		return this->data.rbegin();
-	}
-	
 	typename map<K, V>::iterator end()
 	{
 		return this->data.end();
+	}
+	
+	typename map<K, V>::reverse_iterator rbegin()
+	{
+		return this->data.rbegin();
 	}
 	
 	typename map<K, V>::reverse_iterator rend()

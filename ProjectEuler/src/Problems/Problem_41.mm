@@ -30,10 +30,10 @@
 {
 	[super solveProblem:completion];
 	
-	set<uint64_t> &millionPrimes = primes::sharedPrimes()->loadPrimes(1); // 1st million primes
+	primes::loadPrimes(1);
 	
 	// reverse iterator, since we are looking for the largest, the first prime to pass is the answer
-	for (auto itr = millionPrimes.rbegin(); itr != millionPrimes.rend(); advance(itr, 1)) {
+	for (auto itr = primes::rbegin(); itr != primes::rend(); advance(itr, 1)) {
 		if (isPandigital(*itr, 1, numberOfDigits(*itr))) {
 			completion(@(*itr), self.endTime);	// 7652413
 			return;

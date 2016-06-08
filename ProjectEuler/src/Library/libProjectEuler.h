@@ -280,17 +280,6 @@ extern uint64_t concatanate(uint64_t a, uint64_t b);
 extern bool isPandigital(uint64_t n, uint64_t a, uint64_t b);
 
 /**
- *  A number a is a permutation of another number b
- *	if it contains the exact same digits in any order
- *
- *  @param a
- *  @param b
- *
- *  @return bool
- */
-extern bool isPermutation(uint64_t a, uint64_t b);
-
-/**
  *  Get the nth fibonacci number
  *
  *  @param n
@@ -307,15 +296,6 @@ extern uint64_t fibonacci(uint64_t n);
  *  @return string
  */
 extern string englishRepresentationOfNumber(uint64_t n);
-
-/**
- *  Swaps elements in provided string to give the next permutation
- *
- *  @param permutation
- *
- *  @return bool true if there are more possible permutations
- */
-extern bool nextPermutation(string &permutation);
 
 /**
  *  A number n is called increasing if no digit is exceeded by the digit to its left
