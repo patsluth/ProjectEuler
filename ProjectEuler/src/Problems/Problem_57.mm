@@ -35,7 +35,7 @@
 		
 		f.first += 2 * f.second;
 		f.second = f.first - f.second;
-		
+
 		if (f.first.str().length() > f.second.str().length()) {
 			solution += 1;
 		}

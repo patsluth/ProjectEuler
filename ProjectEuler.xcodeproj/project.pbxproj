@@ -48,6 +48,7 @@
 		2EB384771D02052900030F35 /* Problem_61.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EB384761D02052800030F35 /* Problem_61.mm */; };
 		2EBF59131CFBB2AE000F86BF /* Problem_26.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EBF59121CFBB2AE000F86BF /* Problem_26.mm */; };
 		2EC1AEF21CECD9F800553C6D /* Problem_24.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1AEF11CECD9F800553C6D /* Problem_24.mm */; };
+		2ED419BA1D29A0C900A4F0EB /* Problem_65.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ED419B91D29A0C900A4F0EB /* Problem_65.mm */; };
 		2ED7849A1D05B6560073528D /* p102_triangles.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2ED784991D05B6410073528D /* p102_triangles.txt */; };
 		2ED7849C1D05B6700073528D /* Problem_102.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ED7849B1D05B6700073528D /* Problem_102.mm */; };
 		2ED7849E1D05C4FF0073528D /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED7849D1D05C4FE0073528D /* GLKit.framework */; };
@@ -172,6 +173,7 @@
 		2EB384761D02052800030F35 /* Problem_61.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_61.mm; sourceTree = "<group>"; };
 		2EBF59121CFBB2AE000F86BF /* Problem_26.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_26.mm; sourceTree = "<group>"; };
 		2EC1AEF11CECD9F800553C6D /* Problem_24.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_24.mm; sourceTree = "<group>"; };
+		2ED419B91D29A0C900A4F0EB /* Problem_65.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_65.mm; sourceTree = "<group>"; };
 		2ED784991D05B6410073528D /* p102_triangles.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = p102_triangles.txt; sourceTree = "<group>"; };
 		2ED7849B1D05B6700073528D /* Problem_102.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_102.mm; sourceTree = "<group>"; };
 		2ED7849D1D05C4FE0073528D /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -407,6 +409,7 @@
 				2EB384761D02052800030F35 /* Problem_61.mm */,
 				2ED784A01D05D5D90073528D /* Problem_62.mm */,
 				2EACD1C31CEE01560092761A /* Problem_63.mm */,
+				2ED419B91D29A0C900A4F0EB /* Problem_65.mm */,
 				2EF42B2F1CE7935C008D8C2B /* Problem_67.mm */,
 				2E0E76ED1CFF26F200C98C26 /* Problem_71.mm */,
 				2EF42B321CE7935C008D8C2B /* Problem_74.mm */,
@@ -520,6 +523,7 @@
 				2EF42B621CE7935C008D8C2B /* Problem_5.mm in Sources */,
 				2EF42B3C1CE7935C008D8C2B /* libProjectEuler.mm in Sources */,
 				2EF42B6B1CE7935C008D8C2B /* Problem_74.mm in Sources */,
+				2ED419BA1D29A0C900A4F0EB /* Problem_65.mm in Sources */,
 				2EF42B601CE7935C008D8C2B /* Problem_46.mm in Sources */,
 				2EF42B431CE7935C008D8C2B /* Problem_13.mm in Sources */,
 				2EF42B721CE7935C008D8C2B /* Problem_99.mm in Sources */,

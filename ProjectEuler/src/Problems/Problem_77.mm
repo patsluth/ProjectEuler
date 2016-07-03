@@ -19,8 +19,6 @@
 {
 }
 
-@property (strong, nonatomic) NSArray *coins;
-
 @end
 
 
