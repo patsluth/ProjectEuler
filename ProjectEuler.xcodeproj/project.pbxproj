@@ -47,6 +47,7 @@
 		2EACDFE61CFCB5F20048C81A /* Problem_265.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EACDFE51CFCB5F20048C81A /* Problem_265.mm */; };
 		2EB384771D02052900030F35 /* Problem_61.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EB384761D02052800030F35 /* Problem_61.mm */; };
 		2EBC57941D2AE36000640CC7 /* Problem_80.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC57931D2AE36000640CC7 /* Problem_80.mm */; };
+		2EBC57961D2AEC0A00640CC7 /* Problem_97.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC57951D2AEC0A00640CC7 /* Problem_97.mm */; };
 		2EBF59131CFBB2AE000F86BF /* Problem_26.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EBF59121CFBB2AE000F86BF /* Problem_26.mm */; };
 		2EC1AEF21CECD9F800553C6D /* Problem_24.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EC1AEF11CECD9F800553C6D /* Problem_24.mm */; };
 		2ED419BA1D29A0C900A4F0EB /* Problem_65.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ED419B91D29A0C900A4F0EB /* Problem_65.mm */; };
@@ -173,6 +174,7 @@
 		2EACDFE51CFCB5F20048C81A /* Problem_265.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_265.mm; sourceTree = "<group>"; };
 		2EB384761D02052800030F35 /* Problem_61.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_61.mm; sourceTree = "<group>"; };
 		2EBC57931D2AE36000640CC7 /* Problem_80.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_80.mm; sourceTree = "<group>"; };
+		2EBC57951D2AEC0A00640CC7 /* Problem_97.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_97.mm; sourceTree = "<group>"; };
 		2EBF59121CFBB2AE000F86BF /* Problem_26.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_26.mm; sourceTree = "<group>"; };
 		2EC1AEF11CECD9F800553C6D /* Problem_24.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_24.mm; sourceTree = "<group>"; };
 		2ED419B91D29A0C900A4F0EB /* Problem_65.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Problem_65.mm; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 				2EF42B371CE7935C008D8C2B /* Problem_92.mm */,
 				2EF42B381CE7935C008D8C2B /* Problem_95.mm */,
 				2E144F7A1CFCB9B4008FF342 /* Problem_96.mm */,
+				2EBC57951D2AEC0A00640CC7 /* Problem_97.mm */,
 				2EF42B391CE7935C008D8C2B /* Problem_99.mm */,
 				2ED7849B1D05B6700073528D /* Problem_102.mm */,
 				2E8830E21CF9F2D3003FD187 /* Problem_112.mm */,
@@ -525,6 +528,7 @@
 				2EACD1C41CEE01560092761A /* Problem_63.mm in Sources */,
 				2EF42B621CE7935C008D8C2B /* Problem_5.mm in Sources */,
 				2EF42B3C1CE7935C008D8C2B /* libProjectEuler.mm in Sources */,
+				2EBC57961D2AEC0A00640CC7 /* Problem_97.mm in Sources */,
 				2EF42B6B1CE7935C008D8C2B /* Problem_74.mm in Sources */,
 				2ED419BA1D29A0C900A4F0EB /* Problem_65.mm in Sources */,
 				2EF42B601CE7935C008D8C2B /* Problem_46.mm in Sources */,
