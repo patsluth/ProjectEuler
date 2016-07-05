@@ -57,8 +57,8 @@ extern bool isPalindrome(string n);
 
 extern uint64_t numberOfDigits(uint64_t n);
 
-extern uint64_t sumOfString(string &s);
-extern uint64_t sumOfDigitsInString(string &s);
+extern uint64_t sumOfString(string *s);
+extern uint64_t sumOfDigitsInString(string *s);
 extern uint64_t sumOfVector(vector<uint64_t> &v);
 extern uint64_t sumOfSet(set<uint64_t> &s);
 

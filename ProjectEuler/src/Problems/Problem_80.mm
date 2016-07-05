@@ -40,9 +40,12 @@
 		squareRootString = [squareRootString stringByReplacingOccurrencesOfString:@"." withString:@""];
 		
 		if (squareRootString.length >= 100) {
+			
 			squareRootString = [squareRootString substringWithRange:NSMakeRange(0, 100)];
-			string temp = string(squareRootString.UTF8String);
+			string *temp = new string(squareRootString.UTF8String);
 			solution += sumOfDigitsInString(temp);
+			delete temp;
+			
 		}
 		
 	}

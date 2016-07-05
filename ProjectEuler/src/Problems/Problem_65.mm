@@ -28,7 +28,6 @@
 {
 	[super solveProblem:completion];
 	
-	
 	pair<cpp_int, cpp_int> f = { 1, 2 };
 	
 	for (uint64_t i = 2; i <= 101; i += 1) {
@@ -45,8 +44,9 @@
 		
 	}
 	
-	string solution = f.first.str();
+	string *solution = new string(f.first.str());
 	completion(@(sumOfDigitsInString(solution)), self.endTime);	// 272
+	delete solution;
 }
 
 @end

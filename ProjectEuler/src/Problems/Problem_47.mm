@@ -30,20 +30,57 @@
 {
 	[super solveProblem:completion];
 	
-	assert(primes::isPrime(982451654));
-	uint64_t x = 0;
+	vector<uint64_t> consecutivePrimes;
+	set<uint64_t> *primeFactors = new set<uint64_t>();
 	
-	for (auto itr = primes::begin(); itr != primes::end(); advance(itr, 1)) {
-		x += 1;
+	for (uint64_t n = 647; consecutivePrimes.size() != 4; n += 1) {
+		
+		primeFacors(n, primeFactors);
+		
+		if ((*primeFactors).size() == 4) {
+			
+			if (consecutivePrimes.size() > 0 && consecutivePrimes.back() != n - 1) {
+				consecutivePrimes.clear(); // Reset consecutive prime list
+			}
+			
+			consecutivePrimes.push_back(n);
+			
+		}
+		
 	}
 	
-	printf("%llu", x);
-//
-//	for (uint64_t i = 644; i < 1000; i += 1) {
-//		
-//	}
+	completion(@(*consecutivePrimes.begin()), self.endTime);	// 134043
 	
-	completion(@(0), self.endTime);	// ??
+	(*primeFactors).clear();
+	delete primeFactors;
+}
+
+void primeFacors(uint64_t n, set<uint64_t> *s)
+{
+	primes::loadPrimes(1);
+	
+	(*s).clear();
+	uint64_t rem = n;
+ 
+	for (auto itr = primes::begin(); itr != primes::end(); advance(itr, 1)) {
+		
+		uint64_t prime = *itr;
+		
+		if (prime * prime > n) {
+			(*s).insert(prime);
+			return;
+		}
+		
+		while (rem % prime == 0) {
+			rem /= prime;
+			(*s).insert(prime);
+		}
+		
+		if (rem == 1) { // No remainder
+			break;
+		}
+		
+	}
 }
 
 @end
