@@ -67,7 +67,9 @@ public:
 		return primes::sharedPrimes()->primeData.rend();
 	}
 	
-	static bool isPrime(uint64_t i);
+	static bool isPrime(uint64_t n);
+	
+	static typename vector<uint64_t>::iterator nextPrime(uint64_t n);
 	
 	static bool loadPrimes(uint64_t nMillion);
 	

@@ -374,6 +374,8 @@ extern uint64_t reverseNumber(uint64_t n);
  */
 extern uint64_t changeBase(uint64_t n, uint64_t base);
 
+extern uint64_t ipow(uint64_t base, uint64_t exponent);
+
 #endif
 
 #endif /* libProjectEuler_h */

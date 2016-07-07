@@ -703,6 +703,22 @@ extern uint64_t changeBase(uint64_t n, uint64_t base)
 	return returnVal;
 }
 
+extern uint64_t ipow(uint64_t base, uint64_t exponent)
+{
+	uint64_t value = 1;
+	
+	while (exponent) {
+		if (exponent & 1) {
+			value *= base;
+		}
+		exponent >>= 1;
+		base *= base;
+	}
+	
+	return value;
+}
+
+
 
 
 

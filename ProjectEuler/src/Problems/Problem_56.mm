@@ -10,7 +10,7 @@
 
 #import <boost/multiprecision/cpp_dec_float.hpp>
 
-typedef number<cpp_dec_float<200> > cpp_dec_float_p56;
+typedef number<cpp_dec_float<200>> cpp_dec_float_p56;
 
 
 

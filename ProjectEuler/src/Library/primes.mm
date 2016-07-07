@@ -22,22 +22,40 @@
  */
 primes *primes::shared_instance = NULL;
 
-bool primes::isPrime(uint64_t i)
+bool primes::isPrime(uint64_t n)
 {
-	while (primes::sharedPrimes()->primeData.size() == 0 || i > *primes::sharedPrimes()->primeData.rbegin()) {
+	// Make sure n is loaded
+	if (primes::sharedPrimes()->primeData.size() == 0 || n > *primes::sharedPrimes()->primeData.rbegin()) {
 		
 		uint64_t nMillion = (primes::sharedPrimes()->primeData.size() / 1000000) + 1;
+		
 		if (!primes::loadPrimes(nMillion)) {
 			return false;
+		} else {
+			return primes::isPrime(n);
 		}
 		
 	}
 	
-	if (binary_search(primes::sharedPrimes()->primeData.begin(), primes::sharedPrimes()->primeData.end(), i)) {
-		return true;
+	return binary_search(primes::sharedPrimes()->primeData.begin(), primes::sharedPrimes()->primeData.end(), n);
+}
+
+typename vector<uint64_t>::iterator primes::nextPrime(uint64_t n)
+{
+	// Make sure the next prime (n + 1) is loaded
+	if ((primes::sharedPrimes()->primeData.size() == 0 || n >= *primes::sharedPrimes()->primeData.rbegin())) {
+
+		uint64_t nMillion = (primes::sharedPrimes()->primeData.size() / 1000000) + 1;
+		
+		if (!primes::loadPrimes(nMillion)) {
+			return primes::end();
+		} else {
+			return primes::nextPrime(n);
+		}
+
 	}
-    
-    return false;
+	
+	return std::upper_bound(primes::sharedPrimes()->primeData.begin(), primes::sharedPrimes()->primeData.end(), n);
 }
 
 bool primes::loadPrimes(uint64_t nMillion)
