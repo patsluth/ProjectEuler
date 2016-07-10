@@ -376,6 +376,25 @@ extern uint64_t changeBase(uint64_t n, uint64_t base);
 
 extern uint64_t ipow(uint64_t base, uint64_t exponent);
 
+/**
+ *  Calulcate vector of primes from a to b
+ *
+ *  @param a lower bounds
+ *  @param b upper bounds
+ *
+ *  @return vector<uint64_t>
+ */
+vector<uint64_t> sieveOfEratosthenes(uint64_t a, uint64_t b);
+
+/**
+ *  Euler's totient function
+ *
+ *  @param n
+ *
+ *  @return uint64_t
+ */
+uint64_t totient(uint64_t n);
+
 #endif
 
 #endif /* libProjectEuler_h */

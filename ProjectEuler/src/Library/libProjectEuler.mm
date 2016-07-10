@@ -718,6 +718,54 @@ extern uint64_t ipow(uint64_t base, uint64_t exponent)
 	return value;
 }
 
+vector<uint64_t> sieveOfEratosthenes(uint64_t a, uint64_t b)
+{
+	bool *isComposite = new bool[b + 1];
+	memset(isComposite, true, sizeof(bool) * b + 1);
+	
+	uint64_t bSqrt = sqrt(b);
+	
+	for (uint64_t i = 1; i <= bSqrt; i += 1) {
+		
+		if (isComposite[i]) {
+			uint64_t twoI = 2 * i;
+			for (uint64_t j = twoI * (i + 1); j <= b; j += twoI + 1) {
+				isComposite[j] = false;
+			}
+		}
+		
+	}
+	
+	vector<uint64_t> primeSieve;
+	
+	if (a < 3) {
+		primeSieve.push_back(2);
+		a = 3;
+	}
+	
+	for (uint64_t i = 0; i <= b; i += 1) {
+		if (isComposite[i]) {
+			primeSieve.push_back((2 * i) + 1);
+		}
+	}
+	
+	delete [] isComposite;
+	return primeSieve;
+}
+
+uint64_t totient(uint64_t n)
+{
+	uint64_t count = 0;
+	
+	for (uint64_t i = 0; i < n; i += 1) {
+		if (gcd(i, n) == 1) {
+			count += 1;
+		}
+	}
+	
+	return count;
+}
+
 
 
 
