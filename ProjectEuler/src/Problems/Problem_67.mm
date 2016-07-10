@@ -8,10 +8,6 @@
 
 #import "ProblemBase.h"
 
-#import "hashMap.h"
-
-#import <boost/foreach.hpp>
-
 
 
 
@@ -34,7 +30,7 @@
 	
 	pyramid p = pyramidFromFile("p067_triangle.txt");
 	
-	completion(@(pyramid_SumOfMaxPath(p)), self.endTime);	// 28684
+	completion(@(maxPathSum(p)), self.endTime);	// 7273
 }
 
 @end

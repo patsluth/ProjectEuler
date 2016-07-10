@@ -215,7 +215,7 @@ extern pyramid pyramidFromFile(string file)
     return p;
 }
 
-extern uint64_t pyramid_SumOfMaxPath(pyramid p)
+extern uint64_t maxPathSum(pyramid p)
 {
 	if (p.size() == 0) {
 		return 0;

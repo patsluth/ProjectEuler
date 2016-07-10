@@ -157,7 +157,7 @@ extern pyramid pyramidFromFile(string file);
  *
  *  @return sum
  */
-extern uint64_t pyramid_SumOfMaxPath(pyramid p);
+extern uint64_t maxPathSum(pyramid p);
 
 /**
  *  Print pyramid to console

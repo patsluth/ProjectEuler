@@ -30,7 +30,7 @@
 	
 	pyramid p = pyramidFromFile("p018_triangle.txt");
 	
-	completion(@(pyramid_SumOfMaxPath(p)), self.endTime);	// 1074
+	completion(@(maxPathSum(p)), self.endTime);	// 1074
 }
 
 @end
